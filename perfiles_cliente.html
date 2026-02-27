@@ -59,7 +59,41 @@ tbody td{padding:10px;white-space:nowrap}
 .pagination button:hover:not(.active){background:var(--g100)}
 .result-count{text-align:center;padding:10px;font-size:.8rem;color:#888}
 .footer{text-align:center;padding:20px;color:#aaa;font-size:.73rem}
-@media(max-width:768px){.hero h1{font-size:1.5rem}.filters-grid{grid-template-columns:1fr 1fr}}
+
+/* MOBILE CARDS */
+.cards-container{display:none;padding:10px 20px}
+.card{background:#fff;border:1px solid #e8e8e8;border-radius:14px;padding:16px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.card-ref{color:var(--verde);font-weight:600;font-size:.82rem}
+.card-tipo{color:var(--verde);font-weight:500;font-size:.72rem}
+.card-desc{font-weight:500;font-size:.9rem;margin-bottom:8px;color:#222}
+.card-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin:8px 0}
+.card-field{display:flex;flex-direction:column}
+.card-field .lbl{font-size:.62rem;text-transform:uppercase;color:#999;letter-spacing:.5px}
+.card-field .val{font-size:.82rem;font-weight:500}
+.card-footer{display:flex;justify-content:space-between;align-items:center;margin-top:10px;padding-top:10px;border-top:1px solid #f0f0f0}
+.card-precio{color:var(--verde-d);font-weight:700;font-size:1.05rem}
+
+@media(max-width:768px){
+  .hero{padding:30px 16px 28px}
+  .hero h1{font-size:1.5rem}
+  .hero .sub{font-size:.78rem}
+  .hero .badge-fecha{font-size:.7rem;padding:6px 14px}
+  .tarifa-bar{margin:0 10px;border-radius:10px;margin-top:-14px}
+  .tarifa-header{padding:10px 16px;flex-direction:column;text-align:center;gap:4px}
+  .tarifa-header .title{font-size:.78rem}
+  .tarifa-header .note{font-size:.68rem}
+  .tarifa-row{padding:10px 16px}
+  .filters-section{padding:0 10px;margin-top:20px}
+  .filters-card{padding:18px 16px}
+  .filters-grid{grid-template-columns:1fr 1fr;gap:8px}
+  .table-section{padding:0 10px 30px}
+  .table-wrapper{display:none}
+  .result-count{display:block}
+  .cards-container{display:block}
+  .pagination{flex-wrap:wrap}
+  .footer{font-size:.65rem}
+}
 </style>
 </head>
 <body>
@@ -96,6 +130,7 @@ tbody td{padding:10px;white-space:nowrap}
     <div class="table-wrapper">
       <table><thead><tr><th>Referencia</th><th>Descripción</th><th>Tipo</th><th>Ancho</th><th>Alto</th><th>Espesor</th><th>Longitud</th><th>€/m</th><th>Disponibilidad</th></tr></thead><tbody id="tbody"></tbody></table>
     </div>
+    <div class="cards-container" id="cards"></div>
     <div class="pagination" id="pagination"></div>
   </div>
 </div>
@@ -120,12 +155,32 @@ function applyFilters(){
 }
 function render(){
   const start=(page-1)*PER_PAGE;const slice=filtered.slice(start,start+PER_PAGE);
+  // Desktop table
   document.getElementById('tbody').innerHTML=slice.map(r=>{
     const pm=Math.round(r.peso_kg_m*PRECIO_KG*100)/100;
     const icon=r.estado==='Stock'?'🟢':r.estado==='7/10 Días'?'🟡':'🔴';
     const bc=r.estado==='Stock'?'badge-stock':r.estado==='7/10 Días'?'badge-dias':'badge-sin';
     const av=r.ancho!==null?r.ancho:'—';const alv=r.alto!==null?r.alto:'—';const ev=r.espesor!==null?r.espesor:'—';
     return `<tr><td class="td-ref">${r.ref}</td><td>${r.descripcion}</td><td class="td-tipo">${r.tipo}</td><td>${av}</td><td>${alv}</td><td>${ev}</td><td>${r.longitud}</td><td class="td-precio">${pm.toFixed(2)} €</td><td><span class="badge ${bc}">${icon} ${r.estado}</span></td></tr>`;
+  }).join('');
+  // Mobile cards
+  document.getElementById('cards').innerHTML=slice.map(r=>{
+    const pm=Math.round(r.peso_kg_m*PRECIO_KG*100)/100;
+    const icon=r.estado==='Stock'?'🟢':r.estado==='7/10 Días'?'🟡':'🔴';
+    const bc=r.estado==='Stock'?'badge-stock':r.estado==='7/10 Días'?'badge-dias':'badge-sin';
+    const av=r.ancho!==null?r.ancho:'—';const alv=r.alto!==null?r.alto:'—';const ev=r.espesor!==null?r.espesor:'—';
+    return `<div class="card">
+      <div class="card-header"><span class="card-ref">${r.ref}</span><span class="card-tipo">${r.tipo}</span></div>
+      <div class="card-desc">${r.descripcion}</div>
+      <div class="card-grid">
+        <div class="card-field"><span class="lbl">Ancho</span><span class="val">${av}</span></div>
+        <div class="card-field"><span class="lbl">Alto</span><span class="val">${alv}</span></div>
+        <div class="card-field"><span class="lbl">Espesor</span><span class="val">${ev}</span></div>
+        <div class="card-field"><span class="lbl">Longitud</span><span class="val">${r.longitud}</span></div>
+        <div class="card-field"><span class="lbl">€/m</span><span class="val card-precio">${pm.toFixed(2)} €</span></div>
+      </div>
+      <div class="card-footer"><span class="badge ${bc}">${icon} ${r.estado}</span></div>
+    </div>`;
   }).join('');
   document.getElementById('resultCount').textContent=filtered.length+' referencias encontradas';
   const tp=Math.ceil(filtered.length/PER_PAGE);const pag=document.getElementById('pagination');
