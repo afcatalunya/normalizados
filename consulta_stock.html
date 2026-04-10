@@ -305,7 +305,7 @@ const start=(currentPage-1)*PER_PAGE;
 const r=filtered[start+i];
 const precio=parseFloat(document.getElementById('fPrecio').value.replace(',','.'))||6.40;
 const euro=(r.peso_kg_m*precio).toFixed(2);
-const text=r.descripcion+' — '+euro+' €/m — '+r.estado;
+const text=r.descripcion+' — '+r.longitud+' mm — '+euro+' €/m — '+r.estado;
 navigator.clipboard.writeText(text).then(()=>{
 const btn=document.querySelectorAll('.btn-copy')[i];
 if(btn){btn.textContent='✓';setTimeout(()=>btn.textContent='📋',1500)}
@@ -316,7 +316,7 @@ function copyAll(){
 const precio=parseFloat(document.getElementById('fPrecio').value.replace(',','.'))||6.40;
 const lines=filtered.map(r=>{
 const euro=(r.peso_kg_m*precio).toFixed(2);
-return r.descripcion+' — '+euro+' €/m — '+r.estado;
+return r.descripcion+' — '+r.longitud+' mm — '+euro+' €/m — '+r.estado;
 });
 navigator.clipboard.writeText(lines.join('\n')).then(()=>{
 const btn=document.querySelector('.btn-copy-all');
