@@ -43,7 +43,7 @@
     "acabado": "BRUTO",
     "tar": 0,
     "mur": 8,
-    "val": 765,
+    "val": 735,
     "estado": "7/10 Días",
     "precio_metro": 0.8
   },
@@ -58,7 +58,7 @@
     "peso_kg_m": 0.205,
     "acabado": "BRUTO",
     "tar": 353,
-    "mur": 569,
+    "mur": 562,
     "val": 248,
     "estado": "Stock",
     "precio_metro": 1.31
@@ -203,7 +203,7 @@
     "acabado": "BRUTO",
     "tar": 0,
     "mur": 0,
-    "val": 147,
+    "val": 135,
     "estado": "7/10 Días",
     "precio_metro": 1.22
   },
@@ -249,7 +249,7 @@
     "longitud": 6000,
     "peso_kg_m": 0.313,
     "acabado": "BRUTO",
-    "tar": 371,
+    "tar": 261,
     "mur": 219,
     "val": 55,
     "estado": "Stock",
@@ -282,7 +282,7 @@
     "peso_kg_m": 0.46143,
     "acabado": "BRUTO",
     "tar": 205,
-    "mur": 304,
+    "mur": 244,
     "val": 6,
     "estado": "Stock",
     "precio_metro": 2.95
@@ -331,7 +331,7 @@
     "acabado": "BRUTO",
     "tar": 85,
     "mur": 0,
-    "val": 160,
+    "val": 113,
     "estado": "Stock",
     "precio_metro": 1.32
   },
@@ -361,9 +361,9 @@
     "longitud": 6000,
     "peso_kg_m": 0.313,
     "acabado": "BRUTO",
-    "tar": 116,
+    "tar": 112,
     "mur": 722,
-    "val": 99,
+    "val": 75,
     "estado": "Stock",
     "precio_metro": 2.0
   },
@@ -409,9 +409,9 @@
     "longitud": 6400,
     "peso_kg_m": 0.2754,
     "acabado": "BRUTO",
-    "tar": 136,
+    "tar": 116,
     "mur": 0,
-    "val": 340,
+    "val": 310,
     "estado": "Stock",
     "precio_metro": 1.76
   },
@@ -442,7 +442,7 @@
     "peso_kg_m": 0.421,
     "acabado": "BRUTO",
     "tar": 95,
-    "mur": 409,
+    "mur": 397,
     "val": 2,
     "estado": "Stock",
     "precio_metro": 2.69
@@ -489,9 +489,9 @@
     "longitud": 6000,
     "peso_kg_m": 0.824,
     "acabado": "BRUTO",
-    "tar": 59,
-    "mur": 449,
-    "val": 17,
+    "tar": 57,
+    "mur": 444,
+    "val": 13,
     "estado": "Stock",
     "precio_metro": 5.27
   },
@@ -506,7 +506,7 @@
     "peso_kg_m": 1.012,
     "acabado": "BRUTO",
     "tar": 19,
-    "mur": 17,
+    "mur": 7,
     "val": 0,
     "estado": "Stock",
     "precio_metro": 6.48
@@ -618,7 +618,7 @@
     "peso_kg_m": 0.3456,
     "acabado": "BRUTO",
     "tar": 151,
-    "mur": 150,
+    "mur": 110,
     "val": 143,
     "estado": "Stock",
     "precio_metro": 2.21
@@ -634,7 +634,7 @@
     "peso_kg_m": 0.786,
     "acabado": "BRUTO",
     "tar": 0,
-    "mur": 201,
+    "mur": 194,
     "val": 23,
     "estado": "7/10 Días",
     "precio_metro": 5.03
@@ -649,7 +649,7 @@
     "longitud": 6750,
     "peso_kg_m": 1.2823,
     "acabado": "BRUTO",
-    "tar": 6,
+    "tar": 0,
     "mur": 0,
     "val": 2,
     "estado": "Sin stock",
@@ -698,7 +698,7 @@
     "peso_kg_m": 0.477,
     "acabado": "BRUTO",
     "tar": 0,
-    "mur": 0,
+    "mur": 94,
     "val": 100,
     "estado": "7/10 Días",
     "precio_metro": 3.05
@@ -746,7 +746,7 @@
     "peso_kg_m": 0.3996,
     "acabado": "BRUTO",
     "tar": 0,
-    "mur": 63,
+    "mur": 37,
     "val": 0,
     "estado": "7/10 Días",
     "precio_metro": 2.56
@@ -761,7 +761,7 @@
     "longitud": 6000,
     "peso_kg_m": 0.531,
     "acabado": "BRUTO",
-    "tar": 184,
+    "tar": 177,
     "mur": 56,
     "val": 80,
     "estado": "Stock",
@@ -826,7 +826,7 @@
     "peso_kg_m": 1.253,
     "acabado": "BRUTO",
     "tar": 84,
-    "mur": 60,
+    "mur": 55,
     "val": 75,
     "estado": "Stock",
     "precio_metro": 8.02
@@ -937,7 +937,7 @@
     "longitud": 6000,
     "peso_kg_m": 0.637,
     "acabado": "BRUTO",
-    "tar": 107,
+    "tar": 106,
     "mur": 66,
     "val": 18,
     "estado": "Stock",
@@ -954,7 +954,7 @@
     "peso_kg_m": 1.252,
     "acabado": "BRUTO",
     "tar": 138,
-    "mur": 17,
+    "mur": 16,
     "val": 63,
     "estado": "Stock",
     "precio_metro": 8.01
@@ -1002,7 +1002,7 @@
     "peso_kg_m": 3.283,
     "acabado": "BRUTO",
     "tar": 68,
-    "mur": 10,
+    "mur": 0,
     "val": 0,
     "estado": "Stock",
     "precio_metro": 21.01
@@ -1530,7 +1530,7 @@
     "peso_kg_m": 0.462,
     "acabado": "BRUTO",
     "tar": 206,
-    "mur": 71,
+    "mur": 69,
     "val": 0,
     "estado": "Stock",
     "precio_metro": 2.96
@@ -1658,7 +1658,7 @@
     "peso_kg_m": 0.17,
     "acabado": "BRUTO",
     "tar": 118,
-    "mur": 87,
+    "mur": 73,
     "val": 0,
     "estado": "Stock",
     "precio_metro": 1.09
@@ -1866,7 +1866,7 @@
     "peso_kg_m": 0.389,
     "acabado": "BRUTO",
     "tar": 0,
-    "mur": 196,
+    "mur": 98,
     "val": 430,
     "estado": "7/10 Días",
     "precio_metro": 2.49
@@ -2138,7 +2138,7 @@
     "peso_kg_m": 0.122,
     "acabado": "BRUTO",
     "tar": 206,
-    "mur": 24,
+    "mur": 20,
     "val": 267,
     "estado": "Stock",
     "precio_metro": 0.78
@@ -2235,7 +2235,7 @@
     "acabado": "BRUTO",
     "tar": 411,
     "mur": 192,
-    "val": 10,
+    "val": 9,
     "estado": "Stock",
     "precio_metro": 2.07
   },
@@ -2281,10 +2281,10 @@
     "longitud": 6000,
     "peso_kg_m": 0.203,
     "acabado": "BRUTO",
-    "tar": 14,
+    "tar": 8,
     "mur": 89,
     "val": 0,
-    "estado": "Stock",
+    "estado": "7/10 Días",
     "precio_metro": 1.3
   },
   {
@@ -2378,7 +2378,7 @@
     "peso_kg_m": 0.243,
     "acabado": "BRUTO",
     "tar": 357,
-    "mur": 338,
+    "mur": 337,
     "val": 187,
     "estado": "Stock",
     "precio_metro": 1.56
@@ -2410,7 +2410,7 @@
     "peso_kg_m": 0.486,
     "acabado": "BRUTO",
     "tar": 137,
-    "mur": 81,
+    "mur": 79,
     "val": 1,
     "estado": "Stock",
     "precio_metro": 3.11
@@ -2522,7 +2522,7 @@
     "peso_kg_m": 0.324,
     "acabado": "BRUTO",
     "tar": 209,
-    "mur": 102,
+    "mur": 100,
     "val": 203,
     "estado": "Stock",
     "precio_metro": 2.07
@@ -2586,7 +2586,7 @@
     "peso_kg_m": 0.866,
     "acabado": "BRUTO",
     "tar": 20,
-    "mur": 205,
+    "mur": 201,
     "val": 17,
     "estado": "Stock",
     "precio_metro": 5.54
@@ -2730,7 +2730,7 @@
     "peso_kg_m": 0.405,
     "acabado": "BRUTO",
     "tar": 27,
-    "mur": 319,
+    "mur": 204,
     "val": 42,
     "estado": "Stock",
     "precio_metro": 2.59
@@ -2746,7 +2746,7 @@
     "peso_kg_m": 0.54,
     "acabado": "BRUTO",
     "tar": 3,
-    "mur": 253,
+    "mur": 249,
     "val": 4,
     "estado": "7/10 Días",
     "precio_metro": 3.46
@@ -2874,7 +2874,7 @@
     "peso_kg_m": 2.025,
     "acabado": "BRUTO",
     "tar": 50,
-    "mur": 74,
+    "mur": 73,
     "val": 26,
     "estado": "Stock",
     "precio_metro": 12.96
@@ -2970,7 +2970,7 @@
     "peso_kg_m": 1.62,
     "acabado": "BRUTO",
     "tar": 9,
-    "mur": 143,
+    "mur": 142,
     "val": 54,
     "estado": "7/10 Días",
     "precio_metro": 10.37
@@ -3098,7 +3098,7 @@
     "peso_kg_m": 1.733,
     "acabado": "BRUTO",
     "tar": 0,
-    "mur": 144,
+    "mur": 142,
     "val": 0,
     "estado": "7/10 Días",
     "precio_metro": 11.09
@@ -3243,7 +3243,7 @@
     "acabado": "BRUTO",
     "tar": 29,
     "mur": 67,
-    "val": 58,
+    "val": 57,
     "estado": "Stock",
     "precio_metro": 17.34
   },
@@ -3274,7 +3274,7 @@
     "peso_kg_m": 3.974,
     "acabado": "BRUTO",
     "tar": 24,
-    "mur": 14,
+    "mur": 10,
     "val": 0,
     "estado": "Stock",
     "precio_metro": 25.43
@@ -3595,7 +3595,7 @@
     "acabado": "BRUTO",
     "tar": 320,
     "mur": 110,
-    "val": 339,
+    "val": 337,
     "estado": "Stock",
     "precio_metro": 0.89
   },
@@ -3659,7 +3659,7 @@
     "acabado": "BRUTO",
     "tar": 0,
     "mur": 5,
-    "val": 194,
+    "val": 160,
     "estado": "7/10 Días",
     "precio_metro": 2.29
   },
@@ -3866,8 +3866,8 @@
     "peso_kg_m": 0.2624,
     "acabado": "BRUTO",
     "tar": 0,
-    "mur": 375,
-    "val": 245,
+    "mur": 0,
+    "val": 235,
     "estado": "7/10 Días",
     "precio_metro": 1.68
   },
@@ -3898,7 +3898,7 @@
     "peso_kg_m": 0.551,
     "acabado": "BRUTO",
     "tar": 167,
-    "mur": 320,
+    "mur": 318,
     "val": 9,
     "estado": "Stock",
     "precio_metro": 3.53
@@ -3920,22 +3920,6 @@
     "precio_metro": 2.12
   },
   {
-    "ref": "NOR0032202",
-    "descripcion": "TUBO CUADRADO 25 X 1.3",
-    "tipo": "TUBO CUADRADO",
-    "ancho": 25.0,
-    "alto": 25.0,
-    "espesor": 1.3,
-    "longitud": 6400,
-    "peso_kg_m": 0.332,
-    "acabado": "BRUTO",
-    "tar": 0,
-    "mur": 108,
-    "val": 0,
-    "estado": "7/10 Días",
-    "precio_metro": 2.12
-  },
-  {
     "ref": "NOI0088833",
     "descripcion": "TUBO CUADRADO 25 X 1.5",
     "tipo": "TUBO CUADRADO",
@@ -3945,7 +3929,7 @@
     "longitud": 6000,
     "peso_kg_m": 0.381,
     "acabado": "BRUTO",
-    "tar": 264,
+    "tar": 254,
     "mur": 342,
     "val": 111,
     "estado": "Stock",
@@ -4027,8 +4011,8 @@
     "acabado": "BRUTO",
     "tar": 2,
     "mur": 0,
-    "val": 0,
-    "estado": "Sin stock",
+    "val": 129,
+    "estado": "7/10 Días",
     "precio_metro": 2.57
   },
   {
@@ -4043,7 +4027,7 @@
     "acabado": "BRUTO",
     "tar": 61,
     "mur": 124,
-    "val": 170,
+    "val": 224,
     "estado": "Stock",
     "precio_metro": 3.88
   },
@@ -4090,8 +4074,8 @@
     "peso_kg_m": 0.475,
     "acabado": "BRUTO",
     "tar": 4,
-    "mur": 86,
-    "val": 265,
+    "mur": 88,
+    "val": 0,
     "estado": "7/10 Días",
     "precio_metro": 3.04
   },
@@ -4107,7 +4091,7 @@
     "acabado": "BRUTO",
     "tar": 139,
     "mur": 258,
-    "val": 44,
+    "val": 36,
     "estado": "Stock",
     "precio_metro": 4.56
   },
@@ -4122,7 +4106,7 @@
     "peso_kg_m": 0.543,
     "acabado": "BRUTO",
     "tar": 0,
-    "mur": 90,
+    "mur": 69,
     "val": 225,
     "estado": "7/10 Días",
     "precio_metro": 3.48
@@ -4154,8 +4138,8 @@
     "peso_kg_m": 0.824,
     "acabado": "BRUTO",
     "tar": 117,
-    "mur": 101,
-    "val": 102,
+    "mur": 59,
+    "val": 130,
     "estado": "Stock",
     "precio_metro": 5.27
   },
@@ -4187,7 +4171,7 @@
     "acabado": "BRUTO",
     "tar": 66,
     "mur": 429,
-    "val": 97,
+    "val": 77,
     "estado": "Stock",
     "precio_metro": 7.67
   },
@@ -4202,7 +4186,7 @@
     "peso_kg_m": 1.5548,
     "acabado": "BRUTO",
     "tar": 79,
-    "mur": 81,
+    "mur": 80,
     "val": 45,
     "estado": "Stock",
     "precio_metro": 9.95
@@ -4314,7 +4298,7 @@
     "peso_kg_m": 1.041,
     "acabado": "BRUTO",
     "tar": 103,
-    "mur": 137,
+    "mur": 135,
     "val": 117,
     "estado": "Stock",
     "precio_metro": 6.66
@@ -4330,7 +4314,7 @@
     "peso_kg_m": 1.523,
     "acabado": "BRUTO",
     "tar": 111,
-    "mur": 91,
+    "mur": 76,
     "val": 54,
     "estado": "Stock",
     "precio_metro": 9.75
@@ -4378,7 +4362,7 @@
     "peso_kg_m": 0.8235,
     "acabado": "BRUTO",
     "tar": 5,
-    "mur": 85,
+    "mur": 83,
     "val": 95,
     "estado": "7/10 Días",
     "precio_metro": 5.27
@@ -4442,7 +4426,7 @@
     "peso_kg_m": 1.855,
     "acabado": "BRUTO",
     "tar": 57,
-    "mur": 62,
+    "mur": 60,
     "val": 142,
     "estado": "Stock",
     "precio_metro": 11.87
@@ -4475,7 +4459,7 @@
     "acabado": "BRUTO",
     "tar": 40,
     "mur": 49,
-    "val": 7,
+    "val": 5,
     "estado": "Stock",
     "precio_metro": 15.48
   },
@@ -4570,7 +4554,7 @@
     "peso_kg_m": 1.691,
     "acabado": "BRUTO",
     "tar": 45,
-    "mur": 75,
+    "mur": 81,
     "val": 25,
     "estado": "Stock",
     "precio_metro": 10.82
@@ -4602,7 +4586,7 @@
     "peso_kg_m": 3.282,
     "acabado": "BRUTO",
     "tar": 55,
-    "mur": 42,
+    "mur": 41,
     "val": 100,
     "estado": "Stock",
     "precio_metro": 21.0
@@ -4634,7 +4618,7 @@
     "peso_kg_m": 3.994,
     "acabado": "BRUTO",
     "tar": 0,
-    "mur": 20,
+    "mur": 18,
     "val": 0,
     "estado": "7/10 Días",
     "precio_metro": 25.56
@@ -4721,7 +4705,7 @@
   },
   {
     "ref": "NOI0088830",
-    "descripcion": "TUBO CUADRADO 100 X 6 (C/R)",
+    "descripcion": "TUBO CUADRADO 100 X 6 (R/5)",
     "tipo": "TUBO CUADRADO",
     "ancho": 100.0,
     "alto": 100.0,
@@ -4730,7 +4714,7 @@
     "peso_kg_m": 6.036,
     "acabado": "BRUTO",
     "tar": 17,
-    "mur": 11,
+    "mur": 1,
     "val": 0,
     "estado": "Stock",
     "precio_metro": 38.63
@@ -4874,8 +4858,8 @@
     "peso_kg_m": 0.16594,
     "acabado": "BRUTO",
     "tar": 81,
-    "mur": 400,
-    "val": 9,
+    "mur": 0,
+    "val": 0,
     "estado": "Stock",
     "precio_metro": 1.06
   },
@@ -4890,9 +4874,9 @@
     "peso_kg_m": 0.298,
     "acabado": "BRUTO",
     "tar": 7,
-    "mur": 190,
+    "mur": 0,
     "val": 0,
-    "estado": "7/10 Días",
+    "estado": "Sin stock",
     "precio_metro": 1.91
   },
   {
@@ -4921,9 +4905,9 @@
     "longitud": 6000,
     "peso_kg_m": 0.49677,
     "acabado": "BRUTO",
-    "tar": 186,
+    "tar": 180,
     "mur": 57,
-    "val": 142,
+    "val": 127,
     "estado": "Stock",
     "precio_metro": 3.18
   },
@@ -4970,7 +4954,7 @@
     "peso_kg_m": 0.497,
     "acabado": "BRUTO",
     "tar": 125,
-    "mur": 365,
+    "mur": 355,
     "val": 210,
     "estado": "Stock",
     "precio_metro": 3.18
@@ -4986,8 +4970,8 @@
     "peso_kg_m": 0.402,
     "acabado": "BRUTO",
     "tar": 1,
-    "mur": 55,
-    "val": 146,
+    "mur": 0,
+    "val": 134,
     "estado": "7/10 Días",
     "precio_metro": 2.57
   },
@@ -5001,7 +4985,7 @@
     "longitud": 6000,
     "peso_kg_m": 0.462,
     "acabado": "BRUTO",
-    "tar": 3,
+    "tar": 0,
     "mur": 0,
     "val": 26,
     "estado": "7/10 Días",
@@ -5018,7 +5002,7 @@
     "peso_kg_m": 0.60453,
     "acabado": "BRUTO",
     "tar": 157,
-    "mur": 14,
+    "mur": 6,
     "val": 0,
     "estado": "Stock",
     "precio_metro": 3.87
@@ -5082,7 +5066,7 @@
     "peso_kg_m": 0.7128,
     "acabado": "BRUTO",
     "tar": 0,
-    "mur": 59,
+    "mur": 25,
     "val": 69,
     "estado": "7/10 Días",
     "precio_metro": 4.56
@@ -5209,7 +5193,7 @@
     "longitud": 6400,
     "peso_kg_m": 0.583,
     "acabado": "BRUTO",
-    "tar": 32,
+    "tar": 22,
     "mur": 154,
     "val": 78,
     "estado": "Stock",
@@ -5258,7 +5242,7 @@
     "peso_kg_m": 0.821,
     "acabado": "BRUTO",
     "tar": 42,
-    "mur": 3,
+    "mur": 1,
     "val": 63,
     "estado": "Stock",
     "precio_metro": 5.25
@@ -5370,8 +5354,8 @@
     "peso_kg_m": 0.821,
     "acabado": "BRUTO",
     "tar": 83,
-    "mur": 4,
-    "val": 157,
+    "mur": 130,
+    "val": 142,
     "estado": "Stock",
     "precio_metro": 5.25
   },
@@ -5498,8 +5482,8 @@
     "peso_kg_m": 1.5228,
     "acabado": "BRUTO",
     "tar": 86,
-    "mur": 17,
-    "val": 16,
+    "mur": 7,
+    "val": 80,
     "estado": "Stock",
     "precio_metro": 9.75
   },
@@ -5530,7 +5514,7 @@
     "peso_kg_m": 1.987,
     "acabado": "BRUTO",
     "tar": 40,
-    "mur": 8,
+    "mur": 86,
     "val": 54,
     "estado": "Stock",
     "precio_metro": 12.72
@@ -5674,7 +5658,7 @@
     "peso_kg_m": 0.6831,
     "acabado": "BRUTO",
     "tar": 1,
-    "mur": 96,
+    "mur": 152,
     "val": 87,
     "estado": "7/10 Días",
     "precio_metro": 4.37
@@ -5726,22 +5710,6 @@
     "val": 25,
     "estado": "Stock",
     "precio_metro": 7.33
-  },
-  {
-    "ref": "NOR0032312",
-    "descripcion": "RECTANGULAR 80 X 40 X 1.5",
-    "tipo": "TUBO RECTANGULAR",
-    "ancho": 40.0,
-    "alto": 80.0,
-    "espesor": 1.5,
-    "longitud": 6400,
-    "peso_kg_m": 0.948,
-    "acabado": "BRUTO",
-    "tar": 0,
-    "mur": 43,
-    "val": 0,
-    "estado": "7/10 Días",
-    "precio_metro": 6.07
   },
   {
     "ref": "NOI0088918",
@@ -5851,7 +5819,7 @@
     "acabado": "BRUTO",
     "tar": 43,
     "mur": 141,
-    "val": 33,
+    "val": 30,
     "estado": "Stock",
     "precio_metro": 15.48
   },
@@ -5994,7 +5962,7 @@
     "peso_kg_m": 0.95118,
     "acabado": "BRUTO",
     "tar": 12,
-    "mur": 70,
+    "mur": 0,
     "val": 57,
     "estado": "Stock",
     "precio_metro": 6.09
@@ -6074,7 +6042,7 @@
     "peso_kg_m": 2.8512,
     "acabado": "BRUTO",
     "tar": 48,
-    "mur": 84,
+    "mur": 82,
     "val": 41,
     "estado": "Stock",
     "precio_metro": 18.25
@@ -6123,7 +6091,7 @@
     "acabado": "BRUTO",
     "tar": 14,
     "mur": 46,
-    "val": 11,
+    "val": 6,
     "estado": "Stock",
     "precio_metro": 10.09
   },
@@ -6174,6 +6142,22 @@
     "val": 0,
     "estado": "7/10 Días",
     "precio_metro": 19.32
+  },
+  {
+    "ref": "NOR0032324",
+    "descripcion": "RECTANGULAR 100 X 60 X 1.8",
+    "tipo": "TUBO RECTANGULAR",
+    "ancho": 60.0,
+    "alto": 100.0,
+    "espesor": 1.8,
+    "longitud": 6000,
+    "peso_kg_m": 1.526,
+    "acabado": "BRUTO",
+    "tar": 0,
+    "mur": 382,
+    "val": 0,
+    "estado": "7/10 Días",
+    "precio_metro": 9.77
   },
   {
     "ref": "NOR0032324",
@@ -6250,7 +6234,7 @@
     "peso_kg_m": 1.114,
     "acabado": "BRUTO",
     "tar": 24,
-    "mur": 99,
+    "mur": 89,
     "val": 15,
     "estado": "Stock",
     "precio_metro": 7.13
@@ -6441,10 +6425,10 @@
     "longitud": 6000,
     "peso_kg_m": 2.117,
     "acabado": "BRUTO",
-    "tar": 18,
+    "tar": 3,
     "mur": 12,
     "val": 7,
-    "estado": "Stock",
+    "estado": "7/10 Días",
     "precio_metro": 13.55
   },
   {
@@ -6474,9 +6458,9 @@
     "peso_kg_m": 1.353,
     "acabado": "BRUTO",
     "tar": 1,
-    "mur": 0,
+    "mur": 32,
     "val": 0,
-    "estado": "Sin stock",
+    "estado": "7/10 Días",
     "precio_metro": 8.66
   },
   {
@@ -6730,9 +6714,9 @@
     "peso_kg_m": 5.135,
     "acabado": "BRUTO",
     "tar": 0,
-    "mur": 23,
+    "mur": 1,
     "val": 5,
-    "estado": "7/10 Días",
+    "estado": "Sin stock",
     "precio_metro": 32.86
   },
   {
@@ -6762,7 +6746,7 @@
     "peso_kg_m": 5.135,
     "acabado": "BRUTO",
     "tar": 0,
-    "mur": 28,
+    "mur": 20,
     "val": 0,
     "estado": "7/10 Días",
     "precio_metro": 32.86
@@ -6922,7 +6906,7 @@
     "peso_kg_m": 0.305,
     "acabado": "BRUTO",
     "tar": 84,
-    "mur": 407,
+    "mur": 397,
     "val": 300,
     "estado": "Stock",
     "precio_metro": 1.95
@@ -7018,8 +7002,8 @@
     "peso_kg_m": 0.39,
     "acabado": "BRUTO",
     "tar": 196,
-    "mur": 119,
-    "val": 85,
+    "mur": 85,
+    "val": 65,
     "estado": "Stock",
     "precio_metro": 2.5
   },
@@ -7034,7 +7018,7 @@
     "peso_kg_m": 0.562,
     "acabado": "BRUTO",
     "tar": 198,
-    "mur": 158,
+    "mur": 157,
     "val": 127,
     "estado": "Stock",
     "precio_metro": 3.6
@@ -7099,7 +7083,7 @@
     "acabado": "BRUTO",
     "tar": 66,
     "mur": 0,
-    "val": 300,
+    "val": 254,
     "estado": "Stock",
     "precio_metro": 3.05
   },
@@ -7115,7 +7099,7 @@
     "acabado": "BRUTO",
     "tar": 189,
     "mur": 113,
-    "val": 31,
+    "val": 25,
     "estado": "Stock",
     "precio_metro": 3.73
   },
@@ -7130,7 +7114,7 @@
     "peso_kg_m": 1.06,
     "acabado": "BRUTO",
     "tar": 82,
-    "mur": 249,
+    "mur": 228,
     "val": 0,
     "estado": "Stock",
     "precio_metro": 6.78
@@ -7162,7 +7146,7 @@
     "peso_kg_m": 0.645,
     "acabado": "BRUTO",
     "tar": 10,
-    "mur": 54,
+    "mur": 53,
     "val": 10,
     "estado": "Stock",
     "precio_metro": 4.13
@@ -7227,7 +7211,7 @@
     "acabado": "BRUTO",
     "tar": 118,
     "mur": 151,
-    "val": 53,
+    "val": 48,
     "estado": "Stock",
     "precio_metro": 5.11
   },
@@ -7290,7 +7274,7 @@
     "peso_kg_m": 1.289,
     "acabado": "BRUTO",
     "tar": 38,
-    "mur": 41,
+    "mur": 40,
     "val": 0,
     "estado": "Stock",
     "precio_metro": 8.25
@@ -7307,7 +7291,7 @@
     "acabado": "BRUTO",
     "tar": 74,
     "mur": 12,
-    "val": 154,
+    "val": 140,
     "estado": "Stock",
     "precio_metro": 5.77
   },
@@ -7434,7 +7418,7 @@
     "peso_kg_m": 0.899,
     "acabado": "BRUTO",
     "tar": 18,
-    "mur": 45,
+    "mur": 37,
     "val": 26,
     "estado": "Stock",
     "precio_metro": 5.75
@@ -7515,7 +7499,7 @@
     "acabado": "BRUTO",
     "tar": 0,
     "mur": 29,
-    "val": 70,
+    "val": 50,
     "estado": "7/10 Días",
     "precio_metro": 12.2
   },
