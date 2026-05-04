@@ -1,8 +1,9 @@
 {
-  "vigencia": "09/05/2026",
+  "vigencia": "19 de mayo de 2026",
   "data": [
     {
       "ref": "NOI0018096",
+      "descripcion": "TUBO CUADRADO 80 X 2",
       "tipo": "TUBO CUADRADO",
       "alto": 80.0,
       "ancho": 80.0,
@@ -14,11 +15,11 @@
       "mur": 81,
       "val": 25,
       "estado": "Stock",
-      "precio_metro": 10.99,
-      "descripcion": "TUBO CUADRADO 80 X 2"
+      "precio_metro": 10.99
     },
     {
       "ref": "NOI0050620",
+      "descripcion": "ANGULO 50 X 5 C/R INT. 5 mm",
       "tipo": "ANGULO",
       "alto": 50.0,
       "ancho": 5.0,
@@ -30,11 +31,11 @@
       "mur": 1,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 8.41,
-      "descripcion": "ANGULO 50 X 5 C/R INT. 5 mm"
+      "precio_metro": 8.41
     },
     {
       "ref": "NOI0084444",
+      "descripcion": "U - 20 X 40 X 20 X 1.5",
       "tipo": "PERFIL U",
       "alto": 20.0,
       "ancho": 40.0,
@@ -46,11 +47,11 @@
       "mur": 11,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 2.03,
-      "descripcion": "U - 20 X 40 X 20 X 1.5"
+      "precio_metro": 2.03
     },
     {
       "ref": "NOI0088000",
+      "descripcion": "CUADRADO MACIZO 10 mm",
       "tipo": "CUADRADO MACIZO",
       "alto": 10.0,
       "ancho": 10.0,
@@ -62,11 +63,11 @@
       "mur": 452,
       "val": 567,
       "estado": "Stock",
-      "precio_metro": 1.76,
-      "descripcion": "CUADRADO MACIZO 10 mm"
+      "precio_metro": 1.76
     },
     {
       "ref": "NOI0088001",
+      "descripcion": "CUADRADO MACIZO 15",
       "tipo": "CUADRADO MACIZO",
       "alto": 15.0,
       "ancho": 15.0,
@@ -78,11 +79,11 @@
       "mur": 311,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 3.95,
-      "descripcion": "CUADRADO MACIZO 15"
+      "precio_metro": 3.95
     },
     {
       "ref": "NOI0088002",
+      "descripcion": "CUADRADO MACIZO 20",
       "tipo": "CUADRADO MACIZO",
       "alto": 20.0,
       "ancho": 20.0,
@@ -94,11 +95,11 @@
       "mur": 104,
       "val": 8,
       "estado": "Stock",
-      "precio_metro": 7.05,
-      "descripcion": "CUADRADO MACIZO 20"
+      "precio_metro": 7.05
     },
     {
       "ref": "NOI0088003",
+      "descripcion": "CUADRADO MACIZO 25",
       "tipo": "CUADRADO MACIZO",
       "alto": 25.0,
       "ancho": 25.0,
@@ -110,11 +111,11 @@
       "mur": 18,
       "val": 15,
       "estado": "Stock",
-      "precio_metro": 10.97,
-      "descripcion": "CUADRADO MACIZO 25"
+      "precio_metro": 10.97
     },
     {
       "ref": "NOI0088004",
+      "descripcion": "CUADRADO MACIZO 30",
       "tipo": "CUADRADO MACIZO",
       "alto": 30.0,
       "ancho": 30.0,
@@ -126,11 +127,11 @@
       "mur": 12,
       "val": 6,
       "estado": "Stock",
-      "precio_metro": 15.79,
-      "descripcion": "CUADRADO MACIZO 30"
+      "precio_metro": 15.79
     },
     {
       "ref": "NOI0088005",
+      "descripcion": "CUADRADO MACIZO 40",
       "tipo": "CUADRADO MACIZO",
       "alto": 40.0,
       "ancho": 40.0,
@@ -142,11 +143,11 @@
       "mur": 68,
       "val": 39,
       "estado": "7/10 Días",
-      "precio_metro": 28.18,
-      "descripcion": "CUADRADO MACIZO 40"
+      "precio_metro": 28.18
     },
     {
       "ref": "NOI0088007",
+      "descripcion": "CUADRADO MACIZO 12",
       "tipo": "CUADRADO MACIZO",
       "alto": 12.0,
       "ancho": 12.0,
@@ -158,11 +159,11 @@
       "mur": 10,
       "val": 211,
       "estado": "Stock",
-      "precio_metro": 2.54,
-      "descripcion": "CUADRADO MACIZO 12"
+      "precio_metro": 2.54
     },
     {
       "ref": "NOI0088008",
+      "descripcion": "CUADRADO MACIZO 50",
       "tipo": "CUADRADO MACIZO",
       "alto": 50.0,
       "ancho": 50.0,
@@ -174,11 +175,11 @@
       "mur": 22,
       "val": 11,
       "estado": "Stock",
-      "precio_metro": 44.04,
-      "descripcion": "CUADRADO MACIZO 50"
+      "precio_metro": 44.04
     },
     {
       "ref": "NOI0088011",
+      "descripcion": "CUADRADO MACIZO 45",
       "tipo": "CUADRADO MACIZO",
       "alto": 45.0,
       "ancho": 45.0,
@@ -190,11 +191,11 @@
       "mur": 21,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 35.52,
-      "descripcion": "CUADRADO MACIZO 45"
+      "precio_metro": 35.52
     },
     {
       "ref": "NOI0088012",
+      "descripcion": "CUADRADO MACIZO 35",
       "tipo": "CUADRADO MACIZO",
       "alto": 35.0,
       "ancho": 35.0,
@@ -206,11 +207,11 @@
       "mur": 14,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 21.5,
-      "descripcion": "CUADRADO MACIZO 35"
+      "precio_metro": 21.5
     },
     {
       "ref": "NOI0088100",
+      "descripcion": "REDONDO MACIZO 10 mm",
       "tipo": "REDONDO MACIZO",
       "alto": null,
       "ancho": 10.0,
@@ -219,14 +220,14 @@
       "peso_kg_m": 0.212,
       "acabado": "BRUTO",
       "tar": 159,
-      "mur": 162,
+      "mur": 159,
       "val": 115,
       "estado": "Stock",
-      "precio_metro": 1.38,
-      "descripcion": "REDONDO MACIZO 10 mm"
+      "precio_metro": 1.38
     },
     {
       "ref": "NOI0088101",
+      "descripcion": "REDONDO MACIZO 12 mm",
       "tipo": "REDONDO MACIZO",
       "alto": null,
       "ancho": 12.0,
@@ -238,11 +239,11 @@
       "mur": 346,
       "val": 60,
       "estado": "Stock",
-      "precio_metro": 1.98,
-      "descripcion": "REDONDO MACIZO 12 mm"
+      "precio_metro": 1.98
     },
     {
       "ref": "NOI0088102",
+      "descripcion": "REDONDO MACIZO 13",
       "tipo": "REDONDO MACIZO",
       "alto": null,
       "ancho": 13.0,
@@ -251,14 +252,14 @@
       "peso_kg_m": 0.358,
       "acabado": "BRUTO",
       "tar": 0,
-      "mur": 35,
-      "val": 130,
+      "mur": 5,
+      "val": 115,
       "estado": "7/10 Días",
-      "precio_metro": 2.33,
-      "descripcion": "REDONDO MACIZO 13"
+      "precio_metro": 2.33
     },
     {
       "ref": "NOI0088103",
+      "descripcion": "REDONDO MACIZO 6 mm",
       "tipo": "REDONDO MACIZO",
       "alto": null,
       "ancho": 6.0,
@@ -270,11 +271,11 @@
       "mur": 200,
       "val": 452,
       "estado": "Stock",
-      "precio_metro": 0.49,
-      "descripcion": "REDONDO MACIZO 6 mm"
+      "precio_metro": 0.49
     },
     {
       "ref": "NOI0088104",
+      "descripcion": "REDONDO MACIZO 16 mm",
       "tipo": "REDONDO MACIZO",
       "alto": null,
       "ancho": 16.0,
@@ -286,11 +287,11 @@
       "mur": 146,
       "val": 97,
       "estado": "Stock",
-      "precio_metro": 3.53,
-      "descripcion": "REDONDO MACIZO 16 mm"
+      "precio_metro": 3.53
     },
     {
       "ref": "NOI0088105",
+      "descripcion": "REDONDO MACIZO 20",
       "tipo": "REDONDO MACIZO",
       "alto": null,
       "ancho": 20.0,
@@ -299,14 +300,14 @@
       "peso_kg_m": 0.848,
       "acabado": "BRUTO",
       "tar": 32,
-      "mur": 10,
+      "mur": 8,
       "val": 100,
       "estado": "Stock",
-      "precio_metro": 5.51,
-      "descripcion": "REDONDO MACIZO 20"
+      "precio_metro": 5.51
     },
     {
       "ref": "NOI0088106",
+      "descripcion": "REDONDO MACIZO 25",
       "tipo": "REDONDO MACIZO",
       "alto": null,
       "ancho": 25.0,
@@ -318,11 +319,11 @@
       "mur": 16,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 8.61,
-      "descripcion": "REDONDO MACIZO 25"
+      "precio_metro": 8.61
     },
     {
       "ref": "NOI0088107",
+      "descripcion": "REDONDO MACIZO 30",
       "tipo": "REDONDO MACIZO",
       "alto": null,
       "ancho": 30.0,
@@ -334,11 +335,11 @@
       "mur": 53,
       "val": 8,
       "estado": "7/10 Días",
-      "precio_metro": 12.41,
-      "descripcion": "REDONDO MACIZO 30"
+      "precio_metro": 12.41
     },
     {
       "ref": "NOI0088108",
+      "descripcion": "REDONDO MACIZO 35",
       "tipo": "REDONDO MACIZO",
       "alto": null,
       "ancho": 35.0,
@@ -350,11 +351,11 @@
       "mur": 33,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 16.89,
-      "descripcion": "REDONDO MACIZO 35"
+      "precio_metro": 16.89
     },
     {
       "ref": "NOI0088109",
+      "descripcion": "REDONDO MACIZO 40",
       "tipo": "REDONDO MACIZO",
       "alto": null,
       "ancho": 40.0,
@@ -363,14 +364,14 @@
       "peso_kg_m": 3.393,
       "acabado": "BRUTO",
       "tar": 27,
-      "mur": 46,
+      "mur": 47,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 22.05,
-      "descripcion": "REDONDO MACIZO 40"
+      "precio_metro": 22.05
     },
     {
       "ref": "NOI0088110",
+      "descripcion": "REDONDO MACIZO 50 mm",
       "tipo": "REDONDO MACIZO",
       "alto": null,
       "ancho": 50.0,
@@ -382,11 +383,11 @@
       "mur": 1,
       "val": 17,
       "estado": "7/10 Días",
-      "precio_metro": 34.47,
-      "descripcion": "REDONDO MACIZO 50 mm"
+      "precio_metro": 34.47
     },
     {
       "ref": "NOI0088111",
+      "descripcion": "REDONDO MACIZO 60",
       "tipo": "REDONDO MACIZO",
       "alto": null,
       "ancho": 60.0,
@@ -395,14 +396,14 @@
       "peso_kg_m": 7.635,
       "acabado": "BRUTO",
       "tar": 6,
-      "mur": 5,
+      "mur": 6,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 49.63,
-      "descripcion": "REDONDO MACIZO 60"
+      "precio_metro": 49.63
     },
     {
       "ref": "NOI0088113",
+      "descripcion": "REDONDO MACIZO 8 mm",
       "tipo": "REDONDO MACIZO",
       "alto": null,
       "ancho": 8.0,
@@ -411,14 +412,14 @@
       "peso_kg_m": 0.1383,
       "acabado": "BRUTO",
       "tar": 320,
-      "mur": 110,
-      "val": 335,
+      "mur": 80,
+      "val": 324,
       "estado": "Stock",
-      "precio_metro": 0.9,
-      "descripcion": "REDONDO MACIZO 8 mm"
+      "precio_metro": 0.9
     },
     {
       "ref": "NOI0088116",
+      "descripcion": "REDONDO MACIZO 22 mm",
       "tipo": "REDONDO MACIZO",
       "alto": null,
       "ancho": 22.0,
@@ -430,11 +431,11 @@
       "mur": 7,
       "val": 39,
       "estado": "7/10 Días",
-      "precio_metro": 6.67,
-      "descripcion": "REDONDO MACIZO 22 mm"
+      "precio_metro": 6.67
     },
     {
       "ref": "NOI0088118",
+      "descripcion": "REDONDO MACIZO 15 mm",
       "tipo": "REDONDO MACIZO",
       "alto": null,
       "ancho": 15.0,
@@ -446,11 +447,11 @@
       "mur": 133,
       "val": 108,
       "estado": "Stock",
-      "precio_metro": 3.1,
-      "descripcion": "REDONDO MACIZO 15 mm"
+      "precio_metro": 3.1
     },
     {
       "ref": "NOI0088200",
+      "descripcion": "PLETINA 20 X 3",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 20.0,
@@ -462,11 +463,11 @@
       "mur": 90,
       "val": 528,
       "estado": "Stock",
-      "precio_metro": 1.05,
-      "descripcion": "PLETINA 20 X 3"
+      "precio_metro": 1.05
     },
     {
       "ref": "NOI0088201",
+      "descripcion": "PLETINA 20 X 10",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 20.0,
@@ -478,11 +479,11 @@
       "mur": 114,
       "val": 165,
       "estado": "Stock",
-      "precio_metro": 3.5,
-      "descripcion": "PLETINA 20 X 10"
+      "precio_metro": 3.5
     },
     {
       "ref": "NOI0088202",
+      "descripcion": "PLETINA 25 X 4",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 25.0,
@@ -494,11 +495,11 @@
       "mur": 471,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 1.75,
-      "descripcion": "PLETINA 25 X 4"
+      "precio_metro": 1.75
     },
     {
       "ref": "NOI0088203",
+      "descripcion": "PLETINA 30 X 3",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 30.0,
@@ -510,11 +511,11 @@
       "mur": 11,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 1.58,
-      "descripcion": "PLETINA 30 X 3"
+      "precio_metro": 1.58
     },
     {
       "ref": "NOI0088203",
+      "descripcion": "PLETINA 30 X 3",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 30.0,
@@ -523,14 +524,14 @@
       "peso_kg_m": 0.243,
       "acabado": "BRUTO",
       "tar": 357,
-      "mur": 331,
+      "mur": 329,
       "val": 185,
       "estado": "Stock",
-      "precio_metro": 1.58,
-      "descripcion": "PLETINA 30 X 3"
+      "precio_metro": 1.58
     },
     {
       "ref": "NOI0088204",
+      "descripcion": "PLETINA 30 X 5",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 30.0,
@@ -542,11 +543,11 @@
       "mur": 91,
       "val": 273,
       "estado": "Stock",
-      "precio_metro": 2.63,
-      "descripcion": "PLETINA 30 X 5"
+      "precio_metro": 2.63
     },
     {
       "ref": "NOI0088205",
+      "descripcion": "PLETINA 30 X 6",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 30.0,
@@ -558,11 +559,11 @@
       "mur": 79,
       "val": 1,
       "estado": "Stock",
-      "precio_metro": 3.16,
-      "descripcion": "PLETINA 30 X 6"
+      "precio_metro": 3.16
     },
     {
       "ref": "NOI0088206",
+      "descripcion": "PLETINA 30 X 8",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 30.0,
@@ -574,11 +575,11 @@
       "mur": 255,
       "val": 194,
       "estado": "Stock",
-      "precio_metro": 4.21,
-      "descripcion": "PLETINA 30 X 8"
+      "precio_metro": 4.21
     },
     {
       "ref": "NOI0088207",
+      "descripcion": "PLETINA 30 X 10",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 30.0,
@@ -590,11 +591,11 @@
       "mur": 271,
       "val": 120,
       "estado": "Stock",
-      "precio_metro": 5.28,
-      "descripcion": "PLETINA 30 X 10"
+      "precio_metro": 5.28
     },
     {
       "ref": "NOI0088208",
+      "descripcion": "PLETINA 30 X 20",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 30.0,
@@ -606,11 +607,11 @@
       "mur": 92,
       "val": 1,
       "estado": "7/10 Días",
-      "precio_metro": 10.53,
-      "descripcion": "PLETINA 30 X 20"
+      "precio_metro": 10.53
     },
     {
       "ref": "NOI0088209",
+      "descripcion": "PLETINA 40 X 6",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 40.0,
@@ -619,14 +620,14 @@
       "peso_kg_m": 0.648,
       "acabado": "BRUTO",
       "tar": 77,
-      "mur": 381,
+      "mur": 373,
       "val": 178,
       "estado": "Stock",
-      "precio_metro": 4.21,
-      "descripcion": "PLETINA 40 X 6"
+      "precio_metro": 4.21
     },
     {
       "ref": "NOI0088210",
+      "descripcion": "PLETINA 40 X 8",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 40.0,
@@ -634,15 +635,15 @@
       "longitud": 6.0,
       "peso_kg_m": 0.866,
       "acabado": "BRUTO",
-      "tar": 20,
+      "tar": 19,
       "mur": 201,
       "val": 17,
       "estado": "Stock",
-      "precio_metro": 5.63,
-      "descripcion": "PLETINA 40 X 8"
+      "precio_metro": 5.63
     },
     {
       "ref": "NOI0088211",
+      "descripcion": "PLETINA 40 X 10",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 40.0,
@@ -654,11 +655,11 @@
       "mur": 20,
       "val": 80,
       "estado": "Stock",
-      "precio_metro": 7.05,
-      "descripcion": "PLETINA 40 X 10"
+      "precio_metro": 7.05
     },
     {
       "ref": "NOI0088212",
+      "descripcion": "PLETINA 40 X 15",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 40.0,
@@ -670,11 +671,11 @@
       "mur": 62,
       "val": 57,
       "estado": "Stock",
-      "precio_metro": 10.53,
-      "descripcion": "PLETINA 40 X 15"
+      "precio_metro": 10.53
     },
     {
       "ref": "NOI0088213",
+      "descripcion": "PLETINA 50 X 3",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 50.0,
@@ -686,11 +687,11 @@
       "mur": 204,
       "val": 42,
       "estado": "Stock",
-      "precio_metro": 2.63,
-      "descripcion": "PLETINA 50 X 3"
+      "precio_metro": 2.63
     },
     {
       "ref": "NOI0088214",
+      "descripcion": "PLETINA 50 X 5",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 50.0,
@@ -702,11 +703,11 @@
       "mur": 0,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 4.39,
-      "descripcion": "PLETINA 50 X 5"
+      "precio_metro": 4.39
     },
     {
       "ref": "NOI0088214",
+      "descripcion": "PLETINA 50 X 5",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 50.0,
@@ -718,11 +719,11 @@
       "mur": 0,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 4.39,
-      "descripcion": "PLETINA 50 X 5"
+      "precio_metro": 4.39
     },
     {
       "ref": "NOI0088214",
+      "descripcion": "PLETINA 50 X 5",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 50.0,
@@ -730,15 +731,15 @@
       "longitud": 6.0,
       "peso_kg_m": 0.675,
       "acabado": "BRUTO",
-      "tar": 178,
+      "tar": 177,
       "mur": 23,
       "val": 29,
       "estado": "Stock",
-      "precio_metro": 4.39,
-      "descripcion": "PLETINA 50 X 5"
+      "precio_metro": 4.39
     },
     {
       "ref": "NOI0088215",
+      "descripcion": "PLETINA 50 X 8",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 50.0,
@@ -750,11 +751,11 @@
       "mur": 203,
       "val": 119,
       "estado": "Stock",
-      "precio_metro": 7.02,
-      "descripcion": "PLETINA 50 X 8"
+      "precio_metro": 7.02
     },
     {
       "ref": "NOI0088216",
+      "descripcion": "PLETINA 50 X 10",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 50.0,
@@ -763,14 +764,14 @@
       "peso_kg_m": 1.355,
       "acabado": "BRUTO",
       "tar": 21,
-      "mur": 159,
+      "mur": 156,
       "val": 74,
       "estado": "Stock",
-      "precio_metro": 8.81,
-      "descripcion": "PLETINA 50 X 10"
+      "precio_metro": 8.81
     },
     {
       "ref": "NOI0088217",
+      "descripcion": "PLETINA 50 X 15",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 50.0,
@@ -782,11 +783,11 @@
       "mur": 73,
       "val": 26,
       "estado": "Stock",
-      "precio_metro": 13.16,
-      "descripcion": "PLETINA 50 X 15"
+      "precio_metro": 13.16
     },
     {
       "ref": "NOI0088218",
+      "descripcion": "PLETINA 50 X 20",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 50.0,
@@ -798,11 +799,11 @@
       "mur": 62,
       "val": 41,
       "estado": "Stock",
-      "precio_metro": 17.56,
-      "descripcion": "PLETINA 50 X 20"
+      "precio_metro": 17.56
     },
     {
       "ref": "NOI0088219",
+      "descripcion": "PLETINA 60 X 10",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 60.0,
@@ -811,14 +812,14 @@
       "peso_kg_m": 1.62,
       "acabado": "BRUTO",
       "tar": 9,
-      "mur": 141,
+      "mur": 138,
       "val": 54,
       "estado": "7/10 Días",
-      "precio_metro": 10.53,
-      "descripcion": "PLETINA 60 X 10"
+      "precio_metro": 10.53
     },
     {
       "ref": "NOI0088220",
+      "descripcion": "PLETINA 60 X 12",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 60.0,
@@ -830,11 +831,11 @@
       "mur": 25,
       "val": 42,
       "estado": "Stock",
-      "precio_metro": 12.64,
-      "descripcion": "PLETINA 60 X 12"
+      "precio_metro": 12.64
     },
     {
       "ref": "NOI0088221",
+      "descripcion": "PLETINA 60 X 15",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 60.0,
@@ -846,11 +847,11 @@
       "mur": 66,
       "val": 30,
       "estado": "Stock",
-      "precio_metro": 15.79,
-      "descripcion": "PLETINA 60 X 15"
+      "precio_metro": 15.79
     },
     {
       "ref": "NOI0088222",
+      "descripcion": "PLETINA 60 X 20",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 60.0,
@@ -862,11 +863,11 @@
       "mur": 40,
       "val": 8,
       "estado": "7/10 Días",
-      "precio_metro": 21.05,
-      "descripcion": "PLETINA 60 X 20"
+      "precio_metro": 21.05
     },
     {
       "ref": "NOI0088223",
+      "descripcion": "PLETINA 70 X 10",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 70.0,
@@ -878,11 +879,11 @@
       "mur": 79,
       "val": 38,
       "estado": "Stock",
-      "precio_metro": 12.28,
-      "descripcion": "PLETINA 70 X 10"
+      "precio_metro": 12.28
     },
     {
       "ref": "NOI0088224",
+      "descripcion": "PLETINA 80 X 8",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 80.0,
@@ -894,11 +895,11 @@
       "mur": 12,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 11.26,
-      "descripcion": "PLETINA 80 X 8"
+      "precio_metro": 11.26
     },
     {
       "ref": "NOI0088224",
+      "descripcion": "PLETINA 80 X 8",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 80.0,
@@ -910,11 +911,11 @@
       "mur": 142,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 11.26,
-      "descripcion": "PLETINA 80 X 8"
+      "precio_metro": 11.26
     },
     {
       "ref": "NOI0088225",
+      "descripcion": "PLETINA 80 X 10",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 80.0,
@@ -923,14 +924,14 @@
       "peso_kg_m": 2.167,
       "acabado": "BRUTO",
       "tar": 30,
-      "mur": 28,
+      "mur": 26,
       "val": 29,
       "estado": "Stock",
-      "precio_metro": 14.09,
-      "descripcion": "PLETINA 80 X 10"
+      "precio_metro": 14.09
     },
     {
       "ref": "NOI0088226",
+      "descripcion": "PLETINA 80 X 15",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 80.0,
@@ -942,11 +943,11 @@
       "mur": 27,
       "val": 29,
       "estado": "Stock",
-      "precio_metro": 21.14,
-      "descripcion": "PLETINA 80 X 15"
+      "precio_metro": 21.14
     },
     {
       "ref": "NOI0088227",
+      "descripcion": "PLETINA 80 X 20",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 80.0,
@@ -958,11 +959,11 @@
       "mur": 27,
       "val": 20,
       "estado": "Stock",
-      "precio_metro": 28.08,
-      "descripcion": "PLETINA 80 X 20"
+      "precio_metro": 28.08
     },
     {
       "ref": "NOI0088228",
+      "descripcion": "PLETINA 100 X 8",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 100.0,
@@ -974,11 +975,11 @@
       "mur": 63,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 14.04,
-      "descripcion": "PLETINA 100 X 8"
+      "precio_metro": 14.04
     },
     {
       "ref": "NOI0088229",
+      "descripcion": "PLETINA 100 X 10",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 100.0,
@@ -990,11 +991,11 @@
       "mur": 67,
       "val": 57,
       "estado": "Stock",
-      "precio_metro": 17.61,
-      "descripcion": "PLETINA 100 X 10"
+      "precio_metro": 17.61
     },
     {
       "ref": "NOI0088230",
+      "descripcion": "PLETINA 100 X 12",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 100.0,
@@ -1006,11 +1007,11 @@
       "mur": 65,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 20.66,
-      "descripcion": "PLETINA 100 X 12"
+      "precio_metro": 20.66
     },
     {
       "ref": "NOI0088231",
+      "descripcion": "PLETINA 120 X 10",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 120.0,
@@ -1019,14 +1020,14 @@
       "peso_kg_m": 3.234,
       "acabado": "BRUTO",
       "tar": 20,
-      "mur": 61,
-      "val": 0,
+      "mur": 34,
+      "val": 27,
       "estado": "Stock",
-      "precio_metro": 21.02,
-      "descripcion": "PLETINA 120 X 10"
+      "precio_metro": 21.02
     },
     {
       "ref": "NOI0088232",
+      "descripcion": "PLETINA 120 X 12 (C/R-6 mm)",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 120.0,
@@ -1038,11 +1039,11 @@
       "mur": 21,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 25.27,
-      "descripcion": "PLETINA 120 X 12 (C/R-6 mm)"
+      "precio_metro": 25.27
     },
     {
       "ref": "NOI0088233",
+      "descripcion": "PLETINA 130 X 15",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 130.0,
@@ -1054,11 +1055,11 @@
       "mur": 27,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 34.22,
-      "descripcion": "PLETINA 130 X 15"
+      "precio_metro": 34.22
     },
     {
       "ref": "NOI0088234",
+      "descripcion": "PLETINA 150 X 10",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 150.0,
@@ -1067,14 +1068,14 @@
       "peso_kg_m": 4.048,
       "acabado": "BRUTO",
       "tar": 19,
-      "mur": 0,
-      "val": 54,
+      "mur": 3,
+      "val": 51,
       "estado": "Stock",
-      "precio_metro": 26.31,
-      "descripcion": "PLETINA 150 X 10"
+      "precio_metro": 26.31
     },
     {
       "ref": "NOI0088235",
+      "descripcion": "PLETINA 100 X 5",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 100.0,
@@ -1083,14 +1084,14 @@
       "peso_kg_m": 1.35,
       "acabado": "BRUTO",
       "tar": 57,
-      "mur": 59,
-      "val": 71,
+      "mur": 0,
+      "val": 111,
       "estado": "Stock",
-      "precio_metro": 8.78,
-      "descripcion": "PLETINA 100 X 5"
+      "precio_metro": 8.78
     },
     {
       "ref": "NOI0088236",
+      "descripcion": "PLETINA 75 X 15",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 75.0,
@@ -1102,11 +1103,11 @@
       "mur": 53,
       "val": 45,
       "estado": "7/10 Días",
-      "precio_metro": 19.74,
-      "descripcion": "PLETINA 75 X 15"
+      "precio_metro": 19.74
     },
     {
       "ref": "NOI0088237",
+      "descripcion": "PLETINA 100 X 20",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 100.0,
@@ -1118,11 +1119,11 @@
       "mur": 46,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 35.1,
-      "descripcion": "PLETINA 100 X 20"
+      "precio_metro": 35.1
     },
     {
       "ref": "NOI0088238",
+      "descripcion": "PLETINA 40 X 20",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 40.0,
@@ -1134,11 +1135,11 @@
       "mur": 48,
       "val": 51,
       "estado": "Stock",
-      "precio_metro": 14.04,
-      "descripcion": "PLETINA 40 X 20"
+      "precio_metro": 14.04
     },
     {
       "ref": "NOI0088239",
+      "descripcion": "PLETINA 20 X 8",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 20.0,
@@ -1150,11 +1151,11 @@
       "mur": 313,
       "val": 4,
       "estado": "Stock",
-      "precio_metro": 2.8,
-      "descripcion": "PLETINA 20 X 8"
+      "precio_metro": 2.8
     },
     {
       "ref": "NOI0088240",
+      "descripcion": "PLETINA 60 X 5",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 60.0,
@@ -1166,11 +1167,11 @@
       "mur": 339,
       "val": 2,
       "estado": "Stock",
-      "precio_metro": 5.27,
-      "descripcion": "PLETINA 60 X 5"
+      "precio_metro": 5.27
     },
     {
       "ref": "NOI0088241",
+      "descripcion": "PLETINA 30 X 15",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 30.0,
@@ -1182,11 +1183,11 @@
       "mur": 241,
       "val": 93,
       "estado": "Stock",
-      "precio_metro": 7.9,
-      "descripcion": "PLETINA 30 X 15"
+      "precio_metro": 7.9
     },
     {
       "ref": "NOI0088242",
+      "descripcion": "PLETINA 15 X 3",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 15.0,
@@ -1198,11 +1199,11 @@
       "mur": 20,
       "val": 267,
       "estado": "Stock",
-      "precio_metro": 0.79,
-      "descripcion": "PLETINA 15 X 3"
+      "precio_metro": 0.79
     },
     {
       "ref": "NOI0088243",
+      "descripcion": "PLETINA 20 X 6",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 20.0,
@@ -1214,11 +1215,11 @@
       "mur": 191,
       "val": 8,
       "estado": "Stock",
-      "precio_metro": 2.11,
-      "descripcion": "PLETINA 20 X 6"
+      "precio_metro": 2.11
     },
     {
       "ref": "NOI0088244",
+      "descripcion": "PLETINA 35 X 5",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 35.0,
@@ -1230,11 +1231,11 @@
       "mur": 147,
       "val": 8,
       "estado": "Stock",
-      "precio_metro": 3.07,
-      "descripcion": "PLETINA 35 X 5"
+      "precio_metro": 3.07
     },
     {
       "ref": "NOI0088245",
+      "descripcion": "PLETINA 15 X 5",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 15.0,
@@ -1246,11 +1247,11 @@
       "mur": 22,
       "val": 272,
       "estado": "Stock",
-      "precio_metro": 1.32,
-      "descripcion": "PLETINA 15 X 5"
+      "precio_metro": 1.32
     },
     {
       "ref": "NOI0088246",
+      "descripcion": "PLETINA 60 X 3",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 60.0,
@@ -1262,11 +1263,11 @@
       "mur": 176,
       "val": 83,
       "estado": "Stock",
-      "precio_metro": 3.16,
-      "descripcion": "PLETINA 60 X 3"
+      "precio_metro": 3.16
     },
     {
       "ref": "NOI0088249",
+      "descripcion": "PLETINA 30 X 2",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 30.0,
@@ -1278,11 +1279,11 @@
       "mur": 0,
       "val": 526,
       "estado": "7/10 Días",
-      "precio_metro": 1.05,
-      "descripcion": "PLETINA 30 X 2"
+      "precio_metro": 1.05
     },
     {
       "ref": "NOI0088250",
+      "descripcion": "PLETINA 50 X 4",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 50.0,
@@ -1291,14 +1292,14 @@
       "peso_kg_m": 0.54,
       "acabado": "BRUTO",
       "tar": 3,
-      "mur": 249,
+      "mur": 246,
       "val": 4,
       "estado": "7/10 Días",
-      "precio_metro": 3.51,
-      "descripcion": "PLETINA 50 X 4"
+      "precio_metro": 3.51
     },
     {
       "ref": "NOI0088251",
+      "descripcion": "PLETINA 200 X 10",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 200.0,
@@ -1310,11 +1311,11 @@
       "mur": 2,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 35.1,
-      "descripcion": "PLETINA 200 X 10"
+      "precio_metro": 35.1
     },
     {
       "ref": "NOI0088254",
+      "descripcion": "PLETINA 150 X 12",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 150.0,
@@ -1326,11 +1327,11 @@
       "mur": 12,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 31.59,
-      "descripcion": "PLETINA 150 X 12"
+      "precio_metro": 31.59
     },
     {
       "ref": "NOI0088255",
+      "descripcion": "PLETINA 200 X 12",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 200.0,
@@ -1342,11 +1343,11 @@
       "mur": 19,
       "val": 12,
       "estado": "Stock",
-      "precio_metro": 42.12,
-      "descripcion": "PLETINA 200 X 12"
+      "precio_metro": 42.12
     },
     {
       "ref": "NOI0088257",
+      "descripcion": "PLETINA 100 X 30",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 100.0,
@@ -1358,11 +1359,11 @@
       "mur": 0,
       "val": 11,
       "estado": "7/10 Días",
-      "precio_metro": 52.65,
-      "descripcion": "PLETINA 100 X 30"
+      "precio_metro": 52.65
     },
     {
       "ref": "NOI0088259",
+      "descripcion": "PLETINA 100 X 15",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 100.0,
@@ -1374,11 +1375,11 @@
       "mur": 10,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 25.83,
-      "descripcion": "PLETINA 100 X 15"
+      "precio_metro": 25.83
     },
     {
       "ref": "NOI0088260",
+      "descripcion": "PLETINA 60 X 8",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 60.0,
@@ -1390,11 +1391,11 @@
       "mur": 50,
       "val": 50,
       "estado": "Stock",
-      "precio_metro": 8.42,
-      "descripcion": "PLETINA 60 X 8"
+      "precio_metro": 8.42
     },
     {
       "ref": "NOI0088261",
+      "descripcion": "PLETINA 150 X 15",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 150.0,
@@ -1406,11 +1407,11 @@
       "mur": 9,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 39.49,
-      "descripcion": "PLETINA 150 X 15"
+      "precio_metro": 39.49
     },
     {
       "ref": "NOI0088262",
+      "descripcion": "PLETINA 140 X 10",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 140.0,
@@ -1422,11 +1423,11 @@
       "mur": 1,
       "val": 1,
       "estado": "Stock",
-      "precio_metro": 24.57,
-      "descripcion": "PLETINA 140 X 10"
+      "precio_metro": 24.57
     },
     {
       "ref": "NOI0088263",
+      "descripcion": "PLETINA 80 X 5",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 80.0,
@@ -1436,13 +1437,13 @@
       "acabado": "BRUTO",
       "tar": 67,
       "mur": 2,
-      "val": 113,
+      "val": 105,
       "estado": "Stock",
-      "precio_metro": 7.02,
-      "descripcion": "PLETINA 80 X 5"
+      "precio_metro": 7.02
     },
     {
       "ref": "NOI0088264",
+      "descripcion": "PLETINA 25 X 6",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 25.0,
@@ -1454,11 +1455,11 @@
       "mur": 508,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 3.07,
-      "descripcion": "PLETINA 25 X 6"
+      "precio_metro": 3.07
     },
     {
       "ref": "NOI0088265",
+      "descripcion": "PLETINA 50 X 6",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 50.0,
@@ -1470,11 +1471,11 @@
       "mur": 14,
       "val": 135,
       "estado": "Stock",
-      "precio_metro": 5.27,
-      "descripcion": "PLETINA 50 X 6"
+      "precio_metro": 5.27
     },
     {
       "ref": "NOI0088265",
+      "descripcion": "PLETINA 50 X 6",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 50.0,
@@ -1486,11 +1487,11 @@
       "mur": 0,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 5.27,
-      "descripcion": "PLETINA 50 X 6"
+      "precio_metro": 5.27
     },
     {
       "ref": "NOI0088266",
+      "descripcion": "PLETINA 80 X 40",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 80.0,
@@ -1502,11 +1503,11 @@
       "mur": 3,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 56.16,
-      "descripcion": "PLETINA 80 X 40"
+      "precio_metro": 56.16
     },
     {
       "ref": "NOI0088267",
+      "descripcion": "PLETINA 200 X 6 (C/R 3mm)",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 200.0,
@@ -1518,11 +1519,11 @@
       "mur": 2,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 20.92,
-      "descripcion": "PLETINA 200 X 6 (C/R 3mm)"
+      "precio_metro": 20.92
     },
     {
       "ref": "NOI0088267",
+      "descripcion": "PLETINA 200 X 6 (C/R 3mm)",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 200.0,
@@ -1534,11 +1535,11 @@
       "mur": 11,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 20.92,
-      "descripcion": "PLETINA 200 X 6 (C/R 3mm)"
+      "precio_metro": 20.92
     },
     {
       "ref": "NOI0088269",
+      "descripcion": "PLETINA 100 X 3",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 100.0,
@@ -1550,11 +1551,11 @@
       "mur": 26,
       "val": 7,
       "estado": "Stock",
-      "precio_metro": 5.27,
-      "descripcion": "PLETINA 100 X 3"
+      "precio_metro": 5.27
     },
     {
       "ref": "NOI0088270",
+      "descripcion": "PLETINA 90 X 5",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 90.0,
@@ -1566,11 +1567,11 @@
       "mur": 68,
       "val": 1,
       "estado": "7/10 Días",
-      "precio_metro": 7.9,
-      "descripcion": "PLETINA 90 X 5"
+      "precio_metro": 7.9
     },
     {
       "ref": "NOI0088271",
+      "descripcion": "PLETINA 35 X 10",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 35.0,
@@ -1582,11 +1583,11 @@
       "mur": 97,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 6.14,
-      "descripcion": "PLETINA 35 X 10"
+      "precio_metro": 6.14
     },
     {
       "ref": "NOI0088272",
+      "descripcion": "PLETINA 45 X 6",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 45.0,
@@ -1598,11 +1599,11 @@
       "mur": 0,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 4.74,
-      "descripcion": "PLETINA 45 X 6"
+      "precio_metro": 4.74
     },
     {
       "ref": "NOI0088272",
+      "descripcion": "PLETINA 45 X 6",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 45.0,
@@ -1614,11 +1615,11 @@
       "mur": 0,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 4.74,
-      "descripcion": "PLETINA 45 X 6"
+      "precio_metro": 4.74
     },
     {
       "ref": "NOI0088272",
+      "descripcion": "PLETINA 45 X 6",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 45.0,
@@ -1630,11 +1631,11 @@
       "mur": 124,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 4.74,
-      "descripcion": "PLETINA 45 X 6"
+      "precio_metro": 4.74
     },
     {
       "ref": "NOI0088273",
+      "descripcion": "PLETINA 45 X 10",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 45.0,
@@ -1646,11 +1647,11 @@
       "mur": 70,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 7.9,
-      "descripcion": "PLETINA 45 X 10"
+      "precio_metro": 7.9
     },
     {
       "ref": "NOI0088274",
+      "descripcion": "PLETINA 45 X 20",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 45.0,
@@ -1662,11 +1663,11 @@
       "mur": 35,
       "val": 42,
       "estado": "Stock",
-      "precio_metro": 15.8,
-      "descripcion": "PLETINA 45 X 20"
+      "precio_metro": 15.8
     },
     {
       "ref": "NOI0088275",
+      "descripcion": "PLETINA 120 X 8",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 120.0,
@@ -1678,11 +1679,11 @@
       "mur": 37,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 16.85,
-      "descripcion": "PLETINA 120 X 8"
+      "precio_metro": 16.85
     },
     {
       "ref": "NOI0088276",
+      "descripcion": "PLETINA 60 X 4",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 60.0,
@@ -1694,11 +1695,11 @@
       "mur": 0,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 4.21,
-      "descripcion": "PLETINA 60 X 4"
+      "precio_metro": 4.21
     },
     {
       "ref": "NOI0088277",
+      "descripcion": "PLETINA 120 X 6",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 120.0,
@@ -1710,11 +1711,11 @@
       "mur": 41,
       "val": 6,
       "estado": "7/10 Días",
-      "precio_metro": 12.64,
-      "descripcion": "PLETINA 120 X 6"
+      "precio_metro": 12.64
     },
     {
       "ref": "NOI0088278",
+      "descripcion": "PLETINA 40 X 3",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 40.0,
@@ -1722,15 +1723,15 @@
       "longitud": 6.0,
       "peso_kg_m": 0.324,
       "acabado": "BRUTO",
-      "tar": 203,
+      "tar": 173,
       "mur": 80,
       "val": 203,
       "estado": "Stock",
-      "precio_metro": 2.11,
-      "descripcion": "PLETINA 40 X 3"
+      "precio_metro": 2.11
     },
     {
       "ref": "NOI0088279",
+      "descripcion": "PLETINA 25 X 10",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 25.0,
@@ -1742,11 +1743,11 @@
       "mur": 31,
       "val": 15,
       "estado": "Stock",
-      "precio_metro": 4.39,
-      "descripcion": "PLETINA 25 X 10"
+      "precio_metro": 4.39
     },
     {
       "ref": "NOI0088280",
+      "descripcion": "PLETINA 25 X 3",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 25.0,
@@ -1755,14 +1756,14 @@
       "peso_kg_m": 0.203,
       "acabado": "BRUTO",
       "tar": 8,
-      "mur": 88,
+      "mur": 85,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 1.32,
-      "descripcion": "PLETINA 25 X 3"
+      "precio_metro": 1.32
     },
     {
       "ref": "NOI0088281",
+      "descripcion": "PLETINA 200 X 8",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 200.0,
@@ -1774,11 +1775,11 @@
       "mur": 44,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 28.08,
-      "descripcion": "PLETINA 200 X 8"
+      "precio_metro": 28.08
     },
     {
       "ref": "NOI0088282",
+      "descripcion": "PLETINA 15 X 8",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 15.0,
@@ -1790,11 +1791,11 @@
       "mur": 226,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 2.11,
-      "descripcion": "PLETINA 15 X 8"
+      "precio_metro": 2.11
     },
     {
       "ref": "NOI0088283",
+      "descripcion": "PLETINA 150 X 5",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 150.0,
@@ -1806,11 +1807,11 @@
       "mur": 19,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 13.16,
-      "descripcion": "PLETINA 150 X 5"
+      "precio_metro": 13.16
     },
     {
       "ref": "NOI0088300",
+      "descripcion": "U - 25 X 40 X 25 X 2",
       "tipo": "PERFIL U",
       "alto": 25.0,
       "ancho": 40.0,
@@ -1822,11 +1823,11 @@
       "mur": 246,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 2.63,
-      "descripcion": "U - 25 X 40 X 25 X 2"
+      "precio_metro": 2.63
     },
     {
       "ref": "NOI0088301",
+      "descripcion": "U - 40 X 80 X 40 X 4",
       "tipo": "PERFIL U",
       "alto": 40.0,
       "ancho": 80.0,
@@ -1836,13 +1837,13 @@
       "acabado": "BRUTO",
       "tar": 0,
       "mur": 113,
-      "val": 4,
+      "val": 1,
       "estado": "7/10 Días",
-      "precio_metro": 10.78,
-      "descripcion": "U - 40 X 80 X 40 X 4"
+      "precio_metro": 10.78
     },
     {
       "ref": "NOI0088302",
+      "descripcion": "U - 30 X 60 X 30 X 5",
       "tipo": "PERFIL U",
       "alto": 30.0,
       "ancho": 60.0,
@@ -1854,11 +1855,11 @@
       "mur": 115,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 9.65,
-      "descripcion": "U - 30 X 60 X 30 X 5"
+      "precio_metro": 9.65
     },
     {
       "ref": "NOI0088303",
+      "descripcion": "U - 45 X 100 X 45 X 4.5",
       "tipo": "PERFIL U",
       "alto": 45.0,
       "ancho": 100.0,
@@ -1870,11 +1871,11 @@
       "mur": 42,
       "val": 50,
       "estado": "Stock",
-      "precio_metro": 15.76,
-      "descripcion": "U - 45 X 100 X 45 X 4.5"
+      "precio_metro": 15.76
     },
     {
       "ref": "NOI0088305",
+      "descripcion": "U - 63 X 125 X 63 X 6",
       "tipo": "PERFIL U",
       "alto": 63.0,
       "ancho": 125.0,
@@ -1886,11 +1887,11 @@
       "mur": 27,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 25.17,
-      "descripcion": "U - 63 X 125 X 63 X 6"
+      "precio_metro": 25.17
     },
     {
       "ref": "NOI0088306",
+      "descripcion": "U - 203 X 72.5 X 8/12",
       "tipo": "PERFIL U",
       "alto": 203.0,
       "ancho": 72.5,
@@ -1902,11 +1903,11 @@
       "mur": 14,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 58.34,
-      "descripcion": "U - 203 X 72.5 X 8/12"
+      "precio_metro": 58.34
     },
     {
       "ref": "NOI0088307",
+      "descripcion": "U - 25 X 50 X 25 X 3",
       "tipo": "PERFIL U",
       "alto": 25.0,
       "ancho": 50.0,
@@ -1918,11 +1919,11 @@
       "mur": 53,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 4.97,
-      "descripcion": "U - 25 X 50 X 25 X 3"
+      "precio_metro": 4.97
     },
     {
       "ref": "NOI0088308",
+      "descripcion": "U - 60 X 40 X 60 X 3",
       "tipo": "PERFIL U",
       "alto": 60.0,
       "ancho": 40.0,
@@ -1932,13 +1933,13 @@
       "acabado": "BRUTO",
       "tar": 0,
       "mur": 42,
-      "val": 46,
+      "val": 43,
       "estado": "7/10 Días",
-      "precio_metro": 7.08,
-      "descripcion": "U - 60 X 40 X 60 X 3"
+      "precio_metro": 7.08
     },
     {
       "ref": "NOI0088309",
+      "descripcion": "U - 30 X 30 X 30 X 2",
       "tipo": "PERFIL U",
       "alto": 30.0,
       "ancho": 30.0,
@@ -1947,14 +1948,14 @@
       "peso_kg_m": 0.466,
       "acabado": "BRUTO",
       "tar": 11,
-      "mur": 46,
+      "mur": 36,
       "val": 7,
       "estado": "Stock",
-      "precio_metro": 3.03,
-      "descripcion": "U - 30 X 30 X 30 X 2"
+      "precio_metro": 3.03
     },
     {
       "ref": "NOI0088310",
+      "descripcion": "U - 57.2 X 152.4 X 57.2 X 5",
       "tipo": "PERFIL U",
       "alto": 57.2,
       "ancho": 152.4,
@@ -1966,11 +1967,11 @@
       "mur": 78,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 22.53,
-      "descripcion": "U - 57.2 X 152.4 X 57.2 X 5"
+      "precio_metro": 22.53
     },
     {
       "ref": "NOI0088311",
+      "descripcion": "U - 20 X 80 X 20 X 4",
       "tipo": "PERFIL U",
       "alto": 20.0,
       "ancho": 80.0,
@@ -1982,11 +1983,11 @@
       "mur": 52,
       "val": 20,
       "estado": "Stock",
-      "precio_metro": 7.98,
-      "descripcion": "U - 20 X 80 X 20 X 4"
+      "precio_metro": 7.98
     },
     {
       "ref": "NOI0088312",
+      "descripcion": "U - 50 X 60 X 50 X 3",
       "tipo": "PERFIL U",
       "alto": 50.0,
       "ancho": 60.0,
@@ -1998,11 +1999,11 @@
       "mur": 2,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 8.12,
-      "descripcion": "U - 50 X 60 X 50 X 3"
+      "precio_metro": 8.12
     },
     {
       "ref": "NOI0088312",
+      "descripcion": "U - 50 X 60 X 50 X 3",
       "tipo": "PERFIL U",
       "alto": 50.0,
       "ancho": 60.0,
@@ -2014,11 +2015,11 @@
       "mur": 25,
       "val": 46,
       "estado": "7/10 Días",
-      "precio_metro": 8.12,
-      "descripcion": "U - 50 X 60 X 50 X 3"
+      "precio_metro": 8.12
     },
     {
       "ref": "NOI0088313",
+      "descripcion": "U - 30 X 60 X 30 X 4",
       "tipo": "PERFIL U",
       "alto": 30.0,
       "ancho": 60.0,
@@ -2030,11 +2031,11 @@
       "mur": 121,
       "val": 84,
       "estado": "Stock",
-      "precio_metro": 7.87,
-      "descripcion": "U - 30 X 60 X 30 X 4"
+      "precio_metro": 7.87
     },
     {
       "ref": "NOI0088314",
+      "descripcion": "U - 30 X 60 X 30 X 3",
       "tipo": "PERFIL U",
       "alto": 30.0,
       "ancho": 60.0,
@@ -2046,11 +2047,11 @@
       "mur": 0,
       "val": 65,
       "estado": "7/10 Días",
-      "precio_metro": 5.98,
-      "descripcion": "U - 30 X 60 X 30 X 3"
+      "precio_metro": 5.98
     },
     {
       "ref": "NOI0088315",
+      "descripcion": "U - 40 X 80 X 40 X 6",
       "tipo": "PERFIL U",
       "alto": 40.0,
       "ancho": 80.0,
@@ -2062,11 +2063,11 @@
       "mur": 26,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 15.58,
-      "descripcion": "U - 40 X 80 X 40 X 6"
+      "precio_metro": 15.58
     },
     {
       "ref": "NOI0088316",
+      "descripcion": "U - 30 X 16 X 30 X 2",
       "tipo": "PERFIL U",
       "alto": 30.0,
       "ancho": 16.0,
@@ -2078,11 +2079,11 @@
       "mur": 98,
       "val": 430,
       "estado": "7/10 Días",
-      "precio_metro": 2.53,
-      "descripcion": "U - 30 X 16 X 30 X 2"
+      "precio_metro": 2.53
     },
     {
       "ref": "NOI0088317",
+      "descripcion": "U - 40 X 40 X 40 X 4",
       "tipo": "PERFIL U",
       "alto": 40.0,
       "ancho": 40.0,
@@ -2094,11 +2095,11 @@
       "mur": 58,
       "val": 79,
       "estado": "Stock",
-      "precio_metro": 7.93,
-      "descripcion": "U - 40 X 40 X 40 X 4"
+      "precio_metro": 7.93
     },
     {
       "ref": "NOI0088318",
+      "descripcion": "U - 60 X 30 X 60 X 4",
       "tipo": "PERFIL U",
       "alto": 60.0,
       "ancho": 30.0,
@@ -2110,11 +2111,11 @@
       "mur": 2,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 9.96,
-      "descripcion": "U - 60 X 30 X 60 X 4"
+      "precio_metro": 9.96
     },
     {
       "ref": "NOI0088319",
+      "descripcion": "U - 30 X 15 X 30 X 2",
       "tipo": "PERFIL U",
       "alto": 30.0,
       "ancho": 15.0,
@@ -2126,11 +2127,11 @@
       "mur": 0,
       "val": 1,
       "estado": "Sin stock",
-      "precio_metro": 2.56,
-      "descripcion": "U - 30 X 15 X 30 X 2"
+      "precio_metro": 2.56
     },
     {
       "ref": "NOI0088400",
+      "descripcion": "ANGULO 25 X 3",
       "tipo": "ANGULO",
       "alto": 25.0,
       "ancho": 25.0,
@@ -2142,11 +2143,11 @@
       "mur": 533,
       "val": 124,
       "estado": "Stock",
-      "precio_metro": 2.51,
-      "descripcion": "ANGULO 25 X 3"
+      "precio_metro": 2.51
     },
     {
       "ref": "NOI0088401",
+      "descripcion": "ANGULO 30 X 3",
       "tipo": "ANGULO",
       "alto": 30.0,
       "ancho": 30.0,
@@ -2154,15 +2155,15 @@
       "longitud": 6.0,
       "peso_kg_m": 0.46143,
       "acabado": "BRUTO",
-      "tar": 205,
-      "mur": 244,
+      "tar": 33,
+      "mur": 416,
       "val": 6,
       "estado": "Stock",
-      "precio_metro": 3.0,
-      "descripcion": "ANGULO 30 X 3"
+      "precio_metro": 3.0
     },
     {
       "ref": "NOI0088402",
+      "descripcion": "ANGULO 40 X 2",
       "tipo": "ANGULO",
       "alto": 40.0,
       "ancho": 40.0,
@@ -2170,15 +2171,15 @@
       "longitud": 6.0,
       "peso_kg_m": 0.421,
       "acabado": "BRUTO",
-      "tar": 79,
-      "mur": 397,
+      "tar": 76,
+      "mur": 395,
       "val": 2,
       "estado": "Stock",
-      "precio_metro": 2.74,
-      "descripcion": "ANGULO 40 X 2"
+      "precio_metro": 2.74
     },
     {
       "ref": "NOI0088402",
+      "descripcion": "ANGULO 40 X 2",
       "tipo": "ANGULO",
       "alto": 40.0,
       "ancho": 40.0,
@@ -2190,11 +2191,11 @@
       "mur": 0,
       "val": 95,
       "estado": "7/10 Días",
-      "precio_metro": 2.74,
-      "descripcion": "ANGULO 40 X 2"
+      "precio_metro": 2.74
     },
     {
       "ref": "NOI0088403",
+      "descripcion": "ANGULO 40 X 4",
       "tipo": "ANGULO",
       "alto": 40.0,
       "ancho": 40.0,
@@ -2203,14 +2204,30 @@
       "peso_kg_m": 0.824,
       "acabado": "BRUTO",
       "tar": 57,
-      "mur": 390,
+      "mur": 173,
       "val": 41,
       "estado": "Stock",
-      "precio_metro": 5.36,
-      "descripcion": "ANGULO 40 X 4"
+      "precio_metro": 5.36
     },
     {
       "ref": "NOI0088404",
+      "descripcion": "ANGULO 50 X 5",
+      "tipo": "ANGULO",
+      "alto": 50.0,
+      "ancho": 50.0,
+      "espesor": 5.0,
+      "longitud": 6.0,
+      "peso_kg_m": 1.2823,
+      "acabado": "BRUTO",
+      "tar": 0,
+      "mur": 0,
+      "val": 47,
+      "estado": "7/10 Días",
+      "precio_metro": 8.33
+    },
+    {
+      "ref": "NOI0088404",
+      "descripcion": "ANGULO 50 X 5",
       "tipo": "ANGULO",
       "alto": 50.0,
       "ancho": 50.0,
@@ -2222,11 +2239,11 @@
       "mur": 116,
       "val": 2,
       "estado": "7/10 Días",
-      "precio_metro": 8.33,
-      "descripcion": "ANGULO 50 X 5"
+      "precio_metro": 8.33
     },
     {
       "ref": "NOI0088405",
+      "descripcion": "ANGULO 60 X 6",
       "tipo": "ANGULO",
       "alto": 60.0,
       "ancho": 60.0,
@@ -2235,14 +2252,14 @@
       "peso_kg_m": 1.847,
       "acabado": "BRUTO",
       "tar": 124,
-      "mur": 109,
+      "mur": 108,
       "val": 2,
       "estado": "Stock",
-      "precio_metro": 12.01,
-      "descripcion": "ANGULO 60 X 6"
+      "precio_metro": 12.01
     },
     {
       "ref": "NOI0088406",
+      "descripcion": "ANGULO 70 X 6",
       "tipo": "ANGULO",
       "alto": 70.0,
       "ancho": 70.0,
@@ -2254,11 +2271,11 @@
       "mur": 34,
       "val": 45,
       "estado": "Stock",
-      "precio_metro": 14.11,
-      "descripcion": "ANGULO 70 X 6"
+      "precio_metro": 14.11
     },
     {
       "ref": "NOI0088407",
+      "descripcion": "ANGULO 80 X 8",
       "tipo": "ANGULO",
       "alto": 80.0,
       "ancho": 80.0,
@@ -2266,15 +2283,15 @@
       "longitud": 6.0,
       "peso_kg_m": 3.283,
       "acabado": "BRUTO",
-      "tar": 58,
+      "tar": 57,
       "mur": 10,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 21.34,
-      "descripcion": "ANGULO 80 X 8"
+      "precio_metro": 21.34
     },
     {
       "ref": "NOI0088408",
+      "descripcion": "ANGULO 100 X 10",
       "tipo": "ANGULO",
       "alto": 100.0,
       "ancho": 100.0,
@@ -2286,11 +2303,11 @@
       "mur": 25,
       "val": 35,
       "estado": "Stock",
-      "precio_metro": 33.34,
-      "descripcion": "ANGULO 100 X 10"
+      "precio_metro": 33.34
     },
     {
       "ref": "NOI0088409",
+      "descripcion": "ANGULO 20 X 2",
       "tipo": "ANGULO",
       "alto": 20.0,
       "ancho": 20.0,
@@ -2298,15 +2315,15 @@
       "longitud": 6.0,
       "peso_kg_m": 0.205,
       "acabado": "BRUTO",
-      "tar": 353,
-      "mur": 561,
+      "tar": 343,
+      "mur": 556,
       "val": 248,
       "estado": "Stock",
-      "precio_metro": 1.33,
-      "descripcion": "ANGULO 20 X 2"
+      "precio_metro": 1.33
     },
     {
       "ref": "NOI0088409",
+      "descripcion": "ANGULO 20 X 2",
       "tipo": "ANGULO",
       "alto": 20.0,
       "ancho": 20.0,
@@ -2318,11 +2335,11 @@
       "mur": 0,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 1.33,
-      "descripcion": "ANGULO 20 X 2"
+      "precio_metro": 1.33
     },
     {
       "ref": "NOI0088410",
+      "descripcion": "ANGULO 45 X 3",
       "tipo": "ANGULO",
       "alto": 45.0,
       "ancho": 45.0,
@@ -2334,11 +2351,11 @@
       "mur": 225,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 4.58,
-      "descripcion": "ANGULO 45 X 3"
+      "precio_metro": 4.58
     },
     {
       "ref": "NOI0088411",
+      "descripcion": "ANGULO 50 X 3",
       "tipo": "ANGULO",
       "alto": 50.0,
       "ancho": 50.0,
@@ -2350,11 +2367,11 @@
       "mur": 194,
       "val": 23,
       "estado": "7/10 Días",
-      "precio_metro": 5.11,
-      "descripcion": "ANGULO 50 X 3"
+      "precio_metro": 5.11
     },
     {
       "ref": "NOI0088412",
+      "descripcion": "ANGULO 60 X 4",
       "tipo": "ANGULO",
       "alto": 60.0,
       "ancho": 60.0,
@@ -2366,11 +2383,11 @@
       "mur": 48,
       "val": 80,
       "estado": "Stock",
-      "precio_metro": 8.14,
-      "descripcion": "ANGULO 60 X 4"
+      "precio_metro": 8.14
     },
     {
       "ref": "NOI0088413",
+      "descripcion": "ANGULO 35 X 5",
       "tipo": "ANGULO",
       "alto": 35.0,
       "ancho": 35.0,
@@ -2382,11 +2399,11 @@
       "mur": 124,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 5.7,
-      "descripcion": "ANGULO 35 X 5"
+      "precio_metro": 5.7
     },
     {
       "ref": "NOI0088414",
+      "descripcion": "ANGULO 120 X 10",
       "tipo": "ANGULO",
       "alto": 120.0,
       "ancho": 120.0,
@@ -2398,11 +2415,11 @@
       "mur": 13,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 40.5,
-      "descripcion": "ANGULO 120 X 10"
+      "precio_metro": 40.5
     },
     {
       "ref": "NOI0088414",
+      "descripcion": "ANGULO 120 X 10",
       "tipo": "ANGULO",
       "alto": 120.0,
       "ancho": 120.0,
@@ -2414,11 +2431,11 @@
       "mur": 2,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 40.5,
-      "descripcion": "ANGULO 120 X 10"
+      "precio_metro": 40.5
     },
     {
       "ref": "NOI0088415",
+      "descripcion": "ANGULO 80 X 4",
       "tipo": "ANGULO",
       "alto": 80.0,
       "ancho": 80.0,
@@ -2430,11 +2447,11 @@
       "mur": 122,
       "val": 50,
       "estado": "Stock",
-      "precio_metro": 10.95,
-      "descripcion": "ANGULO 80 X 4"
+      "precio_metro": 10.95
     },
     {
       "ref": "NOI0088417",
+      "descripcion": "ANGULO 100 X 6",
       "tipo": "ANGULO",
       "alto": 100.0,
       "ancho": 100.0,
@@ -2443,14 +2460,14 @@
       "peso_kg_m": 3.143,
       "acabado": "BRUTO",
       "tar": 0,
-      "mur": 6,
+      "mur": 0,
       "val": 15,
       "estado": "7/10 Días",
-      "precio_metro": 20.43,
-      "descripcion": "ANGULO 100 X 6"
+      "precio_metro": 20.43
     },
     {
       "ref": "NOI0088418",
+      "descripcion": "ANGULO 100 X 3",
       "tipo": "ANGULO",
       "alto": 100.0,
       "ancho": 100.0,
@@ -2459,14 +2476,14 @@
       "peso_kg_m": 1.596,
       "acabado": "BRUTO",
       "tar": 67,
-      "mur": 7,
+      "mur": 0,
       "val": 82,
       "estado": "Stock",
-      "precio_metro": 10.37,
-      "descripcion": "ANGULO 100 X 3"
+      "precio_metro": 10.37
     },
     {
       "ref": "NOI0088419",
+      "descripcion": "ANGULO 40 X 5",
       "tipo": "ANGULO",
       "alto": 40.0,
       "ancho": 40.0,
@@ -2478,11 +2495,11 @@
       "mur": 7,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 6.58,
-      "descripcion": "ANGULO 40 X 5"
+      "precio_metro": 6.58
     },
     {
       "ref": "NOI0088420",
+      "descripcion": "ANGULO 60 X 2",
       "tipo": "ANGULO",
       "alto": 60.0,
       "ancho": 60.0,
@@ -2491,14 +2508,14 @@
       "peso_kg_m": 0.637,
       "acabado": "BRUTO",
       "tar": 130,
-      "mur": 42,
+      "mur": 41,
       "val": 3,
       "estado": "Stock",
-      "precio_metro": 4.14,
-      "descripcion": "ANGULO 60 X 2"
+      "precio_metro": 4.14
     },
     {
       "ref": "NOI0088421",
+      "descripcion": "ANGULO 75 X 4",
       "tipo": "ANGULO",
       "alto": 75.0,
       "ancho": 75.0,
@@ -2510,11 +2527,11 @@
       "mur": 63,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 10.25,
-      "descripcion": "ANGULO 75 X 4"
+      "precio_metro": 10.25
     },
     {
       "ref": "NOI0088500",
+      "descripcion": "ANGULO 60 X 15 X 2",
       "tipo": "ANGULO",
       "alto": 60.0,
       "ancho": 15.0,
@@ -2526,11 +2543,11 @@
       "mur": 276,
       "val": 166,
       "estado": "Stock",
-      "precio_metro": 2.56,
-      "descripcion": "ANGULO 60 X 15 X 2"
+      "precio_metro": 2.56
     },
     {
       "ref": "NOI0088501",
+      "descripcion": "ANGULO 50 X 25 X 3",
       "tipo": "ANGULO",
       "alto": 50.0,
       "ancho": 25.0,
@@ -2542,11 +2559,11 @@
       "mur": 111,
       "val": 156,
       "estado": "Stock",
-      "precio_metro": 3.8,
-      "descripcion": "ANGULO 50 X 25 X 3"
+      "precio_metro": 3.8
     },
     {
       "ref": "NOI0088502",
+      "descripcion": "ANGULO 75 X 50 X 5",
       "tipo": "ANGULO",
       "alto": 75.0,
       "ancho": 50.0,
@@ -2558,11 +2575,11 @@
       "mur": 6,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 10.49,
-      "descripcion": "ANGULO 75 X 50 X 5"
+      "precio_metro": 10.49
     },
     {
       "ref": "NOI0088502",
+      "descripcion": "ANGULO 75 X 50 X 5",
       "tipo": "ANGULO",
       "alto": 75.0,
       "ancho": 50.0,
@@ -2574,11 +2591,11 @@
       "mur": 177,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 10.49,
-      "descripcion": "ANGULO 75 X 50 X 5"
+      "precio_metro": 10.49
     },
     {
       "ref": "NOI0088503",
+      "descripcion": "ANGULO 80 X 50 X 2",
       "tipo": "ANGULO",
       "alto": 80.0,
       "ancho": 50.0,
@@ -2590,11 +2607,11 @@
       "mur": 246,
       "val": 3,
       "estado": "7/10 Días",
-      "precio_metro": 4.51,
-      "descripcion": "ANGULO 80 X 50 X 2"
+      "precio_metro": 4.51
     },
     {
       "ref": "NOI0088504",
+      "descripcion": "ANGULO 150 X 90 X 9.5",
       "tipo": "ANGULO",
       "alto": 150.0,
       "ancho": 90.0,
@@ -2606,11 +2623,11 @@
       "mur": 20,
       "val": 17,
       "estado": "7/10 Días",
-      "precio_metro": 38.43,
-      "descripcion": "ANGULO 150 X 90 X 9.5"
+      "precio_metro": 38.43
     },
     {
       "ref": "NOI0088505",
+      "descripcion": "ANGULO 180 X 70 X 10",
       "tipo": "ANGULO",
       "alto": 180.0,
       "ancho": 70.0,
@@ -2622,11 +2639,11 @@
       "mur": 5,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 42.26,
-      "descripcion": "ANGULO 180 X 70 X 10"
+      "precio_metro": 42.26
     },
     {
       "ref": "NOI0088506",
+      "descripcion": "ANGULO 40 X 20 X 2",
       "tipo": "ANGULO",
       "alto": 40.0,
       "ancho": 20.0,
@@ -2636,13 +2653,13 @@
       "acabado": "BRUTO",
       "tar": 112,
       "mur": 722,
-      "val": 75,
+      "val": 65,
       "estado": "Stock",
-      "precio_metro": 2.03,
-      "descripcion": "ANGULO 40 X 20 X 2"
+      "precio_metro": 2.03
     },
     {
       "ref": "NOI0088507",
+      "descripcion": "ANGULO 60 X 40 X 4",
       "tipo": "ANGULO",
       "alto": 60.0,
       "ancho": 40.0,
@@ -2654,11 +2671,11 @@
       "mur": 164,
       "val": 2,
       "estado": "Stock",
-      "precio_metro": 6.76,
-      "descripcion": "ANGULO 60 X 40 X 4"
+      "precio_metro": 6.76
     },
     {
       "ref": "NOI0088508",
+      "descripcion": "ANGULO 80 X 40 X 4",
       "tipo": "ANGULO",
       "alto": 80.0,
       "ancho": 40.0,
@@ -2670,11 +2687,11 @@
       "mur": 16,
       "val": 56,
       "estado": "Stock",
-      "precio_metro": 8.14,
-      "descripcion": "ANGULO 80 X 40 X 4"
+      "precio_metro": 8.14
     },
     {
       "ref": "NOI0088509",
+      "descripcion": "ANGULO 100 X 20 X 2",
       "tipo": "ANGULO",
       "alto": 100.0,
       "ancho": 20.0,
@@ -2686,11 +2703,11 @@
       "mur": 92,
       "val": 6,
       "estado": "Stock",
-      "precio_metro": 4.14,
-      "descripcion": "ANGULO 100 X 20 X 2"
+      "precio_metro": 4.14
     },
     {
       "ref": "NOI0088510",
+      "descripcion": "ANGULO 30 X 2",
       "tipo": "ANGULO",
       "alto": 30.0,
       "ancho": 30.0,
@@ -2702,11 +2719,11 @@
       "mur": 219,
       "val": 55,
       "estado": "Stock",
-      "precio_metro": 2.03,
-      "descripcion": "ANGULO 30 X 2"
+      "precio_metro": 2.03
     },
     {
       "ref": "NOI0088511",
+      "descripcion": "ANGULO 40 X 3",
       "tipo": "ANGULO",
       "alto": 40.0,
       "ancho": 40.0,
@@ -2716,13 +2733,13 @@
       "acabado": "BRUTO",
       "tar": 119,
       "mur": 88,
-      "val": 183,
+      "val": 175,
       "estado": "Stock",
-      "precio_metro": 4.05,
-      "descripcion": "ANGULO 40 X 3"
+      "precio_metro": 4.05
     },
     {
       "ref": "NOI0088513",
+      "descripcion": "ANGULO 100 X 50 X 6",
       "tipo": "ANGULO",
       "alto": 100.0,
       "ancho": 50.0,
@@ -2734,11 +2751,11 @@
       "mur": 30,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 15.16,
-      "descripcion": "ANGULO 100 X 50 X 6"
+      "precio_metro": 15.16
     },
     {
       "ref": "NOI0088514",
+      "descripcion": "ANGULO 100 X 50 X 5",
       "tipo": "ANGULO",
       "alto": 100.0,
       "ancho": 50.0,
@@ -2750,11 +2767,11 @@
       "mur": 22,
       "val": 5,
       "estado": "Stock",
-      "precio_metro": 12.73,
-      "descripcion": "ANGULO 100 X 50 X 5"
+      "precio_metro": 12.73
     },
     {
       "ref": "NOI0088515",
+      "descripcion": "ANGULO 30 X 20 X 2",
       "tipo": "ANGULO",
       "alto": 30.0,
       "ancho": 20.0,
@@ -2764,13 +2781,13 @@
       "acabado": "BRUTO",
       "tar": 72,
       "mur": 59,
-      "val": 411,
+      "val": 375,
       "estado": "Stock",
-      "precio_metro": 1.68,
-      "descripcion": "ANGULO 30 X 20 X 2"
+      "precio_metro": 1.68
     },
     {
       "ref": "NOI0088516",
+      "descripcion": "ANGULO 30 X 20 X 3",
       "tipo": "ANGULO",
       "alto": 30.0,
       "ancho": 20.0,
@@ -2782,11 +2799,11 @@
       "mur": 238,
       "val": 117,
       "estado": "7/10 Días",
-      "precio_metro": 2.47,
-      "descripcion": "ANGULO 30 X 20 X 3"
+      "precio_metro": 2.47
     },
     {
       "ref": "NOI0088517",
+      "descripcion": "ANGULO 110 X 30 X 2",
       "tipo": "ANGULO",
       "alto": 110.0,
       "ancho": 30.0,
@@ -2798,11 +2815,11 @@
       "mur": 76,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 4.84,
-      "descripcion": "ANGULO 110 X 30 X 2"
+      "precio_metro": 4.84
     },
     {
       "ref": "NOI0088518",
+      "descripcion": "ANGULO 120 X 50 X 3",
       "tipo": "ANGULO",
       "alto": 120.0,
       "ancho": 50.0,
@@ -2814,11 +2831,11 @@
       "mur": 118,
       "val": 48,
       "estado": "7/10 Días",
-      "precio_metro": 8.79,
-      "descripcion": "ANGULO 120 X 50 X 3"
+      "precio_metro": 8.79
     },
     {
       "ref": "NOI0088519",
+      "descripcion": "ANGULO 60 X 40 X 2",
       "tipo": "ANGULO",
       "alto": 60.0,
       "ancho": 40.0,
@@ -2830,11 +2847,11 @@
       "mur": 31,
       "val": 80,
       "estado": "Stock",
-      "precio_metro": 3.45,
-      "descripcion": "ANGULO 60 X 40 X 2"
+      "precio_metro": 3.45
     },
     {
       "ref": "NOI0088520",
+      "descripcion": "ANGULO 30 X 4",
       "tipo": "ANGULO",
       "alto": 30.0,
       "ancho": 30.0,
@@ -2846,11 +2863,11 @@
       "mur": 202,
       "val": 24,
       "estado": "Stock",
-      "precio_metro": 3.93,
-      "descripcion": "ANGULO 30 X 4"
+      "precio_metro": 3.93
     },
     {
       "ref": "NOI0088521",
+      "descripcion": "ANGULO 145 X 32 X 2",
       "tipo": "ANGULO",
       "alto": 145.0,
       "ancho": 32.0,
@@ -2862,11 +2879,11 @@
       "mur": 11,
       "val": 36,
       "estado": "7/10 Días",
-      "precio_metro": 6.12,
-      "descripcion": "ANGULO 145 X 32 X 2"
+      "precio_metro": 6.12
     },
     {
       "ref": "NOI0088522",
+      "descripcion": "ANGULO 50 X 30 X 3",
       "tipo": "ANGULO",
       "alto": 50.0,
       "ancho": 30.0,
@@ -2875,14 +2892,14 @@
       "peso_kg_m": 0.627,
       "acabado": "BRUTO",
       "tar": 0,
-      "mur": 142,
+      "mur": 137,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 4.08,
-      "descripcion": "ANGULO 50 X 30 X 3"
+      "precio_metro": 4.08
     },
     {
       "ref": "NOI0088522",
+      "descripcion": "ANGULO 50 X 30 X 3",
       "tipo": "ANGULO",
       "alto": 50.0,
       "ancho": 30.0,
@@ -2894,11 +2911,11 @@
       "mur": 198,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 4.08,
-      "descripcion": "ANGULO 50 X 30 X 3"
+      "precio_metro": 4.08
     },
     {
       "ref": "NOI0088523",
+      "descripcion": "ANGULO 60 X 30 X 2",
       "tipo": "ANGULO",
       "alto": 60.0,
       "ancho": 30.0,
@@ -2910,11 +2927,11 @@
       "mur": 94,
       "val": 100,
       "estado": "7/10 Días",
-      "precio_metro": 3.1,
-      "descripcion": "ANGULO 60 X 30 X 2"
+      "precio_metro": 3.1
     },
     {
       "ref": "NOI0088523",
+      "descripcion": "ANGULO 60 X 30 X 2",
       "tipo": "ANGULO",
       "alto": 60.0,
       "ancho": 30.0,
@@ -2926,11 +2943,11 @@
       "mur": 11,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 3.1,
-      "descripcion": "ANGULO 60 X 30 X 2"
+      "precio_metro": 3.1
     },
     {
       "ref": "NOI0088524",
+      "descripcion": "ANGULO 125 X 32 X 2",
       "tipo": "ANGULO",
       "alto": 125.0,
       "ancho": 32.0,
@@ -2942,11 +2959,11 @@
       "mur": 194,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 5.43,
-      "descripcion": "ANGULO 125 X 32 X 2"
+      "precio_metro": 5.43
     },
     {
       "ref": "NOI0088525",
+      "descripcion": "ANGULO 40 X 30 X 2",
       "tipo": "ANGULO",
       "alto": 40.0,
       "ancho": 30.0,
@@ -2958,11 +2975,11 @@
       "mur": 0,
       "val": 191,
       "estado": "7/10 Días",
-      "precio_metro": 2.39,
-      "descripcion": "ANGULO 40 X 30 X 2"
+      "precio_metro": 2.39
     },
     {
       "ref": "NOI0088526",
+      "descripcion": "ANGULO 40 X 35 X 3",
       "tipo": "ANGULO",
       "alto": 40.0,
       "ancho": 35.0,
@@ -2974,11 +2991,11 @@
       "mur": 171,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 3.79,
-      "descripcion": "ANGULO 40 X 35 X 3"
+      "precio_metro": 3.79
     },
     {
       "ref": "NOI0088527",
+      "descripcion": "ANGULO 80 X 40 X 2",
       "tipo": "ANGULO",
       "alto": 80.0,
       "ancho": 40.0,
@@ -2990,11 +3007,11 @@
       "mur": 66,
       "val": 18,
       "estado": "Stock",
-      "precio_metro": 4.14,
-      "descripcion": "ANGULO 80 X 40 X 2"
+      "precio_metro": 4.14
     },
     {
       "ref": "NOI0088528",
+      "descripcion": "ANGULO 140 X 50 X 3",
       "tipo": "ANGULO",
       "alto": 140.0,
       "ancho": 50.0,
@@ -3006,11 +3023,11 @@
       "mur": 67,
       "val": 42,
       "estado": "Stock",
-      "precio_metro": 9.85,
-      "descripcion": "ANGULO 140 X 50 X 3"
+      "precio_metro": 9.85
     },
     {
       "ref": "NOI0088529",
+      "descripcion": "ANGULO 70 X 40 X 2",
       "tipo": "ANGULO",
       "alto": 70.0,
       "ancho": 40.0,
@@ -3019,14 +3036,14 @@
       "peso_kg_m": 0.583,
       "acabado": "BRUTO",
       "tar": 0,
-      "mur": 191,
+      "mur": 181,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 3.79,
-      "descripcion": "ANGULO 70 X 40 X 2"
+      "precio_metro": 3.79
     },
     {
       "ref": "NOI0088530",
+      "descripcion": "ANGULO 160 X 15 X 2",
       "tipo": "ANGULO",
       "alto": 160.0,
       "ancho": 15.0,
@@ -3038,11 +3055,11 @@
       "mur": 48,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 6.07,
-      "descripcion": "ANGULO 160 X 15 X 2"
+      "precio_metro": 6.07
     },
     {
       "ref": "NOI0088600",
+      "descripcion": "T - 40 X 40 X 4",
       "tipo": "PERFIL T",
       "alto": 40.0,
       "ancho": 40.0,
@@ -3054,11 +3071,11 @@
       "mur": 144,
       "val": 20,
       "estado": "Stock",
-      "precio_metro": 5.36,
-      "descripcion": "T - 40 X 40 X 4"
+      "precio_metro": 5.36
     },
     {
       "ref": "NOI0088601",
+      "descripcion": "T - 40 X 40 X 2",
       "tipo": "PERFIL T",
       "alto": 40.0,
       "ancho": 40.0,
@@ -3070,11 +3087,11 @@
       "mur": 167,
       "val": 160,
       "estado": "Stock",
-      "precio_metro": 2.74,
-      "descripcion": "T - 40 X 40 X 2"
+      "precio_metro": 2.74
     },
     {
       "ref": "NOI0088602",
+      "descripcion": "T - 30 X 30 X 3",
       "tipo": "PERFIL T",
       "alto": 30.0,
       "ancho": 30.0,
@@ -3086,11 +3103,11 @@
       "mur": 69,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 3.0,
-      "descripcion": "T - 30 X 30 X 3"
+      "precio_metro": 3.0
     },
     {
       "ref": "NOI0088602",
+      "descripcion": "T - 30 X 30 X 3",
       "tipo": "PERFIL T",
       "alto": 30.0,
       "ancho": 30.0,
@@ -3102,11 +3119,11 @@
       "mur": 18,
       "val": 2,
       "estado": "7/10 Días",
-      "precio_metro": 3.0,
-      "descripcion": "T - 30 X 30 X 3"
+      "precio_metro": 3.0
     },
     {
       "ref": "NOI0088603",
+      "descripcion": "T - 50 X 50 X 5",
       "tipo": "PERFIL T",
       "alto": 50.0,
       "ancho": 50.0,
@@ -3118,11 +3135,11 @@
       "mur": 81,
       "val": 6,
       "estado": "Stock",
-      "precio_metro": 8.33,
-      "descripcion": "T - 50 X 50 X 5"
+      "precio_metro": 8.33
     },
     {
       "ref": "NOI0088604",
+      "descripcion": "T - 30 X 30 X 2",
       "tipo": "PERFIL T",
       "alto": 30.0,
       "ancho": 30.0,
@@ -3134,11 +3151,11 @@
       "mur": 202,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 2.04,
-      "descripcion": "T - 30 X 30 X 2"
+      "precio_metro": 2.04
     },
     {
       "ref": "NOI0088605",
+      "descripcion": "T - 50 X 50 X 2",
       "tipo": "PERFIL T",
       "alto": 50.0,
       "ancho": 50.0,
@@ -3150,11 +3167,11 @@
       "mur": 60,
       "val": 180,
       "estado": "Stock",
-      "precio_metro": 3.44,
-      "descripcion": "T - 50 X 50 X 2"
+      "precio_metro": 3.44
     },
     {
       "ref": "NOI0088606",
+      "descripcion": "T - 60 X 60 X 4",
       "tipo": "PERFIL T",
       "alto": 60.0,
       "ancho": 60.0,
@@ -3166,11 +3183,11 @@
       "mur": 39,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 8.03,
-      "descripcion": "T - 60 X 60 X 4"
+      "precio_metro": 8.03
     },
     {
       "ref": "NOI0088700",
+      "descripcion": "TUBO REDONDO 20 X 2 (20/16)",
       "tipo": "TUBO REDONDO",
       "alto": 20.0,
       "ancho": 20.0,
@@ -3179,14 +3196,14 @@
       "peso_kg_m": 0.305,
       "acabado": "BRUTO",
       "tar": 84,
-      "mur": 393,
+      "mur": 392,
       "val": 300,
       "estado": "Stock",
-      "precio_metro": 1.98,
-      "descripcion": "TUBO REDONDO 20 X 2 (20/16)"
+      "precio_metro": 1.98
     },
     {
       "ref": "NOI0088701",
+      "descripcion": "TUBO REDONDO 25 X 2 (25/21)",
       "tipo": "TUBO REDONDO",
       "alto": 25.0,
       "ancho": 25.0,
@@ -3198,11 +3215,11 @@
       "mur": 84,
       "val": 65,
       "estado": "Stock",
-      "precio_metro": 2.54,
-      "descripcion": "TUBO REDONDO 25 X 2 (25/21)"
+      "precio_metro": 2.54
     },
     {
       "ref": "NOI0088702",
+      "descripcion": "TUBO REDONDO 25 X 3 (25/19)",
       "tipo": "TUBO REDONDO",
       "alto": 25.0,
       "ancho": 25.0,
@@ -3210,15 +3227,15 @@
       "longitud": 6.0,
       "peso_kg_m": 0.562,
       "acabado": "BRUTO",
-      "tar": 198,
+      "tar": 197,
       "mur": 157,
       "val": 127,
       "estado": "Stock",
-      "precio_metro": 3.65,
-      "descripcion": "TUBO REDONDO 25 X 3 (25/19)"
+      "precio_metro": 3.65
     },
     {
       "ref": "NOI0088703",
+      "descripcion": "TUBO REDONDO 25.6 X 4.55 (25.6/16.5)",
       "tipo": "TUBO REDONDO",
       "alto": 25.6,
       "ancho": 25.6,
@@ -3230,11 +3247,11 @@
       "mur": 313,
       "val": 27,
       "estado": "7/10 Días",
-      "precio_metro": 5.28,
-      "descripcion": "TUBO REDONDO 25.6 X 4.55 (25.6/16.5)"
+      "precio_metro": 5.28
     },
     {
       "ref": "NOI0088704",
+      "descripcion": "TUBO REDONDO 30 X 2.5 (30/25)",
       "tipo": "TUBO REDONDO",
       "alto": 30.0,
       "ancho": 30.0,
@@ -3246,11 +3263,11 @@
       "mur": 103,
       "val": 25,
       "estado": "Stock",
-      "precio_metro": 3.79,
-      "descripcion": "TUBO REDONDO 30 X 2.5 (30/25)"
+      "precio_metro": 3.79
     },
     {
       "ref": "NOI0088705",
+      "descripcion": "TUBO REDONDO 30 X 5 (30/20)",
       "tipo": "TUBO REDONDO",
       "alto": 30.0,
       "ancho": 30.0,
@@ -3262,11 +3279,11 @@
       "mur": 224,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 6.89,
-      "descripcion": "TUBO REDONDO 30 X 5 (30/20)"
+      "precio_metro": 6.89
     },
     {
       "ref": "NOI0088706",
+      "descripcion": "TUBO REDONDO 35 X 2.5 (35/30)",
       "tipo": "TUBO REDONDO",
       "alto": 35.0,
       "ancho": 35.0,
@@ -3278,11 +3295,11 @@
       "mur": 65,
       "val": 96,
       "estado": "Stock",
-      "precio_metro": 4.47,
-      "descripcion": "TUBO REDONDO 35 X 2.5 (35/30)"
+      "precio_metro": 4.47
     },
     {
       "ref": "NOI0088707",
+      "descripcion": "TUBO REDONDO 40 X 2.5 (40/35)",
       "tipo": "TUBO REDONDO",
       "alto": 40.0,
       "ancho": 40.0,
@@ -3294,11 +3311,11 @@
       "mur": 150,
       "val": 48,
       "estado": "Stock",
-      "precio_metro": 5.19,
-      "descripcion": "TUBO REDONDO 40 X 2.5 (40/35)"
+      "precio_metro": 5.19
     },
     {
       "ref": "NOI0088708",
+      "descripcion": "TUBO REDONDO 40 X 5 (40/30)",
       "tipo": "TUBO REDONDO",
       "alto": 40.0,
       "ancho": 40.0,
@@ -3310,11 +3327,11 @@
       "mur": 63,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 9.65,
-      "descripcion": "TUBO REDONDO 40 X 5 (40/30)"
+      "precio_metro": 9.65
     },
     {
       "ref": "NOI0088708",
+      "descripcion": "TUBO REDONDO 40 X 5 (40/30)",
       "tipo": "TUBO REDONDO",
       "alto": 40.0,
       "ancho": 40.0,
@@ -3326,11 +3343,11 @@
       "mur": 70,
       "val": 97,
       "estado": "Stock",
-      "precio_metro": 9.65,
-      "descripcion": "TUBO REDONDO 40 X 5 (40/30)"
+      "precio_metro": 9.65
     },
     {
       "ref": "NOI0088709",
+      "descripcion": "TUBO REDONDO 50 X 3 (50/44)",
       "tipo": "TUBO REDONDO",
       "alto": 50.0,
       "ancho": 50.0,
@@ -3342,11 +3359,11 @@
       "mur": 127,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 7.77,
-      "descripcion": "TUBO REDONDO 50 X 3 (50/44)"
+      "precio_metro": 7.77
     },
     {
       "ref": "NOI0088710",
+      "descripcion": "TUBO REDONDO 50 X 5 (50/40)",
       "tipo": "TUBO REDONDO",
       "alto": 50.0,
       "ancho": 50.0,
@@ -3355,14 +3372,14 @@
       "peso_kg_m": 1.9085,
       "acabado": "BRUTO",
       "tar": 135,
-      "mur": 63,
+      "mur": 61,
       "val": 42,
       "estado": "Stock",
-      "precio_metro": 12.41,
-      "descripcion": "TUBO REDONDO 50 X 5 (50/40)"
+      "precio_metro": 12.41
     },
     {
       "ref": "NOI0088711",
+      "descripcion": "TUBO REDONDO 60 X 4 (60/52)",
       "tipo": "TUBO REDONDO",
       "alto": 60.0,
       "ancho": 60.0,
@@ -3374,11 +3391,11 @@
       "mur": 29,
       "val": 50,
       "estado": "7/10 Días",
-      "precio_metro": 12.4,
-      "descripcion": "TUBO REDONDO 60 X 4 (60/52)"
+      "precio_metro": 12.4
     },
     {
       "ref": "NOI0088712",
+      "descripcion": "TUBO REDONDO 60 X 5 (60/50)",
       "tipo": "TUBO REDONDO",
       "alto": 60.0,
       "ancho": 60.0,
@@ -3390,11 +3407,11 @@
       "mur": 117,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 15.16,
-      "descripcion": "TUBO REDONDO 60 X 5 (60/50)"
+      "precio_metro": 15.16
     },
     {
       "ref": "NOI0088713",
+      "descripcion": "TUBO REDONDO 80 X 5 (80/70)",
       "tipo": "TUBO REDONDO",
       "alto": 80.0,
       "ancho": 80.0,
@@ -3406,11 +3423,11 @@
       "mur": 63,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 20.75,
-      "descripcion": "TUBO REDONDO 80 X 5 (80/70)"
+      "precio_metro": 20.75
     },
     {
       "ref": "NOI0088714",
+      "descripcion": "TUBO REDONDO 100 X 10 (100/80)",
       "tipo": "TUBO REDONDO",
       "alto": 100.0,
       "ancho": 100.0,
@@ -3422,11 +3439,11 @@
       "mur": 0,
       "val": 1,
       "estado": "Sin stock",
-      "precio_metro": 49.62,
-      "descripcion": "TUBO REDONDO 100 X 10 (100/80)"
+      "precio_metro": 49.62
     },
     {
       "ref": "NOI0088714",
+      "descripcion": "TUBO REDONDO 100 X 10 (100/80)",
       "tipo": "TUBO REDONDO",
       "alto": 100.0,
       "ancho": 100.0,
@@ -3438,11 +3455,11 @@
       "mur": 8,
       "val": 2,
       "estado": "Sin stock",
-      "precio_metro": 49.62,
-      "descripcion": "TUBO REDONDO 100 X 10 (100/80)"
+      "precio_metro": 49.62
     },
     {
       "ref": "NOI0088715",
+      "descripcion": "TUBO REDONDO 155 X 3 (155/149)",
       "tipo": "TUBO REDONDO",
       "alto": 155.0,
       "ancho": 155.0,
@@ -3454,11 +3471,11 @@
       "mur": 4,
       "val": 1,
       "estado": "Sin stock",
-      "precio_metro": 25.16,
-      "descripcion": "TUBO REDONDO 155 X 3 (155/149)"
+      "precio_metro": 25.16
     },
     {
       "ref": "NOI0088716",
+      "descripcion": "TUBO REDONDO 110 X 3 (110/104)",
       "tipo": "TUBO REDONDO",
       "alto": 110.0,
       "ancho": 110.0,
@@ -3466,15 +3483,15 @@
       "longitud": 6.0,
       "peso_kg_m": 2.722,
       "acabado": "BRUTO",
-      "tar": 15,
+      "tar": 13,
       "mur": 15,
       "val": 28,
       "estado": "Stock",
-      "precio_metro": 17.69,
-      "descripcion": "TUBO REDONDO 110 X 3 (110/104)"
+      "precio_metro": 17.69
     },
     {
       "ref": "NOI0088717",
+      "descripcion": "TUBO REDONDO 110 X 5 (110/100)",
       "tipo": "TUBO REDONDO",
       "alto": 110.0,
       "ancho": 110.0,
@@ -3486,11 +3503,11 @@
       "mur": 0,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 28.94,
-      "descripcion": "TUBO REDONDO 110 X 5 (110/100)"
+      "precio_metro": 28.94
     },
     {
       "ref": "NOI0088718",
+      "descripcion": "TUBO REDONDO 100 X 5 (100/90)",
       "tipo": "TUBO REDONDO",
       "alto": 100.0,
       "ancho": 100.0,
@@ -3502,11 +3519,11 @@
       "mur": 0,
       "val": 1,
       "estado": "Sin stock",
-      "precio_metro": 26.18,
-      "descripcion": "TUBO REDONDO 100 X 5 (100/90)"
+      "precio_metro": 26.18
     },
     {
       "ref": "NOI0088718",
+      "descripcion": "TUBO REDONDO 100 X 5 (100/90)",
       "tipo": "TUBO REDONDO",
       "alto": 100.0,
       "ancho": 100.0,
@@ -3518,11 +3535,11 @@
       "mur": 14,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 26.18,
-      "descripcion": "TUBO REDONDO 100 X 5 (100/90)"
+      "precio_metro": 26.18
     },
     {
       "ref": "NOI0088719",
+      "descripcion": "TUBO REDONDO 22 X 1.5 (22/19)",
       "tipo": "TUBO REDONDO",
       "alto": 22.0,
       "ancho": 22.0,
@@ -3534,11 +3551,11 @@
       "mur": 402,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 1.7,
-      "descripcion": "TUBO REDONDO 22 X 1.5 (22/19)"
+      "precio_metro": 1.7
     },
     {
       "ref": "NOI0088720",
+      "descripcion": "TUBO REDONDO 33 X 2.5 (33/28)",
       "tipo": "TUBO REDONDO",
       "alto": 33.0,
       "ancho": 33.0,
@@ -3547,14 +3564,14 @@
       "peso_kg_m": 0.645,
       "acabado": "BRUTO",
       "tar": 10,
-      "mur": 53,
+      "mur": 11,
       "val": 10,
       "estado": "Stock",
-      "precio_metro": 4.19,
-      "descripcion": "TUBO REDONDO 33 X 2.5 (33/28)"
+      "precio_metro": 4.19
     },
     {
       "ref": "NOI0088721",
+      "descripcion": "TUBO REDONDO 45 X 2.5 (45/40)",
       "tipo": "TUBO REDONDO",
       "alto": 45.0,
       "ancho": 45.0,
@@ -3566,11 +3583,11 @@
       "mur": 12,
       "val": 140,
       "estado": "Stock",
-      "precio_metro": 5.86,
-      "descripcion": "TUBO REDONDO 45 X 2.5 (45/40)"
+      "precio_metro": 5.86
     },
     {
       "ref": "NOI0088722",
+      "descripcion": "TUBO REDONDO 80 X 3 (80/74)",
       "tipo": "TUBO REDONDO",
       "alto": 80.0,
       "ancho": 80.0,
@@ -3582,11 +3599,11 @@
       "mur": 22,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 12.78,
-      "descripcion": "TUBO REDONDO 80 X 3 (80/74)"
+      "precio_metro": 12.78
     },
     {
       "ref": "NOI0088723",
+      "descripcion": "TUBO REDONDO 90 X 5 (90/80)",
       "tipo": "TUBO REDONDO",
       "alto": 90.0,
       "ancho": 90.0,
@@ -3595,14 +3612,14 @@
       "peso_kg_m": 3.605,
       "acabado": "BRUTO",
       "tar": 18,
-      "mur": 4,
+      "mur": 3,
       "val": 24,
       "estado": "Stock",
-      "precio_metro": 23.43,
-      "descripcion": "TUBO REDONDO 90 X 5 (90/80)"
+      "precio_metro": 23.43
     },
     {
       "ref": "NOI0088724",
+      "descripcion": "TUBO REDONDO 200 X 6 (200/188)",
       "tipo": "TUBO REDONDO",
       "alto": 200.0,
       "ancho": 200.0,
@@ -3614,11 +3631,11 @@
       "mur": 0,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 64.18,
-      "descripcion": "TUBO REDONDO 200 X 6 (200/188)"
+      "precio_metro": 64.18
     },
     {
       "ref": "NOI0088725",
+      "descripcion": "TUBO REDONDO 16 X 2 (16/12)",
       "tipo": "TUBO REDONDO",
       "alto": 16.0,
       "ancho": 16.0,
@@ -3630,11 +3647,11 @@
       "mur": 349,
       "val": 108,
       "estado": "Stock",
-      "precio_metro": 1.54,
-      "descripcion": "TUBO REDONDO 16 X 2 (16/12)"
+      "precio_metro": 1.54
     },
     {
       "ref": "NOI0088726",
+      "descripcion": "TUBO REDONDO 60 X 2 (60/56)",
       "tipo": "TUBO REDONDO",
       "alto": 60.0,
       "ancho": 60.0,
@@ -3646,11 +3663,11 @@
       "mur": 118,
       "val": 30,
       "estado": "Stock",
-      "precio_metro": 6.4,
-      "descripcion": "TUBO REDONDO 60 X 2 (60/56)"
+      "precio_metro": 6.4
     },
     {
       "ref": "NOI0088727",
+      "descripcion": "TUBO REDONDO 50 X 10 (50/30)",
       "tipo": "TUBO REDONDO",
       "alto": 50.0,
       "ancho": 50.0,
@@ -3662,11 +3679,11 @@
       "mur": 1,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 22.81,
-      "descripcion": "TUBO REDONDO 50 X 10 (50/30)"
+      "precio_metro": 22.81
     },
     {
       "ref": "NOI0088728",
+      "descripcion": "TUBO REDONDO 100 X 2 (100/96)",
       "tipo": "TUBO REDONDO",
       "alto": 100.0,
       "ancho": 100.0,
@@ -3678,11 +3695,11 @@
       "mur": 16,
       "val": 10,
       "estado": "7/10 Días",
-      "precio_metro": 10.85,
-      "descripcion": "TUBO REDONDO 100 X 2 (100/96)"
+      "precio_metro": 10.85
     },
     {
       "ref": "NOI0088734",
+      "descripcion": "TUBO REDONDO 40 X 4 (40/32)",
       "tipo": "TUBO REDONDO",
       "alto": 40.0,
       "ancho": 40.0,
@@ -3694,11 +3711,11 @@
       "mur": 179,
       "val": 26,
       "estado": "Stock",
-      "precio_metro": 7.97,
-      "descripcion": "TUBO REDONDO 40 X 4 (40/32)"
+      "precio_metro": 7.97
     },
     {
       "ref": "NOI0088736",
+      "descripcion": "TUBO REDONDO 50 X 2 (50/46)",
       "tipo": "TUBO REDONDO",
       "alto": 50.0,
       "ancho": 50.0,
@@ -3706,15 +3723,15 @@
       "longitud": 6.0,
       "peso_kg_m": 0.813,
       "acabado": "BRUTO",
-      "tar": 141,
-      "mur": 13,
+      "tar": 140,
+      "mur": 12,
       "val": 252,
       "estado": "Stock",
-      "precio_metro": 5.28,
-      "descripcion": "TUBO REDONDO 50 X 2 (50/46)"
+      "precio_metro": 5.28
     },
     {
       "ref": "NOI0088737",
+      "descripcion": "TUBO REDONDO 80 X 2.5 (80/75)",
       "tipo": "TUBO REDONDO",
       "alto": 80.0,
       "ancho": 80.0,
@@ -3726,11 +3743,11 @@
       "mur": 25,
       "val": 22,
       "estado": "7/10 Días",
-      "precio_metro": 10.67,
-      "descripcion": "TUBO REDONDO 80 X 2.5 (80/75)"
+      "precio_metro": 10.67
     },
     {
       "ref": "NOI0088738",
+      "descripcion": "TUBO REDONDO 60 X 2.5 (60/55)",
       "tipo": "TUBO REDONDO",
       "alto": 60.0,
       "ancho": 60.0,
@@ -3742,11 +3759,11 @@
       "mur": 0,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 7.92,
-      "descripcion": "TUBO REDONDO 60 X 2.5 (60/55)"
+      "precio_metro": 7.92
     },
     {
       "ref": "NOI0088739",
+      "descripcion": "TUBO REDONDO 16 X 1.5 (16/13)",
       "tipo": "TUBO REDONDO",
       "alto": 16.0,
       "ancho": 16.0,
@@ -3758,11 +3775,11 @@
       "mur": 174,
       "val": 4,
       "estado": "Stock",
-      "precio_metro": 1.2,
-      "descripcion": "TUBO REDONDO 16 X 1.5 (16/13)"
+      "precio_metro": 1.2
     },
     {
       "ref": "NOI0088740",
+      "descripcion": "TUBO REDONDO 55 X 1.5 (55/52)",
       "tipo": "TUBO REDONDO",
       "alto": 55.0,
       "ancho": 55.0,
@@ -3772,13 +3789,13 @@
       "acabado": "BRUTO",
       "tar": 62,
       "mur": 8,
-      "val": 57,
+      "val": 50,
       "estado": "Stock",
-      "precio_metro": 4.42,
-      "descripcion": "TUBO REDONDO 55 X 1.5 (55/52)"
+      "precio_metro": 4.42
     },
     {
       "ref": "NOI0088741",
+      "descripcion": "TUBO REDONDO 120 X 3 (120/114)",
       "tipo": "TUBO REDONDO",
       "alto": 120.0,
       "ancho": 120.0,
@@ -3790,11 +3807,11 @@
       "mur": 23,
       "val": 13,
       "estado": "7/10 Días",
-      "precio_metro": 19.36,
-      "descripcion": "TUBO REDONDO 120 X 3 (120/114)"
+      "precio_metro": 19.36
     },
     {
       "ref": "NOI0088743",
+      "descripcion": "TUBO REDONDO 25 X 1.5 (25/22)",
       "tipo": "TUBO REDONDO",
       "alto": 25.0,
       "ancho": 25.0,
@@ -3806,11 +3823,11 @@
       "mur": 70,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 1.95,
-      "descripcion": "TUBO REDONDO 25 X 1.5 (25/22)"
+      "precio_metro": 1.95
     },
     {
       "ref": "NOI0088744",
+      "descripcion": "TUBO REDONDO 42 X 4 (42/34)",
       "tipo": "TUBO REDONDO",
       "alto": 42.0,
       "ancho": 42.0,
@@ -3822,11 +3839,11 @@
       "mur": 40,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 8.38,
-      "descripcion": "TUBO REDONDO 42 X 4 (42/34)"
+      "precio_metro": 8.38
     },
     {
       "ref": "NOI0088745",
+      "descripcion": "TUBO REDONDO 32 X 3 (32/26)",
       "tipo": "TUBO REDONDO",
       "alto": 32.0,
       "ancho": 32.0,
@@ -3838,11 +3855,11 @@
       "mur": 90,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 4.81,
-      "descripcion": "TUBO REDONDO 32 X 3 (32/26)"
+      "precio_metro": 4.81
     },
     {
       "ref": "NOI0088746",
+      "descripcion": "TUBO REDONDO 35 X 3 (35/29)",
       "tipo": "TUBO REDONDO",
       "alto": 35.0,
       "ancho": 35.0,
@@ -3851,14 +3868,14 @@
       "peso_kg_m": 0.816,
       "acabado": "BRUTO",
       "tar": 36,
-      "mur": 14,
+      "mur": 13,
       "val": 13,
       "estado": "Stock",
-      "precio_metro": 5.3,
-      "descripcion": "TUBO REDONDO 35 X 3 (35/29)"
+      "precio_metro": 5.3
     },
     {
       "ref": "NOI0088747",
+      "descripcion": "TUBO REDONDO 22 X 2 (22/18)",
       "tipo": "TUBO REDONDO",
       "alto": 22.0,
       "ancho": 22.0,
@@ -3870,11 +3887,11 @@
       "mur": 176,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 2.21,
-      "descripcion": "TUBO REDONDO 22 X 2 (22/18)"
+      "precio_metro": 2.21
     },
     {
       "ref": "NOI0088749",
+      "descripcion": "TUBO REDONDO 130.5 X 10.25 (130.5/110)",
       "tipo": "TUBO REDONDO",
       "alto": 130.5,
       "ancho": 130.5,
@@ -3886,11 +3903,11 @@
       "mur": 10,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 67.96,
-      "descripcion": "TUBO REDONDO 130.5 X 10.25 (130.5/110)"
+      "precio_metro": 67.96
     },
     {
       "ref": "NOI0088750",
+      "descripcion": "TUBO REDONDO 70 X 4 (70/62)",
       "tipo": "TUBO REDONDO",
       "alto": 70.0,
       "ancho": 70.0,
@@ -3899,14 +3916,14 @@
       "peso_kg_m": 2.238,
       "acabado": "BRUTO",
       "tar": 10,
-      "mur": 85,
+      "mur": 81,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 14.55,
-      "descripcion": "TUBO REDONDO 70 X 4 (70/62)"
+      "precio_metro": 14.55
     },
     {
       "ref": "NOI0088751",
+      "descripcion": "TUBO REDONDO 70 X 10 (70/50)",
       "tipo": "TUBO REDONDO",
       "alto": 70.0,
       "ancho": 70.0,
@@ -3918,11 +3935,11 @@
       "mur": 0,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 40.82,
-      "descripcion": "TUBO REDONDO 70 X 10 (70/50)"
+      "precio_metro": 40.82
     },
     {
       "ref": "NOI0088752",
+      "descripcion": "TUBO REDONDO 20 X 3 (20/14)",
       "tipo": "TUBO REDONDO",
       "alto": 20.0,
       "ancho": 20.0,
@@ -3934,27 +3951,11 @@
       "mur": 192,
       "val": 182,
       "estado": "Stock",
-      "precio_metro": 2.81,
-      "descripcion": "TUBO REDONDO 20 X 3 (20/14)"
-    },
-    {
-      "ref": "NOI0088753",
-      "tipo": "TUBO REDONDO",
-      "alto": 30.0,
-      "ancho": 30.0,
-      "espesor": 1.5,
-      "longitud": 6.4,
-      "peso_kg_m": 0.363,
-      "acabado": "BRUTO",
-      "tar": 0,
-      "mur": 0,
-      "val": 9,
-      "estado": "Sin stock",
-      "precio_metro": 2.36,
-      "descripcion": "TUBO REDONDO 30 X 1.5 (30/27)"
+      "precio_metro": 2.81
     },
     {
       "ref": "NOI0088754",
+      "descripcion": "TUBO REDONDO 48 X 3 (48/42)",
       "tipo": "TUBO REDONDO",
       "alto": 48.0,
       "ancho": 48.0,
@@ -3966,11 +3967,11 @@
       "mur": 36,
       "val": 38,
       "estado": "7/10 Días",
-      "precio_metro": 7.46,
-      "descripcion": "TUBO REDONDO 48 X 3 (48/42)"
+      "precio_metro": 7.46
     },
     {
       "ref": "NOI0088755",
+      "descripcion": "TUBO REDONDO 55 X 2 (55/51)",
       "tipo": "TUBO REDONDO",
       "alto": 55.0,
       "ancho": 55.0,
@@ -3982,11 +3983,11 @@
       "mur": 36,
       "val": 26,
       "estado": "Stock",
-      "precio_metro": 5.84,
-      "descripcion": "TUBO REDONDO 55 X 2 (55/51)"
+      "precio_metro": 5.84
     },
     {
       "ref": "NOI0088756",
+      "descripcion": "TUBO REDONDO 20 X 4.75 (20/10.50)",
       "tipo": "TUBO REDONDO",
       "alto": 20.0,
       "ancho": 20.0,
@@ -3998,11 +3999,11 @@
       "mur": 136,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 3.99,
-      "descripcion": "TUBO REDONDO 20 X 4.75 (20/10.50)"
+      "precio_metro": 3.99
     },
     {
       "ref": "NOI0088757",
+      "descripcion": "TUBO REDONDO 70 X 6 (70/58)",
       "tipo": "TUBO REDONDO",
       "alto": 70.0,
       "ancho": 70.0,
@@ -4014,11 +4015,11 @@
       "mur": 22,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 21.24,
-      "descripcion": "TUBO REDONDO 70 X 6 (70/58)"
+      "precio_metro": 21.24
     },
     {
       "ref": "NOI0088758",
+      "descripcion": "TUBO REDONDO 30 X 2",
       "tipo": "TUBO REDONDO",
       "alto": 30.0,
       "ancho": 30.0,
@@ -4028,13 +4029,13 @@
       "acabado": "BRUTO",
       "tar": 66,
       "mur": 0,
-      "val": 234,
+      "val": 223,
       "estado": "Stock",
-      "precio_metro": 3.09,
-      "descripcion": "TUBO REDONDO 30 X 2"
+      "precio_metro": 3.09
     },
     {
       "ref": "NOI0088800",
+      "descripcion": "TUBO CUADRADO 20 X 2",
       "tipo": "TUBO CUADRADO",
       "alto": 20.0,
       "ancho": 20.0,
@@ -4042,15 +4043,15 @@
       "longitud": 6.0,
       "peso_kg_m": 0.389,
       "acabado": "BRUTO",
-      "tar": 209,
-      "mur": 0,
-      "val": 205,
+      "tar": 207,
+      "mur": 5,
+      "val": 183,
       "estado": "Stock",
-      "precio_metro": 2.53,
-      "descripcion": "TUBO CUADRADO 20 X 2"
+      "precio_metro": 2.53
     },
     {
       "ref": "NOI0088801",
+      "descripcion": "TUBO CUADRADO 25 X 2 (C/R)",
       "tipo": "TUBO CUADRADO",
       "alto": 25.0,
       "ancho": 25.0,
@@ -4062,11 +4063,11 @@
       "mur": 415,
       "val": 45,
       "estado": "7/10 Días",
-      "precio_metro": 3.17,
-      "descripcion": "TUBO CUADRADO 25 X 2 (C/R)"
+      "precio_metro": 3.17
     },
     {
       "ref": "NOI0088802",
+      "descripcion": "TUBO CUADRADO 30 X 3",
       "tipo": "TUBO CUADRADO",
       "alto": 30.0,
       "ancho": 30.0,
@@ -4076,13 +4077,13 @@
       "acabado": "BRUTO",
       "tar": 104,
       "mur": 236,
-      "val": 287,
+      "val": 295,
       "estado": "Stock",
-      "precio_metro": 5.69,
-      "descripcion": "TUBO CUADRADO 30 X 3"
+      "precio_metro": 5.69
     },
     {
       "ref": "NOI0088803",
+      "descripcion": "TUBO CUADRADO 35 X 2",
       "tipo": "TUBO CUADRADO",
       "alto": 35.0,
       "ancho": 35.0,
@@ -4091,14 +4092,14 @@
       "peso_kg_m": 0.713,
       "acabado": "BRUTO",
       "tar": 139,
-      "mur": 251,
+      "mur": 241,
       "val": 36,
       "estado": "Stock",
-      "precio_metro": 4.63,
-      "descripcion": "TUBO CUADRADO 35 X 2"
+      "precio_metro": 4.63
     },
     {
       "ref": "NOI0088804",
+      "descripcion": "TUBO CUADRADO 40 X 2",
       "tipo": "TUBO CUADRADO",
       "alto": 40.0,
       "ancho": 40.0,
@@ -4106,15 +4107,15 @@
       "longitud": 6.0,
       "peso_kg_m": 0.824,
       "acabado": "BRUTO",
-      "tar": 117,
-      "mur": 48,
+      "tar": 77,
+      "mur": 39,
       "val": 120,
       "estado": "Stock",
-      "precio_metro": 5.36,
-      "descripcion": "TUBO CUADRADO 40 X 2"
+      "precio_metro": 5.36
     },
     {
       "ref": "NOI0088805",
+      "descripcion": "TUBO CUADRADO 40 X 2.5",
       "tipo": "TUBO CUADRADO",
       "alto": 40.0,
       "ancho": 40.0,
@@ -4126,11 +4127,11 @@
       "mur": 173,
       "val": 38,
       "estado": "Stock",
-      "precio_metro": 6.61,
-      "descripcion": "TUBO CUADRADO 40 X 2.5"
+      "precio_metro": 6.61
     },
     {
       "ref": "NOI0088806",
+      "descripcion": "TUBO CUADRADO 40 X 4",
       "tipo": "TUBO CUADRADO",
       "alto": 40.0,
       "ancho": 40.0,
@@ -4142,11 +4143,11 @@
       "mur": 66,
       "val": 44,
       "estado": "Stock",
-      "precio_metro": 10.11,
-      "descripcion": "TUBO CUADRADO 40 X 4"
+      "precio_metro": 10.11
     },
     {
       "ref": "NOI0088807",
+      "descripcion": "TUBO CUADRADO 50 X 2",
       "tipo": "TUBO CUADRADO",
       "alto": 50.0,
       "ancho": 50.0,
@@ -4158,11 +4159,11 @@
       "mur": 135,
       "val": 117,
       "estado": "Stock",
-      "precio_metro": 6.77,
-      "descripcion": "TUBO CUADRADO 50 X 2"
+      "precio_metro": 6.77
     },
     {
       "ref": "NOI0088808",
+      "descripcion": "TUBO CUADRADO 50 X 4",
       "tipo": "TUBO CUADRADO",
       "alto": 50.0,
       "ancho": 50.0,
@@ -4174,11 +4175,11 @@
       "mur": 172,
       "val": 50,
       "estado": "Stock",
-      "precio_metro": 12.92,
-      "descripcion": "TUBO CUADRADO 50 X 4"
+      "precio_metro": 12.92
     },
     {
       "ref": "NOI0088809",
+      "descripcion": "TUBO CUADRADO 60 X 3",
       "tipo": "TUBO CUADRADO",
       "alto": 60.0,
       "ancho": 60.0,
@@ -4190,11 +4191,11 @@
       "mur": 60,
       "val": 142,
       "estado": "Stock",
-      "precio_metro": 12.06,
-      "descripcion": "TUBO CUADRADO 60 X 3"
+      "precio_metro": 12.06
     },
     {
       "ref": "NOI0088810",
+      "descripcion": "TUBO CUADRADO 60 X 4",
       "tipo": "TUBO CUADRADO",
       "alto": 60.0,
       "ancho": 60.0,
@@ -4202,15 +4203,15 @@
       "longitud": 6.0,
       "peso_kg_m": 2.419,
       "acabado": "BRUTO",
-      "tar": 40,
+      "tar": 38,
       "mur": 49,
       "val": 5,
       "estado": "Stock",
-      "precio_metro": 15.72,
-      "descripcion": "TUBO CUADRADO 60 X 4"
+      "precio_metro": 15.72
     },
     {
       "ref": "NOI0088811",
+      "descripcion": "TUBO CUADRADO 70 X 4",
       "tipo": "TUBO CUADRADO",
       "alto": 70.0,
       "ancho": 70.0,
@@ -4222,11 +4223,11 @@
       "mur": 90,
       "val": 17,
       "estado": "Stock",
-      "precio_metro": 18.53,
-      "descripcion": "TUBO CUADRADO 70 X 4"
+      "precio_metro": 18.53
     },
     {
       "ref": "NOI0088812",
+      "descripcion": "TUBO CUADRADO 80 X 4",
       "tipo": "TUBO CUADRADO",
       "alto": 80.0,
       "ancho": 80.0,
@@ -4238,11 +4239,11 @@
       "mur": 41,
       "val": 100,
       "estado": "Stock",
-      "precio_metro": 21.33,
-      "descripcion": "TUBO CUADRADO 80 X 4"
+      "precio_metro": 21.33
     },
     {
       "ref": "NOI0088813",
+      "descripcion": "TUBO CUADRADO 80 X 8",
       "tipo": "TUBO CUADRADO",
       "alto": 80.0,
       "ancho": 80.0,
@@ -4254,11 +4255,11 @@
       "mur": 6,
       "val": 20,
       "estado": "7/10 Días",
-      "precio_metro": 40.44,
-      "descripcion": "TUBO CUADRADO 80 X 8"
+      "precio_metro": 40.44
     },
     {
       "ref": "NOI0088814",
+      "descripcion": "TUBO CUADRADO 100 X 4",
       "tipo": "TUBO CUADRADO",
       "alto": 100.0,
       "ancho": 100.0,
@@ -4270,11 +4271,11 @@
       "mur": 14,
       "val": 53,
       "estado": "Stock",
-      "precio_metro": 26.86,
-      "descripcion": "TUBO CUADRADO 100 X 4"
+      "precio_metro": 26.86
     },
     {
       "ref": "NOI0088815",
+      "descripcion": "TUBO CUADRADO 80 X 3",
       "tipo": "TUBO CUADRADO",
       "alto": 80.0,
       "ancho": 80.0,
@@ -4286,11 +4287,11 @@
       "mur": 17,
       "val": 10,
       "estado": "Stock",
-      "precio_metro": 16.28,
-      "descripcion": "TUBO CUADRADO 80 X 3"
+      "precio_metro": 16.28
     },
     {
       "ref": "NOI0088816",
+      "descripcion": "TUBO CUADRADO 30 X 2",
       "tipo": "TUBO CUADRADO",
       "alto": 30.0,
       "ancho": 30.0,
@@ -4298,15 +4299,15 @@
       "longitud": 6.0,
       "peso_kg_m": 0.607,
       "acabado": "BRUTO",
-      "tar": 58,
+      "tar": 54,
       "mur": 122,
       "val": 218,
       "estado": "Stock",
-      "precio_metro": 3.95,
-      "descripcion": "TUBO CUADRADO 30 X 2"
+      "precio_metro": 3.95
     },
     {
       "ref": "NOI0088817",
+      "descripcion": "TUBO CUADRADO 45 X 2",
       "tipo": "TUBO CUADRADO",
       "alto": 45.0,
       "ancho": 45.0,
@@ -4318,11 +4319,11 @@
       "mur": 63,
       "val": 114,
       "estado": "Stock",
-      "precio_metro": 6.04,
-      "descripcion": "TUBO CUADRADO 45 X 2"
+      "precio_metro": 6.04
     },
     {
       "ref": "NOI0088818",
+      "descripcion": "TUBO CUADRADO 70 X 2",
       "tipo": "TUBO CUADRADO",
       "alto": 70.0,
       "ancho": 70.0,
@@ -4334,11 +4335,11 @@
       "mur": 69,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 9.58,
-      "descripcion": "TUBO CUADRADO 70 X 2"
+      "precio_metro": 9.58
     },
     {
       "ref": "NOI0088818",
+      "descripcion": "TUBO CUADRADO 70 X 2",
       "tipo": "TUBO CUADRADO",
       "alto": 70.0,
       "ancho": 70.0,
@@ -4350,11 +4351,11 @@
       "mur": 20,
       "val": 4,
       "estado": "Stock",
-      "precio_metro": 9.58,
-      "descripcion": "TUBO CUADRADO 70 X 2"
+      "precio_metro": 9.58
     },
     {
       "ref": "NOI0088819",
+      "descripcion": "TUBO CUADRADO 80 X 5 (R/5)",
       "tipo": "TUBO CUADRADO",
       "alto": 80.0,
       "ancho": 80.0,
@@ -4366,11 +4367,11 @@
       "mur": 18,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 25.96,
-      "descripcion": "TUBO CUADRADO 80 X 5 (R/5)"
+      "precio_metro": 25.96
     },
     {
       "ref": "NOI0088819",
+      "descripcion": "TUBO CUADRADO 80 X 5 (R/5)",
       "tipo": "TUBO CUADRADO",
       "alto": 80.0,
       "ancho": 80.0,
@@ -4382,11 +4383,11 @@
       "mur": 1,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 25.96,
-      "descripcion": "TUBO CUADRADO 80 X 5 (R/5)"
+      "precio_metro": 25.96
     },
     {
       "ref": "NOI0088820",
+      "descripcion": "TUBO CUADRADO 120 X 5 (R/5)",
       "tipo": "TUBO CUADRADO",
       "alto": 120.0,
       "ancho": 120.0,
@@ -4398,11 +4399,11 @@
       "mur": 15,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 40.37,
-      "descripcion": "TUBO CUADRADO 120 X 5 (R/5)"
+      "precio_metro": 40.37
     },
     {
       "ref": "NOI0088821",
+      "descripcion": "TUBO CUADRADO 25 X 3",
       "tipo": "TUBO CUADRADO",
       "alto": 25.0,
       "ancho": 25.0,
@@ -4412,13 +4413,13 @@
       "acabado": "BRUTO",
       "tar": 0,
       "mur": 3,
-      "val": 43,
+      "val": 48,
       "estado": "7/10 Días",
-      "precio_metro": 4.86,
-      "descripcion": "TUBO CUADRADO 25 X 3"
+      "precio_metro": 4.86
     },
     {
       "ref": "NOI0088822",
+      "descripcion": "TUBO CUADRADO 60 X 2",
       "tipo": "TUBO CUADRADO",
       "alto": 60.0,
       "ancho": 60.0,
@@ -4430,11 +4431,11 @@
       "mur": 24,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 8.14,
-      "descripcion": "TUBO CUADRADO 60 X 2"
+      "precio_metro": 8.14
     },
     {
       "ref": "NOI0088822",
+      "descripcion": "TUBO CUADRADO 60 X 2",
       "tipo": "TUBO CUADRADO",
       "alto": 60.0,
       "ancho": 60.0,
@@ -4446,11 +4447,11 @@
       "mur": 121,
       "val": 69,
       "estado": "Stock",
-      "precio_metro": 8.14,
-      "descripcion": "TUBO CUADRADO 60 X 2"
+      "precio_metro": 8.14
     },
     {
       "ref": "NOI0088823",
+      "descripcion": "TUBO CUADRADO 40 X 3",
       "tipo": "TUBO CUADRADO",
       "alto": 40.0,
       "ancho": 40.0,
@@ -4459,14 +4460,14 @@
       "peso_kg_m": 1.199,
       "acabado": "BRUTO",
       "tar": 51,
-      "mur": 427,
+      "mur": 425,
       "val": 77,
       "estado": "Stock",
-      "precio_metro": 7.79,
-      "descripcion": "TUBO CUADRADO 40 X 3"
+      "precio_metro": 7.79
     },
     {
       "ref": "NOI0088824",
+      "descripcion": "TUBO CUADRADO 20 X 3",
       "tipo": "TUBO CUADRADO",
       "alto": 20.0,
       "ancho": 20.0,
@@ -4478,11 +4479,11 @@
       "mur": 316,
       "val": 9,
       "estado": "Stock",
-      "precio_metro": 3.58,
-      "descripcion": "TUBO CUADRADO 20 X 3"
+      "precio_metro": 3.58
     },
     {
       "ref": "NOI0088826",
+      "descripcion": "TUBO CUADRADO 40 X 4 (R/4)",
       "tipo": "TUBO CUADRADO",
       "alto": 40.0,
       "ancho": 40.0,
@@ -4494,11 +4495,11 @@
       "mur": 79,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 9.87,
-      "descripcion": "TUBO CUADRADO 40 X 4 (R/4)"
+      "precio_metro": 9.87
     },
     {
       "ref": "NOI0088827",
+      "descripcion": "TUBO CUADRADO 30 X 3 (R/3)",
       "tipo": "TUBO CUADRADO",
       "alto": 30.0,
       "ancho": 30.0,
@@ -4510,11 +4511,11 @@
       "mur": 276,
       "val": 72,
       "estado": "7/10 Días",
-      "precio_metro": 5.55,
-      "descripcion": "TUBO CUADRADO 30 X 3 (R/3)"
+      "precio_metro": 5.55
     },
     {
       "ref": "NOI0088828",
+      "descripcion": "TUBO CUADRADO 60 X 3 (R/6)",
       "tipo": "TUBO CUADRADO",
       "alto": 60.0,
       "ancho": 60.0,
@@ -4526,11 +4527,11 @@
       "mur": 73,
       "val": 14,
       "estado": "Stock",
-      "precio_metro": 11.99,
-      "descripcion": "TUBO CUADRADO 60 X 3 (R/6)"
+      "precio_metro": 11.99
     },
     {
       "ref": "NOI0088829",
+      "descripcion": "TUBO CUADRADO 50 X 4 (R/3)",
       "tipo": "TUBO CUADRADO",
       "alto": 50.0,
       "ancho": 50.0,
@@ -4542,11 +4543,11 @@
       "mur": 47,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 12.78,
-      "descripcion": "TUBO CUADRADO 50 X 4 (R/3)"
+      "precio_metro": 12.78
     },
     {
       "ref": "NOI0088830",
+      "descripcion": "TUBO CUADRADO 100 X 6 (R/5)",
       "tipo": "TUBO CUADRADO",
       "alto": 100.0,
       "ancho": 100.0,
@@ -4558,11 +4559,11 @@
       "mur": 17,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 39.23,
-      "descripcion": "TUBO CUADRADO 100 X 6 (R/5)"
+      "precio_metro": 39.23
     },
     {
       "ref": "NOI0088831",
+      "descripcion": "TUBO CUADRADO 50 X 3",
       "tipo": "TUBO CUADRADO",
       "alto": 50.0,
       "ancho": 50.0,
@@ -4574,11 +4575,11 @@
       "mur": 75,
       "val": 54,
       "estado": "Stock",
-      "precio_metro": 9.9,
-      "descripcion": "TUBO CUADRADO 50 X 3"
+      "precio_metro": 9.9
     },
     {
       "ref": "NOI0088832",
+      "descripcion": "TUBO CUADRADO 150 X 2.6",
       "tipo": "TUBO CUADRADO",
       "alto": 150.0,
       "ancho": 150.0,
@@ -4590,11 +4591,11 @@
       "mur": 1,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 26.88,
-      "descripcion": "TUBO CUADRADO 150 X 2.6"
+      "precio_metro": 26.88
     },
     {
       "ref": "NOI0088832",
+      "descripcion": "TUBO CUADRADO 150 X 2.6",
       "tipo": "TUBO CUADRADO",
       "alto": 150.0,
       "ancho": 150.0,
@@ -4604,13 +4605,13 @@
       "acabado": "BRUTO",
       "tar": 36,
       "mur": 12,
-      "val": 6,
+      "val": 4,
       "estado": "Stock",
-      "precio_metro": 26.88,
-      "descripcion": "TUBO CUADRADO 150 X 2.6"
+      "precio_metro": 26.88
     },
     {
       "ref": "NOI0088833",
+      "descripcion": "TUBO CUADRADO 25 X 1.5",
       "tipo": "TUBO CUADRADO",
       "alto": 25.0,
       "ancho": 25.0,
@@ -4622,11 +4623,11 @@
       "mur": 342,
       "val": 111,
       "estado": "Stock",
-      "precio_metro": 2.48,
-      "descripcion": "TUBO CUADRADO 25 X 1.5"
+      "precio_metro": 2.48
     },
     {
       "ref": "NOI0088833",
+      "descripcion": "TUBO CUADRADO 25 X 1.5",
       "tipo": "TUBO CUADRADO",
       "alto": 25.0,
       "ancho": 25.0,
@@ -4638,11 +4639,11 @@
       "mur": 0,
       "val": 5,
       "estado": "Sin stock",
-      "precio_metro": 2.48,
-      "descripcion": "TUBO CUADRADO 25 X 1.5"
+      "precio_metro": 2.48
     },
     {
       "ref": "NOI0088834",
+      "descripcion": "TUBO CUADRADO 80 X 4 (R/6)",
       "tipo": "TUBO CUADRADO",
       "alto": 80.0,
       "ancho": 80.0,
@@ -4654,11 +4655,11 @@
       "mur": 30,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 20.86,
-      "descripcion": "TUBO CUADRADO 80 X 4 (R/6)"
+      "precio_metro": 20.86
     },
     {
       "ref": "NOI0088835",
+      "descripcion": "TUBO CUADRADO 200 X 5 (R/5)",
       "tipo": "TUBO CUADRADO",
       "alto": 200.0,
       "ancho": 200.0,
@@ -4670,11 +4671,11 @@
       "mur": 0,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 68.0,
-      "descripcion": "TUBO CUADRADO 200 X 5 (R/5)"
+      "precio_metro": 68.0
     },
     {
       "ref": "NOI0088835",
+      "descripcion": "TUBO CUADRADO 200 X 5 (R/5)",
       "tipo": "TUBO CUADRADO",
       "alto": 200.0,
       "ancho": 200.0,
@@ -4686,11 +4687,11 @@
       "mur": 5,
       "val": 10,
       "estado": "7/10 Días",
-      "precio_metro": 68.0,
-      "descripcion": "TUBO CUADRADO 200 X 5 (R/5)"
+      "precio_metro": 68.0
     },
     {
       "ref": "NOI0088835",
+      "descripcion": "TUBO CUADRADO 200 X 5 (R/5)",
       "tipo": "TUBO CUADRADO",
       "alto": 200.0,
       "ancho": 200.0,
@@ -4702,11 +4703,11 @@
       "mur": 6,
       "val": 8,
       "estado": "Sin stock",
-      "precio_metro": 68.0,
-      "descripcion": "TUBO CUADRADO 200 X 5 (R/5)"
+      "precio_metro": 68.0
     },
     {
       "ref": "NOI0088837",
+      "descripcion": "TUBO CUADRADO 60 X 2.5",
       "tipo": "TUBO CUADRADO",
       "alto": 60.0,
       "ancho": 60.0,
@@ -4718,11 +4719,11 @@
       "mur": 22,
       "val": 14,
       "estado": "7/10 Días",
-      "precio_metro": 10.09,
-      "descripcion": "TUBO CUADRADO 60 X 2.5"
+      "precio_metro": 10.09
     },
     {
       "ref": "NOI0088900",
+      "descripcion": "TUBO RECTANGULAR 40 X 20 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 40.0,
       "ancho": 20.0,
@@ -4730,15 +4731,15 @@
       "longitud": 6.0,
       "peso_kg_m": 0.60453,
       "acabado": "BRUTO",
-      "tar": 155,
-      "mur": 5,
-      "val": 0,
+      "tar": 135,
+      "mur": 0,
+      "val": 7,
       "estado": "Stock",
-      "precio_metro": 3.93,
-      "descripcion": "TUBO RECTANGULAR 40 X 20 X 2"
+      "precio_metro": 3.93
     },
     {
       "ref": "NOI0088900",
+      "descripcion": "TUBO RECTANGULAR 40 X 20 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 40.0,
       "ancho": 20.0,
@@ -4750,11 +4751,11 @@
       "mur": 0,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 3.93,
-      "descripcion": "TUBO RECTANGULAR 40 X 20 X 2"
+      "precio_metro": 3.93
     },
     {
       "ref": "NOI0088901",
+      "descripcion": "TUBO RECTANGULAR 40 X 30 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 40.0,
       "ancho": 30.0,
@@ -4766,11 +4767,11 @@
       "mur": 18,
       "val": 69,
       "estado": "7/10 Días",
-      "precio_metro": 4.63,
-      "descripcion": "TUBO RECTANGULAR 40 X 30 X 2"
+      "precio_metro": 4.63
     },
     {
       "ref": "NOI0088902",
+      "descripcion": "TUBO RECTANGULAR 50 X 30 X 3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 50.0,
       "ancho": 30.0,
@@ -4782,11 +4783,11 @@
       "mur": 0,
       "val": 51,
       "estado": "7/10 Días",
-      "precio_metro": 7.79,
-      "descripcion": "TUBO RECTANGULAR 50 X 30 X 3"
+      "precio_metro": 7.79
     },
     {
       "ref": "NOI0088902",
+      "descripcion": "TUBO RECTANGULAR 50 X 30 X 3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 50.0,
       "ancho": 30.0,
@@ -4794,15 +4795,15 @@
       "longitud": 6.0,
       "peso_kg_m": 1.199,
       "acabado": "BRUTO",
-      "tar": 133,
+      "tar": 132,
       "mur": 186,
       "val": 90,
       "estado": "Stock",
-      "precio_metro": 7.79,
-      "descripcion": "TUBO RECTANGULAR 50 X 30 X 3"
+      "precio_metro": 7.79
     },
     {
       "ref": "NOI0088903",
+      "descripcion": "TUBO RECTANGULAR 60 X 20 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 60.0,
       "ancho": 20.0,
@@ -4812,13 +4813,13 @@
       "acabado": "BRUTO",
       "tar": 83,
       "mur": 130,
-      "val": 132,
+      "val": 112,
       "estado": "Stock",
-      "precio_metro": 5.34,
-      "descripcion": "TUBO RECTANGULAR 60 X 20 X 2"
+      "precio_metro": 5.34
     },
     {
       "ref": "NOI0088904",
+      "descripcion": "TUBO RECTANGULAR 60 X 40 X 3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 60.0,
       "ancho": 40.0,
@@ -4827,14 +4828,14 @@
       "peso_kg_m": 1.5228,
       "acabado": "BRUTO",
       "tar": 86,
-      "mur": 7,
-      "val": 80,
+      "mur": 6,
+      "val": 76,
       "estado": "Stock",
-      "precio_metro": 9.9,
-      "descripcion": "TUBO RECTANGULAR 60 X 40 X 3"
+      "precio_metro": 9.9
     },
     {
       "ref": "NOI0088904",
+      "descripcion": "TUBO RECTANGULAR 60 X 40 X 3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 60.0,
       "ancho": 40.0,
@@ -4846,11 +4847,11 @@
       "mur": 0,
       "val": 53,
       "estado": "7/10 Días",
-      "precio_metro": 9.9,
-      "descripcion": "TUBO RECTANGULAR 60 X 40 X 3"
+      "precio_metro": 9.9
     },
     {
       "ref": "NOI0088905",
+      "descripcion": "TUBO RECTANGULAR 70 X 30 X 3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 70.0,
       "ancho": 30.0,
@@ -4862,11 +4863,11 @@
       "mur": 174,
       "val": 60,
       "estado": "Stock",
-      "precio_metro": 9.93,
-      "descripcion": "TUBO RECTANGULAR 70 X 30 X 3"
+      "precio_metro": 9.93
     },
     {
       "ref": "NOI0088906",
+      "descripcion": "TUBO RECTANGULAR 80 X 40 X 4",
       "tipo": "TUBO RECTANGULAR",
       "alto": 80.0,
       "ancho": 40.0,
@@ -4878,11 +4879,11 @@
       "mur": 138,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 15.72,
-      "descripcion": "TUBO RECTANGULAR 80 X 40 X 4"
+      "precio_metro": 15.72
     },
     {
       "ref": "NOI0088907",
+      "descripcion": "TUBO RECTANGULAR 100 X 40 X 4",
       "tipo": "TUBO RECTANGULAR",
       "alto": 100.0,
       "ancho": 40.0,
@@ -4894,11 +4895,11 @@
       "mur": 82,
       "val": 41,
       "estado": "Stock",
-      "precio_metro": 18.53,
-      "descripcion": "TUBO RECTANGULAR 100 X 40 X 4"
+      "precio_metro": 18.53
     },
     {
       "ref": "NOI0088908",
+      "descripcion": "TUBO RECTANGULAR 100 x 50 x 4",
       "tipo": "TUBO RECTANGULAR",
       "alto": 100.0,
       "ancho": 50.0,
@@ -4907,14 +4908,14 @@
       "peso_kg_m": 3.067,
       "acabado": "BRUTO",
       "tar": 12,
-      "mur": 30,
-      "val": 51,
+      "mur": 27,
+      "val": 50,
       "estado": "Stock",
-      "precio_metro": 19.94,
-      "descripcion": "TUBO RECTANGULAR 100 x 50 x 4"
+      "precio_metro": 19.94
     },
     {
       "ref": "NOI0088909",
+      "descripcion": "TUBO RECTANGULAR 30 X 20 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 30.0,
       "ancho": 20.0,
@@ -4922,15 +4923,15 @@
       "longitud": 6.0,
       "peso_kg_m": 0.49677,
       "acabado": "BRUTO",
-      "tar": 180,
+      "tar": 179,
       "mur": 56,
       "val": 127,
       "estado": "Stock",
-      "precio_metro": 3.23,
-      "descripcion": "TUBO RECTANGULAR 30 X 20 X 2"
+      "precio_metro": 3.23
     },
     {
       "ref": "NOI0088909",
+      "descripcion": "TUBO RECTANGULAR 30 X 20 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 30.0,
       "ancho": 20.0,
@@ -4939,14 +4940,14 @@
       "peso_kg_m": 0.49677,
       "acabado": "BRUTO",
       "tar": 0,
-      "mur": 23,
+      "mur": 13,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 3.23,
-      "descripcion": "TUBO RECTANGULAR 30 X 20 X 2"
+      "precio_metro": 3.23
     },
     {
       "ref": "NOI0088910",
+      "descripcion": "TUBO RECTANGULAR 120 X 80 X 6 (R/5)",
       "tipo": "TUBO RECTANGULAR",
       "alto": 120.0,
       "ancho": 80.0,
@@ -4958,11 +4959,11 @@
       "mur": 35,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 39.83,
-      "descripcion": "TUBO RECTANGULAR 120 X 80 X 6 (R/5)"
+      "precio_metro": 39.83
     },
     {
       "ref": "NOI0088911",
+      "descripcion": "TUBO RECTANGULAR 140 X 60 X 3/4",
       "tipo": "TUBO RECTANGULAR",
       "alto": 140.0,
       "ancho": 60.0,
@@ -4974,11 +4975,11 @@
       "mur": 47,
       "val": 8,
       "estado": "7/10 Días",
-      "precio_metro": 22.32,
-      "descripcion": "TUBO RECTANGULAR 140 X 60 X 3/4"
+      "precio_metro": 22.32
     },
     {
       "ref": "NOI0088912",
+      "descripcion": "TUBO RECTANGULAR 150 X 80 X 3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 150.0,
       "ancho": 80.0,
@@ -4988,13 +4989,13 @@
       "acabado": "BRUTO",
       "tar": 0,
       "mur": 48,
-      "val": 43,
+      "val": 41,
       "estado": "7/10 Días",
-      "precio_metro": 23.59,
-      "descripcion": "TUBO RECTANGULAR 150 X 80 X 3"
+      "precio_metro": 23.59
     },
     {
       "ref": "NOI0088913",
+      "descripcion": "TUBO RECTANGULAR 40 X 30 X 4",
       "tipo": "TUBO RECTANGULAR",
       "alto": 40.0,
       "ancho": 30.0,
@@ -5006,11 +5007,11 @@
       "mur": 269,
       "val": 46,
       "estado": "Stock",
-      "precio_metro": 8.84,
-      "descripcion": "TUBO RECTANGULAR 40 X 30 X 4"
+      "precio_metro": 8.84
     },
     {
       "ref": "NOI0088914",
+      "descripcion": "TUBO RECTANGULAR 120 X 50 X 3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 120.0,
       "ancho": 50.0,
@@ -5022,11 +5023,11 @@
       "mur": 51,
       "val": 24,
       "estado": "Stock",
-      "precio_metro": 17.27,
-      "descripcion": "TUBO RECTANGULAR 120 X 50 X 3"
+      "precio_metro": 17.27
     },
     {
       "ref": "NOI0088915",
+      "descripcion": "TUBO RECTANGULAR 100 X 40 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 100.0,
       "ancho": 40.0,
@@ -5038,11 +5039,11 @@
       "mur": 11,
       "val": 15,
       "estado": "Stock",
-      "precio_metro": 9.55,
-      "descripcion": "TUBO RECTANGULAR 100 X 40 X 2"
+      "precio_metro": 9.55
     },
     {
       "ref": "NOI0088916",
+      "descripcion": "TUBO RECTANGULAR 80 X 60 X 4",
       "tipo": "TUBO RECTANGULAR",
       "alto": 80.0,
       "ancho": 60.0,
@@ -5054,11 +5055,11 @@
       "mur": 84,
       "val": 40,
       "estado": "Stock",
-      "precio_metro": 18.53,
-      "descripcion": "TUBO RECTANGULAR 80 X 60 X 4"
+      "precio_metro": 18.53
     },
     {
       "ref": "NOI0088917",
+      "descripcion": "TUBO RECTANGULAR 120 X 60 X 5",
       "tipo": "TUBO RECTANGULAR",
       "alto": 120.0,
       "ancho": 60.0,
@@ -5070,11 +5071,11 @@
       "mur": 21,
       "val": 11,
       "estado": "Stock",
-      "precio_metro": 29.84,
-      "descripcion": "TUBO RECTANGULAR 120 X 60 X 5"
+      "precio_metro": 29.84
     },
     {
       "ref": "NOI0088918",
+      "descripcion": "TUBO RECTANGULAR 80 X 40 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 80.0,
       "ancho": 40.0,
@@ -5086,11 +5087,11 @@
       "mur": 173,
       "val": 60,
       "estado": "Stock",
-      "precio_metro": 8.14,
-      "descripcion": "TUBO RECTANGULAR 80 X 40 X 2"
+      "precio_metro": 8.14
     },
     {
       "ref": "NOI0088918",
+      "descripcion": "TUBO RECTANGULAR 80 X 40 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 80.0,
       "ancho": 40.0,
@@ -5102,11 +5103,11 @@
       "mur": 4,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 8.14,
-      "descripcion": "TUBO RECTANGULAR 80 X 40 X 2"
+      "precio_metro": 8.14
     },
     {
       "ref": "NOI0088918",
+      "descripcion": "TUBO RECTANGULAR 80 X 40 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 80.0,
       "ancho": 40.0,
@@ -5118,11 +5119,11 @@
       "mur": 3,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 8.14,
-      "descripcion": "TUBO RECTANGULAR 80 X 40 X 2"
+      "precio_metro": 8.14
     },
     {
       "ref": "NOI0088918",
+      "descripcion": "TUBO RECTANGULAR 80 X 40 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 80.0,
       "ancho": 40.0,
@@ -5134,11 +5135,11 @@
       "mur": 1,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 8.14,
-      "descripcion": "TUBO RECTANGULAR 80 X 40 X 2"
+      "precio_metro": 8.14
     },
     {
       "ref": "NOI0088919",
+      "descripcion": "TUBO RECTANGULAR 100 X 50 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 100.0,
       "ancho": 50.0,
@@ -5147,14 +5148,14 @@
       "peso_kg_m": 1.577,
       "acabado": "BRUTO",
       "tar": 14,
-      "mur": 46,
-      "val": 6,
+      "mur": 32,
+      "val": 17,
       "estado": "Stock",
-      "precio_metro": 10.25,
-      "descripcion": "TUBO RECTANGULAR 100 X 50 X 2"
+      "precio_metro": 10.25
     },
     {
       "ref": "NOI0088919",
+      "descripcion": "TUBO RECTANGULAR 100 X 50 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 100.0,
       "ancho": 50.0,
@@ -5166,11 +5167,11 @@
       "mur": 25,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 10.25,
-      "descripcion": "TUBO RECTANGULAR 100 X 50 X 2"
+      "precio_metro": 10.25
     },
     {
       "ref": "NOI0088920",
+      "descripcion": "TUBO RECTANGULAR 170 X 50 X 2.7",
       "tipo": "TUBO RECTANGULAR",
       "alto": 170.0,
       "ancho": 50.0,
@@ -5182,11 +5183,11 @@
       "mur": 7,
       "val": 44,
       "estado": "Stock",
-      "precio_metro": 20.41,
-      "descripcion": "TUBO RECTANGULAR 170 X 50 X 2.7"
+      "precio_metro": 20.41
     },
     {
       "ref": "NOI0088921",
+      "descripcion": "TUBO RECTANGULAR 100 x 60 x 3 (R/10)",
       "tipo": "TUBO RECTANGULAR",
       "alto": 100.0,
       "ancho": 60.0,
@@ -5198,11 +5199,11 @@
       "mur": 0,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 15.45,
-      "descripcion": "TUBO RECTANGULAR 100 x 60 x 3 (R/10)"
+      "precio_metro": 15.45
     },
     {
       "ref": "NOI0088922",
+      "descripcion": "TUBO RECTANGULAR 60 X 30 X 5 (R/4.5)",
       "tipo": "TUBO RECTANGULAR",
       "alto": 60.0,
       "ancho": 30.0,
@@ -5214,11 +5215,11 @@
       "mur": 77,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 13.79,
-      "descripcion": "TUBO RECTANGULAR 60 X 30 X 5 (R/4.5)"
+      "precio_metro": 13.79
     },
     {
       "ref": "NOI0088924",
+      "descripcion": "TUBO RECTANGULAR 150 X 30 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 150.0,
       "ancho": 30.0,
@@ -5230,11 +5231,11 @@
       "mur": 0,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 12.36,
-      "descripcion": "TUBO RECTANGULAR 150 X 30 X 2"
+      "precio_metro": 12.36
     },
     {
       "ref": "NOI0088924",
+      "descripcion": "TUBO RECTANGULAR 150 X 30 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 150.0,
       "ancho": 30.0,
@@ -5246,11 +5247,11 @@
       "mur": 50,
       "val": 31,
       "estado": "Stock",
-      "precio_metro": 12.36,
-      "descripcion": "TUBO RECTANGULAR 150 X 30 X 2"
+      "precio_metro": 12.36
     },
     {
       "ref": "NOI0088925",
+      "descripcion": "TUBO RECTANGULAR 100 X 80 X 4",
       "tipo": "TUBO RECTANGULAR",
       "alto": 100.0,
       "ancho": 80.0,
@@ -5262,11 +5263,11 @@
       "mur": 7,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 24.15,
-      "descripcion": "TUBO RECTANGULAR 100 X 80 X 4"
+      "precio_metro": 24.15
     },
     {
       "ref": "NOI0088926",
+      "descripcion": "TUBO RECTANGULAR 50 X 25 X 3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 50.0,
       "ancho": 25.0,
@@ -5278,11 +5279,11 @@
       "mur": 121,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 7.27,
-      "descripcion": "TUBO RECTANGULAR 50 X 25 X 3"
+      "precio_metro": 7.27
     },
     {
       "ref": "NOI0088927",
+      "descripcion": "TUBO RECTANGULAR 100 X 60 X 4 (R.10)",
       "tipo": "TUBO RECTANGULAR",
       "alto": 100.0,
       "ancho": 60.0,
@@ -5294,11 +5295,11 @@
       "mur": 24,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 20.38,
-      "descripcion": "TUBO RECTANGULAR 100 X 60 X 4 (R.10)"
+      "precio_metro": 20.38
     },
     {
       "ref": "NOI0088928",
+      "descripcion": "TUBO RECTANGULAR 40 X 20 X 3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 40.0,
       "ancho": 20.0,
@@ -5310,11 +5311,11 @@
       "mur": 11,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 5.69,
-      "descripcion": "TUBO RECTANGULAR 40 X 20 X 3"
+      "precio_metro": 5.69
     },
     {
       "ref": "NOI0088928",
+      "descripcion": "TUBO RECTANGULAR 40 X 20 X 3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 40.0,
       "ancho": 20.0,
@@ -5326,11 +5327,11 @@
       "mur": 85,
       "val": 155,
       "estado": "Stock",
-      "precio_metro": 5.69,
-      "descripcion": "TUBO RECTANGULAR 40 X 20 X 3"
+      "precio_metro": 5.69
     },
     {
       "ref": "NOI0088929",
+      "descripcion": "TUBO RECTANGULAR 120 X 40 X 3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 120.0,
       "ancho": 40.0,
@@ -5342,11 +5343,11 @@
       "mur": 87,
       "val": 9,
       "estado": "Stock",
-      "precio_metro": 16.22,
-      "descripcion": "TUBO RECTANGULAR 120 X 40 X 3"
+      "precio_metro": 16.22
     },
     {
       "ref": "NOI0088930",
+      "descripcion": "TUBO RECTANGULAR 200 X 40 X 3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 200.0,
       "ancho": 40.0,
@@ -5358,11 +5359,11 @@
       "mur": 18,
       "val": 32,
       "estado": "Stock",
-      "precio_metro": 24.64,
-      "descripcion": "TUBO RECTANGULAR 200 X 40 X 3"
+      "precio_metro": 24.64
     },
     {
       "ref": "NOI0088931",
+      "descripcion": "TUBO RECTANGULAR 80 X 40 X 3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 80.0,
       "ancho": 40.0,
@@ -5370,15 +5371,15 @@
       "longitud": 6.0,
       "peso_kg_m": 1.852,
       "acabado": "BRUTO",
-      "tar": 93,
+      "tar": 92,
       "mur": 5,
       "val": 64,
       "estado": "Stock",
-      "precio_metro": 12.04,
-      "descripcion": "TUBO RECTANGULAR 80 X 40 X 3"
+      "precio_metro": 12.04
     },
     {
       "ref": "NOI0088932",
+      "descripcion": "TUBO RECTANGULAR 80 X 20 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 80.0,
       "ancho": 20.0,
@@ -5388,13 +5389,13 @@
       "acabado": "BRUTO",
       "tar": 98,
       "mur": 13,
-      "val": 9,
+      "val": 0,
       "estado": "Stock",
-      "precio_metro": 6.77,
-      "descripcion": "TUBO RECTANGULAR 80 X 20 X 2"
+      "precio_metro": 6.77
     },
     {
       "ref": "NOI0088932",
+      "descripcion": "TUBO RECTANGULAR 80 X 20 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 80.0,
       "ancho": 20.0,
@@ -5406,11 +5407,11 @@
       "mur": 0,
       "val": 5,
       "estado": "Sin stock",
-      "precio_metro": 6.77,
-      "descripcion": "TUBO RECTANGULAR 80 X 20 X 2"
+      "precio_metro": 6.77
     },
     {
       "ref": "NOI0088933",
+      "descripcion": "TUBO RECTANGULAR 100 X 25 X 1.7",
       "tipo": "TUBO RECTANGULAR",
       "alto": 100.0,
       "ancho": 25.0,
@@ -5422,11 +5423,11 @@
       "mur": 6,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 7.28,
-      "descripcion": "TUBO RECTANGULAR 100 X 25 X 1.7"
+      "precio_metro": 7.28
     },
     {
       "ref": "NOI0088935",
+      "descripcion": "TUBO RECTANGULAR 75 X 35 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 75.0,
       "ancho": 35.0,
@@ -5438,11 +5439,11 @@
       "mur": 95,
       "val": 40,
       "estado": "Stock",
-      "precio_metro": 7.47,
-      "descripcion": "TUBO RECTANGULAR 75 X 35 X 2"
+      "precio_metro": 7.47
     },
     {
       "ref": "NOI0088935",
+      "descripcion": "TUBO RECTANGULAR 75 X 35 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 75.0,
       "ancho": 35.0,
@@ -5454,11 +5455,11 @@
       "mur": 9,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 7.47,
-      "descripcion": "TUBO RECTANGULAR 75 X 35 X 2"
+      "precio_metro": 7.47
     },
     {
       "ref": "NOI0088936",
+      "descripcion": "TUBO RECTANGULAR 60 X 40 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 60.0,
       "ancho": 40.0,
@@ -5467,14 +5468,14 @@
       "peso_kg_m": 1.041,
       "acabado": "BRUTO",
       "tar": 83,
-      "mur": 9,
+      "mur": 7,
       "val": 34,
       "estado": "Stock",
-      "precio_metro": 6.77,
-      "descripcion": "TUBO RECTANGULAR 60 X 40 X 2"
+      "precio_metro": 6.77
     },
     {
       "ref": "NOI0088936",
+      "descripcion": "TUBO RECTANGULAR 60 X 40 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 60.0,
       "ancho": 40.0,
@@ -5486,11 +5487,11 @@
       "mur": 4,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 6.77,
-      "descripcion": "TUBO RECTANGULAR 60 X 40 X 2"
+      "precio_metro": 6.77
     },
     {
       "ref": "NOI0088937",
+      "descripcion": "TUBO RECTANGULAR 50 X 20 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 50.0,
       "ancho": 20.0,
@@ -5498,15 +5499,15 @@
       "longitud": 6.0,
       "peso_kg_m": 0.713,
       "acabado": "BRUTO",
-      "tar": 173,
+      "tar": 171,
       "mur": 80,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 4.63,
-      "descripcion": "TUBO RECTANGULAR 50 X 20 X 2"
+      "precio_metro": 4.63
     },
     {
       "ref": "NOI0088938",
+      "descripcion": "TUBO RECTANGULAR 50 X 25 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 50.0,
       "ancho": 25.0,
@@ -5514,15 +5515,15 @@
       "longitud": 6.0,
       "peso_kg_m": 0.767,
       "acabado": "BRUTO",
-      "tar": 49,
-      "mur": 167,
+      "tar": 24,
+      "mur": 28,
       "val": 25,
       "estado": "Stock",
-      "precio_metro": 4.99,
-      "descripcion": "TUBO RECTANGULAR 50 X 25 X 2"
+      "precio_metro": 4.99
     },
     {
       "ref": "NOI0088939",
+      "descripcion": "TUBO RECTANGULAR 200 X 80 X 5 (C/R)",
       "tipo": "TUBO RECTANGULAR",
       "alto": 200.0,
       "ancho": 80.0,
@@ -5534,11 +5535,11 @@
       "mur": 6,
       "val": 16,
       "estado": "Stock",
-      "precio_metro": 46.68,
-      "descripcion": "TUBO RECTANGULAR 200 X 80 X 5 (C/R)"
+      "precio_metro": 46.68
     },
     {
       "ref": "NOI0088940",
+      "descripcion": "TUBO RECTANGULAR 40 X 10 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 40.0,
       "ancho": 10.0,
@@ -5547,14 +5548,14 @@
       "peso_kg_m": 0.497,
       "acabado": "BRUTO",
       "tar": 119,
-      "mur": 352,
+      "mur": 327,
       "val": 210,
       "estado": "Stock",
-      "precio_metro": 3.23,
-      "descripcion": "TUBO RECTANGULAR 40 X 10 X 2"
+      "precio_metro": 3.23
     },
     {
       "ref": "NOI0088941",
+      "descripcion": "TUBO RECTANGULAR 60 X 40 X 2 6005T6",
       "tipo": "TUBO RECTANGULAR",
       "alto": 60.0,
       "ancho": 40.0,
@@ -5566,11 +5567,11 @@
       "mur": 10,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 6.74,
-      "descripcion": "TUBO RECTANGULAR 60 X 40 X 2 6005T6"
+      "precio_metro": 6.74
     },
     {
       "ref": "NOI0088942",
+      "descripcion": "TUBO RECTANGULAR 80 X 40 X 3 (R/6)",
       "tipo": "TUBO RECTANGULAR",
       "alto": 80.0,
       "ancho": 40.0,
@@ -5582,11 +5583,11 @@
       "mur": 2,
       "val": 3,
       "estado": "Stock",
-      "precio_metro": 12.01,
-      "descripcion": "TUBO RECTANGULAR 80 X 40 X 3 (R/6)"
+      "precio_metro": 12.01
     },
     {
       "ref": "NOI0088943",
+      "descripcion": "TUBO RECTANGULAR 50 X 30 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 50.0,
       "ancho": 30.0,
@@ -5598,11 +5599,11 @@
       "mur": 1,
       "val": 63,
       "estado": "Stock",
-      "precio_metro": 5.34,
-      "descripcion": "TUBO RECTANGULAR 50 X 30 X 2"
+      "precio_metro": 5.34
     },
     {
       "ref": "NOI0088944",
+      "descripcion": "TUBO RECTANGULAR 40 X 20 X 1.5",
       "tipo": "TUBO RECTANGULAR",
       "alto": 40.0,
       "ancho": 20.0,
@@ -5614,11 +5615,11 @@
       "mur": 0,
       "val": 26,
       "estado": "7/10 Días",
-      "precio_metro": 3.0,
-      "descripcion": "TUBO RECTANGULAR 40 X 20 X 1.5"
+      "precio_metro": 3.0
     },
     {
       "ref": "NOI0088945",
+      "descripcion": "TUBO RECTANGULAR 70 X 50 X 3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 70.0,
       "ancho": 50.0,
@@ -5630,11 +5631,11 @@
       "mur": 14,
       "val": 19,
       "estado": "Stock",
-      "precio_metro": 12.01,
-      "descripcion": "TUBO RECTANGULAR 70 X 50 X 3"
+      "precio_metro": 12.01
     },
     {
       "ref": "NOI0088945",
+      "descripcion": "TUBO RECTANGULAR 70 X 50 X 3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 70.0,
       "ancho": 50.0,
@@ -5646,11 +5647,11 @@
       "mur": 1,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 12.01,
-      "descripcion": "TUBO RECTANGULAR 70 X 50 X 3"
+      "precio_metro": 12.01
     },
     {
       "ref": "NOI0088946",
+      "descripcion": "TUBO RECTANGULAR 100 X 50 X 4 (C/R-5)",
       "tipo": "TUBO RECTANGULAR",
       "alto": 100.0,
       "ancho": 50.0,
@@ -5662,11 +5663,11 @@
       "mur": 24,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 19.62,
-      "descripcion": "TUBO RECTANGULAR 100 X 50 X 4 (C/R-5)"
+      "precio_metro": 19.62
     },
     {
       "ref": "NOI0088947",
+      "descripcion": "TUBO RECTANGULAR 120 X 80 X 3 (R.6)",
       "tipo": "TUBO RECTANGULAR",
       "alto": 120.0,
       "ancho": 80.0,
@@ -5676,13 +5677,13 @@
       "acabado": "BRUTO",
       "tar": 0,
       "mur": 1,
-      "val": 56,
+      "val": 42,
       "estado": "7/10 Días",
-      "precio_metro": 20.01,
-      "descripcion": "TUBO RECTANGULAR 120 X 80 X 3 (R.6)"
+      "precio_metro": 20.01
     },
     {
       "ref": "NOI0088948",
+      "descripcion": "TUBO RECTANGULAR 120 X 80 X 6",
       "tipo": "TUBO RECTANGULAR",
       "alto": 120.0,
       "ancho": 80.0,
@@ -5694,11 +5695,11 @@
       "mur": 22,
       "val": 24,
       "estado": "Stock",
-      "precio_metro": 39.6,
-      "descripcion": "TUBO RECTANGULAR 120 X 80 X 6"
+      "precio_metro": 39.6
     },
     {
       "ref": "NOI0088949",
+      "descripcion": "TUBO RECTANGULAR 60 X 30 X 3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 60.0,
       "ancho": 30.0,
@@ -5710,11 +5711,11 @@
       "mur": 40,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 8.85,
-      "descripcion": "TUBO RECTANGULAR 60 X 30 X 3"
+      "precio_metro": 8.85
     },
     {
       "ref": "NOI0088950",
+      "descripcion": "TUBO RECTANGULAR 80 X 50 X 3 (C/R-5)",
       "tipo": "TUBO RECTANGULAR",
       "alto": 80.0,
       "ancho": 50.0,
@@ -5726,11 +5727,11 @@
       "mur": 55,
       "val": 1,
       "estado": "7/10 Días",
-      "precio_metro": 12.74,
-      "descripcion": "TUBO RECTANGULAR 80 X 50 X 3 (C/R-5)"
+      "precio_metro": 12.74
     },
     {
       "ref": "NOI0088950",
+      "descripcion": "TUBO RECTANGULAR 80 X 50 X 3 (C/R-5)",
       "tipo": "TUBO RECTANGULAR",
       "alto": 80.0,
       "ancho": 50.0,
@@ -5742,11 +5743,11 @@
       "mur": 4,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 12.74,
-      "descripcion": "TUBO RECTANGULAR 80 X 50 X 3 (C/R-5)"
+      "precio_metro": 12.74
     },
     {
       "ref": "NOI0088951",
+      "descripcion": "TUBO RECTANGULAR 225 X 125 X 2.75",
       "tipo": "TUBO RECTANGULAR",
       "alto": 225.0,
       "ancho": 125.0,
@@ -5758,11 +5759,11 @@
       "mur": 2,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 33.38,
-      "descripcion": "TUBO RECTANGULAR 225 X 125 X 2.75"
+      "precio_metro": 33.38
     },
     {
       "ref": "NOI0088951",
+      "descripcion": "TUBO RECTANGULAR 225 X 125 X 2.75",
       "tipo": "TUBO RECTANGULAR",
       "alto": 225.0,
       "ancho": 125.0,
@@ -5774,11 +5775,11 @@
       "mur": 1,
       "val": 5,
       "estado": "Sin stock",
-      "precio_metro": 33.38,
-      "descripcion": "TUBO RECTANGULAR 225 X 125 X 2.75"
+      "precio_metro": 33.38
     },
     {
       "ref": "NOI0088951",
+      "descripcion": "TUBO RECTANGULAR 225 X 125 X 2.75",
       "tipo": "TUBO RECTANGULAR",
       "alto": 225.0,
       "ancho": 125.0,
@@ -5790,11 +5791,11 @@
       "mur": 0,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 33.38,
-      "descripcion": "TUBO RECTANGULAR 225 X 125 X 2.75"
+      "precio_metro": 33.38
     },
     {
       "ref": "NOI0088952",
+      "descripcion": "TUBO RECTANGULAR 80 X 50 X 4",
       "tipo": "TUBO RECTANGULAR",
       "alto": 80.0,
       "ancho": 50.0,
@@ -5806,11 +5807,11 @@
       "mur": 85,
       "val": 2,
       "estado": "Stock",
-      "precio_metro": 17.13,
-      "descripcion": "TUBO RECTANGULAR 80 X 50 X 4"
+      "precio_metro": 17.13
     },
     {
       "ref": "NOI0088953",
+      "descripcion": "TUBO RECTANGULAR 240 X 80 X 3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 240.0,
       "ancho": 80.0,
@@ -5820,13 +5821,13 @@
       "acabado": "BRUTO",
       "tar": 0,
       "mur": 2,
-      "val": 20,
+      "val": 17,
       "estado": "7/10 Días",
-      "precio_metro": 33.09,
-      "descripcion": "TUBO RECTANGULAR 240 X 80 X 3"
+      "precio_metro": 33.09
     },
     {
       "ref": "NOI0088954",
+      "descripcion": "TUBO RECTANGULAR 140 X 60 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 140.0,
       "ancho": 60.0,
@@ -5838,11 +5839,11 @@
       "mur": 10,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 13.76,
-      "descripcion": "TUBO RECTANGULAR 140 X 60 X 2"
+      "precio_metro": 13.76
     },
     {
       "ref": "NOI0088954",
+      "descripcion": "TUBO RECTANGULAR 140 X 60 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 140.0,
       "ancho": 60.0,
@@ -5851,14 +5852,14 @@
       "peso_kg_m": 2.117,
       "acabado": "BRUTO",
       "tar": 3,
-      "mur": 12,
+      "mur": 91,
       "val": 7,
       "estado": "7/10 Días",
-      "precio_metro": 13.76,
-      "descripcion": "TUBO RECTANGULAR 140 X 60 X 2"
+      "precio_metro": 13.76
     },
     {
       "ref": "NOI0088955",
+      "descripcion": "TUBO RECTANGULAR 80 X 60 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 80.0,
       "ancho": 60.0,
@@ -5867,14 +5868,14 @@
       "peso_kg_m": 1.469,
       "acabado": "BRUTO",
       "tar": 100,
-      "mur": 66,
+      "mur": 60,
       "val": 76,
       "estado": "Stock",
-      "precio_metro": 9.55,
-      "descripcion": "TUBO RECTANGULAR 80 X 60 X 2"
+      "precio_metro": 9.55
     },
     {
       "ref": "NOI0088956",
+      "descripcion": "TUBO RECTANGULAR 30 X 20 X 3 (R.4)",
       "tipo": "TUBO RECTANGULAR",
       "alto": 30.0,
       "ancho": 20.0,
@@ -5886,11 +5887,11 @@
       "mur": 114,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 4.41,
-      "descripcion": "TUBO RECTANGULAR 30 X 20 X 3 (R.4)"
+      "precio_metro": 4.41
     },
     {
       "ref": "NOI0088957",
+      "descripcion": "TUBO RECTANGULAR 60 X 40 X 4",
       "tipo": "TUBO RECTANGULAR",
       "alto": 60.0,
       "ancho": 40.0,
@@ -5898,15 +5899,15 @@
       "longitud": 6.0,
       "peso_kg_m": 1.987,
       "acabado": "BRUTO",
-      "tar": 40,
+      "tar": 38,
       "mur": 86,
-      "val": 54,
+      "val": 47,
       "estado": "Stock",
-      "precio_metro": 12.92,
-      "descripcion": "TUBO RECTANGULAR 60 X 40 X 4"
+      "precio_metro": 12.92
     },
     {
       "ref": "NOI0088958",
+      "descripcion": "TUBO RECTANGULAR 70 X 10 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 70.0,
       "ancho": 10.0,
@@ -5918,11 +5919,11 @@
       "mur": 34,
       "val": 90,
       "estado": "7/10 Días",
-      "precio_metro": 5.36,
-      "descripcion": "TUBO RECTANGULAR 70 X 10 X 2"
+      "precio_metro": 5.36
     },
     {
       "ref": "NOI0088959",
+      "descripcion": "TUBO RECTANGULAR 160 X 40 X 4",
       "tipo": "TUBO RECTANGULAR",
       "alto": 160.0,
       "ancho": 40.0,
@@ -5934,11 +5935,11 @@
       "mur": 22,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 26.98,
-      "descripcion": "TUBO RECTANGULAR 160 X 40 X 4"
+      "precio_metro": 26.98
     },
     {
       "ref": "NOI0088960",
+      "descripcion": "TUBO RECTANGULAR 150 X 50 X 2.5 (R/3)",
       "tipo": "TUBO RECTANGULAR",
       "alto": 150.0,
       "ancho": 50.0,
@@ -5950,11 +5951,11 @@
       "mur": 2,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 17.12,
-      "descripcion": "TUBO RECTANGULAR 150 X 50 X 2.5 (R/3)"
+      "precio_metro": 17.12
     },
     {
       "ref": "NOI0088960",
+      "descripcion": "TUBO RECTANGULAR 150 X 50 X 2.5 (R/3)",
       "tipo": "TUBO RECTANGULAR",
       "alto": 150.0,
       "ancho": 50.0,
@@ -5966,11 +5967,11 @@
       "mur": 7,
       "val": 10,
       "estado": "7/10 Días",
-      "precio_metro": 17.12,
-      "descripcion": "TUBO RECTANGULAR 150 X 50 X 2.5 (R/3)"
+      "precio_metro": 17.12
     },
     {
       "ref": "NOI0088962",
+      "descripcion": "TUBO RECTANGULAR 250 X 40 X 2 (3 CAMARAS)",
       "tipo": "TUBO RECTANGULAR",
       "alto": 250.0,
       "ancho": 40.0,
@@ -5982,11 +5983,11 @@
       "mur": 30,
       "val": 9,
       "estado": "7/10 Días",
-      "precio_metro": 22.76,
-      "descripcion": "TUBO RECTANGULAR 250 X 40 X 2 (3 CAMARAS)"
+      "precio_metro": 22.76
     },
     {
       "ref": "NOI0088963",
+      "descripcion": "TUBO RECTANGULAR 80 X 50 X 3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 80.0,
       "ancho": 50.0,
@@ -5994,15 +5995,15 @@
       "longitud": 6.0,
       "peso_kg_m": 2.01,
       "acabado": "BRUTO",
-      "tar": 36,
+      "tar": 35,
       "mur": 26,
       "val": 28,
       "estado": "Stock",
-      "precio_metro": 13.06,
-      "descripcion": "TUBO RECTANGULAR 80 X 50 X 3"
+      "precio_metro": 13.06
     },
     {
       "ref": "NOI0088964",
+      "descripcion": "TUBO RECTANGULAR 120 X 60 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 120.0,
       "ancho": 60.0,
@@ -6011,14 +6012,14 @@
       "peso_kg_m": 1.901,
       "acabado": "BRUTO",
       "tar": 0,
-      "mur": 104,
+      "mur": 100,
       "val": 22,
       "estado": "7/10 Días",
-      "precio_metro": 12.36,
-      "descripcion": "TUBO RECTANGULAR 120 X 60 X 2"
+      "precio_metro": 12.36
     },
     {
       "ref": "NOI0088966",
+      "descripcion": "TUBO RECTANGULAR 50 X 40 X 1.5",
       "tipo": "TUBO RECTANGULAR",
       "alto": 50.0,
       "ancho": 40.0,
@@ -6030,11 +6031,11 @@
       "mur": 7,
       "val": 5,
       "estado": "Sin stock",
-      "precio_metro": 4.58,
-      "descripcion": "TUBO RECTANGULAR 50 X 40 X 1.5"
+      "precio_metro": 4.58
     },
     {
       "ref": "NOI0088967",
+      "descripcion": "TUBO RECTANGULAR 60 X 30 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 60.0,
       "ancho": 30.0,
@@ -6044,13 +6045,13 @@
       "acabado": "BRUTO",
       "tar": 108,
       "mur": 156,
-      "val": 92,
+      "val": 90,
       "estado": "Stock",
-      "precio_metro": 6.04,
-      "descripcion": "TUBO RECTANGULAR 60 X 30 X 2"
+      "precio_metro": 6.04
     },
     {
       "ref": "NOI0088968",
+      "descripcion": "TUBO RECTANGULAR 80 X 30 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 80.0,
       "ancho": 30.0,
@@ -6059,14 +6060,14 @@
       "peso_kg_m": 1.145,
       "acabado": "BRUTO",
       "tar": 71,
-      "mur": 147,
+      "mur": 146,
       "val": 25,
       "estado": "Stock",
-      "precio_metro": 7.44,
-      "descripcion": "TUBO RECTANGULAR 80 X 30 X 2"
+      "precio_metro": 7.44
     },
     {
       "ref": "NOI0088969",
+      "descripcion": "TUBO RECTANGULAR 150 X 50 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 150.0,
       "ancho": 50.0,
@@ -6075,14 +6076,14 @@
       "peso_kg_m": 2.117,
       "acabado": "BRUTO",
       "tar": 58,
-      "mur": 39,
+      "mur": 30,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 13.76,
-      "descripcion": "TUBO RECTANGULAR 150 X 50 X 2"
+      "precio_metro": 13.76
     },
     {
       "ref": "NOI0088970",
+      "descripcion": "TUBO RECTANGULAR 70 X 40 X 4",
       "tipo": "TUBO RECTANGULAR",
       "alto": 70.0,
       "ancho": 40.0,
@@ -6094,11 +6095,11 @@
       "mur": 9,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 14.32,
-      "descripcion": "TUBO RECTANGULAR 70 X 40 X 4"
+      "precio_metro": 14.32
     },
     {
       "ref": "NOI0088971",
+      "descripcion": "TUBO RECTANGULAR 100 X 10 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 100.0,
       "ancho": 10.0,
@@ -6110,11 +6111,11 @@
       "mur": 57,
       "val": 2,
       "estado": "7/10 Días",
-      "precio_metro": 6.79,
-      "descripcion": "TUBO RECTANGULAR 100 X 10 X 2"
+      "precio_metro": 6.79
     },
     {
       "ref": "NOI0088972",
+      "descripcion": "TUBO RECTANGULAR 50 X 40 X 3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 50.0,
       "ancho": 40.0,
@@ -6126,11 +6127,11 @@
       "mur": 39,
       "val": 5,
       "estado": "Stock",
-      "precio_metro": 8.85,
-      "descripcion": "TUBO RECTANGULAR 50 X 40 X 3"
+      "precio_metro": 8.85
     },
     {
       "ref": "NOI0088973",
+      "descripcion": "TUBO RECTANGULAR 150 X 40 X 2.5",
       "tipo": "TUBO RECTANGULAR",
       "alto": 150.0,
       "ancho": 40.0,
@@ -6142,11 +6143,11 @@
       "mur": 3,
       "val": 10,
       "estado": "Stock",
-      "precio_metro": 16.24,
-      "descripcion": "TUBO RECTANGULAR 150 X 40 X 2.5"
+      "precio_metro": 16.24
     },
     {
       "ref": "NOI0088974",
+      "descripcion": "TUBO RECTANGULAR 90 X 40 X 3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 90.0,
       "ancho": 40.0,
@@ -6158,11 +6159,11 @@
       "mur": 0,
       "val": 9,
       "estado": "Stock",
-      "precio_metro": 13.06,
-      "descripcion": "TUBO RECTANGULAR 90 X 40 X 3"
+      "precio_metro": 13.06
     },
     {
       "ref": "NOI0088975",
+      "descripcion": "TUBO RECTANGULAR 45 X 25 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 45.0,
       "ancho": 25.0,
@@ -6174,11 +6175,11 @@
       "mur": 94,
       "val": 99,
       "estado": "7/10 Días",
-      "precio_metro": 4.63,
-      "descripcion": "TUBO RECTANGULAR 45 X 25 X 2"
+      "precio_metro": 4.63
     },
     {
       "ref": "NOI0088976",
+      "descripcion": "TUBO RECTANGULAR 300 X 50 X 2.7 (3 CAMARAS)",
       "tipo": "TUBO RECTANGULAR",
       "alto": 300.0,
       "ancho": 50.0,
@@ -6190,11 +6191,11 @@
       "mur": 8,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 32.77,
-      "descripcion": "TUBO RECTANGULAR 300 X 50 X 2.7 (3 CAMARAS)"
+      "precio_metro": 32.77
     },
     {
       "ref": "NOI0088977",
+      "descripcion": "TUBO RECTANGULAR 50 X 15 X 2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 50.0,
       "ancho": 15.0,
@@ -6206,43 +6207,11 @@
       "mur": 135,
       "val": 89,
       "estado": "7/10 Días",
-      "precio_metro": 4.28,
-      "descripcion": "TUBO RECTANGULAR 50 X 15 X 2"
-    },
-    {
-      "ref": "NOI0088978",
-      "tipo": "TUBO RECTANGULAR",
-      "alto": 150.0,
-      "ancho": 50.0,
-      "espesor": 2.5,
-      "longitud": 4.0,
-      "peso_kg_m": 0.0,
-      "acabado": "BRUTO",
-      "tar": 0,
-      "mur": 36,
-      "val": 0,
-      "estado": "7/10 Días",
-      "precio_metro": 0.0,
-      "descripcion": "TUBO RECTANGULAR 150 X 50 X 2.5 (R2)"
-    },
-    {
-      "ref": "NOI0088978",
-      "tipo": "TUBO RECTANGULAR",
-      "alto": 150.0,
-      "ancho": 50.0,
-      "espesor": 2.5,
-      "longitud": 7.0,
-      "peso_kg_m": 0.0,
-      "acabado": "BRUTO",
-      "tar": 0,
-      "mur": 37,
-      "val": 0,
-      "estado": "7/10 Días",
-      "precio_metro": 0.0,
-      "descripcion": "TUBO RECTANGULAR 150 X 50 X 2.5 (R2)"
+      "precio_metro": 4.28
     },
     {
       "ref": "NOI0088979",
+      "descripcion": "TUBO RECTANGULAR 150 X 60 X 2.1",
       "tipo": "TUBO RECTANGULAR",
       "alto": 150.0,
       "ancho": 60.0,
@@ -6254,11 +6223,11 @@
       "mur": 23,
       "val": 57,
       "estado": "Stock",
-      "precio_metro": 15.17,
-      "descripcion": "TUBO RECTANGULAR 150 X 60 X 2.1"
+      "precio_metro": 15.17
     },
     {
       "ref": "NOI0088980",
+      "descripcion": "TUBO RECTANGULAR 150 X 50 X 2.5 AUT.",
       "tipo": "TUBO RECTANGULAR",
       "alto": 150.0,
       "ancho": 50.0,
@@ -6270,11 +6239,11 @@
       "mur": 0,
       "val": 1,
       "estado": "Sin stock",
-      "precio_metro": 17.99,
-      "descripcion": "TUBO RECTANGULAR 150 X 50 X 2.5 AUT."
+      "precio_metro": 17.99
     },
     {
       "ref": "NOI0088981",
+      "descripcion": "TUBO RECTANGULAR 150 X 50 X 4",
       "tipo": "TUBO RECTANGULAR",
       "alto": 150.0,
       "ancho": 50.0,
@@ -6286,11 +6255,27 @@
       "mur": 4,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 26.96,
-      "descripcion": "TUBO RECTANGULAR 150 X 50 X 4"
+      "precio_metro": 26.96
+    },
+    {
+      "ref": "NOI0088982",
+      "descripcion": "TUBO RECTANGULAR 100 X 20 X 2",
+      "tipo": "TUBO RECTANGULAR",
+      "alto": 100.0,
+      "ancho": 20.0,
+      "espesor": 2.0,
+      "longitud": 6.0,
+      "peso_kg_m": 0.0,
+      "acabado": "BRUTO",
+      "tar": 0,
+      "mur": 122,
+      "val": 0,
+      "estado": "7/10 Días",
+      "precio_metro": 0.0
     },
     {
       "ref": "NOR0004490",
+      "descripcion": "U - 15 X 15 X 15 X 1,5",
       "tipo": "PERFIL U",
       "alto": 15.0,
       "ancho": 15.0,
@@ -6302,11 +6287,11 @@
       "mur": 73,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 1.1,
-      "descripcion": "U - 15 X 15 X 15 X 1,5"
+      "precio_metro": 1.1
     },
     {
       "ref": "NOR0004602",
+      "descripcion": "U - 40 X 40 X 40 X 1,5",
       "tipo": "PERFIL U",
       "alto": 40.0,
       "ancho": 40.0,
@@ -6318,11 +6303,11 @@
       "mur": 231,
       "val": 53,
       "estado": "7/10 Días",
-      "precio_metro": 3.08,
-      "descripcion": "U - 40 X 40 X 40 X 1,5"
+      "precio_metro": 3.08
     },
     {
       "ref": "NOR0004950",
+      "descripcion": "RECTANGULAR 70 X 20 AUT.CR.",
       "tipo": "TUBO RECTANGULAR",
       "alto": null,
       "ancho": null,
@@ -6334,11 +6319,11 @@
       "mur": 84,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 5.92,
-      "descripcion": "RECTANGULAR 70 X 20 AUT.CR."
+      "precio_metro": 5.92
     },
     {
       "ref": "NOR0032001",
+      "descripcion": "PLETINA 20 X 4",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 20.0,
@@ -6350,11 +6335,11 @@
       "mur": 0,
       "val": 854,
       "estado": "Stock",
-      "precio_metro": 1.4,
-      "descripcion": "PLETINA 20 X 4"
+      "precio_metro": 1.4
     },
     {
       "ref": "NOR0032001",
+      "descripcion": "PLETINA 20 X 4",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 20.0,
@@ -6363,14 +6348,14 @@
       "peso_kg_m": 0.216,
       "acabado": "BRUTO",
       "tar": 0,
-      "mur": 871,
+      "mur": 864,
       "val": 425,
       "estado": "7/10 Días",
-      "precio_metro": 1.4,
-      "descripcion": "PLETINA 20 X 4"
+      "precio_metro": 1.4
     },
     {
       "ref": "NOR0032002",
+      "descripcion": "PLETINA 30 X 4",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 30.0,
@@ -6382,11 +6367,11 @@
       "mur": 223,
       "val": 285,
       "estado": "Stock",
-      "precio_metro": 0.21,
-      "descripcion": "PLETINA 30 X 4"
+      "precio_metro": 0.21
     },
     {
       "ref": "NOR0032003",
+      "descripcion": "PLETINA 40 X 4",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 40.0,
@@ -6398,11 +6383,11 @@
       "mur": 0,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 2.81,
-      "descripcion": "PLETINA 40 X 4"
+      "precio_metro": 2.81
     },
     {
       "ref": "NOR0032003",
+      "descripcion": "PLETINA 40 X 4",
       "tipo": "PLETINA",
       "alto": null,
       "ancho": 40.0,
@@ -6411,14 +6396,14 @@
       "peso_kg_m": 0.432,
       "acabado": "BRUTO",
       "tar": 178,
-      "mur": 166,
-      "val": 106,
+      "mur": 149,
+      "val": 100,
       "estado": "Stock",
-      "precio_metro": 2.81,
-      "descripcion": "PLETINA 40 X 4"
+      "precio_metro": 2.81
     },
     {
       "ref": "NOR0032004",
+      "descripcion": "T - 20 X 20 X 1,5",
       "tipo": "PERFIL T",
       "alto": 20.0,
       "ancho": 20.0,
@@ -6430,11 +6415,11 @@
       "mur": 0,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 0.88,
-      "descripcion": "T - 20 X 20 X 1,5"
+      "precio_metro": 0.88
     },
     {
       "ref": "NOR0032004",
+      "descripcion": "T - 20 X 20 X 1,5",
       "tipo": "PERFIL T",
       "alto": 20.0,
       "ancho": 20.0,
@@ -6443,14 +6428,14 @@
       "peso_kg_m": 0.135,
       "acabado": "BRUTO",
       "tar": 0,
-      "mur": 266,
+      "mur": 265,
       "val": 6,
       "estado": "7/10 Días",
-      "precio_metro": 0.88,
-      "descripcion": "T - 20 X 20 X 1,5"
+      "precio_metro": 0.88
     },
     {
       "ref": "NOR0032005",
+      "descripcion": "T - 25 X 25 X 1,3",
       "tipo": "PERFIL T",
       "alto": 25.0,
       "ancho": 25.0,
@@ -6459,14 +6444,14 @@
       "peso_kg_m": 0.197,
       "acabado": "BRUTO",
       "tar": 0,
-      "mur": 274,
+      "mur": 272,
       "val": 63,
       "estado": "7/10 Días",
-      "precio_metro": 1.28,
-      "descripcion": "T - 25 X 25 X 1,3"
+      "precio_metro": 1.28
     },
     {
       "ref": "NOR0032006",
+      "descripcion": "U - 20 X 20 X 20 X 1.3",
       "tipo": "PERFIL U",
       "alto": 20.0,
       "ancho": 20.0,
@@ -6478,11 +6463,11 @@
       "mur": 1,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 1.5,
-      "descripcion": "U - 20 X 20 X 20 X 1.3"
+      "precio_metro": 1.5
     },
     {
       "ref": "NOR0032006",
+      "descripcion": "U - 20 X 20 X 20 X 1.3",
       "tipo": "PERFIL U",
       "alto": 20.0,
       "ancho": 20.0,
@@ -6492,13 +6477,13 @@
       "acabado": "BRUTO",
       "tar": 80,
       "mur": 650,
-      "val": 170,
+      "val": 168,
       "estado": "Stock",
-      "precio_metro": 1.5,
-      "descripcion": "U - 20 X 20 X 20 X 1.3"
+      "precio_metro": 1.5
     },
     {
       "ref": "NOR0032007",
+      "descripcion": "U - 15 X 30 X 15 X 1.5",
       "tipo": "PERFIL U",
       "alto": 15.0,
       "ancho": 30.0,
@@ -6508,13 +6493,13 @@
       "acabado": "BRUTO",
       "tar": 139,
       "mur": 269,
-      "val": 71,
+      "val": 69,
       "estado": "Stock",
-      "precio_metro": 1.5,
-      "descripcion": "U - 15 X 30 X 15 X 1.5"
+      "precio_metro": 1.5
     },
     {
       "ref": "NOR0032008",
+      "descripcion": "U - 10 X 12 X 10 X 1.5",
       "tipo": "PERFIL U",
       "alto": 10.0,
       "ancho": 12.0,
@@ -6526,11 +6511,11 @@
       "mur": 0,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 0.67,
-      "descripcion": "U - 10 X 12 X 10 X 1.5"
+      "precio_metro": 0.67
     },
     {
       "ref": "NOR0032009",
+      "descripcion": "U - 15 X 15 X 15 X 2",
       "tipo": "PERFIL U",
       "alto": 15.0,
       "ancho": 15.0,
@@ -6542,11 +6527,11 @@
       "mur": 104,
       "val": 1276,
       "estado": "Stock",
-      "precio_metro": 1.44,
-      "descripcion": "U - 15 X 15 X 15 X 2"
+      "precio_metro": 1.44
     },
     {
       "ref": "NOR0032010",
+      "descripcion": "U - 25 X 25 X 25 X 2",
       "tipo": "PERFIL U",
       "alto": 25.0,
       "ancho": 25.0,
@@ -6555,14 +6540,14 @@
       "peso_kg_m": 0.383,
       "acabado": "BRUTO",
       "tar": 371,
-      "mur": 250,
+      "mur": 238,
       "val": 49,
       "estado": "Stock",
-      "precio_metro": 2.49,
-      "descripcion": "U - 25 X 25 X 25 X 2"
+      "precio_metro": 2.49
     },
     {
       "ref": "NOR0032010",
+      "descripcion": "U - 25 X 25 X 25 X 2",
       "tipo": "PERFIL U",
       "alto": 25.0,
       "ancho": 25.0,
@@ -6574,11 +6559,11 @@
       "mur": 1,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 2.49,
-      "descripcion": "U - 25 X 25 X 25 X 2"
+      "precio_metro": 2.49
     },
     {
       "ref": "NOR0032101",
+      "descripcion": "ANGULO 15 X 1.3",
       "tipo": "ANGULO",
       "alto": 15.0,
       "ancho": 15.0,
@@ -6587,14 +6572,14 @@
       "peso_kg_m": 0.116,
       "acabado": "BRUTO",
       "tar": 201,
-      "mur": 1293,
+      "mur": 1290,
       "val": 3,
       "estado": "Stock",
-      "precio_metro": 0.75,
-      "descripcion": "ANGULO 15 X 1.3"
+      "precio_metro": 0.75
     },
     {
       "ref": "NOR0032102",
+      "descripcion": "ANGULO 20 X 1.2",
       "tipo": "ANGULO",
       "alto": 20.0,
       "ancho": 20.0,
@@ -6603,14 +6588,14 @@
       "peso_kg_m": 0.1255,
       "acabado": "BRUTO",
       "tar": 507,
-      "mur": 1360,
+      "mur": 2124,
       "val": 735,
       "estado": "Stock",
-      "precio_metro": 0.82,
-      "descripcion": "ANGULO 20 X 1.2"
+      "precio_metro": 0.82
     },
     {
       "ref": "NOR0032103",
+      "descripcion": "ANGULO 25 X 1.3",
       "tipo": "ANGULO",
       "alto": 25.0,
       "ancho": 25.0,
@@ -6622,11 +6607,11 @@
       "mur": 767,
       "val": 131,
       "estado": "Stock",
-      "precio_metro": 1.11,
-      "descripcion": "ANGULO 25 X 1.3"
+      "precio_metro": 1.11
     },
     {
       "ref": "NOR0032104",
+      "descripcion": "ANGULO 30 X 1.25",
       "tipo": "ANGULO",
       "alto": 30.0,
       "ancho": 30.0,
@@ -6638,11 +6623,11 @@
       "mur": 226,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 1.24,
-      "descripcion": "ANGULO 30 X 1.25"
+      "precio_metro": 1.24
     },
     {
       "ref": "NOR0032104",
+      "descripcion": "ANGULO 30 X 1.25",
       "tipo": "ANGULO",
       "alto": 30.0,
       "ancho": 30.0,
@@ -6650,15 +6635,15 @@
       "longitud": 6.4,
       "peso_kg_m": 0.1905,
       "acabado": "BRUTO",
-      "tar": 302,
-      "mur": 474,
+      "tar": 300,
+      "mur": 454,
       "val": 135,
       "estado": "Stock",
-      "precio_metro": 1.24,
-      "descripcion": "ANGULO 30 X 1.25"
+      "precio_metro": 1.24
     },
     {
       "ref": "NOR0032104",
+      "descripcion": "ANGULO 30 X 1.25",
       "tipo": "ANGULO",
       "alto": 30.0,
       "ancho": 30.0,
@@ -6670,11 +6655,11 @@
       "mur": 5,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 1.24,
-      "descripcion": "ANGULO 30 X 1.25"
+      "precio_metro": 1.24
     },
     {
       "ref": "NOR0032104",
+      "descripcion": "ANGULO 30 X 1.25",
       "tipo": "ANGULO",
       "alto": 30.0,
       "ancho": 30.0,
@@ -6686,11 +6671,11 @@
       "mur": 114,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 1.24,
-      "descripcion": "ANGULO 30 X 1.25"
+      "precio_metro": 1.24
     },
     {
       "ref": "NOR0032105",
+      "descripcion": "ANGULO 40 X 1.3",
       "tipo": "ANGULO",
       "alto": 40.0,
       "ancho": 40.0,
@@ -6699,14 +6684,14 @@
       "peso_kg_m": 0.2754,
       "acabado": "BRUTO",
       "tar": 116,
-      "mur": 579,
-      "val": 310,
+      "mur": 576,
+      "val": 284,
       "estado": "Stock",
-      "precio_metro": 1.79,
-      "descripcion": "ANGULO 40 X 1.3"
+      "precio_metro": 1.79
     },
     {
       "ref": "NOR0032105",
+      "descripcion": "ANGULO 40 X 1.3",
       "tipo": "ANGULO",
       "alto": 40.0,
       "ancho": 40.0,
@@ -6718,11 +6703,11 @@
       "mur": 2,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 1.79,
-      "descripcion": "ANGULO 40 X 1.3"
+      "precio_metro": 1.79
     },
     {
       "ref": "NOR0032106",
+      "descripcion": "ANGULO 50 X 1.3",
       "tipo": "ANGULO",
       "alto": 50.0,
       "ancho": 50.0,
@@ -6732,13 +6717,13 @@
       "acabado": "BRUTO",
       "tar": 151,
       "mur": 110,
-      "val": 143,
+      "val": 83,
       "estado": "Stock",
-      "precio_metro": 2.25,
-      "descripcion": "ANGULO 50 X 1.3"
+      "precio_metro": 2.25
     },
     {
       "ref": "NOR0032107",
+      "descripcion": "ANGULO 60 X 1.4",
       "tipo": "ANGULO",
       "alto": 60.0,
       "ancho": 60.0,
@@ -6750,11 +6735,11 @@
       "mur": 202,
       "val": 109,
       "estado": "7/10 Días",
-      "precio_metro": 2.91,
-      "descripcion": "ANGULO 60 X 1.4"
+      "precio_metro": 2.91
     },
     {
       "ref": "NOR0032108",
+      "descripcion": "ANGULO 20 X 10 X 1.5",
       "tipo": "ANGULO",
       "alto": 20.0,
       "ancho": 10.0,
@@ -6764,13 +6749,13 @@
       "acabado": "BRUTO",
       "tar": 534,
       "mur": 403,
-      "val": 193,
+      "val": 192,
       "estado": "Stock",
-      "precio_metro": 0.66,
-      "descripcion": "ANGULO 20 X 10 X 1.5"
+      "precio_metro": 0.66
     },
     {
       "ref": "NOR0032109",
+      "descripcion": "ANGULO 40 x 20 X 1.3",
       "tipo": "ANGULO",
       "alto": 40.0,
       "ancho": 20.0,
@@ -6780,13 +6765,13 @@
       "acabado": "BRUTO",
       "tar": 85,
       "mur": 228,
-      "val": 113,
+      "val": 90,
       "estado": "Stock",
-      "precio_metro": 1.34,
-      "descripcion": "ANGULO 40 x 20 X 1.3"
+      "precio_metro": 1.34
     },
     {
       "ref": "NOR0032109",
+      "descripcion": "ANGULO 40 x 20 X 1.3",
       "tipo": "ANGULO",
       "alto": 40.0,
       "ancho": 20.0,
@@ -6798,11 +6783,11 @@
       "mur": 92,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 1.34,
-      "descripcion": "ANGULO 40 x 20 X 1.3"
+      "precio_metro": 1.34
     },
     {
       "ref": "NOR0032110",
+      "descripcion": "ANGULO 60 X 40 X 1.5",
       "tipo": "ANGULO",
       "alto": 60.0,
       "ancho": 40.0,
@@ -6814,11 +6799,11 @@
       "mur": 1,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 2.6,
-      "descripcion": "ANGULO 60 X 40 X 1.5"
+      "precio_metro": 2.6
     },
     {
       "ref": "NOR0032110",
+      "descripcion": "ANGULO 60 X 40 X 1.5",
       "tipo": "ANGULO",
       "alto": 60.0,
       "ancho": 40.0,
@@ -6827,14 +6812,14 @@
       "peso_kg_m": 0.3996,
       "acabado": "BRUTO",
       "tar": 179,
-      "mur": 37,
-      "val": 246,
+      "mur": 34,
+      "val": 238,
       "estado": "Stock",
-      "precio_metro": 2.6,
-      "descripcion": "ANGULO 60 X 40 X 1.5"
+      "precio_metro": 2.6
     },
     {
       "ref": "NOR0032111",
+      "descripcion": "ANGULO 80 X 40 X 1.25",
       "tipo": "ANGULO",
       "alto": 80.0,
       "ancho": 40.0,
@@ -6843,14 +6828,14 @@
       "peso_kg_m": 0.4005,
       "acabado": "BRUTO",
       "tar": 77,
-      "mur": 243,
+      "mur": 242,
       "val": 252,
       "estado": "Stock",
-      "precio_metro": 2.6,
-      "descripcion": "ANGULO 80 X 40 X 1.25"
+      "precio_metro": 2.6
     },
     {
       "ref": "NOR0032112",
+      "descripcion": "ANGULO 30 X 15 X 1,2",
       "tipo": "ANGULO",
       "alto": 30.0,
       "ancho": 15.0,
@@ -6859,14 +6844,14 @@
       "peso_kg_m": 0.142,
       "acabado": "BRUTO",
       "tar": 241,
-      "mur": 228,
+      "mur": 226,
       "val": 72,
       "estado": "Stock",
-      "precio_metro": 0.92,
-      "descripcion": "ANGULO 30 X 15 X 1,2"
+      "precio_metro": 0.92
     },
     {
       "ref": "NOR0032115",
+      "descripcion": "ANGULO 100 X 40 X 1,8",
       "tipo": "ANGULO",
       "alto": 100.0,
       "ancho": 40.0,
@@ -6878,11 +6863,11 @@
       "mur": 47,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 4.37,
-      "descripcion": "ANGULO 100 X 40 X 1,8"
+      "precio_metro": 4.37
     },
     {
       "ref": "NOR0032116",
+      "descripcion": "ANGULO 25 X 1.5",
       "tipo": "ANGULO",
       "alto": 25.0,
       "ancho": 25.0,
@@ -6894,11 +6879,11 @@
       "mur": 282,
       "val": 282,
       "estado": "7/10 Días",
-      "precio_metro": 1.29,
-      "descripcion": "ANGULO 25 X 1.5"
+      "precio_metro": 1.29
     },
     {
       "ref": "NOR0032117",
+      "descripcion": "ANGULO 50 X 25 X 1,7",
       "tipo": "ANGULO",
       "alto": 50.0,
       "ancho": 25.0,
@@ -6907,14 +6892,14 @@
       "peso_kg_m": 0.338,
       "acabado": "BRUTO",
       "tar": 0,
-      "mur": 75,
-      "val": 36,
+      "mur": 363,
+      "val": 29,
       "estado": "7/10 Días",
-      "precio_metro": 2.2,
-      "descripcion": "ANGULO 50 X 25 X 1,7"
+      "precio_metro": 2.2
     },
     {
       "ref": "NOR0032120",
+      "descripcion": "ANGULO 53 X 28 X 1.5 CH.",
       "tipo": "ANGULO",
       "alto": 53.0,
       "ancho": 28.0,
@@ -6926,11 +6911,11 @@
       "mur": 50,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 2.08,
-      "descripcion": "ANGULO 53 X 28 X 1.5 CH."
+      "precio_metro": 2.08
     },
     {
       "ref": "NOR0032200",
+      "descripcion": "TUBO CUADRADO 16 X 1.3",
       "tipo": "TUBO CUADRADO",
       "alto": 16.0,
       "ancho": 16.0,
@@ -6942,11 +6927,11 @@
       "mur": 537,
       "val": 82,
       "estado": "Stock",
-      "precio_metro": 1.34,
-      "descripcion": "TUBO CUADRADO 16 X 1.3"
+      "precio_metro": 1.34
     },
     {
       "ref": "NOR0032201",
+      "descripcion": "TUBO CUADRADO 20 X 1,3",
       "tipo": "TUBO CUADRADO",
       "alto": 20.0,
       "ancho": 20.0,
@@ -6958,11 +6943,11 @@
       "mur": 2,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 1.71,
-      "descripcion": "TUBO CUADRADO 20 X 1,3"
+      "precio_metro": 1.71
     },
     {
       "ref": "NOR0032201",
+      "descripcion": "TUBO CUADRADO 20 X 1,3",
       "tipo": "TUBO CUADRADO",
       "alto": 20.0,
       "ancho": 20.0,
@@ -6974,11 +6959,11 @@
       "mur": 368,
       "val": 212,
       "estado": "7/10 Días",
-      "precio_metro": 1.71,
-      "descripcion": "TUBO CUADRADO 20 X 1,3"
+      "precio_metro": 1.71
     },
     {
       "ref": "NOR0032202",
+      "descripcion": "TUBO CUADRADO 25 X 1.3",
       "tipo": "TUBO CUADRADO",
       "alto": 25.0,
       "ancho": 25.0,
@@ -6990,11 +6975,11 @@
       "mur": 55,
       "val": 56,
       "estado": "7/10 Días",
-      "precio_metro": 2.16,
-      "descripcion": "TUBO CUADRADO 25 X 1.3"
+      "precio_metro": 2.16
     },
     {
       "ref": "NOR0032202",
+      "descripcion": "TUBO CUADRADO 25 X 1.3",
       "tipo": "TUBO CUADRADO",
       "alto": 25.0,
       "ancho": 25.0,
@@ -7006,11 +6991,11 @@
       "mur": 239,
       "val": 55,
       "estado": "Stock",
-      "precio_metro": 2.16,
-      "descripcion": "TUBO CUADRADO 25 X 1.3"
+      "precio_metro": 2.16
     },
     {
       "ref": "NOR0032203",
+      "descripcion": "TUBO CUADRADO 30 X 1.3",
       "tipo": "TUBO CUADRADO",
       "alto": 30.0,
       "ancho": 30.0,
@@ -7019,14 +7004,14 @@
       "peso_kg_m": 0.402,
       "acabado": "BRUTO",
       "tar": 2,
-      "mur": 375,
+      "mur": 335,
       "val": 129,
       "estado": "7/10 Días",
-      "precio_metro": 2.61,
-      "descripcion": "TUBO CUADRADO 30 X 1.3"
+      "precio_metro": 2.61
     },
     {
       "ref": "NOR0032204",
+      "descripcion": "TUBO CUADRADO 40 X 1.3",
       "tipo": "TUBO CUADRADO",
       "alto": 40.0,
       "ancho": 40.0,
@@ -7035,14 +7020,14 @@
       "peso_kg_m": 0.543,
       "acabado": "BRUTO",
       "tar": 169,
-      "mur": 34,
-      "val": 225,
+      "mur": 27,
+      "val": 219,
       "estado": "Stock",
-      "precio_metro": 3.53,
-      "descripcion": "TUBO CUADRADO 40 X 1.3"
+      "precio_metro": 3.53
     },
     {
       "ref": "NOR0032205",
+      "descripcion": "TUBO CUADRADO 45 X 1.5",
       "tipo": "TUBO CUADRADO",
       "alto": 45.0,
       "ancho": 45.0,
@@ -7054,11 +7039,11 @@
       "mur": 2,
       "val": 3,
       "estado": "Sin stock",
-      "precio_metro": 4.58,
-      "descripcion": "TUBO CUADRADO 45 X 1.5"
+      "precio_metro": 4.58
     },
     {
       "ref": "NOR0032205",
+      "descripcion": "TUBO CUADRADO 45 X 1.5",
       "tipo": "TUBO CUADRADO",
       "alto": 45.0,
       "ancho": 45.0,
@@ -7070,11 +7055,11 @@
       "mur": 165,
       "val": 59,
       "estado": "7/10 Días",
-      "precio_metro": 4.58,
-      "descripcion": "TUBO CUADRADO 45 X 1.5"
+      "precio_metro": 4.58
     },
     {
       "ref": "NOR0032206",
+      "descripcion": "TUBO CUADRADO 50 X 1,3",
       "tipo": "TUBO CUADRADO",
       "alto": 50.0,
       "ancho": 50.0,
@@ -7086,11 +7071,11 @@
       "mur": 0,
       "val": 36,
       "estado": "7/10 Días",
-      "precio_metro": 4.44,
-      "descripcion": "TUBO CUADRADO 50 X 1,3"
+      "precio_metro": 4.44
     },
     {
       "ref": "NOR0032206",
+      "descripcion": "TUBO CUADRADO 50 X 1,3",
       "tipo": "TUBO CUADRADO",
       "alto": 50.0,
       "ancho": 50.0,
@@ -7102,11 +7087,11 @@
       "mur": 68,
       "val": 61,
       "estado": "Stock",
-      "precio_metro": 4.44,
-      "descripcion": "TUBO CUADRADO 50 X 1,3"
+      "precio_metro": 4.44
     },
     {
       "ref": "NOR0032207",
+      "descripcion": "TUBO CUADRADO 60 X 1,3",
       "tipo": "TUBO CUADRADO",
       "alto": 60.0,
       "ancho": 60.0,
@@ -7118,11 +7103,11 @@
       "mur": 83,
       "val": 95,
       "estado": "7/10 Días",
-      "precio_metro": 5.35,
-      "descripcion": "TUBO CUADRADO 60 X 1,3"
+      "precio_metro": 5.35
     },
     {
       "ref": "NOR0032208",
+      "descripcion": "TUBO CUADRADO 70 X 1,3",
       "tipo": "TUBO CUADRADO",
       "alto": 70.0,
       "ancho": 70.0,
@@ -7134,11 +7119,11 @@
       "mur": 24,
       "val": 49,
       "estado": "7/10 Días",
-      "precio_metro": 6.27,
-      "descripcion": "TUBO CUADRADO 70 X 1,3"
+      "precio_metro": 6.27
     },
     {
       "ref": "NOR0032209",
+      "descripcion": "TUBO CUADRADO 80 X 1,5",
       "tipo": "TUBO CUADRADO",
       "alto": 80.0,
       "ancho": 80.0,
@@ -7150,11 +7135,11 @@
       "mur": 59,
       "val": 6,
       "estado": "Stock",
-      "precio_metro": 8.27,
-      "descripcion": "TUBO CUADRADO 80 X 1,5"
+      "precio_metro": 8.27
     },
     {
       "ref": "NOR0032210",
+      "descripcion": "TUBO CUADRADO 100 X 1,9",
       "tipo": "TUBO CUADRADO",
       "alto": 100.0,
       "ancho": 100.0,
@@ -7166,11 +7151,11 @@
       "mur": 1,
       "val": 72,
       "estado": "Stock",
-      "precio_metro": 13.09,
-      "descripcion": "TUBO CUADRADO 100 X 1,9"
+      "precio_metro": 13.09
     },
     {
       "ref": "NOR0032210",
+      "descripcion": "TUBO CUADRADO 100 X 1,9",
       "tipo": "TUBO CUADRADO",
       "alto": 100.0,
       "ancho": 100.0,
@@ -7182,11 +7167,11 @@
       "mur": 42,
       "val": 2,
       "estado": "7/10 Días",
-      "precio_metro": 13.09,
-      "descripcion": "TUBO CUADRADO 100 X 1,9"
+      "precio_metro": 13.09
     },
     {
       "ref": "NOR0032211",
+      "descripcion": "TUBO CUADRADO 35 X 1.3",
       "tipo": "TUBO CUADRADO",
       "alto": 35.0,
       "ancho": 35.0,
@@ -7198,11 +7183,11 @@
       "mur": 88,
       "val": 262,
       "estado": "7/10 Días",
-      "precio_metro": 3.09,
-      "descripcion": "TUBO CUADRADO 35 X 1.3"
+      "precio_metro": 3.09
     },
     {
       "ref": "NOR0032212",
+      "descripcion": "TUBO CUADRADO 120 X 2",
       "tipo": "TUBO CUADRADO",
       "alto": 120.0,
       "ancho": 120.0,
@@ -7211,14 +7196,14 @@
       "peso_kg_m": 2.549,
       "acabado": "BRUTO",
       "tar": 26,
-      "mur": 9,
+      "mur": 6,
       "val": 38,
       "estado": "Stock",
-      "precio_metro": 16.57,
-      "descripcion": "TUBO CUADRADO 120 X 2"
+      "precio_metro": 16.57
     },
     {
       "ref": "NOR0032213",
+      "descripcion": "TUBO CUADRADO 40 X 1.5",
       "tipo": "TUBO CUADRADO",
       "alto": 40.0,
       "ancho": 40.0,
@@ -7230,11 +7215,11 @@
       "mur": 0,
       "val": 42,
       "estado": "7/10 Días",
-      "precio_metro": 4.06,
-      "descripcion": "TUBO CUADRADO 40 X 1.5"
+      "precio_metro": 4.06
     },
     {
       "ref": "NOR0032300",
+      "descripcion": "RECTANGULAR 20 X 10 X 1.3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 20.0,
       "ancho": 10.0,
@@ -7246,11 +7231,11 @@
       "mur": 344,
       "val": 4,
       "estado": "Stock",
-      "precio_metro": 1.08,
-      "descripcion": "RECTANGULAR 20 X 10 X 1.3"
+      "precio_metro": 1.08
     },
     {
       "ref": "NOR0032301",
+      "descripcion": "RECTANGULAR 30 X 15 X 1.3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 30.0,
       "ancho": 15.0,
@@ -7259,14 +7244,14 @@
       "peso_kg_m": 0.298,
       "acabado": "BRUTO",
       "tar": 7,
-      "mur": 186,
+      "mur": 176,
       "val": 247,
       "estado": "7/10 Días",
-      "precio_metro": 1.94,
-      "descripcion": "RECTANGULAR 30 X 15 X 1.3"
+      "precio_metro": 1.94
     },
     {
       "ref": "NOR0032302",
+      "descripcion": "RECTANGULAR 30 x 20 X 1,2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 30.0,
       "ancho": 20.0,
@@ -7275,14 +7260,14 @@
       "peso_kg_m": 0.3078,
       "acabado": "BRUTO",
       "tar": 43,
-      "mur": 139,
+      "mur": 125,
       "val": 289,
       "estado": "Stock",
-      "precio_metro": 2.0,
-      "descripcion": "RECTANGULAR 30 x 20 X 1,2"
+      "precio_metro": 2.0
     },
     {
       "ref": "NOR0032303",
+      "descripcion": "RECTANGULAR 40 X 20 X 1,3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 40.0,
       "ancho": 20.0,
@@ -7291,14 +7276,14 @@
       "peso_kg_m": 0.402,
       "acabado": "BRUTO",
       "tar": 1,
-      "mur": 295,
-      "val": 134,
+      "mur": 232,
+      "val": 132,
       "estado": "7/10 Días",
-      "precio_metro": 2.61,
-      "descripcion": "RECTANGULAR 40 X 20 X 1,3"
+      "precio_metro": 2.61
     },
     {
       "ref": "NOR0032304",
+      "descripcion": "RECTANGULAR 50 X 20 X 1.3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 50.0,
       "ancho": 20.0,
@@ -7310,11 +7295,11 @@
       "mur": 47,
       "val": 30,
       "estado": "Stock",
-      "precio_metro": 3.08,
-      "descripcion": "RECTANGULAR 50 X 20 X 1.3"
+      "precio_metro": 3.08
     },
     {
       "ref": "NOR0032305",
+      "descripcion": "RECTANGULAR 60 X 20 X 1,3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 60.0,
       "ancho": 20.0,
@@ -7323,14 +7308,14 @@
       "peso_kg_m": 0.5427,
       "acabado": "BRUTO",
       "tar": 100,
-      "mur": 16,
+      "mur": 10,
       "val": 90,
       "estado": "Stock",
-      "precio_metro": 3.53,
-      "descripcion": "RECTANGULAR 60 X 20 X 1,3"
+      "precio_metro": 3.53
     },
     {
       "ref": "NOR0032306",
+      "descripcion": "RECTANGULAR 70 X 20 X 1.3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 70.0,
       "ancho": 20.0,
@@ -7342,11 +7327,11 @@
       "mur": 83,
       "val": 9,
       "estado": "Stock",
-      "precio_metro": 3.98,
-      "descripcion": "RECTANGULAR 70 X 20 X 1.3"
+      "precio_metro": 3.98
     },
     {
       "ref": "NOR0032307",
+      "descripcion": "RECTANGULAR 80 X 20 X 1.3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 80.0,
       "ancho": 20.0,
@@ -7358,11 +7343,11 @@
       "mur": 113,
       "val": 4,
       "estado": "7/10 Días",
-      "precio_metro": 4.44,
-      "descripcion": "RECTANGULAR 80 X 20 X 1.3"
+      "precio_metro": 4.44
     },
     {
       "ref": "NOR0032308",
+      "descripcion": "RECTANGULAR 100 X 40 X 1.5",
       "tipo": "TUBO RECTANGULAR",
       "alto": 100.0,
       "ancho": 40.0,
@@ -7374,11 +7359,11 @@
       "mur": 0,
       "val": 13,
       "estado": "7/10 Días",
-      "precio_metro": 7.21,
-      "descripcion": "RECTANGULAR 100 X 40 X 1.5"
+      "precio_metro": 7.21
     },
     {
       "ref": "NOR0032308",
+      "descripcion": "RECTANGULAR 100 X 40 X 1.5",
       "tipo": "TUBO RECTANGULAR",
       "alto": 100.0,
       "ancho": 40.0,
@@ -7387,14 +7372,14 @@
       "peso_kg_m": 1.1097,
       "acabado": "BRUTO",
       "tar": 8,
-      "mur": 22,
+      "mur": 10,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 7.21,
-      "descripcion": "RECTANGULAR 100 X 40 X 1.5"
+      "precio_metro": 7.21
     },
     {
       "ref": "NOR0032309",
+      "descripcion": "RECTANGULAR 100 X 45 X 1.7",
       "tipo": "TUBO RECTANGULAR",
       "alto": 100.0,
       "ancho": 45.0,
@@ -7406,11 +7391,11 @@
       "mur": 1,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 9.93,
-      "descripcion": "RECTANGULAR 100 X 45 X 1.7"
+      "precio_metro": 9.93
     },
     {
       "ref": "NOR0032310",
+      "descripcion": "RECTANGULAR 120 X 40 X 1.9",
       "tipo": "TUBO RECTANGULAR",
       "alto": 120.0,
       "ancho": 40.0,
@@ -7422,11 +7407,11 @@
       "mur": 60,
       "val": 25,
       "estado": "7/10 Días",
-      "precio_metro": 10.43,
-      "descripcion": "RECTANGULAR 120 X 40 X 1.9"
+      "precio_metro": 10.43
     },
     {
       "ref": "NOR0032311",
+      "descripcion": "RECTANGULAR 60 X 40 X 1.3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 60.0,
       "ancho": 40.0,
@@ -7435,14 +7420,14 @@
       "peso_kg_m": 0.6831,
       "acabado": "BRUTO",
       "tar": 11,
-      "mur": 322,
+      "mur": 236,
       "val": 76,
       "estado": "Stock",
-      "precio_metro": 4.44,
-      "descripcion": "RECTANGULAR 60 X 40 X 1.3"
+      "precio_metro": 4.44
     },
     {
       "ref": "NOR0032313",
+      "descripcion": "RECTANGULAR 50 X 25 X 1.5",
       "tipo": "TUBO RECTANGULAR",
       "alto": 50.0,
       "ancho": 25.0,
@@ -7454,11 +7439,11 @@
       "mur": 0,
       "val": 39,
       "estado": "7/10 Días",
-      "precio_metro": 3.79,
-      "descripcion": "RECTANGULAR 50 X 25 X 1.5"
+      "precio_metro": 3.79
     },
     {
       "ref": "NOR0032313",
+      "descripcion": "RECTANGULAR 50 X 25 X 1.5",
       "tipo": "TUBO RECTANGULAR",
       "alto": 50.0,
       "ancho": 25.0,
@@ -7470,11 +7455,11 @@
       "mur": 154,
       "val": 78,
       "estado": "Stock",
-      "precio_metro": 3.79,
-      "descripcion": "RECTANGULAR 50 X 25 X 1.5"
+      "precio_metro": 3.79
     },
     {
       "ref": "NOR0032314",
+      "descripcion": "RECTANGULAR 60 X 10 X 1.3",
       "tipo": "TUBO RECTANGULAR",
       "alto": 60.0,
       "ancho": 10.0,
@@ -7484,13 +7469,13 @@
       "acabado": "BRUTO",
       "tar": 16,
       "mur": 237,
-      "val": 7,
+      "val": 5,
       "estado": "Stock",
-      "precio_metro": 3.07,
-      "descripcion": "RECTANGULAR 60 X 10 X 1.3"
+      "precio_metro": 3.07
     },
     {
       "ref": "NOR0032315",
+      "descripcion": "RECTANGULAR 100 X 20 X 1.5",
       "tipo": "TUBO RECTANGULAR",
       "alto": 100.0,
       "ancho": 20.0,
@@ -7499,14 +7484,14 @@
       "peso_kg_m": 0.95118,
       "acabado": "BRUTO",
       "tar": 12,
-      "mur": 409,
-      "val": 57,
+      "mur": 408,
+      "val": 47,
       "estado": "Stock",
-      "precio_metro": 6.18,
-      "descripcion": "RECTANGULAR 100 X 20 X 1.5"
+      "precio_metro": 6.18
     },
     {
       "ref": "NOR0032316",
+      "descripcion": "RECTANGULAR 120 X 20 X 1.5",
       "tipo": "TUBO RECTANGULAR",
       "alto": 120.0,
       "ancho": 20.0,
@@ -7515,14 +7500,14 @@
       "peso_kg_m": 1.114,
       "acabado": "BRUTO",
       "tar": 19,
-      "mur": 89,
+      "mur": 73,
       "val": 15,
       "estado": "Stock",
-      "precio_metro": 7.24,
-      "descripcion": "RECTANGULAR 120 X 20 X 1.5"
+      "precio_metro": 7.24
     },
     {
       "ref": "NOR0032319",
+      "descripcion": "RECTANGULAR 50 X 15 X 1.2",
       "tipo": "TUBO RECTANGULAR",
       "alto": 50.0,
       "ancho": 15.0,
@@ -7534,11 +7519,11 @@
       "mur": 199,
       "val": 61,
       "estado": "7/10 Días",
-      "precio_metro": 2.64,
-      "descripcion": "RECTANGULAR 50 X 15 X 1.2"
+      "precio_metro": 2.64
     },
     {
       "ref": "NOR0032320",
+      "descripcion": "RECTANGULAR 120 X 40 X 1.5",
       "tipo": "TUBO RECTANGULAR",
       "alto": 120.0,
       "ancho": 40.0,
@@ -7550,11 +7535,11 @@
       "mur": 0,
       "val": 20,
       "estado": "7/10 Días",
-      "precio_metro": 8.27,
-      "descripcion": "RECTANGULAR 120 X 40 X 1.5"
+      "precio_metro": 8.27
     },
     {
       "ref": "NOR0032320",
+      "descripcion": "RECTANGULAR 120 X 40 X 1.5",
       "tipo": "TUBO RECTANGULAR",
       "alto": 120.0,
       "ancho": 40.0,
@@ -7566,11 +7551,11 @@
       "mur": 0,
       "val": 0,
       "estado": "Stock",
-      "precio_metro": 8.27,
-      "descripcion": "RECTANGULAR 120 X 40 X 1.5"
+      "precio_metro": 8.27
     },
     {
       "ref": "NOR0032321",
+      "descripcion": "RECTANGULAR 150 X 20 X 1.5",
       "tipo": "TUBO RECTANGULAR",
       "alto": 150.0,
       "ancho": 20.0,
@@ -7582,11 +7567,11 @@
       "mur": 30,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 8.79,
-      "descripcion": "RECTANGULAR 150 X 20 X 1.5"
+      "precio_metro": 8.79
     },
     {
       "ref": "NOR0032323",
+      "descripcion": "RECTANGULAR 100 X 50 X 1.5",
       "tipo": "TUBO RECTANGULAR",
       "alto": 100.0,
       "ancho": 50.0,
@@ -7598,11 +7583,11 @@
       "mur": 0,
       "val": 4,
       "estado": "Sin stock",
-      "precio_metro": 7.77,
-      "descripcion": "RECTANGULAR 100 X 50 X 1.5"
+      "precio_metro": 7.77
     },
     {
       "ref": "NOR0032324",
+      "descripcion": "RECTANGULAR 100 X 60 X 1.8",
       "tipo": "TUBO RECTANGULAR",
       "alto": 100.0,
       "ancho": 60.0,
@@ -7614,11 +7599,11 @@
       "mur": 464,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 9.92,
-      "descripcion": "RECTANGULAR 100 X 60 X 1.8"
+      "precio_metro": 9.92
     },
     {
       "ref": "NOR0032324",
+      "descripcion": "RECTANGULAR 100 X 60 X 1.8",
       "tipo": "TUBO RECTANGULAR",
       "alto": 100.0,
       "ancho": 60.0,
@@ -7630,11 +7615,11 @@
       "mur": 38,
       "val": 1,
       "estado": "7/10 Días",
-      "precio_metro": 9.92,
-      "descripcion": "RECTANGULAR 100 X 60 X 1.8"
+      "precio_metro": 9.92
     },
     {
       "ref": "NOR0032401",
+      "descripcion": "TUBO REDONDO 16 X 1,2",
       "tipo": "TUBO REDONDO",
       "alto": 16.0,
       "ancho": 16.0,
@@ -7646,11 +7631,11 @@
       "mur": 193,
       "val": 8,
       "estado": "Stock",
-      "precio_metro": 1.05,
-      "descripcion": "TUBO REDONDO 16 X 1,2"
+      "precio_metro": 1.05
     },
     {
       "ref": "NOR0032402",
+      "descripcion": "TUBO REDONDO 18 X 1.5",
       "tipo": "TUBO REDONDO",
       "alto": 18.0,
       "ancho": 18.0,
@@ -7662,11 +7647,11 @@
       "mur": 539,
       "val": 10,
       "estado": "7/10 Días",
-      "precio_metro": 1.37,
-      "descripcion": "TUBO REDONDO 18 X 1.5"
+      "precio_metro": 1.37
     },
     {
       "ref": "NOR0032403",
+      "descripcion": "TUBO REDONDO 20 X 1.2",
       "tipo": "TUBO REDONDO",
       "alto": 20.0,
       "ancho": 20.0,
@@ -7678,11 +7663,11 @@
       "mur": 0,
       "val": 238,
       "estado": "7/10 Días",
-      "precio_metro": 1.24,
-      "descripcion": "TUBO REDONDO 20 X 1.2"
+      "precio_metro": 1.24
     },
     {
       "ref": "NOR0032403",
+      "descripcion": "TUBO REDONDO 20 X 1.2",
       "tipo": "TUBO REDONDO",
       "alto": 20.0,
       "ancho": 20.0,
@@ -7694,11 +7679,11 @@
       "mur": 39,
       "val": 330,
       "estado": "Stock",
-      "precio_metro": 1.24,
-      "descripcion": "TUBO REDONDO 20 X 1.2"
+      "precio_metro": 1.24
     },
     {
       "ref": "NOR0032404",
+      "descripcion": "TUBO REDONDO 25 X 1,3",
       "tipo": "TUBO REDONDO",
       "alto": 25.0,
       "ancho": 25.0,
@@ -7710,11 +7695,11 @@
       "mur": 182,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 0.0,
-      "descripcion": "TUBO REDONDO 25 X 1,3"
+      "precio_metro": 0.0
     },
     {
       "ref": "NOR0032405",
+      "descripcion": "TUBO REDONDO 30 X 1,2",
       "tipo": "TUBO REDONDO",
       "alto": 30.0,
       "ancho": 30.0,
@@ -7726,11 +7711,11 @@
       "mur": 129,
       "val": 23,
       "estado": "7/10 Días",
-      "precio_metro": 1.91,
-      "descripcion": "TUBO REDONDO 30 X 1,2"
+      "precio_metro": 1.91
     },
     {
       "ref": "NOR0032406",
+      "descripcion": "TUBO REDONDO 40 X 1,3",
       "tipo": "TUBO REDONDO",
       "alto": 40.0,
       "ancho": 40.0,
@@ -7742,11 +7727,11 @@
       "mur": 195,
       "val": 50,
       "estado": "7/10 Días",
-      "precio_metro": 2.78,
-      "descripcion": "TUBO REDONDO 40 X 1,3"
+      "precio_metro": 2.78
     },
     {
       "ref": "NOR0032407",
+      "descripcion": "TUBO REDONDO 50 X 1,5",
       "tipo": "TUBO REDONDO",
       "alto": 50.0,
       "ancho": 50.0,
@@ -7758,11 +7743,11 @@
       "mur": 33,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 4.02,
-      "descripcion": "TUBO REDONDO 50 X 1,5"
+      "precio_metro": 4.02
     },
     {
       "ref": "NOR0032408",
+      "descripcion": "TUBO REDONDO 60 X 1,4",
       "tipo": "TUBO REDONDO",
       "alto": 60.0,
       "ancho": 60.0,
@@ -7774,11 +7759,11 @@
       "mur": 1,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 4.53,
-      "descripcion": "TUBO REDONDO 60 X 1,4"
+      "precio_metro": 4.53
     },
     {
       "ref": "NOR0032408",
+      "descripcion": "TUBO REDONDO 60 X 1,4",
       "tipo": "TUBO REDONDO",
       "alto": 60.0,
       "ancho": 60.0,
@@ -7790,11 +7775,11 @@
       "mur": 18,
       "val": 46,
       "estado": "7/10 Días",
-      "precio_metro": 4.53,
-      "descripcion": "TUBO REDONDO 60 X 1,4"
+      "precio_metro": 4.53
     },
     {
       "ref": "NOR0032409",
+      "descripcion": "TUBO REDONDO 80 X 1.6",
       "tipo": "TUBO REDONDO",
       "alto": 80.0,
       "ancho": 80.0,
@@ -7806,11 +7791,11 @@
       "mur": 3,
       "val": 0,
       "estado": "Sin stock",
-      "precio_metro": 6.92,
-      "descripcion": "TUBO REDONDO 80 X 1.6"
+      "precio_metro": 6.92
     },
     {
       "ref": "NOR0032409",
+      "descripcion": "TUBO REDONDO 80 X 1.6",
       "tipo": "TUBO REDONDO",
       "alto": 80.0,
       "ancho": 80.0,
@@ -7822,11 +7807,11 @@
       "mur": 111,
       "val": 26,
       "estado": "7/10 Días",
-      "precio_metro": 6.92,
-      "descripcion": "TUBO REDONDO 80 X 1.6"
+      "precio_metro": 6.92
     },
     {
       "ref": "NOR0032410",
+      "descripcion": "TUBO REDONDO 70 X 1,5",
       "tipo": "TUBO REDONDO",
       "alto": 70.0,
       "ancho": 70.0,
@@ -7838,11 +7823,11 @@
       "mur": 30,
       "val": 30,
       "estado": "7/10 Días",
-      "precio_metro": 5.67,
-      "descripcion": "TUBO REDONDO 70 X 1,5"
+      "precio_metro": 5.67
     },
     {
       "ref": "NOR0032414",
+      "descripcion": "T - 30 X 30 X 1.5",
       "tipo": "PERFIL T",
       "alto": 30.0,
       "ancho": 30.0,
@@ -7854,11 +7839,11 @@
       "mur": 19,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 1.54,
-      "descripcion": "T - 30 X 30 X 1.5"
+      "precio_metro": 1.54
     },
     {
       "ref": "NOR0032414",
+      "descripcion": "T - 30 X 30 X 1.5",
       "tipo": "PERFIL T",
       "alto": 30.0,
       "ancho": 30.0,
@@ -7867,11 +7852,10 @@
       "peso_kg_m": 0.237,
       "acabado": "BRUTO",
       "tar": 0,
-      "mur": 187,
+      "mur": 185,
       "val": 0,
       "estado": "7/10 Días",
-      "precio_metro": 1.54,
-      "descripcion": "T - 30 X 30 X 1.5"
+      "precio_metro": 1.54
     }
   ]
 }
