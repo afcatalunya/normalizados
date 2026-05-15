@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consulta de Chapas — Aluminios Franco</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f0f3f8;
+    --surface: #ffffff;
+    --surface2: #f7f9fc;
+    --border: #dde3ee;
+    --border2: #c5cde0;
+    --text: #111827;
+    --text-muted: #4b5563;
+    --text-light: #9ca3af;
+    --accent: #2e7d32;
+    --accent-light: #e8f5e9;
+    --green: #15803d;  --green-bg: #f0fdf4;  --green-border: #86efac;
+    --orange: #b45309; --orange-bg: #fffbeb; --orange-border: #fcd34d;
+    --blue2: #1d4ed8;  --blue-bg: #eff6ff;   --blue-border: #93c5fd;
+    --red: #dc2626;    --red-bg: #fef2f2;    --red-border: #fca5a5;
+    --radius: 12px;
+    --shadow: 0 2px 8px rgba(0,0,0,0.07), 0 6px 20px rgba(0,0,0,0.05);
+  }
+  /* ── LOGO ── */
+  .hero-logo-wrap {
+    margin-bottom: 16px;
+    display: flex; justify-content: center; align-items: center;
+  }
+  .hero-logo-img {
+    height: 64px; width: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.92;
+    drop-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+
+  /* ── VALIDITY ── */
+  .hero-validity {
+    margin-top: 10px;
+    display: inline-block;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 5px 16px;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.75);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+  }
+  .hero-validity .validity-date {
+    color: #fbbf24;
+    font-weight: 700;
+  }
+  .hero-validity.expired {
+    background: rgba(220,38,38,0.2);
+    border-color: rgba(220,38,38,0.4);
+    color: #fca5a5;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(160deg, #0a2a0a 0%, #1a4a1a 50%, #2e7d32 100%);
+    padding: 40px 20px 36px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content:'';
+    position:absolute; inset:0;
+    background: radial-gradient(ellipse 70% 50% at 50% -10%, rgba(100,200,100,0.22) 0%, transparent 70%);
+    pointer-events:none;
+  }
+  .hero-logo {
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.3em;
+    color: rgba(255,255,255,0.45); text-transform: uppercase; margin-bottom: 12px;
+  }
+  .hero h1 {
+    font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 800;
+    color: #fff; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 8px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    background: linear-gradient(90deg, #81c784, #c8e6c9);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-sub {
+    font-size: 0.88rem; color: rgba(255,255,255,0.5); letter-spacing: 0.03em;
+  }
+
+  /* ── BANNER PRECIOS ── */
+  .price-banner {
+    max-width: 820px; margin: 28px auto 0;
+    border-radius: 14px; overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.07);
+    backdrop-filter: blur(10px);
+  }
+  .banner-head {
+    background: rgba(0,0,0,0.25);
+    padding: 11px 18px;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  }
+  .banner-head-left {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: rgba(255,255,255,0.55);
+  }
+  .banner-head-left span { font-size: 0.95rem; }
+  .banner-note {
+    font-size: 0.7rem; color: rgba(255,255,255,0.4);
+    font-style: italic; font-weight: 400;
+  }
+  .banner-note strong { color: #fbbf24; font-style: normal; }
+
+  .ptable { width: 100%; border-collapse: collapse; }
+  .ptable thead th {
+    padding: 9px 16px;
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.09em;
+    text-transform: uppercase; color: rgba(255,255,255,0.4);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    background: rgba(0,0,0,0.12);
+  }
+  .ptable thead th:first-child { text-align: left; }
+  .ptable thead th:not(:first-child) { text-align: center; }
+
+  .ptable tbody tr { background: rgba(0,0,0,0.15) !important; }
+  .ptable tbody tr:nth-child(even) { background: rgba(0,0,0,0.28) !important; }
+  .ptable tbody tr:hover { background: rgba(255,255,255,0.07) !important; }
+  .ptable tbody td {
+    padding: 10px 16px;
+    font-size: 0.84rem; font-weight: 500;
+    color: #ffffff !important;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .ptable tbody tr:last-child td { border-bottom: none; }
+  .ptable tbody td:not(:first-child) {
+    text-align: center;
+    font-family: 'DM Mono', monospace; font-weight: 700; font-size: 0.9rem;
+    color: #a3e635 !important;
+  }
+  .ptable .row-label { display: flex; align-items: center; gap: 8px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .dot-g { background: #4ade80; }
+  .dot-b { background: #60a5fa; }
+  .dot-y { background: #fbbf24; }
+  .ptable .price-note { font-size: 0.7rem; color: rgba(255,255,255,0.55) !important; font-weight: 400; }
+
+  /* ── SEARCH PANEL ── */
+  .page-body {
+    max-width: 100%; margin: 0 auto; padding: 20px 16px 48px;
+  }
+  .search-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 20px 22px 18px;
+    margin-bottom: 20px;
+  }
+  .search-card-title {
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--text-muted);
+    margin-bottom: 14px; display: flex; align-items: center; gap: 6px;
+  }
+  .filters-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr) auto;
+    gap: 10px;
+    align-items: end;
+  }
+  @media (max-width: 900px) {
+    .filters-grid { grid-template-columns: 1fr 1fr 1fr; }
+  }
+  @media (max-width: 560px) {
+    .filters-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .fg { display: flex; flex-direction: column; gap: 5px; }
+  .fg label {
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.07em;
+    text-transform: uppercase; color: var(--text-muted);
+  }
+  .fg input, .fg select {
+    height: 38px; padding: 0 10px;
+    border: 1.5px solid var(--border2); border-radius: 8px;
+    font-family: 'Outfit', sans-serif; font-size: 0.82rem;
+    color: var(--text); background: var(--surface2);
+    outline: none; transition: border-color 0.15s, box-shadow 0.15s;
+    width: 100%;
+  }
+  .fg input:focus, .fg select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(46,125,50,0.1);
+    background: #fff;
+  }
+  .fg input::placeholder { color: var(--text-light); }
+  .fg.search-fg input {
+    height: 42px; font-size: 0.9rem;
+    padding-left: 38px;
+  }
+  .search-wrap { position: relative; }
+  .search-ico {
+    position: absolute; left: 12px; top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9rem; opacity: 0.4; pointer-events: none;
+  }
+
+  .btn-reset {
+    height: 38px; padding: 0 16px;
+    background: var(--text); color: #fff;
+    border: none; border-radius: 8px;
+    font-family: 'Outfit', sans-serif; font-size: 0.8rem; font-weight: 600;
+    cursor: pointer; transition: background 0.15s, transform 0.1s;
+    align-self: end;
+  }
+  .btn-reset:hover { background: var(--accent); transform: translateY(-1px); }
+
+  /* ── HINT ── */
+  .hint {
+    text-align: center; padding: 70px 20px;
+    color: var(--text-light);
+  }
+  .hint-icon { font-size: 3.5rem; margin-bottom: 16px; opacity: 0.3; display: block; }
+  .hint p { font-size: 1rem; font-weight: 500; color: var(--text-muted); margin-bottom: 6px; }
+  .hint small { font-size: 0.8rem; }
+
+  /* ── TABLE ── */
+  .result-meta {
+    font-size: 0.78rem; color: var(--text-muted);
+    margin-bottom: 10px; padding-left: 2px;
+  }
+  .result-meta strong { color: var(--accent); }
+
+  .table-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    width: 100%;
+  }
+  table {
+    width: 100%; border-collapse: collapse;
+    font-size: 0.76rem; table-layout: fixed;
+  }
+  col.c-ref   { width: 10%; }
+  col.c-desc  { width: 22%; }
+  col.c-lar   { width: 6%; }
+  col.c-anc   { width: 6%; }
+  col.c-esp   { width: 6%; }
+  col.c-alea  { width: 9%; }
+  col.c-temp  { width: 6%; }
+  col.c-peso  { width: 7%; }
+  col.c-acab  { width: 8%; }
+  col.c-est   { width: 7%; }
+  col.c-precio { width: 9%; }
+  col.c-accion { width: 9%; }
+
+  thead tr { background: #1a4a1a; }
+  th {
+    padding: 9px 8px;
+    font-size: 0.59rem; font-weight: 700; letter-spacing: 0.07em;
+    text-transform: uppercase; color: rgba(255,255,255,0.6);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    border-bottom: 2px solid rgba(255,255,255,0.06);
+  }
+  th.r { text-align: right; }
+
+  tbody tr { border-bottom: 1px solid var(--border); transition: background 0.1s; }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: #f1f8e9; }
+  tbody tr:nth-child(even) { background: var(--surface2); }
+  tbody tr:nth-child(even):hover { background: #f1f8e9; }
+  td {
+    padding: 8px 8px; vertical-align: middle;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .td-ref {
+    font-family: 'DM Mono', monospace; font-size: 0.71rem;
+    font-weight: 600; color: var(--accent);
+  }
+  .td-desc { font-size: 0.79rem; color: var(--text); }
+  .td-num {
+    text-align: right; font-family: 'DM Mono', monospace;
+    font-size: 0.74rem; color: var(--text-muted);
+  }
+  .td-acabado {
+    font-family: 'DM Mono', monospace; font-size: 0.67rem;
+    background: #e8f5e9; color: #2e4a2e;
+    padding: 2px 6px; border-radius: 4px;
+    display: inline-block; max-width: 100%;
+    overflow: hidden; text-overflow: ellipsis;
+  }
+
+  /* badges */
+  .badge {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 3px 9px; border-radius: 20px;
+    font-size: 0.68rem; font-weight: 600; white-space: nowrap;
+    border: 1px solid transparent;
+  }
+  .badge::before {
+    content:''; width:6px; height:6px;
+    border-radius:50%; flex-shrink:0;
+  }
+  .badge-stock  { background:var(--green-bg);  color:var(--green);  border-color:var(--green-border); }
+  .badge-stock::before  { background:var(--green); box-shadow:0 0 0 2px rgba(21,128,61,.2); }
+  .badge-dias   { background:var(--orange-bg); color:var(--orange); border-color:var(--orange-border); }
+  .badge-dias::before   { background:var(--orange); }
+  .badge-pend   { background:var(--blue-bg);   color:var(--blue2);  border-color:var(--blue-border); }
+  .badge-pend::before   { background:var(--blue2); animation:pulse 1.5s infinite; }
+  .badge-sin    { background:var(--red-bg);    color:var(--red);    border-color:var(--red-border); }
+  .badge-sin::before    { background:var(--red); }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+  .no-res {
+    text-align:center; padding:50px 20px; color:var(--text-muted);
+  }
+  .no-res .icon { font-size:2rem; margin-bottom:10px; opacity:.4; display:block; }
+
+  /* pagination */
+  .pagination {
+    display:flex; align-items:center; justify-content:center;
+    gap:5px; padding:14px; border-top:1px solid var(--border); flex-wrap:wrap;
+  }
+  .page-btn {
+    height:30px; min-width:30px; padding:0 9px;
+    border:1px solid var(--border2); border-radius:6px;
+    background:var(--surface); font-family:'Outfit',sans-serif;
+    font-size:0.76rem; font-weight:500; color:var(--text);
+    cursor:pointer; transition:all .15s;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .page-btn:hover:not(:disabled) { border-color:var(--accent); color:var(--accent); background:var(--accent-light); }
+  .page-btn.active { background:var(--accent); color:#fff; border-color:var(--accent); font-weight:700; }
+  .page-btn:disabled { opacity:.3; cursor:not-allowed; }
+  .page-info { font-size:0.75rem; color:var(--text-muted); padding:0 6px; }
+
+  /* tooltip */
+  [data-tip] { position:relative; cursor:default; }
+  [data-tip]:hover::after {
+    content:attr(data-tip);
+    position:absolute; left:0; top:calc(100% + 5px);
+    background:#1a4a1a; color:#fff;
+    font-size:0.73rem; padding:6px 10px; border-radius:6px;
+    white-space:nowrap; z-index:999; pointer-events:none;
+    box-shadow:0 4px 14px rgba(0,0,0,.25);
+    font-family:'Outfit',sans-serif;
+  }
+
+  .footer {
+    text-align:center; padding:20px;
+    font-size:0.7rem; color:var(--text-light);
+  }
+
+/* ── RESPONSIVE MÓVIL ── */
+@media (max-width: 768px) {
+  .table-card, .table-wrap { display: none !important; }
+  .result-meta { margin-bottom: 8px; }
+
+  .cards-wrap { display: flex; flex-direction: column; gap: 10px; }
+
+  .ref-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 14px 16px;
+    position: relative;
+  }
+  .ref-card-top {
+    display: flex; align-items: flex-start;
+    justify-content: space-between; gap: 8px;
+    margin-bottom: 10px;
+  }
+  .ref-card-ref {
+    font-family: 'DM Mono', monospace; font-size: 0.72rem;
+    font-weight: 700; color: var(--accent);
+  }
+  .ref-card-desc {
+    font-size: 0.8rem; color: var(--text);
+    font-weight: 500; margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .ref-card-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 6px 12px; margin-bottom: 10px;
+  }
+  .ref-card-item { display: flex; flex-direction: column; gap: 1px; }
+  .ref-card-label {
+    font-size: 0.58rem; font-weight: 700; letter-spacing: 0.07em;
+    text-transform: uppercase; color: var(--text-light);
+  }
+  .ref-card-val {
+    font-size: 0.78rem; color: var(--text); font-weight: 500;
+  }
+  .ref-card-val.mono {
+    font-family: 'DM Mono', monospace; font-size: 0.73rem;
+    color: var(--text-muted);
+  }
+  .ref-card-footer {
+    display: flex; align-items: center; justify-content: flex-end;
+    padding-top: 8px; border-top: 1px solid var(--border);
+  }
+
+  .filter-panel {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    flex-wrap: wrap;
+  }
+  .filter-panel .btn-reset { grid-column: 1 / -1; }
+
+  .pagination { flex-wrap: wrap; gap: 4px; }
+}
+
+@media (min-width: 769px) {
+  .cards-wrap { display: none !important; }
+}
+
+
+  .td-precio {
+    text-align: right;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.76rem; font-weight: 700;
+    color: var(--accent);
+  }
+  .td-precio.no-std { color: transparent; }
+  .btn-consulta {
+    display: inline-flex; align-items: center; gap: 4px;
+    padding: 3px 9px; border-radius: 6px;
+    background: #fff8e1; color: #b45309;
+    border: 1px solid #fcd34d;
+    font-size: 0.68rem; font-weight: 600;
+    cursor: pointer; font-family: 'Outfit', sans-serif;
+    transition: all 0.15s; white-space: nowrap;
+  }
+  .btn-consulta:hover { background: #fef3c7; border-color: #f59e0b; }
+
+
+  /* ── ALERTA PRECIO ── */
+  .price-alert {
+    background: linear-gradient(135deg, #78350f 0%, #92400e 100%);
+    border-bottom: 2px solid #fbbf24;
+    padding: 12px 20px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap;
+    animation: slideDown 0.4s ease;
+  }
+  @keyframes slideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to   { transform: translateY(0);     opacity: 1; }
+  }
+  .price-alert-content {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.82rem; color: #fef3c7; font-weight: 500; flex: 1;
+  }
+  .price-alert-icon { font-size: 1.1rem; flex-shrink: 0; }
+  .price-alert-text strong { color: #fbbf24; }
+  .price-alert-close {
+    background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.2);
+    color: #fef3c7; border-radius: 6px; padding: 4px 10px;
+    font-size: 0.72rem; cursor: pointer; font-family: inherit; font-weight: 600;
+    transition: background 0.15s; flex-shrink: 0;
+  }
+  .price-alert-close:hover { background: rgba(255,255,255,0.25); }
+
+  /* ── DISCLAIMER MODAL ── */
+  .disclaimer-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    backdrop-filter: blur(4px);
+  }
+  .disclaimer-overlay.hidden {
+    display: none;
+  }
+  .disclaimer-modal {
+    background: white;
+    border-radius: 14px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    overflow: hidden;
+    animation: slideUp 0.3s ease;
+  }
+  @keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+  }
+  .disclaimer-header {
+    background: linear-gradient(135deg, #1d5c1d 0%, #2d7a2d 100%);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+  }
+  .disclaimer-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+  }
+  .disclaimer-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .disclaimer-content {
+    padding: 24px;
+    color: #111827;
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+  .disclaimer-content p {
+    margin: 0 0 12px 0;
+  }
+  .disclaimer-content p:last-child {
+    margin-bottom: 0;
+  }
+  .disclaimer-content strong {
+    color: #2d7a2d;
+    font-weight: 700;
+  }
+  .disclaimer-btn {
+    width: calc(100% - 48px);
+    margin: 0 24px 24px;
+    padding: 12px;
+    background: #2d7a2d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .disclaimer-btn:hover {
+    background: #1d5c1d;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(45,122,45,0.2);
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<header class="hero">
+  <div class="hero-logo-wrap">
+    <img src="https://aluminiosfranco.es/wp-content/uploads/logotipo.png" alt="Aluminios Franco" class="hero-logo-img">
+  </div>
+  <h1>Consulta de <em>Existencias</em></h1>
+  <div class="hero-sub">Chapas · Stock disponible · Tarragona · Murcia · Valencia</div>
+  <div class="hero-validity" id="validityMsg"></div>
+
+  <!-- BANNER PRECIOS -->
+  <div class="price-banner">
+    <div class="banner-head">
+      <div class="banner-head-left">
+        <span>💶</span> Tarifas vigentes — Precio de venta €/kg
+      </div>
+      <div class="banner-note">
+        Precios para <strong>chapas sueltas</strong> · Para volumen, consultar
+      </div>
+    </div>
+    <table class="ptable">
+      <thead>
+        <tr>
+          <th>Aleación</th>
+          <th>Espesor hasta 6 mm</th>
+          <th>Espesor más de 6 mm</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><div class="row-label"><span class="dot dot-g"></span>Aleación 1050 H24</div></td>
+          <td>4,50 €</td>
+          <td>4,70 €</td>
+        </tr>
+        <tr>
+          <td><div class="row-label"><span class="dot dot-b"></span>Aleación 5754 H111</div></td>
+          <td>4,65 €</td>
+          <td>4,85 €</td>
+        </tr>
+        <tr>
+          <td><div class="row-label"><span class="dot dot-b"></span>Aleación 5083 H111</div></td>
+          <td>5,10 €</td>
+          <td>5,30 €</td>
+        </tr>
+        <tr>
+          <td><div class="row-label"><span class="dot dot-b"></span>Chapas Damero</div></td>
+          <td>4,70 €</td>
+          <td>5,30 € <span class="price-note">(5mm)</span></td>
+        </tr>
+        <tr>
+          <td><div class="row-label"><span class="dot dot-y"></span>Aleación 6082 T6</div></td>
+          <td>6,00 €</td>
+          <td>6,25 €</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+
+  <!-- ALERTA CAMBIO PRECIO -->
+  <div class="price-alert" id="priceAlert" style="display:none">
+    <div class="price-alert-content">
+      <span class="price-alert-icon">⚠️</span>
+      <span class="price-alert-text">
+        <strong>Actualización de tarifas</strong> — Los precios de venta han sido revisados.
+        Consulta la tabla de tarifas vigentes antes de realizar tu pedido.
+      </span>
+    </div>
+    <button class="price-alert-close" onclick="dismissAlert()">Entendido ✕</button>
+  </div>
+
+  <!-- POPUP NUEVOS PRECIOS -->
+  <div class="disclaimer-overlay" id="preciosOverlay" style="display:none">
+    <div class="disclaimer-modal">
+      <div class="disclaimer-header" style="background:linear-gradient(135deg,#b8860b 0%,#d4a017 100%)">
+        <span class="disclaimer-icon">💶</span>
+        <h2>¡Atención — Nuevos precios vigentes!</h2>
+      </div>
+      <div class="disclaimer-content">
+        <p>A partir del <strong>17 de abril de 2026</strong> están en vigor las nuevas tarifas de venta €/kg.</p>
+        <p>Consulta la tabla de <strong>Tarifas Vigentes</strong> en la cabecera de esta página antes de realizar cualquier pedido.</p>
+        <p style="font-size:0.82rem;color:#6b7280">Para pedidos de volumen o condiciones especiales, contacta con tu delegado comercial.</p>
+      </div>
+      <button class="disclaimer-btn" style="background:#b8860b" onclick="closePreciosPopup()">Entendido</button>
+    </div>
+  </div>
+
+  <!-- DISCLAIMER DISPONIBILIDAD -->
+  <div class="disclaimer-overlay" id="disclaimerOverlay">
+    <div class="disclaimer-modal">
+      <div class="disclaimer-header">
+        <span class="disclaimer-icon">ℹ️</span>
+        <h2>Importante</h2>
+      </div>
+      <div class="disclaimer-content">
+        <p>Los pedidos cursados según esta consulta de existencias <strong>están sujetos a confirmación de disponibilidad</strong> por parte de nuestro equipo.</p>
+        <p>Aunque los datos se actualizan regularmente, pueden producirse cambios durante la semana (variaciones en stock, errores de inventario o cambios de última hora).</p>
+        <p><strong>Siempre recibirá confirmación oficial antes de procesar su pedido.</strong></p>
+      </div>
+      <button class="disclaimer-btn" onclick="dismissDisclaimer()">Entendido</button>
+    </div>
+  </div>
+
+<!-- ── BODY ── -->
+<div class="page-body">
+
+  <!-- Search Card -->
+  <div class="search-card">
+    <div class="search-card-title">🔍 Filtrar existencias</div>
+    <div class="filters-grid">
+
+
+
+      <div class="fg">
+        <label>Largo (mm)</label>
+        <input type="number" id="qLargo" placeholder="Ej: 2000">
+      </div>
+      <div class="fg">
+        <label>Ancho (mm)</label>
+        <input type="number" id="qAncho" placeholder="Ej: 1000">
+      </div>
+      <div class="fg">
+        <label>Espesor (mm)</label>
+        <select id="qEspesor"><option value="">Todos</option></select>
+      </div>
+      <div class="fg">
+        <label>Aleación</label>
+        <select id="qAleacion"><option value="">Todas</option></select>
+      </div>
+      <div class="fg">
+        <label>Temple / Dureza</label>
+        <select id="qTemple"><option value="">Todos</option></select>
+      </div>
+      <div class="fg">
+        <label>Acabado</label>
+        <select id="qAcabado"><option value="">Todos</option></select>
+      </div>
+
+
+      <button class="btn-reset" onclick="resetAll()">↺ Limpiar</button>
+    </div>
+  </div>
+
+  <!-- Hint -->
+  <div id="hint" class="hint">
+    <span class="hint-icon">📦</span>
+    <p>Introduce algún criterio para consultar disponibilidad</p>
+    <small>Puedes buscar por referencia, medidas, aleación, acabado o estado de stock</small>
+  </div>
+
+  <!-- Results -->
+  <div id="resultsSection" style="display:none">
+    <div class="result-meta" id="resultMeta"></div>
+    <!-- ESCRITORIO: tabla -->
+    <div class="table-card">
+      <table>
+        <colgroup>
+          <col class="c-ref"><col class="c-desc"><col class="c-lar"><col class="c-anc">
+          <col class="c-esp"><col class="c-alea"><col class="c-temp"><col class="c-peso">
+          <col class="c-acab"><col class="c-est"><col class="c-precio"><col class="c-accion">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Referencia</th>
+            <th>Descripción</th>
+            <th class="r">Largo</th>
+            <th class="r">Ancho</th>
+            <th class="r">Espesor</th>
+            <th>Aleación</th>
+            <th>Temple</th>
+            <th class="r">Peso kg</th>
+            <th>Acabado</th>
+            <th>Estado</th>
+            <th class="r">€/kg</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+      <div id="noRes" class="no-res" style="display:none">
+        <span class="icon">😕</span>
+        <p>No se encontraron referencias con esos criterios</p>
+      </div>
+    </div>
+    <!-- MÓVIL: tarjetas -->
+    <div class="cards-wrap" id="cardsWrap"></div>
+    <!-- paginación compartida -->
+    <div class="pagination" id="pagination"></div>
+  </div>
+
+
+
+
+<script>
+
+const DATA = [{"ref":"CH.DEPL000","descripcion":"DEPLOYE 2000 X 1000 X 1.5 - 60/25/9    SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"DEPLOYE","temple":"DEPLOYE","acabado":"S/A","peso":6,"tar":0,"mur":42,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.DEPL001","descripcion":"DEPLOYE 2000 X 1000 X 1.5 - 122/35/15    SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"DEPLOYE","temple":"DEPLOYE","acabado":"9111 EXT.2C","peso":8.1,"tar":0,"mur":11,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.DEPL001","descripcion":"DEPLOYE 2000 X 1000 X 1.5 - 122/35/15    SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"DEPLOYE","temple":"DEPLOYE","acabado":"S/A","peso":8.1,"tar":0,"mur":98,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.DEPL002","descripcion":"DEPLOYE 2000 X 1000 X 1.5 - 42/12/5.5      SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"DEPLOYE","temple":"DEPLOYE","acabado":"S/A","peso":8.1,"tar":7,"mur":60,"val":3,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.DEPL003","descripcion":"DEPLOYE 2000 X 1000 X 1.5 - 30/15/3      SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"DEPLOYE","temple":"DEPLOYE","acabado":"S/A","peso":8.1,"tar":0,"mur":81,"val":65,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.DEPL004","descripcion":"DEPLOYE 2000 X 1000 X 1.5 - 16/8/1.5     SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"DEPLOYE","temple":"DEPLOYE","acabado":"9006","peso":8.1,"tar":0,"mur":15,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.DEPL004","descripcion":"DEPLOYE 2000 X 1000 X 1.5 - 16/8/1.5     SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"DEPLOYE","temple":"DEPLOYE","acabado":"S/A","peso":8.1,"tar":0,"mur":66,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.DEPL005","descripcion":"DEPLOYE 2000 X 1000 X 1.5 - 110/55/24     SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"DEPLOYE","temple":"DEPLOYE","acabado":"S/A","peso":8.1,"tar":1,"mur":0,"val":44,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.DEPL006","descripcion":"DEPLOYE 2000 X 1000 X 1.5 - 10/5/1,5    SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"DEPLOYE","temple":"DEPLOYE","acabado":"S/A","peso":3.3,"tar":0,"mur":72,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.DEPL007","descripcion":"DEPLOYE 2000 X 1000 X 1.5 - 45/15/5   SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"DEPLOYE","temple":"DEPLOYE","acabado":"S/A","peso":6.23,"tar":1,"mur":53,"val":3,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.DEPL008","descripcion":"DEPLOYE 2000 X 1000 X 1.5 - 90/30/10    SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"DEPLOYE","temple":"DEPLOYE","acabado":"S/A","peso":4.93,"tar":0,"mur":65,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.DEPL009","descripcion":"DEPLOYE 2000 X 1000 X 1.5 - 122/35/15 - R3T5  SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"DEPLOYE","temple":"DEPLOYE","acabado":"PLATA-2C","peso":4.53992,"tar":0,"mur":2,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CH.DEPL009","descripcion":"DEPLOYE 2000 X 1000 X 1.5 - 122/35/15 - R3T5  SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"DEPLOYE","temple":"DEPLOYE","acabado":"S/A","peso":4.53992,"tar":0,"mur":16,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.DEPL010","descripcion":"DEPLOYE 2000 X 1000 X 1.5 - 60/25/6           SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"DEPLOYE","temple":"DEPLOYE","acabado":"S/A","peso":3.4,"tar":0,"mur":68,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.DEPL024","descripcion":"DEPLOYE 2000 X 1000 X 1.5 - 62,5/30/14 - SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"DEPLOYE","temple":"DEPLOYE","acabado":"S/A","peso":5.5,"tar":0,"mur":47,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.DEPL058","descripcion":"DEPLOYE 3190 X 1250 X 1.5 - 90/30/10    SAND","largo":3190,"ancho":1250,"espesor":1.5,"aleacion":"DEPLOYE","temple":"DEPLOYE","acabado":"S/A","peso":10.97,"tar":0,"mur":29,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.DEPL063","descripcion":"DEPLOYE 3000 X 1500 X 1.5 - 60/25/9  SAND","largo":3000,"ancho":1500,"espesor":1.5,"aleacion":"DEPLOYE","temple":"DEPLOYE","acabado":"PLATA-2C","peso":12.37,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CH.DEPL063","descripcion":"DEPLOYE 3000 X 1500 X 1.5 - 60/25/9  SAND","largo":3000,"ancho":1500,"espesor":1.5,"aleacion":"DEPLOYE","temple":"DEPLOYE","acabado":"S/A","peso":12.37,"tar":0,"mur":11,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.DEPL064","descripcion":"DEPLOYE 3000 X 1250 X 2 - 190/76/35 - R3T5  - SAND","largo":3000,"ancho":1250,"espesor":2,"aleacion":"DEPLOYE","temple":"DEPLOYE","acabado":"S/A","peso":13,"tar":0,"mur":6,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CH.PERF001","descripcion":"CH PERF 2000 X 1000 X 1.5 CUADRADO 10","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"S/A","peso":8.1,"tar":15,"mur":0,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CH.PERF003","descripcion":"CH PERF 2000 X 1000 X 1.5 CUADRADO 30 SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"7035-2C","peso":8.1,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CH.PERF003","descripcion":"CH PERF 2000 X 1000 X 1.5 CUADRADO 30 SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"9010","peso":8.1,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CH.PERF003","descripcion":"CH PERF 2000 X 1000 X 1.5 CUADRADO 30 SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"9010-2C","peso":8.1,"tar":0,"mur":0,"val":1,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CH.PERF003","descripcion":"CH PERF 2000 X 1000 X 1.5 CUADRADO 30 SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"S/A","peso":8.1,"tar":0,"mur":63,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.PERF023","descripcion":"CH PERF 2000 X 1000 X 1.5 CUADRADO 20 SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"7016","peso":8.1,"tar":0,"mur":0,"val":1,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CH.PERF023","descripcion":"CH PERF 2000 X 1000 X 1.5 CUADRADO 20 SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"7035-2C","peso":8.1,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CH.PERF023","descripcion":"CH PERF 2000 X 1000 X 1.5 CUADRADO 20 SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"9010","peso":8.1,"tar":0,"mur":2,"val":13,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.PERF023","descripcion":"CH PERF 2000 X 1000 X 1.5 CUADRADO 20 SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"9010-2C","peso":8.1,"tar":0,"mur":3,"val":17,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.PERF023","descripcion":"CH PERF 2000 X 1000 X 1.5 CUADRADO 20 SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"9111-2C","peso":8.1,"tar":0,"mur":0,"val":4,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CH.PERF023","descripcion":"CH PERF 2000 X 1000 X 1.5 CUADRADO 20 SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"PLATA-2C","peso":8.1,"tar":0,"mur":1,"val":3,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CH.PERF023","descripcion":"CH PERF 2000 X 1000 X 1.5 CUADRADO 20 SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"S/A","peso":8.1,"tar":0,"mur":69,"val":1,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.PERF043","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"9010","peso":0,"tar":0,"mur":2,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CH.PERF063","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"9010","peso":0,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CH.PERF081","descripcion":"CH PERF 2000 X 1000 X 1.5 ROMBO 20 LISO    SAND.","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"9010-2C","peso":8.1,"tar":0,"mur":4,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CH.PERF081","descripcion":"CH PERF 2000 X 1000 X 1.5 ROMBO 20 LISO    SAND.","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"S/A","peso":8.1,"tar":0,"mur":16,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.PERF082","descripcion":"CH PERF 2000 X 1000 X 1.5 ROMBO 30 LISO    SAND.","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"S/A","peso":8.1,"tar":0,"mur":74,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.PERF123","descripcion":"CH PERF 2000 X 1000 X 1.5 TRENZALUM ROMBO 30  SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"7011","peso":8.1,"tar":0,"mur":4,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CH.PERF123","descripcion":"CH PERF 2000 X 1000 X 1.5 TRENZALUM ROMBO 30  SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"7011-1C","peso":8.1,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CH.PERF123","descripcion":"CH PERF 2000 X 1000 X 1.5 TRENZALUM ROMBO 30  SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"S/A","peso":8.1,"tar":0,"mur":1,"val":5,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CH.PERF143","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"9010","peso":0,"tar":0,"mur":17,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.PERF183","descripcion":"CH PERF 2000 X 1000 X 1.5 RED.30 SAND.","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"9010","peso":0,"tar":0,"mur":6,"val":4,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CH.PERF183","descripcion":"CH PERF 2000 X 1000 X 1.5 RED.30 SAND.","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"S/A","peso":0,"tar":0,"mur":0,"val":7,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CH.PERF223","descripcion":"CH PERF 2000 X 1000 X 1.5 STAR SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"9010-2C","peso":8.1,"tar":0,"mur":0,"val":2,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CH.PERF250","descripcion":"CH PERF 2000 X 1000 X 1.2 MicroPERF R2.5/T5 SAND","largo":2000,"ancho":1000,"espesor":1.2,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"9010","peso":5.5,"tar":0,"mur":0,"val":55,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.PERF250","descripcion":"CH PERF 2000 X 1000 X 1.2 MicroPERF R2.5/T5 SAND","largo":2000,"ancho":1000,"espesor":1.2,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"S/A","peso":5.5,"tar":120,"mur":239,"val":58,"cdad_pdte":0,"estado":"Stock"},{"ref":"CH.PERF251","descripcion":"CH PERF 2000 X 1000 X 1 MICROPERF R2.5/T5 SAND","largo":2000,"ancho":1000,"espesor":1,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"9010","peso":10,"tar":0,"mur":0,"val":7,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CH.PERF251","descripcion":"CH PERF 2000 X 1000 X 1 MICROPERF R2.5/T5 SAND","largo":2000,"ancho":1000,"espesor":1,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"9010-2C","peso":10,"tar":0,"mur":17,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.PERF251","descripcion":"CH PERF 2000 X 1000 X 1 MICROPERF R2.5/T5 SAND","largo":2000,"ancho":1000,"espesor":1,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"9111-2C","peso":10,"tar":0,"mur":0,"val":1,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CH.PERF251","descripcion":"CH PERF 2000 X 1000 X 1 MICROPERF R2.5/T5 SAND","largo":2000,"ancho":1000,"espesor":1,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"PLATA-2C","peso":10,"tar":0,"mur":0,"val":5,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CH.PERF251","descripcion":"CH PERF 2000 X 1000 X 1 MICROPERF R2.5/T5 SAND","largo":2000,"ancho":1000,"espesor":1,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"S/A","peso":10,"tar":52,"mur":8,"val":6,"cdad_pdte":0,"estado":"Stock"},{"ref":"CH.PERF252","descripcion":"CH PERF 2000 X 1000 X 1,5 SPLASH R40/50    SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"S/A","peso":10,"tar":0,"mur":20,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.PERF253","descripcion":"CH PERF 2000 X 1000 X 1,5 PIXEL R40/50    SAND","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"S/A","peso":10,"tar":0,"mur":20,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CH.PERF300","descripcion":"CH PERF 3000 X 1250 X 1 MULTI-PERF 3,4,5,6","largo":3000,"ancho":1250,"espesor":1,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"S/A","peso":7.01,"tar":0,"mur":35,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090000","descripcion":"CHAPA 2000 X 1000 X 1 COM","largo":2000,"ancho":1000,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"9010-1C","peso":4.86,"tar":313,"mur":0,"val":91,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090000","descripcion":"CHAPA 2000 X 1000 X 1 COM","largo":2000,"ancho":1000,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"9010-2C","peso":4.86,"tar":140,"mur":0,"val":185,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090001","descripcion":"CHAPA 2000 X 1000 X 0.8 C","largo":2000,"ancho":1000,"espesor":0.8,"aleacion":"1050","temple":"H24","acabado":"9010-1C","peso":3.78,"tar":208,"mur":979,"val":326,"cdad_pdte":230,"estado":"Stock"},{"ref":"CHC0090001","descripcion":"CHAPA 2000 X 1000 X 0.8 C","largo":2000,"ancho":1000,"espesor":0.8,"aleacion":"1050","temple":"H24","acabado":"9010-2C","peso":3.78,"tar":0,"mur":324,"val":385,"cdad_pdte":230,"estado":"7/10 días"},{"ref":"CHC0090001","descripcion":"CHAPA 2000 X 1000 X 0.8 C","largo":2000,"ancho":1000,"espesor":0.8,"aleacion":"1050","temple":"H24","acabado":"PLATA-1C","peso":3.78,"tar":0,"mur":0,"val":255,"cdad_pdte":230,"estado":"7/10 días"},{"ref":"CHC0090002","descripcion":"CHAPA 2000 X 1000 X 0.8 1050 H18","largo":2000,"ancho":1000,"espesor":0.8,"aleacion":"1050","temple":"H18","acabado":"7035-2C","peso":4.32,"tar":0,"mur":0,"val":8,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090002","descripcion":"CHAPA 2000 X 1000 X 0.8 1050 H18","largo":2000,"ancho":1000,"espesor":0.8,"aleacion":"1050","temple":"H18","acabado":"9010-2C","peso":4.32,"tar":198,"mur":0,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090002","descripcion":"CHAPA 2000 X 1000 X 0.8 1050 H18","largo":2000,"ancho":1000,"espesor":0.8,"aleacion":"1050","temple":"H18","acabado":"A3005-1C","peso":4.32,"tar":0,"mur":0,"val":2,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090002","descripcion":"CHAPA 2000 X 1000 X 0.8 1050 H18","largo":2000,"ancho":1000,"espesor":0.8,"aleacion":"1050","temple":"H18","acabado":"EMBERO (639)-1","peso":4.32,"tar":0,"mur":0,"val":2,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090002","descripcion":"CHAPA 2000 X 1000 X 0.8 1050 H18","largo":2000,"ancho":1000,"espesor":0.8,"aleacion":"1050","temple":"H18","acabado":"P.V.C.-1C","peso":4.32,"tar":147,"mur":696,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090002","descripcion":"CHAPA 2000 X 1000 X 0.8 1050 H18","largo":2000,"ancho":1000,"espesor":0.8,"aleacion":"1050","temple":"H18","acabado":"PLATA-1C","peso":4.32,"tar":2,"mur":0,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090002","descripcion":"CHAPA 2000 X 1000 X 0.8 1050 H18","largo":2000,"ancho":1000,"espesor":0.8,"aleacion":"1050","temple":"H18","acabado":"PLATA-2C","peso":4.32,"tar":0,"mur":6,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090002","descripcion":"CHAPA 2000 X 1000 X 0.8 1050 H18","largo":2000,"ancho":1000,"espesor":0.8,"aleacion":"1050","temple":"H18","acabado":"S/A","peso":4.32,"tar":257,"mur":738,"val":456,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090003","descripcion":"CHAPA 2000 X 1000 X 1 1050 H24","largo":2000,"ancho":1000,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"7016 TEXT 1C","peso":5.42,"tar":0,"mur":0,"val":2,"cdad_pdte":738,"estado":"Sin stock"},{"ref":"CHC0090003","descripcion":"CHAPA 2000 X 1000 X 1 1050 H24","largo":2000,"ancho":1000,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"8014 TEXT.-1C","peso":5.42,"tar":4,"mur":0,"val":0,"cdad_pdte":738,"estado":"Sin stock"},{"ref":"CHC0090003","descripcion":"CHAPA 2000 X 1000 X 1 1050 H24","largo":2000,"ancho":1000,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"8014-SATINADO","peso":5.42,"tar":0,"mur":1,"val":0,"cdad_pdte":738,"estado":"Sin stock"},{"ref":"CHC0090003","descripcion":"CHAPA 2000 X 1000 X 1 1050 H24","largo":2000,"ancho":1000,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"8019 MATE-1C","peso":5.42,"tar":2,"mur":0,"val":0,"cdad_pdte":738,"estado":"Sin stock"},{"ref":"CHC0090003","descripcion":"CHAPA 2000 X 1000 X 1 1050 H24","largo":2000,"ancho":1000,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"9006 MATE-1C","peso":5.42,"tar":0,"mur":0,"val":8,"cdad_pdte":738,"estado":"Sin stock"},{"ref":"CHC0090003","descripcion":"CHAPA 2000 X 1000 X 1 1050 H24","largo":2000,"ancho":1000,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"9010-1C","peso":5.42,"tar":0,"mur":455,"val":0,"cdad_pdte":738,"estado":"7/10 días"},{"ref":"CHC0090003","descripcion":"CHAPA 2000 X 1000 X 1 1050 H24","largo":2000,"ancho":1000,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"9010-2C","peso":5.42,"tar":170,"mur":399,"val":336,"cdad_pdte":738,"estado":"Stock"},{"ref":"CHC0090003","descripcion":"CHAPA 2000 X 1000 X 1 1050 H24","largo":2000,"ancho":1000,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"9011-2C","peso":5.42,"tar":0,"mur":4,"val":0,"cdad_pdte":738,"estado":"Sin stock"},{"ref":"CHC0090003","descripcion":"CHAPA 2000 X 1000 X 1 1050 H24","largo":2000,"ancho":1000,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"9111 EXT.1C","peso":5.42,"tar":3,"mur":0,"val":0,"cdad_pdte":738,"estado":"Sin stock"},{"ref":"CHC0090003","descripcion":"CHAPA 2000 X 1000 X 1 1050 H24","largo":2000,"ancho":1000,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"9111-1C","peso":5.42,"tar":0,"mur":0,"val":49,"cdad_pdte":738,"estado":"7/10 días"},{"ref":"CHC0090003","descripcion":"CHAPA 2000 X 1000 X 1 1050 H24","largo":2000,"ancho":1000,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"9111-2C","peso":5.42,"tar":0,"mur":0,"val":34,"cdad_pdte":738,"estado":"7/10 días"},{"ref":"CHC0090003","descripcion":"CHAPA 2000 X 1000 X 1 1050 H24","largo":2000,"ancho":1000,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"A7024-1C","peso":5.42,"tar":0,"mur":30,"val":0,"cdad_pdte":738,"estado":"7/10 días"},{"ref":"CHC0090003","descripcion":"CHAPA 2000 X 1000 X 1 1050 H24","largo":2000,"ancho":1000,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"BRONCE-2C","peso":5.42,"tar":0,"mur":0,"val":13,"cdad_pdte":738,"estado":"7/10 días"},{"ref":"CHC0090003","descripcion":"CHAPA 2000 X 1000 X 1 1050 H24","largo":2000,"ancho":1000,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"INOX-2C","peso":5.42,"tar":0,"mur":0,"val":134,"cdad_pdte":738,"estado":"7/10 días"},{"ref":"CHC0090003","descripcion":"CHAPA 2000 X 1000 X 1 1050 H24","largo":2000,"ancho":1000,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"PLATA-2C","peso":5.42,"tar":0,"mur":0,"val":18,"cdad_pdte":738,"estado":"7/10 días"},{"ref":"CHC0090003","descripcion":"CHAPA 2000 X 1000 X 1 1050 H24","largo":2000,"ancho":1000,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":5.42,"tar":748,"mur":1060,"val":673,"cdad_pdte":738,"estado":"Stock"},{"ref":"CHC0090004","descripcion":"CHAPA 2000 X 1000 X 1.2 1050 H24","largo":2000,"ancho":1000,"espesor":1.2,"aleacion":"1050","temple":"H24","acabado":"9005 TEXT.-2C","peso":6.48,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090004","descripcion":"CHAPA 2000 X 1000 X 1.2 1050 H24","largo":2000,"ancho":1000,"espesor":1.2,"aleacion":"1050","temple":"H24","acabado":"9010-1C","peso":6.48,"tar":119,"mur":0,"val":152,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090004","descripcion":"CHAPA 2000 X 1000 X 1.2 1050 H24","largo":2000,"ancho":1000,"espesor":1.2,"aleacion":"1050","temple":"H24","acabado":"9010-2C","peso":6.48,"tar":0,"mur":0,"val":63,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090004","descripcion":"CHAPA 2000 X 1000 X 1.2 1050 H24","largo":2000,"ancho":1000,"espesor":1.2,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":6.48,"tar":272,"mur":443,"val":369,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090005","descripcion":"CHAPA 2000 X 1000 X 1.5 1050 H24","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"9010-1C","peso":8.1,"tar":146,"mur":55,"val":102,"cdad_pdte":120,"estado":"Stock"},{"ref":"CHC0090005","descripcion":"CHAPA 2000 X 1000 X 1.5 1050 H24","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"9010-2C","peso":8.1,"tar":0,"mur":8,"val":35,"cdad_pdte":120,"estado":"7/10 días"},{"ref":"CHC0090005","descripcion":"CHAPA 2000 X 1000 X 1.5 1050 H24","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"9111 EXT.1C","peso":8.1,"tar":0,"mur":0,"val":4,"cdad_pdte":120,"estado":"Sin stock"},{"ref":"CHC0090005","descripcion":"CHAPA 2000 X 1000 X 1.5 1050 H24","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"9111 EXT.2C","peso":8.1,"tar":0,"mur":0,"val":1,"cdad_pdte":120,"estado":"Sin stock"},{"ref":"CHC0090005","descripcion":"CHAPA 2000 X 1000 X 1.5 1050 H24","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"9111-2C","peso":8.1,"tar":0,"mur":0,"val":20,"cdad_pdte":120,"estado":"7/10 días"},{"ref":"CHC0090005","descripcion":"CHAPA 2000 X 1000 X 1.5 1050 H24","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":8.1,"tar":0,"mur":176,"val":101,"cdad_pdte":120,"estado":"7/10 días"},{"ref":"CHC0090006","descripcion":"CHAPA 2000 X 1000 X 2 1050 H24","largo":2000,"ancho":1000,"espesor":2,"aleacion":"1050","temple":"H24","acabado":"9010-1C","peso":10.8,"tar":3,"mur":14,"val":61,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090006","descripcion":"CHAPA 2000 X 1000 X 2 1050 H24","largo":2000,"ancho":1000,"espesor":2,"aleacion":"1050","temple":"H24","acabado":"9010-2C","peso":10.8,"tar":0,"mur":0,"val":11,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090006","descripcion":"CHAPA 2000 X 1000 X 2 1050 H24","largo":2000,"ancho":1000,"espesor":2,"aleacion":"1050","temple":"H24","acabado":"9111 EXT.2C","peso":10.8,"tar":0,"mur":0,"val":28,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090006","descripcion":"CHAPA 2000 X 1000 X 2 1050 H24","largo":2000,"ancho":1000,"espesor":2,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":10.8,"tar":232,"mur":573,"val":329,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090008","descripcion":"CHAPA 2000 X 1000 X 3 1050H24","largo":2000,"ancho":1000,"espesor":3,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":16.2,"tar":171,"mur":518,"val":66,"cdad_pdte":185,"estado":"Stock"},{"ref":"CHC0090009","descripcion":"CHAPA 2000 X 1000 X 4 1050 H24","largo":2000,"ancho":1000,"espesor":4,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":21.6,"tar":213,"mur":56,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090011","descripcion":"CHAPA 2000 X 1000 X 1.5 5005 H14 OXI","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"5005","temple":"H14","acabado":"9111 EXT.2C","peso":8.1,"tar":0,"mur":0,"val":1,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090011","descripcion":"CHAPA 2000 X 1000 X 1.5 5005 H14 OXI","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"5005","temple":"H14","acabado":"9111-1C","peso":8.1,"tar":0,"mur":0,"val":1,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090011","descripcion":"CHAPA 2000 X 1000 X 1.5 5005 H14 OXI","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"5005","temple":"H14","acabado":"PLATA-1C","peso":8.1,"tar":33,"mur":12,"val":33,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090011","descripcion":"CHAPA 2000 X 1000 X 1.5 5005 H14 OXI","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"5005","temple":"H14","acabado":"PLATA-2C","peso":8.1,"tar":0,"mur":0,"val":34,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090011","descripcion":"CHAPA 2000 X 1000 X 1.5 5005 H14 OXI","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"5005","temple":"H14","acabado":"S/A","peso":8.1,"tar":14,"mur":245,"val":68,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090012","descripcion":"CHAPA 2500 X 1250 X 1 1050 H24","largo":2500,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"9010-1C","peso":8.437,"tar":0,"mur":0,"val":15,"cdad_pdte":8297,"estado":"7/10 días"},{"ref":"CHC0090012","descripcion":"CHAPA 2500 X 1250 X 1 1050 H24","largo":2500,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"9010-2C","peso":8.437,"tar":0,"mur":0,"val":58,"cdad_pdte":8297,"estado":"7/10 días"},{"ref":"CHC0090012","descripcion":"CHAPA 2500 X 1250 X 1 1050 H24","largo":2500,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"P.V.C.-1C","peso":8.437,"tar":80,"mur":108,"val":0,"cdad_pdte":8297,"estado":"Stock"},{"ref":"CHC0090012","descripcion":"CHAPA 2500 X 1250 X 1 1050 H24","largo":2500,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":8.437,"tar":105,"mur":3352,"val":377,"cdad_pdte":8297,"estado":"Stock"},{"ref":"CHC0090013","descripcion":"CHAPA 2500 X 1250 X 1.2 1050H24","largo":2500,"ancho":1250,"espesor":1.2,"aleacion":"1050","temple":"H24","acabado":"9016-1C","peso":10.125,"tar":0,"mur":0,"val":2,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090013","descripcion":"CHAPA 2500 X 1250 X 1.2 1050H24","largo":2500,"ancho":1250,"espesor":1.2,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":10.125,"tar":204,"mur":907,"val":31,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090014","descripcion":"CHAPA 2500 X 1250 X 1.5 5754 H111","largo":2500,"ancho":1250,"espesor":1.5,"aleacion":"5754","temple":"H111","acabado":"P.V.C.-1C","peso":12.656,"tar":103,"mur":201,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090014","descripcion":"CHAPA 2500 X 1250 X 1.5 5754 H111","largo":2500,"ancho":1250,"espesor":1.5,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":12.656,"tar":151,"mur":470,"val":332,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090015","descripcion":"CHAPA 2500 X 1250 X 2 1050H24","largo":2500,"ancho":1250,"espesor":2,"aleacion":"1050","temple":"H24","acabado":"P.V.C.-1C","peso":16.875,"tar":33,"mur":271,"val":1,"cdad_pdte":593,"estado":"Stock"},{"ref":"CHC0090015","descripcion":"CHAPA 2500 X 1250 X 2 1050H24","largo":2500,"ancho":1250,"espesor":2,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":16.875,"tar":209,"mur":831,"val":12,"cdad_pdte":593,"estado":"Stock"},{"ref":"CHC0090018","descripcion":"CHAPA 3000 X 1250 X 1 C.","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"9010-1C","peso":9.11,"tar":603,"mur":578,"val":75,"cdad_pdte":348,"estado":"Stock"},{"ref":"CHC0090018","descripcion":"CHAPA 3000 X 1250 X 1 C.","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"9010-2C","peso":9.11,"tar":0,"mur":0,"val":59,"cdad_pdte":348,"estado":"7/10 días"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"1015-1C","peso":10.125,"tar":1,"mur":0,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"5010-1C","peso":10.125,"tar":0,"mur":5,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"7011-1C","peso":10.125,"tar":0,"mur":0,"val":2,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"7011_EXTRU-1C","peso":10.125,"tar":0,"mur":4,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"7016-2C","peso":10.125,"tar":1,"mur":0,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"7021 TEXT.-1C","peso":10.125,"tar":1,"mur":0,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"7024 EXTRUCO","peso":10.125,"tar":10,"mur":0,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"7024-1C","peso":10.125,"tar":52,"mur":20,"val":35,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"8014 MATE-1C","peso":10.125,"tar":1,"mur":0,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"8014-SATINADO","peso":10.125,"tar":15,"mur":0,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"8019 MATE-1C","peso":10.125,"tar":7,"mur":0,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"9010-1C","peso":10.125,"tar":0,"mur":18,"val":139,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"9010-2C","peso":10.125,"tar":0,"mur":190,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"9111 EXT.2C","peso":10.125,"tar":0,"mur":0,"val":1,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"9111-1C","peso":10.125,"tar":52,"mur":0,"val":47,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"9111-2C","peso":10.125,"tar":0,"mur":1,"val":33,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"BRONCE-1C","peso":10.125,"tar":55,"mur":0,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"BRONCE-2C","peso":10.125,"tar":0,"mur":97,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"CEREZO CAT.O","peso":10.125,"tar":2,"mur":0,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"INOX-1C","peso":10.125,"tar":93,"mur":0,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"NOGAL IT.(623)-","peso":10.125,"tar":0,"mur":2,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"P.V.C.-1C","peso":10.125,"tar":0,"mur":533,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"PINO ALU.TEXT(","peso":10.125,"tar":1,"mur":0,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"PLATA-1C","peso":10.125,"tar":6,"mur":0,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"PLATA-2C","peso":10.125,"tar":0,"mur":11,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"ROBLE ANTIGU","peso":10.125,"tar":1,"mur":0,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"ROBLE GOLDE","peso":10.125,"tar":1,"mur":0,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090019","descripcion":"CHAPA 3000 X 1250 X 1 1050H24","largo":3000,"ancho":1250,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":10.125,"tar":70,"mur":412,"val":299,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090020","descripcion":"CHAPA 3000 X 1250 X 1.2 1050 H24","largo":3000,"ancho":1250,"espesor":1.2,"aleacion":"1050","temple":"H24","acabado":"7035-1C","peso":12.15,"tar":5,"mur":0,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090020","descripcion":"CHAPA 3000 X 1250 X 1.2 1050 H24","largo":3000,"ancho":1250,"espesor":1.2,"aleacion":"1050","temple":"H24","acabado":"9010-1C","peso":12.15,"tar":62,"mur":118,"val":9,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090020","descripcion":"CHAPA 3000 X 1250 X 1.2 1050 H24","largo":3000,"ancho":1250,"espesor":1.2,"aleacion":"1050","temple":"H24","acabado":"9010-2C","peso":12.15,"tar":0,"mur":6,"val":35,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090020","descripcion":"CHAPA 3000 X 1250 X 1.2 1050 H24","largo":3000,"ancho":1250,"espesor":1.2,"aleacion":"1050","temple":"H24","acabado":"BQ-10-2C","peso":12.15,"tar":61,"mur":0,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090020","descripcion":"CHAPA 3000 X 1250 X 1.2 1050 H24","largo":3000,"ancho":1250,"espesor":1.2,"aleacion":"1050","temple":"H24","acabado":"INOX-2C","peso":12.15,"tar":0,"mur":55,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090020","descripcion":"CHAPA 3000 X 1250 X 1.2 1050 H24","largo":3000,"ancho":1250,"espesor":1.2,"aleacion":"1050","temple":"H24","acabado":"P.V.C.-1C","peso":12.15,"tar":0,"mur":0,"val":1,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090020","descripcion":"CHAPA 3000 X 1250 X 1.2 1050 H24","largo":3000,"ancho":1250,"espesor":1.2,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":12.15,"tar":272,"mur":713,"val":159,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090021","descripcion":"CHAPA 3000 X 1250 X 1.5 1050 H24","largo":3000,"ancho":1250,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"7011-1C","peso":15.2,"tar":0,"mur":0,"val":2,"cdad_pdte":658,"estado":"Sin stock"},{"ref":"CHC0090021","descripcion":"CHAPA 3000 X 1250 X 1.5 1050 H24","largo":3000,"ancho":1250,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"7022-1C","peso":15.2,"tar":0,"mur":0,"val":1,"cdad_pdte":658,"estado":"Sin stock"},{"ref":"CHC0090021","descripcion":"CHAPA 3000 X 1250 X 1.5 1050 H24","largo":3000,"ancho":1250,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"9010-1C","peso":15.2,"tar":88,"mur":92,"val":12,"cdad_pdte":658,"estado":"Stock"},{"ref":"CHC0090021","descripcion":"CHAPA 3000 X 1250 X 1.5 1050 H24","largo":3000,"ancho":1250,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"9010-2C","peso":15.2,"tar":25,"mur":4,"val":97,"cdad_pdte":658,"estado":"Stock"},{"ref":"CHC0090021","descripcion":"CHAPA 3000 X 1250 X 1.5 1050 H24","largo":3000,"ancho":1250,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"9016-1C","peso":15.2,"tar":0,"mur":1,"val":1,"cdad_pdte":658,"estado":"Sin stock"},{"ref":"CHC0090021","descripcion":"CHAPA 3000 X 1250 X 1.5 1050 H24","largo":3000,"ancho":1250,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"9111 EXT.2C","peso":15.2,"tar":0,"mur":0,"val":5,"cdad_pdte":658,"estado":"Sin stock"},{"ref":"CHC0090021","descripcion":"CHAPA 3000 X 1250 X 1.5 1050 H24","largo":3000,"ancho":1250,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"9111-1C","peso":15.2,"tar":0,"mur":0,"val":25,"cdad_pdte":658,"estado":"7/10 días"},{"ref":"CHC0090021","descripcion":"CHAPA 3000 X 1250 X 1.5 1050 H24","largo":3000,"ancho":1250,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"9111-2C","peso":15.2,"tar":0,"mur":0,"val":36,"cdad_pdte":658,"estado":"7/10 días"},{"ref":"CHC0090021","descripcion":"CHAPA 3000 X 1250 X 1.5 1050 H24","largo":3000,"ancho":1250,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"BRONCE-2C","peso":15.2,"tar":0,"mur":0,"val":4,"cdad_pdte":658,"estado":"Sin stock"},{"ref":"CHC0090021","descripcion":"CHAPA 3000 X 1250 X 1.5 1050 H24","largo":3000,"ancho":1250,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"INOX-1C","peso":15.2,"tar":9,"mur":0,"val":0,"cdad_pdte":658,"estado":"Sin stock"},{"ref":"CHC0090021","descripcion":"CHAPA 3000 X 1250 X 1.5 1050 H24","largo":3000,"ancho":1250,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"INOX-2C","peso":15.2,"tar":0,"mur":0,"val":6,"cdad_pdte":658,"estado":"Sin stock"},{"ref":"CHC0090021","descripcion":"CHAPA 3000 X 1250 X 1.5 1050 H24","largo":3000,"ancho":1250,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"P.V.C.-1C","peso":15.2,"tar":40,"mur":145,"val":0,"cdad_pdte":658,"estado":"Stock"},{"ref":"CHC0090021","descripcion":"CHAPA 3000 X 1250 X 1.5 1050 H24","largo":3000,"ancho":1250,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"PLATA-1C","peso":15.2,"tar":17,"mur":0,"val":0,"cdad_pdte":658,"estado":"Stock"},{"ref":"CHC0090021","descripcion":"CHAPA 3000 X 1250 X 1.5 1050 H24","largo":3000,"ancho":1250,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"PLATA-2C","peso":15.2,"tar":0,"mur":60,"val":0,"cdad_pdte":658,"estado":"7/10 días"},{"ref":"CHC0090021","descripcion":"CHAPA 3000 X 1250 X 1.5 1050 H24","largo":3000,"ancho":1250,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":15.2,"tar":101,"mur":220,"val":126,"cdad_pdte":658,"estado":"Stock"},{"ref":"CHC0090022","descripcion":"CHAPA 3000 X 1250 X 2 1050H24","largo":3000,"ancho":1250,"espesor":2,"aleacion":"1050","temple":"H24","acabado":"9010-1C","peso":20.25,"tar":0,"mur":3,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090022","descripcion":"CHAPA 3000 X 1250 X 2 1050H24","largo":3000,"ancho":1250,"espesor":2,"aleacion":"1050","temple":"H24","acabado":"P.V.C.-1C","peso":20.25,"tar":0,"mur":296,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090022","descripcion":"CHAPA 3000 X 1250 X 2 1050H24","largo":3000,"ancho":1250,"espesor":2,"aleacion":"1050","temple":"H24","acabado":"PLATA-1C","peso":20.25,"tar":0,"mur":0,"val":17,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090022","descripcion":"CHAPA 3000 X 1250 X 2 1050H24","largo":3000,"ancho":1250,"espesor":2,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":20.25,"tar":169,"mur":293,"val":259,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090023","descripcion":"CHAPA 2500 X 1250 X 1.5 1050 H24","largo":2500,"ancho":1250,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"9010-1C","peso":12.656,"tar":0,"mur":0,"val":17,"cdad_pdte":1264,"estado":"7/10 días"},{"ref":"CHC0090023","descripcion":"CHAPA 2500 X 1250 X 1.5 1050 H24","largo":2500,"ancho":1250,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"9010-2C","peso":12.656,"tar":0,"mur":0,"val":8,"cdad_pdte":1264,"estado":"Sin stock"},{"ref":"CHC0090023","descripcion":"CHAPA 2500 X 1250 X 1.5 1050 H24","largo":2500,"ancho":1250,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"P.V.C.-1C","peso":12.656,"tar":0,"mur":1043,"val":0,"cdad_pdte":1264,"estado":"7/10 días"},{"ref":"CHC0090023","descripcion":"CHAPA 2500 X 1250 X 1.5 1050 H24","largo":2500,"ancho":1250,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":12.656,"tar":58,"mur":1168,"val":168,"cdad_pdte":1264,"estado":"Stock"},{"ref":"CHC0090024","descripcion":"CHAPA 3000 X 1250 X 3 1050H24","largo":3000,"ancho":1250,"espesor":3,"aleacion":"1050","temple":"H24","acabado":"9010-2C","peso":30.375,"tar":0,"mur":3,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090024","descripcion":"CHAPA 3000 X 1250 X 3 1050H24","largo":3000,"ancho":1250,"espesor":3,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":30.375,"tar":94,"mur":0,"val":18,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090026","descripcion":"CHAPA 3000 X 1250 X 1.2 5005 H14 OXI","largo":3000,"ancho":1250,"espesor":1.2,"aleacion":"5005","temple":"H14","acabado":"AN.NEGRO 2C","peso":12.15,"tar":0,"mur":6,"val":0,"cdad_pdte":28,"estado":"Sin stock"},{"ref":"CHC0090026","descripcion":"CHAPA 3000 X 1250 X 1.2 5005 H14 OXI","largo":3000,"ancho":1250,"espesor":1.2,"aleacion":"5005","temple":"H14","acabado":"INOX-2C","peso":12.15,"tar":0,"mur":4,"val":0,"cdad_pdte":28,"estado":"Sin stock"},{"ref":"CHC0090026","descripcion":"CHAPA 3000 X 1250 X 1.2 5005 H14 OXI","largo":3000,"ancho":1250,"espesor":1.2,"aleacion":"5005","temple":"H14","acabado":"ORO 1C","peso":12.15,"tar":2,"mur":0,"val":0,"cdad_pdte":28,"estado":"Sin stock"},{"ref":"CHC0090026","descripcion":"CHAPA 3000 X 1250 X 1.2 5005 H14 OXI","largo":3000,"ancho":1250,"espesor":1.2,"aleacion":"5005","temple":"H14","acabado":"ORO 2C","peso":12.15,"tar":2,"mur":0,"val":0,"cdad_pdte":28,"estado":"Sin stock"},{"ref":"CHC0090026","descripcion":"CHAPA 3000 X 1250 X 1.2 5005 H14 OXI","largo":3000,"ancho":1250,"espesor":1.2,"aleacion":"5005","temple":"H14","acabado":"PLATA-1C","peso":12.15,"tar":0,"mur":0,"val":25,"cdad_pdte":28,"estado":"7/10 días"},{"ref":"CHC0090026","descripcion":"CHAPA 3000 X 1250 X 1.2 5005 H14 OXI","largo":3000,"ancho":1250,"espesor":1.2,"aleacion":"5005","temple":"H14","acabado":"PLATA-2C","peso":12.15,"tar":0,"mur":142,"val":2,"cdad_pdte":28,"estado":"7/10 días"},{"ref":"CHC0090026","descripcion":"CHAPA 3000 X 1250 X 1.2 5005 H14 OXI","largo":3000,"ancho":1250,"espesor":1.2,"aleacion":"5005","temple":"H14","acabado":"S/A","peso":12.15,"tar":0,"mur":493,"val":0,"cdad_pdte":28,"estado":"7/10 días"},{"ref":"CHC0090029","descripcion":"CHAPA 3000 X 1500 X 1 1050H24","largo":3000,"ancho":1500,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"7016 MATE-1C","peso":12.15,"tar":0,"mur":2,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090029","descripcion":"CHAPA 3000 X 1500 X 1 1050H24","largo":3000,"ancho":1500,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"7016-1C","peso":12.15,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090029","descripcion":"CHAPA 3000 X 1500 X 1 1050H24","largo":3000,"ancho":1500,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"9010-1C","peso":12.15,"tar":60,"mur":7,"val":4,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090029","descripcion":"CHAPA 3000 X 1500 X 1 1050H24","largo":3000,"ancho":1500,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"9010-2C","peso":12.15,"tar":8,"mur":2,"val":19,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090029","descripcion":"CHAPA 3000 X 1500 X 1 1050H24","largo":3000,"ancho":1500,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"9111-2C","peso":12.15,"tar":0,"mur":20,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090029","descripcion":"CHAPA 3000 X 1500 X 1 1050H24","largo":3000,"ancho":1500,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"COMPENSACIO","peso":12.15,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090029","descripcion":"CHAPA 3000 X 1500 X 1 1050H24","largo":3000,"ancho":1500,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"P.V.C.-1C","peso":12.15,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090029","descripcion":"CHAPA 3000 X 1500 X 1 1050H24","largo":3000,"ancho":1500,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"PLATA-1C","peso":12.15,"tar":0,"mur":0,"val":12,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090029","descripcion":"CHAPA 3000 X 1500 X 1 1050H24","largo":3000,"ancho":1500,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"PLATA-2C","peso":12.15,"tar":0,"mur":0,"val":117,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090029","descripcion":"CHAPA 3000 X 1500 X 1 1050H24","largo":3000,"ancho":1500,"espesor":1,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":12.15,"tar":48,"mur":2015,"val":59,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090030","descripcion":"CHAPA 3000 X 1500 X 1.2 1050 H24","largo":3000,"ancho":1500,"espesor":1.2,"aleacion":"1050","temple":"H24","acabado":"7016-1C","peso":14.58,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090030","descripcion":"CHAPA 3000 X 1500 X 1.2 1050 H24","largo":3000,"ancho":1500,"espesor":1.2,"aleacion":"1050","temple":"H24","acabado":"7024 TEXT.-1C","peso":14.58,"tar":0,"mur":3,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090030","descripcion":"CHAPA 3000 X 1500 X 1.2 1050 H24","largo":3000,"ancho":1500,"espesor":1.2,"aleacion":"1050","temple":"H24","acabado":"9010-1C","peso":14.58,"tar":0,"mur":76,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090030","descripcion":"CHAPA 3000 X 1500 X 1.2 1050 H24","largo":3000,"ancho":1500,"espesor":1.2,"aleacion":"1050","temple":"H24","acabado":"9010-2C","peso":14.58,"tar":0,"mur":7,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090030","descripcion":"CHAPA 3000 X 1500 X 1.2 1050 H24","largo":3000,"ancho":1500,"espesor":1.2,"aleacion":"1050","temple":"H24","acabado":"COMPENSACIO","peso":14.58,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090030","descripcion":"CHAPA 3000 X 1500 X 1.2 1050 H24","largo":3000,"ancho":1500,"espesor":1.2,"aleacion":"1050","temple":"H24","acabado":"PLATA-1C","peso":14.58,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090030","descripcion":"CHAPA 3000 X 1500 X 1.2 1050 H24","largo":3000,"ancho":1500,"espesor":1.2,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":14.58,"tar":97,"mur":224,"val":100,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090031","descripcion":"CHAPA 3000 X 1500 X 1.5 1050 H24","largo":3000,"ancho":1500,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"9010-1C","peso":18.225,"tar":17,"mur":0,"val":43,"cdad_pdte":768,"estado":"Stock"},{"ref":"CHC0090031","descripcion":"CHAPA 3000 X 1500 X 1.5 1050 H24","largo":3000,"ancho":1500,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"9010-2C","peso":18.225,"tar":0,"mur":75,"val":0,"cdad_pdte":768,"estado":"7/10 días"},{"ref":"CHC0090031","descripcion":"CHAPA 3000 X 1500 X 1.5 1050 H24","largo":3000,"ancho":1500,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"9011-1C","peso":18.225,"tar":0,"mur":3,"val":0,"cdad_pdte":768,"estado":"Sin stock"},{"ref":"CHC0090031","descripcion":"CHAPA 3000 X 1500 X 1.5 1050 H24","largo":3000,"ancho":1500,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"9016 MATE-1C","peso":18.225,"tar":0,"mur":1,"val":0,"cdad_pdte":768,"estado":"Sin stock"},{"ref":"CHC0090031","descripcion":"CHAPA 3000 X 1500 X 1.5 1050 H24","largo":3000,"ancho":1500,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"9111-1C","peso":18.225,"tar":0,"mur":0,"val":2,"cdad_pdte":768,"estado":"Sin stock"},{"ref":"CHC0090031","descripcion":"CHAPA 3000 X 1500 X 1.5 1050 H24","largo":3000,"ancho":1500,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"INOX-1C","peso":18.225,"tar":0,"mur":1,"val":0,"cdad_pdte":768,"estado":"Sin stock"},{"ref":"CHC0090031","descripcion":"CHAPA 3000 X 1500 X 1.5 1050 H24","largo":3000,"ancho":1500,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"INOX-2C","peso":18.225,"tar":0,"mur":0,"val":4,"cdad_pdte":768,"estado":"Sin stock"},{"ref":"CHC0090031","descripcion":"CHAPA 3000 X 1500 X 1.5 1050 H24","largo":3000,"ancho":1500,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"P.V.C.-1C","peso":18.225,"tar":0,"mur":407,"val":0,"cdad_pdte":768,"estado":"7/10 días"},{"ref":"CHC0090031","descripcion":"CHAPA 3000 X 1500 X 1.5 1050 H24","largo":3000,"ancho":1500,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"PLATA-2C","peso":18.225,"tar":0,"mur":5,"val":0,"cdad_pdte":768,"estado":"Sin stock"},{"ref":"CHC0090031","descripcion":"CHAPA 3000 X 1500 X 1.5 1050 H24","largo":3000,"ancho":1500,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":18.225,"tar":270,"mur":424,"val":3,"cdad_pdte":768,"estado":"Stock"},{"ref":"CHC0090032","descripcion":"CHAPA 3000 X 1500 X 2 1050 H24","largo":3000,"ancho":1500,"espesor":2,"aleacion":"1050","temple":"H24","acabado":"9010-1C","peso":24.3,"tar":10,"mur":28,"val":16,"cdad_pdte":494,"estado":"7/10 días"},{"ref":"CHC0090032","descripcion":"CHAPA 3000 X 1500 X 2 1050 H24","largo":3000,"ancho":1500,"espesor":2,"aleacion":"1050","temple":"H24","acabado":"9010-2C","peso":24.3,"tar":0,"mur":15,"val":83,"cdad_pdte":494,"estado":"7/10 días"},{"ref":"CHC0090032","descripcion":"CHAPA 3000 X 1500 X 2 1050 H24","largo":3000,"ancho":1500,"espesor":2,"aleacion":"1050","temple":"H24","acabado":"P.V.C.-1C","peso":24.3,"tar":9,"mur":10,"val":0,"cdad_pdte":494,"estado":"Sin stock"},{"ref":"CHC0090032","descripcion":"CHAPA 3000 X 1500 X 2 1050 H24","largo":3000,"ancho":1500,"espesor":2,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":24.3,"tar":127,"mur":544,"val":115,"cdad_pdte":494,"estado":"Stock"},{"ref":"CHC0090034","descripcion":"CHAPA 3000 X 1500 X 3 1050 H24","largo":3000,"ancho":1500,"espesor":3,"aleacion":"1050","temple":"H24","acabado":"P.V.C.-1C","peso":36.45,"tar":8,"mur":13,"val":1,"cdad_pdte":110,"estado":"7/10 días"},{"ref":"CHC0090034","descripcion":"CHAPA 3000 X 1500 X 3 1050 H24","largo":3000,"ancho":1500,"espesor":3,"aleacion":"1050","temple":"H24","acabado":"PULIDO-1C","peso":36.45,"tar":0,"mur":28,"val":0,"cdad_pdte":110,"estado":"7/10 días"},{"ref":"CHC0090034","descripcion":"CHAPA 3000 X 1500 X 3 1050 H24","largo":3000,"ancho":1500,"espesor":3,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":36.45,"tar":82,"mur":403,"val":71,"cdad_pdte":110,"estado":"Stock"},{"ref":"CHC0090035","descripcion":"CHAPA 3000 X 1500 X 4 1050 H24","largo":3000,"ancho":1500,"espesor":4,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":48.6,"tar":68,"mur":24,"val":55,"cdad_pdte":62,"estado":"Stock"},{"ref":"CHC0090036","descripcion":"CHAPA 3000 X 1500 X 5 1050H24","largo":3000,"ancho":1500,"espesor":5,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":60.75,"tar":3,"mur":0,"val":36,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090037","descripcion":"CHAPA 3000 X 1500 X 6 1050H24","largo":3000,"ancho":1500,"espesor":6,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":72.9,"tar":0,"mur":0,"val":10,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090039","descripcion":"CHAPA 4000 X 1500 X 2 1050 H24","largo":4000,"ancho":1500,"espesor":2,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":32.4,"tar":12,"mur":0,"val":3,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090047","descripcion":"CHAPA 2000 X 1250 X 3 1050 H24","largo":2000,"ancho":1250,"espesor":3,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":20.25,"tar":50,"mur":50,"val":41,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090049","descripcion":"CHAPA 3000 X 1250 X 0.8 1050 H18","largo":3000,"ancho":1250,"espesor":0.8,"aleacion":"1050","temple":"H18","acabado":"3020-1C","peso":8.1,"tar":4,"mur":0,"val":0,"cdad_pdte":50,"estado":"Sin stock"},{"ref":"CHC0090049","descripcion":"CHAPA 3000 X 1250 X 0.8 1050 H18","largo":3000,"ancho":1250,"espesor":0.8,"aleacion":"1050","temple":"H18","acabado":"9010-1C","peso":8.1,"tar":123,"mur":440,"val":45,"cdad_pdte":50,"estado":"Stock"},{"ref":"CHC0090049","descripcion":"CHAPA 3000 X 1250 X 0.8 1050 H18","largo":3000,"ancho":1250,"espesor":0.8,"aleacion":"1050","temple":"H18","acabado":"S/A","peso":8.1,"tar":95,"mur":222,"val":0,"cdad_pdte":50,"estado":"Stock"},{"ref":"CHC0090050","descripcion":"CHAPA 2800 X 1500 X 2 3105 H14","largo":2800,"ancho":1500,"espesor":2,"aleacion":"3105","temple":"H14","acabado":"S/A","peso":22.68,"tar":0,"mur":38,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090052","descripcion":"CHAPA 3020 X 1520 X 8 6082 T6","largo":3020,"ancho":1520,"espesor":8,"aleacion":"6082","temple":"T6","acabado":"S/A","peso":99,"tar":3,"mur":6,"val":26,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090054","descripcion":"CHAPA 3000 X 1500 X 8 6082-T6","largo":3000,"ancho":1500,"espesor":8,"aleacion":"6082","temple":"T6","acabado":"S/A","peso":100,"tar":0,"mur":0,"val":6,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090055","descripcion":"CHAPA 2000 X 1000 X 2 5005H24","largo":2000,"ancho":1000,"espesor":2,"aleacion":"5005","temple":"H24","acabado":"S/A","peso":10.8,"tar":54,"mur":0,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090058","descripcion":"CHAPA 2170 X 900 X 1.5 3105 H14","largo":2170,"ancho":900,"espesor":1.5,"aleacion":"3105","temple":"H14","acabado":"S/A","peso":7.91,"tar":0,"mur":0,"val":327,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090059","descripcion":"CHAPA 2250 X 1000 X 1.5 3105 H14","largo":2250,"ancho":1000,"espesor":1.5,"aleacion":"3105","temple":"H14","acabado":"S/A","peso":9.11,"tar":0,"mur":0,"val":201,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090063","descripcion":"CHAPA 3000 X 1500 X 1.5 5005 H14 OXI","largo":3000,"ancho":1500,"espesor":1.5,"aleacion":"5005","temple":"H14","acabado":"AN.NEGRO 1C","peso":18.23,"tar":0,"mur":0,"val":6,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090063","descripcion":"CHAPA 3000 X 1500 X 1.5 5005 H14 OXI","largo":3000,"ancho":1500,"espesor":1.5,"aleacion":"5005","temple":"H14","acabado":"INOX-2C","peso":18.23,"tar":0,"mur":0,"val":15,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090063","descripcion":"CHAPA 3000 X 1500 X 1.5 5005 H14 OXI","largo":3000,"ancho":1500,"espesor":1.5,"aleacion":"5005","temple":"H14","acabado":"PLATA-1C","peso":18.23,"tar":21,"mur":0,"val":8,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090063","descripcion":"CHAPA 3000 X 1500 X 1.5 5005 H14 OXI","largo":3000,"ancho":1500,"espesor":1.5,"aleacion":"5005","temple":"H14","acabado":"PLATA-2C","peso":18.23,"tar":0,"mur":0,"val":8,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090063","descripcion":"CHAPA 3000 X 1500 X 1.5 5005 H14 OXI","largo":3000,"ancho":1500,"espesor":1.5,"aleacion":"5005","temple":"H14","acabado":"S/A","peso":18.23,"tar":42,"mur":361,"val":7,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090066","descripcion":"CHAPA 2050 X 850 X 1.5 1050H24 - 3105H14","largo":2050,"ancho":850,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"9010-1C","peso":7.058,"tar":0,"mur":0,"val":38,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090066","descripcion":"CHAPA 2050 X 850 X 1.5 1050H24 - 3105H14","largo":2050,"ancho":850,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":7.058,"tar":0,"mur":0,"val":341,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090069","descripcion":"CHAPA 4000 X 1500 X 1.5 1050 H24","largo":4000,"ancho":1500,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"7030-1C","peso":24.3,"tar":0,"mur":2,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090069","descripcion":"CHAPA 4000 X 1500 X 1.5 1050 H24","largo":4000,"ancho":1500,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":24.3,"tar":0,"mur":7,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090074","descripcion":"CHAPA 3000 X 1500 X 6 6082T6","largo":3000,"ancho":1500,"espesor":6,"aleacion":"6082","temple":"T6","acabado":"S/A","peso":72.9,"tar":16,"mur":41,"val":5,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090076","descripcion":"CHAPA 2050 X 1000 X 1.5 3105 H14","largo":2050,"ancho":1000,"espesor":1.5,"aleacion":"3105","temple":"H14","acabado":"S/A","peso":8.3,"tar":0,"mur":1,"val":31,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090077","descripcion":"CHAPA 2200 X 1000 X 1.5 3105 H14","largo":2200,"ancho":1000,"espesor":1.5,"aleacion":"3105","temple":"H14","acabado":"S/A","peso":8.91,"tar":0,"mur":0,"val":29,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090080","descripcion":"CHAPA 2000 X 1000 X 1 5005 H14 OXI","largo":2000,"ancho":1000,"espesor":1,"aleacion":"5005","temple":"H14","acabado":"BRONCE-1C","peso":5.4,"tar":156,"mur":0,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090080","descripcion":"CHAPA 2000 X 1000 X 1 5005 H14 OXI","largo":2000,"ancho":1000,"espesor":1,"aleacion":"5005","temple":"H14","acabado":"BRONCE-2C","peso":5.4,"tar":172,"mur":146,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090080","descripcion":"CHAPA 2000 X 1000 X 1 5005 H14 OXI","largo":2000,"ancho":1000,"espesor":1,"aleacion":"5005","temple":"H14","acabado":"INOX-1C","peso":5.4,"tar":172,"mur":0,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090080","descripcion":"CHAPA 2000 X 1000 X 1 5005 H14 OXI","largo":2000,"ancho":1000,"espesor":1,"aleacion":"5005","temple":"H14","acabado":"ORO 2C","peso":5.4,"tar":4,"mur":124,"val":18,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090080","descripcion":"CHAPA 2000 X 1000 X 1 5005 H14 OXI","largo":2000,"ancho":1000,"espesor":1,"aleacion":"5005","temple":"H14","acabado":"PLATA-1C","peso":5.4,"tar":134,"mur":141,"val":46,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090080","descripcion":"CHAPA 2000 X 1000 X 1 5005 H14 OXI","largo":2000,"ancho":1000,"espesor":1,"aleacion":"5005","temple":"H14","acabado":"S/A","peso":5.4,"tar":273,"mur":364,"val":174,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090081","descripcion":"CHAPA 2500 X 1250 X 6 5754 H111","largo":2500,"ancho":1250,"espesor":6,"aleacion":"5754","temple":"H111","acabado":"P.V.C.-1C","peso":50.62,"tar":0,"mur":44,"val":14,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090081","descripcion":"CHAPA 2500 X 1250 X 6 5754 H111","largo":2500,"ancho":1250,"espesor":6,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":50.62,"tar":0,"mur":332,"val":2,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090083","descripcion":"CHAPA 3000 X 1500 X 2 6082 T6","largo":3000,"ancho":1500,"espesor":2,"aleacion":"6082","temple":"T6","acabado":"S/A","peso":24.3,"tar":14,"mur":28,"val":144,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090084","descripcion":"CHAPA 3000 X 1500 X 3 6082T6","largo":3000,"ancho":1500,"espesor":3,"aleacion":"6082","temple":"T6","acabado":"S/A","peso":36.45,"tar":39,"mur":76,"val":23,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090085","descripcion":"CHAPA 3000 X 1500 X 4 6082T6","largo":3000,"ancho":1500,"espesor":4,"aleacion":"6082","temple":"T6","acabado":"S/A","peso":48.6,"tar":0,"mur":20,"val":86,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090086","descripcion":"CHAPA 3020 X 1520 X 6 6082T6","largo":3020,"ancho":1520,"espesor":6,"aleacion":"6082","temple":"T6","acabado":"S/A","peso":74.37,"tar":72,"mur":14,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090087","descripcion":"CHAPA 2000 X 1000 X 1.5 1050 H0","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"1050","temple":"H0","acabado":"S/A","peso":8.1,"tar":7,"mur":0,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090091","descripcion":"CHAPA 3000 X 1250 X 2 3105 H14","largo":3000,"ancho":1250,"espesor":2,"aleacion":"3105","temple":"H14","acabado":"S/A","peso":20.25,"tar":0,"mur":280,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090096","descripcion":"CHAPA 4000 X 1500 X 2 5754 H111","largo":4000,"ancho":1500,"espesor":2,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":32.4,"tar":25,"mur":0,"val":42,"cdad_pdte":62,"estado":"Stock"},{"ref":"CHC0090099","descripcion":"CHAPA 3000 X 1500 X 2.5 6082 T6","largo":3000,"ancho":1500,"espesor":2.5,"aleacion":"6082","temple":"T6","acabado":"S/A","peso":30.375,"tar":0,"mur":22,"val":337,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090101","descripcion":"CHAPA 3000 X 1500 X 2 5005 H14 OXI","largo":3000,"ancho":1500,"espesor":2,"aleacion":"5005","temple":"H14","acabado":"PLATA-2C","peso":24.3,"tar":0,"mur":47,"val":73,"cdad_pdte":370,"estado":"7/10 días"},{"ref":"CHC0090101","descripcion":"CHAPA 3000 X 1500 X 2 5005 H14 OXI","largo":3000,"ancho":1500,"espesor":2,"aleacion":"5005","temple":"H14","acabado":"S/A","peso":24.3,"tar":30,"mur":379,"val":6,"cdad_pdte":370,"estado":"Stock"},{"ref":"CHC0090110","descripcion":"CHAPA 2200 X 1000 X 2 3105 H14","largo":2200,"ancho":1000,"espesor":2,"aleacion":"3105","temple":"H14","acabado":"S/A","peso":11.88,"tar":0,"mur":0,"val":107,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090111","descripcion":"CHAPA 2000 X 1000 X 0.7 1050 H18","largo":2000,"ancho":1000,"espesor":0.7,"aleacion":"1050","temple":"H18","acabado":"S/A","peso":3.78,"tar":0,"mur":1060,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090112","descripcion":"CHAPA 3000 X 1250 X 0.9 1050 H18","largo":3000,"ancho":1250,"espesor":0.9,"aleacion":"1050","temple":"H18","acabado":"S/A","peso":9.11,"tar":0,"mur":630,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090201","descripcion":"CHAPA 3000 X 1000 X 1.5 3005 H44 BL/9020 1C","largo":3000,"ancho":1000,"espesor":1.5,"aleacion":"3005","temple":"H44","acabado":"S/A","peso":12.15,"tar":0,"mur":0,"val":21,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090203","descripcion":"CHAPA 3000 X 1500 X 10 1050 H111","largo":3000,"ancho":1500,"espesor":10,"aleacion":"1050","temple":"H111","acabado":"S/A","peso":121.5,"tar":8,"mur":21,"val":27,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090205","descripcion":"CHAPA 3000 X 1250 X 0.8 5005 H14","largo":3000,"ancho":1250,"espesor":0.8,"aleacion":"5005","temple":"H14","acabado":"PLATA-2C","peso":8.1,"tar":0,"mur":105,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090206","descripcion":"CHAPA 4000 X 2000 X 1.5 1050 H24","largo":4000,"ancho":2000,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":32.4,"tar":63,"mur":11,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090207","descripcion":"CHAPA 2000 X 1500 X 1.5 5005 H24","largo":2000,"ancho":1500,"espesor":1.5,"aleacion":"5005","temple":"H24","acabado":"S/A","peso":12.15,"tar":0,"mur":41,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090208","descripcion":"CHAPA 2400 X 1500 X 1.5 5005 H24","largo":2400,"ancho":1500,"espesor":1.5,"aleacion":"5005","temple":"H24","acabado":"S/A","peso":14.58,"tar":0,"mur":10,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0090211","descripcion":"CHAPA 2500 X 1500 X 1.5 5754 H111","largo":2500,"ancho":1500,"espesor":1.5,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":15.188,"tar":178,"mur":1,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090212","descripcion":"CHAPA 4000 X 1500 X 3 1050 H24","largo":4000,"ancho":1500,"espesor":3,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":48.6,"tar":33,"mur":14,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090216","descripcion":"CHAPA 3000 X 1250 X 1 5005 H14 OXI","largo":3000,"ancho":1250,"espesor":1,"aleacion":"5005","temple":"H14","acabado":"PLATA-1C","peso":10.125,"tar":3,"mur":18,"val":12,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090216","descripcion":"CHAPA 3000 X 1250 X 1 5005 H14 OXI","largo":3000,"ancho":1250,"espesor":1,"aleacion":"5005","temple":"H14","acabado":"S/A","peso":10.125,"tar":0,"mur":446,"val":96,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090217","descripcion":"CHAPA 3000 X 1250 X 1.5 5005 H14 OXI","largo":3000,"ancho":1250,"espesor":1.5,"aleacion":"5005","temple":"H14","acabado":"PLATA-1C","peso":15.1875,"tar":0,"mur":0,"val":4,"cdad_pdte":461,"estado":"Sin stock"},{"ref":"CHC0090217","descripcion":"CHAPA 3000 X 1250 X 1.5 5005 H14 OXI","largo":3000,"ancho":1250,"espesor":1.5,"aleacion":"5005","temple":"H14","acabado":"PLATA-2C","peso":15.1875,"tar":0,"mur":5,"val":32,"cdad_pdte":461,"estado":"7/10 días"},{"ref":"CHC0090217","descripcion":"CHAPA 3000 X 1250 X 1.5 5005 H14 OXI","largo":3000,"ancho":1250,"espesor":1.5,"aleacion":"5005","temple":"H14","acabado":"S/A","peso":15.1875,"tar":0,"mur":623,"val":47,"cdad_pdte":461,"estado":"7/10 días"},{"ref":"CHC0090218","descripcion":"CHAPA 3000 X 1500 X 1.2 5005 H14 OXI","largo":3000,"ancho":1500,"espesor":1.2,"aleacion":"5005","temple":"H14","acabado":"PLATA-1C","peso":14.58,"tar":0,"mur":39,"val":38,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090218","descripcion":"CHAPA 3000 X 1500 X 1.2 5005 H14 OXI","largo":3000,"ancho":1500,"espesor":1.2,"aleacion":"5005","temple":"H14","acabado":"S/A","peso":14.58,"tar":0,"mur":473,"val":104,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090230","descripcion":"CHAPA 2000 X 1000 X 0.8 5005 H14 OXI","largo":2000,"ancho":1000,"espesor":0.8,"aleacion":"5005","temple":"H14","acabado":"PLATA-1C","peso":4.32,"tar":1,"mur":235,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090230","descripcion":"CHAPA 2000 X 1000 X 0.8 5005 H14 OXI","largo":2000,"ancho":1000,"espesor":0.8,"aleacion":"5005","temple":"H14","acabado":"S/A","peso":4.32,"tar":161,"mur":1468,"val":10,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090231","descripcion":"CHAPA 2000 X 1000 X 1.2 5005 H14 OXI","largo":2000,"ancho":1000,"espesor":1.2,"aleacion":"5005","temple":"H14","acabado":"S/A","peso":6.48,"tar":586,"mur":512,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0090304","descripcion":"CHAPA 2500 X 1250 X 1 3105 H14","largo":2500,"ancho":1250,"espesor":1,"aleacion":"3105","temple":"H14","acabado":"P.V.C.-1C","peso":8.44,"tar":0,"mur":852,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090304","descripcion":"CHAPA 2500 X 1250 X 1 3105 H14","largo":2500,"ancho":1250,"espesor":1,"aleacion":"3105","temple":"H14","acabado":"S/A","peso":8.44,"tar":0,"mur":368,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090305","descripcion":"CHAPA 3000 X 1250 X 1.2 3105 H14","largo":3000,"ancho":1250,"espesor":1.2,"aleacion":"3105","temple":"H14","acabado":"P.V.C.-1C","peso":12.15,"tar":0,"mur":83,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090305","descripcion":"CHAPA 3000 X 1250 X 1.2 3105 H14","largo":3000,"ancho":1250,"espesor":1.2,"aleacion":"3105","temple":"H14","acabado":"S/A","peso":12.15,"tar":0,"mur":256,"val":5,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090306","descripcion":"CHAPA 2000 X 1000 X 0.8 3105 H14","largo":2000,"ancho":1000,"espesor":0.8,"aleacion":"3105","temple":"H14","acabado":"P.V.C.-1C","peso":4.32,"tar":0,"mur":934,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090307","descripcion":"CHAPA 2500 X 1250 X 2 3105 H14","largo":2500,"ancho":1250,"espesor":2,"aleacion":"3105","temple":"H14","acabado":"S/A","peso":16.87,"tar":0,"mur":192,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0090308","descripcion":"CHAPA 3000 X 1500 X 2 3105 H14","largo":3000,"ancho":1500,"espesor":2,"aleacion":"3105","temple":"H14","acabado":"S/A","peso":24.3,"tar":0,"mur":24,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0092011","descripcion":"CHAPA 3000 X 1500 X 5 6082 T6","largo":3000,"ancho":1500,"espesor":5,"aleacion":"6082","temple":"T6","acabado":"S/A","peso":60.75,"tar":4,"mur":22,"val":36,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0092012","descripcion":"CHAPA 3000 X 1500 X 1.5 6082 T6","largo":3000,"ancho":1500,"espesor":1.5,"aleacion":"6082","temple":"T6","acabado":"S/A","peso":18.23,"tar":5,"mur":0,"val":379,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0092013","descripcion":"CHAPA 2500 X 1250 X 1 5754 H111","largo":2500,"ancho":1250,"espesor":1,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":8.44,"tar":0,"mur":0,"val":8,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0092014","descripcion":"CHAPA 2500 X 1250 X 2.5 1050 H24","largo":2500,"ancho":1250,"espesor":2.5,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":21.09,"tar":0,"mur":38,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0092015","descripcion":"CHAPA 3000 X 1500 X 2.5 5005 H24","largo":3000,"ancho":1500,"espesor":2.5,"aleacion":"5005","temple":"H24","acabado":"PULIDO-1C","peso":30.38,"tar":17,"mur":0,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0092016","descripcion":"CHAPA 2500 X 1250 X 2.5 5005 H24","largo":2500,"ancho":1250,"espesor":2.5,"aleacion":"5005","temple":"H24","acabado":"S/A","peso":21.09,"tar":78,"mur":46,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0092017","descripcion":"CHAPA 2500 X 1250 X 2 5005 H24 OXI","largo":2500,"ancho":1250,"espesor":2,"aleacion":"5005","temple":"H24","acabado":"S/A","peso":16.88,"tar":43,"mur":59,"val":44,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0092018","descripcion":"CHAPA 2500 X 1250 X 3 5005 H24","largo":2500,"ancho":1250,"espesor":3,"aleacion":"5005","temple":"H24","acabado":"S/A","peso":25.32,"tar":2,"mur":0,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0092019","descripcion":"CHAPA 3000 X 1500 X 3 5005 H24","largo":3000,"ancho":1500,"espesor":3,"aleacion":"5005","temple":"H24","acabado":"S/A","peso":36.45,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0092020","descripcion":"CHAPA 3600 X 1500 X 4 1050 H24","largo":3600,"ancho":1500,"espesor":4,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":58.32,"tar":0,"mur":13,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0092023","descripcion":"CHAPA 2350 X 1500 X 1.5 5754 H111","largo":2350,"ancho":1500,"espesor":1.5,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":14.28,"tar":199,"mur":0,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0092027","descripcion":"CHAPA 4000 X 1000 X 3 1050 H24","largo":4000,"ancho":1000,"espesor":3,"aleacion":"1050","temple":"H24","acabado":"P.V.C.-1C","peso":32.4,"tar":0,"mur":70,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHC0092029","descripcion":"CHAPA 4000 X 1500 X 2 5005 H24 OXI","largo":4000,"ancho":1500,"espesor":2,"aleacion":"5005","temple":"H24","acabado":"S/A","peso":32.4,"tar":0,"mur":4,"val":0,"cdad_pdte":25,"estado":"Sin stock"},{"ref":"CHC0092031","descripcion":"CHAPA 3000 X 2000 X 1.5 1050 H24","largo":3000,"ancho":2000,"espesor":1.5,"aleacion":"1050","temple":"H24","acabado":"S/A","peso":24.3,"tar":90,"mur":36,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHC0092033","descripcion":"CHAPA 3150 X 1500 X 6 6082 T6","largo":3150,"ancho":1500,"espesor":6,"aleacion":"6082","temple":"T6","acabado":"S/A","peso":76.55,"tar":0,"mur":0,"val":6,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHC0092034","descripcion":"CHAPA 2150 X 1500 X 6 6082 T6","largo":2150,"ancho":1500,"espesor":6,"aleacion":"6082","temple":"T6","acabado":"S/A","peso":52.245,"tar":0,"mur":66,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHD0093000","descripcion":"DAMERO 2000 X 1000 X 2","largo":2000,"ancho":1000,"espesor":2,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":11.935,"tar":718,"mur":198,"val":303,"cdad_pdte":335,"estado":"Stock"},{"ref":"CHD0093001","descripcion":"DAMERO 2000 X 1000 X 3","largo":2000,"ancho":1000,"espesor":3,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":17.401,"tar":311,"mur":672,"val":172,"cdad_pdte":230,"estado":"Stock"},{"ref":"CHD0093002","descripcion":"DAMERO 2000 X 1000 X 4","largo":2000,"ancho":1000,"espesor":4,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":24.2,"tar":128,"mur":357,"val":51,"cdad_pdte":165,"estado":"Stock"},{"ref":"CHD0093003","descripcion":"DAMERO 2000 X 1000 X 5","largo":2000,"ancho":1000,"espesor":5,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":29.8,"tar":106,"mur":262,"val":7,"cdad_pdte":168,"estado":"Stock"},{"ref":"CHD0093004","descripcion":"DAMERO 2500 X 1250 X 2","largo":2500,"ancho":1250,"espesor":2,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":18.655,"tar":273,"mur":396,"val":39,"cdad_pdte":383,"estado":"Stock"},{"ref":"CHD0093005","descripcion":"DAMERO 2500 X 1250 X 3","largo":2500,"ancho":1250,"espesor":3,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":27.1878,"tar":65,"mur":445,"val":130,"cdad_pdte":287,"estado":"Stock"},{"ref":"CHD0093006","descripcion":"DAMERO 2500 X 1250 X 4","largo":2500,"ancho":1250,"espesor":4,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":37.81,"tar":82,"mur":134,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHD0093007","descripcion":"DAMERO 2500 X 1250 X 5","largo":2500,"ancho":1250,"espesor":5,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":46.56,"tar":1,"mur":0,"val":13,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHD0093008","descripcion":"DAMERO 3000 X 1500 X 2","largo":3000,"ancho":1500,"espesor":2,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":26.865,"tar":91,"mur":289,"val":84,"cdad_pdte":335,"estado":"Stock"},{"ref":"CHD0093009","descripcion":"DAMERO 3000 X 1500 X 3","largo":3000,"ancho":1500,"espesor":3,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":39.15,"tar":119,"mur":228,"val":207,"cdad_pdte":256,"estado":"Stock"},{"ref":"CHD0093010","descripcion":"DAMERO 3000 X 1500 X 4","largo":3000,"ancho":1500,"espesor":4,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":54.45,"tar":87,"mur":0,"val":10,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHD0093011","descripcion":"DAMERO 3000 X 1500 X 5","largo":3000,"ancho":1500,"espesor":5,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":67.05,"tar":30,"mur":195,"val":10,"cdad_pdte":134,"estado":"Stock"},{"ref":"CHD0093012","descripcion":"DAMERO 2500 X 1500 X 3","largo":2500,"ancho":1500,"espesor":3,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":32.627,"tar":0,"mur":99,"val":10,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHD0093016","descripcion":"DAMERO 2300 X 870 X 3","largo":2300,"ancho":870,"espesor":3,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":18,"tar":0,"mur":20,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHD0093017","descripcion":"DAMERO 2000 X 1000 X 3 - 2 PAL.","largo":2000,"ancho":1000,"espesor":3,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":16.9,"tar":1,"mur":0,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHD0093018","descripcion":"DAMERO 2500 X 1250 X 3 - 2 PAL.","largo":2500,"ancho":1250,"espesor":3,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":28.5,"tar":20,"mur":0,"val":15,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHD0093019","descripcion":"DAMERO 2500 X 1000 X 3","largo":2500,"ancho":1000,"espesor":3,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":21.75,"tar":0,"mur":145,"val":52,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHD0093020","descripcion":"DAMERO 2500 X 1000 X 4","largo":2500,"ancho":1000,"espesor":4,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":33,"tar":0,"mur":84,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHD0093024","descripcion":"DAMERO 2000 X 1250 X 2","largo":2000,"ancho":1250,"espesor":2,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":13.73,"tar":0,"mur":60,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHD0093025","descripcion":"DAMERO 3000 X 1250 X 2","largo":3000,"ancho":1250,"espesor":2,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":21.8,"tar":95,"mur":49,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHD0093028","descripcion":"DAMERO 4000 X 2000 X 5","largo":4000,"ancho":2000,"espesor":5,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":118,"tar":6,"mur":0,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHD0093030","descripcion":"DAMERO 2800 X 1250 X 2","largo":2800,"ancho":1250,"espesor":2,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":22.1,"tar":166,"mur":0,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHD0093031","descripcion":"DAMERO 2200 X 1000 X 2","largo":2200,"ancho":1000,"espesor":2,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":13.25,"tar":248,"mur":7,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHD0093037","descripcion":"DAMERO 2500 X 1250 X 7","largo":2500,"ancho":1250,"espesor":7,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":63,"tar":0,"mur":88,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHD0093038","descripcion":"DAMERO 2000 X 1250 X 7","largo":2000,"ancho":1250,"espesor":7,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":48.9,"tar":0,"mur":44,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHD0093040","descripcion":"DAMERO 2000 x 1000 x 7","largo":2000,"ancho":1000,"espesor":7,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":41.72,"tar":0,"mur":18,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHD0093041","descripcion":"DAMERO 3000 X 1000 X 7","largo":3000,"ancho":1000,"espesor":7,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":62.58,"tar":0,"mur":36,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHD0093098","descripcion":"DAMERO 2120 X 1250 X 2","largo":2120,"ancho":1250,"espesor":2,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":15.794,"tar":0,"mur":27,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHD0093099","descripcion":"DAMERO 2120 X 1500 X 2","largo":2120,"ancho":1500,"espesor":2,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":18.96,"tar":0,"mur":10,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHD0093100","descripcion":"DIAMANTE 3000 X 1250 X 3","largo":3000,"ancho":1250,"espesor":3,"aleacion":"DIAMANTE","temple":"DIAMANTE","acabado":"S/A","peso":33,"tar":1,"mur":0,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHD0093101","descripcion":"DAMERO 13240 X 2450 X 3.5 5086 H244","largo":13240,"ancho":2450,"espesor":3.5,"aleacion":"DAMERO","temple":"DAMERO","acabado":"S/A","peso":329,"tar":15,"mur":0,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHE0095001","descripcion":"CH.GR.ARROZ 13420 x 2460 x 2.6","largo":13420,"ancho":2460,"espesor":2.6,"aleacion":"ARROZ","temple":"ARROZ","acabado":"S/A","peso":235,"tar":169,"mur":112,"val":0,"cdad_pdte":290,"estado":"Stock"},{"ref":"CHE0095006","descripcion":"CHAPA 3000 X 1500 X 2 5754 H32","largo":3000,"ancho":1500,"espesor":2,"aleacion":"5754","temple":"H32","acabado":"S/A","peso":24.3,"tar":41,"mur":204,"val":44,"cdad_pdte":370,"estado":"Stock"},{"ref":"CHE0095013","descripcion":"CHAPA 3020 X 1520 X 10 6082 T651","largo":3020,"ancho":1520,"espesor":10,"aleacion":"6082","temple":"T651","acabado":"S/A","peso":124,"tar":7,"mur":1,"val":9,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHE0095014","descripcion":"CHAPA GR.ARROZ 2500 X 1250 X 2.5","largo":2500,"ancho":1250,"espesor":2.5,"aleacion":"ARROZ","temple":"ARROZ","acabado":"S/A","peso":22,"tar":118,"mur":168,"val":3,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHE0095024","descripcion":"CHAPA 3000 X 1500 X 15 5083H32","largo":3000,"ancho":1500,"espesor":15,"aleacion":"5083","temple":"H32","acabado":"S/A","peso":182.25,"tar":0,"mur":12,"val":4,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHE0095026","descripcion":"CHAPA 2000 X 1000 X 5 6082T6","largo":2000,"ancho":1000,"espesor":5,"aleacion":"6082","temple":"T6","acabado":"S/A","peso":27,"tar":1,"mur":2,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHE0095027","descripcion":"CHAPA 6000 X 2000 X 5 5182H111","largo":6000,"ancho":2000,"espesor":5,"aleacion":"5182","temple":"H111","acabado":"S/A","peso":162,"tar":0,"mur":12,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHE0095028","descripcion":"CHAPA 2675 X 1000 X 4 5154H34","largo":2675,"ancho":1000,"espesor":4,"aleacion":"5154","temple":"H34","acabado":"S/A","peso":28.89,"tar":0,"mur":30,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHE0095030","descripcion":"CHAPA 3000 X 2000 X 8 5083 H32","largo":3000,"ancho":2000,"espesor":8,"aleacion":"5083","temple":"H32","acabado":"S/A","peso":129.6,"tar":0,"mur":77,"val":0,"cdad_pdte":77,"estado":"7/10 días"},{"ref":"CHE0095032","descripcion":"CHAPA 12600 X 2190 X 6 ENDURAL","largo":12600,"ancho":2190,"espesor":6,"aleacion":"ENDURAL","temple":"ENDURAL","acabado":"S/A","peso":447.02,"tar":0,"mur":32,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHE0095033","descripcion":"CHAPA 2500 X 1250 X 4 5083H32","largo":2500,"ancho":1250,"espesor":4,"aleacion":"5083","temple":"H32","acabado":"S/A","peso":33.75,"tar":0,"mur":145,"val":21,"cdad_pdte":331,"estado":"7/10 días"},{"ref":"CHE0095034","descripcion":"CHAPA 2500 X 1250 X 5 5083H32","largo":2500,"ancho":1250,"espesor":5,"aleacion":"5083","temple":"H32","acabado":"S/A","peso":42.18,"tar":0,"mur":10,"val":1,"cdad_pdte":191,"estado":"Sin stock"},{"ref":"CHE0095036","descripcion":"CHAPA 4000 X 2000 X 8 5754 H111","largo":4000,"ancho":2000,"espesor":8,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":172.8,"tar":0,"mur":5,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHE0095040","descripcion":"CHAPA 2500 X 1250 X 2 5754 H111","largo":2500,"ancho":1250,"espesor":2,"aleacion":"5754","temple":"H111","acabado":"P.V.C.-1C","peso":16.88,"tar":0,"mur":118,"val":6,"cdad_pdte":237,"estado":"7/10 días"},{"ref":"CHE0095040","descripcion":"CHAPA 2500 X 1250 X 2 5754 H111","largo":2500,"ancho":1250,"espesor":2,"aleacion":"5754","temple":"H111","acabado":"P.V.C.-2C","peso":16.88,"tar":0,"mur":268,"val":0,"cdad_pdte":237,"estado":"7/10 días"},{"ref":"CHE0095040","descripcion":"CHAPA 2500 X 1250 X 2 5754 H111","largo":2500,"ancho":1250,"espesor":2,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":16.88,"tar":178,"mur":280,"val":91,"cdad_pdte":237,"estado":"Stock"},{"ref":"CHE0095045","descripcion":"CHAPA 2020 X 1020 X 20 6082T6","largo":2020,"ancho":1020,"espesor":20,"aleacion":"6082","temple":"T6","acabado":"S/A","peso":111.2616,"tar":0,"mur":13,"val":2,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHE0095046","descripcion":"CHAPA 3000 X 1500 X 3 5454 H34","largo":3000,"ancho":1500,"espesor":3,"aleacion":"5454","temple":"H34","acabado":"S/A","peso":36.4,"tar":20,"mur":105,"val":0,"cdad_pdte":46,"estado":"Stock"},{"ref":"CHE0095047","descripcion":"CHAPA 2500 X 1250 X 4 5454 H34","largo":2500,"ancho":1250,"espesor":4,"aleacion":"5454","temple":"H34","acabado":"S/A","peso":33.75,"tar":0,"mur":20,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHE0095048","descripcion":"CHAPA 2500 X 1250 X 5 5454 H34","largo":2500,"ancho":1250,"espesor":5,"aleacion":"5454","temple":"H34","acabado":"S/A","peso":42.1875,"tar":0,"mur":90,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHE0095050","descripcion":"CHAPA 3000 X 1500 X 8 5754 H111","largo":3000,"ancho":1500,"espesor":8,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":97.2,"tar":60,"mur":96,"val":23,"cdad_pdte":51,"estado":"Stock"},{"ref":"CHE0095051","descripcion":"CHAPA 3000 X 1500 X 10 5754 H111","largo":3000,"ancho":1500,"espesor":10,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":121.5,"tar":40,"mur":5,"val":110,"cdad_pdte":41,"estado":"Stock"},{"ref":"CHE0095052","descripcion":"CHAPA GOFRADA 3000 X 1250 X 0.8 3003 H16","largo":3000,"ancho":1250,"espesor":0.8,"aleacion":"GOFRADA","temple":"GOFRADA","acabado":"S/A","peso":8.1,"tar":74,"mur":284,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHE0095053","descripcion":"CHAPA GOFRADA 3000 X 1250 X 0.6 3003","largo":3000,"ancho":1250,"espesor":0.6,"aleacion":"GOFRADA","temple":"GOFRADA","acabado":"S/A","peso":6.075,"tar":2,"mur":191,"val":336,"cdad_pdte":658,"estado":"7/10 días"},{"ref":"CHE0095054","descripcion":"CHAPA GOFRADA 2500 X 1250 X 1 3105 H22","largo":2500,"ancho":1250,"espesor":1,"aleacion":"GOFRADA","temple":"GOFRADA","acabado":"S/A","peso":8.437,"tar":58,"mur":0,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHE0095055","descripcion":"CHAPA GR.ARROZ 2500 x 1250 x 1.5","largo":2500,"ancho":1250,"espesor":1.5,"aleacion":"ARROZ","temple":"ARROZ","acabado":"S/A","peso":13.2,"tar":57,"mur":396,"val":27,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHE0095056","descripcion":"CHAPA 3500 X 1250 X 4 5454 H34","largo":3500,"ancho":1250,"espesor":4,"aleacion":"5454","temple":"H34","acabado":"S/A","peso":47.25,"tar":0,"mur":22,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHE0095057","descripcion":"CHAPA 2500 X 1250 X 3 5454 H34","largo":2500,"ancho":1250,"espesor":3,"aleacion":"5454","temple":"H34","acabado":"S/A","peso":25.31,"tar":0,"mur":46,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHE0095058","descripcion":"CHAPA 3020 X 1520 X 8 5754 H111","largo":3020,"ancho":1520,"espesor":8,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":99.152,"tar":0,"mur":13,"val":4,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHE0095059","descripcion":"CHAPA 3000 X 1500 X 5 5454 H34","largo":3000,"ancho":1500,"espesor":5,"aleacion":"5454","temple":"H34","acabado":"S/A","peso":60.75,"tar":0,"mur":3,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHE0095061","descripcion":"CHAPA 2020 X 1020 X 10 6082 T651","largo":2020,"ancho":1020,"espesor":10,"aleacion":"6082","temple":"T651","acabado":"S/A","peso":55.63,"tar":0,"mur":25,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHE0095066","descripcion":"CHAPA GOFRADA 2000 X 1000 X 0.6","largo":2000,"ancho":1000,"espesor":0.6,"aleacion":"GOFRADA","temple":"GOFRADA","acabado":"S/A","peso":3.24,"tar":0,"mur":207,"val":86,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHE0095069","descripcion":"CHAPA 3000 X 1500 X 3 5754 H22","largo":3000,"ancho":1500,"espesor":3,"aleacion":"5754","temple":"H22","acabado":"S/A","peso":36.45,"tar":1,"mur":147,"val":0,"cdad_pdte":55,"estado":"7/10 días"},{"ref":"CHE0095075","descripcion":"CHGR.ARROZ 8500 X 2460 X 2.6","largo":8500,"ancho":2460,"espesor":2.6,"aleacion":"ARROZ","temple":"ARROZ","acabado":"S/A","peso":149.11,"tar":0,"mur":150,"val":0,"cdad_pdte":121,"estado":"7/10 días"},{"ref":"CHE0095079","descripcion":"CHAPA GR.ARROZ 2500 x 1250 x 2","largo":2500,"ancho":1250,"espesor":2,"aleacion":"ARROZ","temple":"ARROZ","acabado":"S/A","peso":18.98,"tar":27,"mur":117,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHE0095083","descripcion":"CHAPA 3020 X 1520 X 12 6082 T6","largo":3020,"ancho":1520,"espesor":12,"aleacion":"6082","temple":"T6","acabado":"S/A","peso":148.73,"tar":12,"mur":6,"val":8,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHE0095084","descripcion":"CHAPA 3000 X 1500 X 8 5083 H32","largo":3000,"ancho":1500,"espesor":8,"aleacion":"5083","temple":"H32","acabado":"S/A","peso":97.2,"tar":3,"mur":16,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHE0095088","descripcion":"CHAPA 4000 X 2000 X 10 5383 H34","largo":4000,"ancho":2000,"espesor":10,"aleacion":"5383","temple":"H34","acabado":"S/A","peso":216,"tar":14,"mur":0,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHE0095089","descripcion":"CHAPA 7200 X 2000 X 10 5383 H34","largo":7200,"ancho":2000,"espesor":10,"aleacion":"5383","temple":"H34","acabado":"S/A","peso":388.8,"tar":0,"mur":2,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHE0095096","descripcion":"CHAPA 3020 X 1520 X 15 6082 T651","largo":3020,"ancho":1520,"espesor":15,"aleacion":"6082","temple":"T651","acabado":"S/A","peso":185.91,"tar":4,"mur":12,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHE0095097","descripcion":"CHAPA 3000 X 1000 X 8 5083 H111","largo":3000,"ancho":1000,"espesor":8,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":64.8,"tar":0,"mur":62,"val":2,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHM0094001","descripcion":"CHAPA 4000 X 2000 X 6 5754H111","largo":4000,"ancho":2000,"espesor":6,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":129.6,"tar":81,"mur":43,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHM0094004","descripcion":"CHAPA 6000 X 2000 X 4 5083H111","largo":6000,"ancho":2000,"espesor":4,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":129.6,"tar":11,"mur":31,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHM0094005","descripcion":"CHAPA 6000 X 2000 X 5 5083H111","largo":6000,"ancho":2000,"espesor":5,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":162,"tar":8,"mur":0,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHM0094010","descripcion":"CHAPA 6000 X 1650 X 4 5083 H34","largo":6000,"ancho":1650,"espesor":4,"aleacion":"5083","temple":"H34","acabado":"S/A","peso":106.92,"tar":0,"mur":23,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHM0094011","descripcion":"CHAPA 6000 X 2190 X 6 5083 H34","largo":6000,"ancho":2190,"espesor":6,"aleacion":"5083","temple":"H34","acabado":"S/A","peso":212.86,"tar":3,"mur":16,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHM0094012","descripcion":"CHAPA 12600 X 2190 X 6 5383 H34","largo":12600,"ancho":2190,"espesor":6,"aleacion":"5383","temple":"H34","acabado":"S/A","peso":447,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHM0094013","descripcion":"CHAPA 3000 X 1500 X 3 5083 H111","largo":3000,"ancho":1500,"espesor":3,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":36.45,"tar":20,"mur":365,"val":191,"cdad_pdte":82,"estado":"Stock"},{"ref":"CHM0094014","descripcion":"CHAPA 6000 X 1500 X 4 5083H111","largo":6000,"ancho":1500,"espesor":4,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":98.64,"tar":0,"mur":7,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHM0094015","descripcion":"CHAPA 6000 X 2190 X 8 5083 H34","largo":6000,"ancho":2190,"espesor":8,"aleacion":"5083","temple":"H34","acabado":"S/A","peso":283.824,"tar":1,"mur":18,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHM0094016","descripcion":"CHAPA 3000 X 2000 X 6 5083 H32","largo":3000,"ancho":2000,"espesor":6,"aleacion":"5083","temple":"H32","acabado":"S/A","peso":97.2,"tar":0,"mur":133,"val":2,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHM0094018","descripcion":"CHAPA 3020 X 1520 X 20 5083H111","largo":3020,"ancho":1520,"espesor":20,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":247.88,"tar":4,"mur":2,"val":4,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHM0094019","descripcion":"CHAPA 3020 X 1520 X 8 5083 H111","largo":3020,"ancho":1520,"espesor":8,"aleacion":"5083","temple":"H111","acabado":"P.V.C.-1C","peso":99.152,"tar":0,"mur":31,"val":2,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHM0094019","descripcion":"CHAPA 3020 X 1520 X 8 5083 H111","largo":3020,"ancho":1520,"espesor":8,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":99.152,"tar":6,"mur":42,"val":2,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHM0094021","descripcion":"CHAPA 3000 X 1500 X 20 5083H111","largo":3000,"ancho":1500,"espesor":20,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":243,"tar":0,"mur":0,"val":2,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHM0094025","descripcion":"CHAPA 3020 X 1520 X 15 5083 H111","largo":3020,"ancho":1520,"espesor":15,"aleacion":"5083","temple":"H111","acabado":"P.V.C.-1C","peso":185.911,"tar":0,"mur":2,"val":2,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHM0094025","descripcion":"CHAPA 3020 X 1520 X 15 5083 H111","largo":3020,"ancho":1520,"espesor":15,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":185.911,"tar":7,"mur":21,"val":11,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHM0094026","descripcion":"CHAPA 3020 X 1520 X 12 5083H111","largo":3020,"ancho":1520,"espesor":12,"aleacion":"5083","temple":"H111","acabado":"P.V.C.-1C","peso":148.72,"tar":0,"mur":14,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHM0094026","descripcion":"CHAPA 3020 X 1520 X 12 5083H111","largo":3020,"ancho":1520,"espesor":12,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":148.72,"tar":2,"mur":9,"val":2,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHM0094027","descripcion":"CHAPA 3000 X 1500 X 6 5083 H111","largo":3000,"ancho":1500,"espesor":6,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":72.9,"tar":22,"mur":31,"val":59,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHM0094029","descripcion":"CHAPA 3000 X 1500 X 4 5083H111","largo":3000,"ancho":1500,"espesor":4,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":48.6,"tar":18,"mur":261,"val":121,"cdad_pdte":103,"estado":"Stock"},{"ref":"CHM0094033","descripcion":"CHAPA 3600 X 1500 X 3 5083H111","largo":3600,"ancho":1500,"espesor":3,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":43.74,"tar":0,"mur":3,"val":2,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHM0094034","descripcion":"CHAPA 4000 X 1300 X 4 5083H111","largo":4000,"ancho":1300,"espesor":4,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":56.16,"tar":0,"mur":10,"val":37,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHM0094039","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"S/A","peso":0,"tar":9,"mur":48,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHM0094041","descripcion":"CHAPA 3000 X 1500 X 5 5083H111","largo":3000,"ancho":1500,"espesor":5,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":60.75,"tar":30,"mur":98,"val":132,"cdad_pdte":213,"estado":"Stock"},{"ref":"CHM0094043","descripcion":"CHAPA 2020 X 1020 X 10 5083 H111","largo":2020,"ancho":1020,"espesor":10,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":57.266,"tar":6,"mur":48,"val":12,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHM0094052","descripcion":"CHAPA 3020 X 1520 X 25 5083H111","largo":3020,"ancho":1520,"espesor":25,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":309.852,"tar":1,"mur":6,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHM0094053","descripcion":"CHAPA 3000 X 1500 X 3 5083 H32","largo":3000,"ancho":1500,"espesor":3,"aleacion":"5083","temple":"H32","acabado":"S/A","peso":36.45,"tar":212,"mur":31,"val":4,"cdad_pdte":206,"estado":"Stock"},{"ref":"CHM0094058","descripcion":"CHAPA 4000 X 2000 X 3 5083 H111","largo":4000,"ancho":2000,"espesor":3,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":64.8,"tar":3,"mur":35,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHM0094060","descripcion":"CHAPA 3000 X 1500 X 2 5083 H111","largo":3000,"ancho":1500,"espesor":2,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":24.3,"tar":44,"mur":96,"val":126,"cdad_pdte":206,"estado":"Stock"},{"ref":"CHM0094063","descripcion":"CHAPA 3000 X 1500 X 12 5083H32","largo":3000,"ancho":1500,"espesor":12,"aleacion":"5083","temple":"H32","acabado":"S/A","peso":145.8,"tar":0,"mur":22,"val":0,"cdad_pdte":3,"estado":"7/10 días"},{"ref":"CHM0094064","descripcion":"CHAPA 3000 X 1500 X 6 5083 H32","largo":3000,"ancho":1500,"espesor":6,"aleacion":"5083","temple":"H32","acabado":"S/A","peso":72.9,"tar":38,"mur":8,"val":1,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHM0094065","descripcion":"CHAPA 3000 X 2000 X 10 5083H32","largo":3000,"ancho":2000,"espesor":10,"aleacion":"5083","temple":"H32","acabado":"S/A","peso":162,"tar":0,"mur":40,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHM0094066","descripcion":"CHAPA 6000 X 2190 X 6 5383 H34","largo":6000,"ancho":2190,"espesor":6,"aleacion":"5383","temple":"H34","acabado":"S/A","peso":212.86,"tar":0,"mur":2,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHM0094069","descripcion":"CHAPA 3020 X 1520 X 30 5083 H111","largo":3020,"ancho":1520,"espesor":30,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":372,"tar":0,"mur":4,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHM0094070","descripcion":"CHAPA 2020 X 1020 X 25 5083 H111","largo":2020,"ancho":1020,"espesor":25,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":139.07,"tar":0,"mur":0,"val":5,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHM0094073","descripcion":"CHAPA 4000 X 2000 X 8 5383H34 HERKAL","largo":4000,"ancho":2000,"espesor":8,"aleacion":"5383","temple":"H34","acabado":"S/A","peso":172.8,"tar":0,"mur":33,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHM0094075","descripcion":"CHAPA 3020 X 1520 X 40 5083 H111","largo":3020,"ancho":1520,"espesor":40,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":495.76,"tar":1,"mur":3,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHM0094076","descripcion":"CHAPA 6000 X 2000 X 12 5083H111","largo":6000,"ancho":2000,"espesor":12,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":388.8,"tar":0,"mur":14,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHM0094078","descripcion":"CHAPA 8000 X 2000 X 5 5083 H111","largo":8000,"ancho":2000,"espesor":5,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":216,"tar":0,"mur":34,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHM0094079","descripcion":"CHAPA 8000 X 2000 X 6 5083 H111","largo":8000,"ancho":2000,"espesor":6,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":259.2,"tar":0,"mur":14,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHM0094082","descripcion":"CHAPA 3020 X 1520 X 10 5754 H111","largo":3020,"ancho":1520,"espesor":10,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":128.111,"tar":0,"mur":0,"val":1,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHM0094085","descripcion":"CHAPA 3000 X 1500 X 8 5083H111","largo":3000,"ancho":1500,"espesor":8,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":97.2,"tar":23,"mur":30,"val":44,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHM0094087","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"S/A","peso":0,"tar":0,"mur":8,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHM0094089","descripcion":"CHAPA 9400 X 2190 X 6 5456H34 ENDURAL","largo":9400,"ancho":2190,"espesor":6,"aleacion":"5456","temple":"H34","acabado":"S/A","peso":333.49,"tar":0,"mur":4,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHM0094093","descripcion":"CHAPA 4000 X 2000 X 10 5754 H111","largo":4000,"ancho":2000,"espesor":10,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":216,"tar":0,"mur":9,"val":4,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHM0094094","descripcion":"CHAPA 4000 X 2000 X 6 5383 H34","largo":4000,"ancho":2000,"espesor":6,"aleacion":"5383","temple":"H34","acabado":"S/A","peso":129.6,"tar":0,"mur":22,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHM0094099","descripcion":"CHAPA 6400 X 2200 X 5 5083 H34","largo":6400,"ancho":2200,"espesor":5,"aleacion":"5083","temple":"H34","acabado":"S/A","peso":188.01,"tar":3,"mur":20,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHM0094116","descripcion":"CHAPA 3600 X 1500 X 4 5083 H32","largo":3600,"ancho":1500,"espesor":4,"aleacion":"5083","temple":"H32","acabado":"S/A","peso":43.74,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHM0094119","descripcion":"CHAPA 3000 X 1500 X 1.5 5083 H111","largo":3000,"ancho":1500,"espesor":1.5,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":18.225,"tar":50,"mur":190,"val":109,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHM0094125","descripcion":"CHAPA 11320 X 1980 X 8 5383 H34","largo":11320,"ancho":1980,"espesor":8,"aleacion":"5383","temple":"H34","acabado":"S/A","peso":484.15,"tar":7,"mur":0,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHM0095129","descripcion":"CHAPA 2910 X 2000 X 2.5 5754 H111","largo":2910,"ancho":2000,"espesor":2.5,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":39.15,"tar":72,"mur":0,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHM0095132","descripcion":"CHAPA 11400 X 1736 X 6 5383 H34","largo":11400,"ancho":1736,"espesor":6,"aleacion":"5383","temple":"H34","acabado":"S/A","peso":320.6,"tar":0,"mur":13,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHM0095133","descripcion":"CHAPA 2000 X 1000 X 5 5083 H111","largo":2000,"ancho":1000,"espesor":5,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":27,"tar":1,"mur":8,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHM0095134","descripcion":"4000 x 2000 x 8 5456 H34 ENDURAL","largo":4000,"ancho":2000,"espesor":8,"aleacion":"ENDURAL","temple":"ENDURAL","acabado":"S/A","peso":172.8,"tar":0,"mur":34,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHM0095135","descripcion":"CHAPA 4000 X 2000 X 6 5083 H111","largo":4000,"ancho":2000,"espesor":6,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":129.6,"tar":1,"mur":0,"val":4,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHM0095136","descripcion":"CHAPA 4000 X 2000 X 5 5083 H111","largo":4000,"ancho":2000,"espesor":5,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":108,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHM0095137","descripcion":"CHAPA 3000 X 1500 X 10 5083 H111","largo":3000,"ancho":1500,"espesor":10,"aleacion":"5083","temple":"H111","acabado":"P.V.C.-1C","peso":121.5,"tar":0,"mur":20,"val":0,"cdad_pdte":83,"estado":"7/10 días"},{"ref":"CHM0095137","descripcion":"CHAPA 3000 X 1500 X 10 5083 H111","largo":3000,"ancho":1500,"espesor":10,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":121.5,"tar":7,"mur":9,"val":3,"cdad_pdte":83,"estado":"Sin stock"},{"ref":"CHM0095139","descripcion":"CHAPA 2500 X 1250 X 10 5754 H111","largo":2500,"ancho":1250,"espesor":10,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":84.38,"tar":0,"mur":44,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHM0095152","descripcion":"CHAPA 6000 X 1750 X 5 5083 H34","largo":6000,"ancho":1750,"espesor":5,"aleacion":"5083","temple":"H34","acabado":"S/A","peso":141.75,"tar":0,"mur":0,"val":59,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHM0095158","descripcion":"CHAPA 1800 X 1000 X 6 5754 H111","largo":1800,"ancho":1000,"espesor":6,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":29.16,"tar":0,"mur":0,"val":40,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHM0095159","descripcion":"CHAPA 7600 X 2190 X 6 5456 H34 ENDURAL","largo":7600,"ancho":2190,"espesor":6,"aleacion":"5456","temple":"H34","acabado":"S/A","peso":269.63,"tar":0,"mur":8,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHN0094035","descripcion":"CHAPA 6000 X 2000 X 8 5083 H321","largo":6000,"ancho":2000,"espesor":8,"aleacion":"5083","temple":"H321","acabado":"S/A","peso":259.2,"tar":0,"mur":4,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHN0094036","descripcion":"CHAPA 2000 X 1000 X 4 5083 H111","largo":2000,"ancho":1000,"espesor":4,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":21.6,"tar":0,"mur":16,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHN0094305","descripcion":"CHAPA 6000 X 2000 X 5 5083 H321","largo":6000,"ancho":2000,"espesor":5,"aleacion":"5083","temple":"H321","acabado":"S/A","peso":162,"tar":0,"mur":5,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0091000","descripcion":"CHAPA PERF. 2000 X 1000 X 1","largo":2000,"ancho":1000,"espesor":1,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"9010-2C","peso":5.4,"tar":0,"mur":3,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0091000","descripcion":"CHAPA PERF. 2000 X 1000 X 1","largo":2000,"ancho":1000,"espesor":1,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"S/A","peso":5.4,"tar":0,"mur":99,"val":17,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0091001","descripcion":"CHAPA PERF. 3000 X 1250 X 1.5","largo":3000,"ancho":1250,"espesor":1.5,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"S/A","peso":15.2,"tar":0,"mur":0,"val":1,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0091009","descripcion":"CHAPA PERF. 2000 X 1000 X 1,2","largo":2000,"ancho":1000,"espesor":1.2,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"S/A","peso":6.48,"tar":0,"mur":6,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0091010","descripcion":"CHAPA PERF. 2000 X 1250 X 2 R5/T7.5          SAND.","largo":2000,"ancho":1250,"espesor":2,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"PLATA","peso":13.5,"tar":0,"mur":4,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0091010","descripcion":"CHAPA PERF. 2000 X 1250 X 2 R5/T7.5          SAND.","largo":2000,"ancho":1250,"espesor":2,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"PLATA-2C","peso":13.5,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0091010","descripcion":"CHAPA PERF. 2000 X 1250 X 2 R5/T7.5          SAND.","largo":2000,"ancho":1250,"espesor":2,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"S/A","peso":13.5,"tar":0,"mur":4,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0091012","descripcion":"CHAPA PERF. 3000 X 1250 X 2 R5/T7.5          SAND.","largo":3000,"ancho":1250,"espesor":2,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"S/A","peso":20.3,"tar":0,"mur":40,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0092000","descripcion":"CHAPA MINIONDA 6050 X 1150 X 0.8 PERF R5 / T8","largo":6050,"ancho":1150,"espesor":0.8,"aleacion":"MINIONDA","temple":"MINIONDA","acabado":"S/A","peso":10,"tar":0,"mur":12,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0092001","descripcion":"CHAPA MINIONDA 6050 X 1150 X 0.8 PERF R3 / T5","largo":6050,"ancho":1150,"espesor":0.8,"aleacion":"MINIONDA","temple":"MINIONDA","acabado":"9010-2C","peso":16.5,"tar":0,"mur":0,"val":3,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0092001","descripcion":"CHAPA MINIONDA 6050 X 1150 X 0.8 PERF R3 / T5","largo":6050,"ancho":1150,"espesor":0.8,"aleacion":"MINIONDA","temple":"MINIONDA","acabado":"S/A","peso":16.5,"tar":31,"mur":81,"val":58,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0092002","descripcion":"CHAPA MINIONDA 6050 X 1150 X 0.7 NARANJA 2008","largo":6050,"ancho":1150,"espesor":0.7,"aleacion":"MINIONDA","temple":"MINIONDA","acabado":"S/A","peso":14.0889,"tar":0,"mur":4,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0092003","descripcion":"CHAPA MINIONDA 6050 X 1150 X 0.7 BLANCO MATE","largo":6050,"ancho":1150,"espesor":0.7,"aleacion":"MINIONDA","temple":"MINIONDA","acabado":"S/A","peso":14.3,"tar":13,"mur":47,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0092004","descripcion":"CHAPA MINIONDA 6050 X 1150 X 0.7 SILVER 9006","largo":6050,"ancho":1150,"espesor":0.7,"aleacion":"MINIONDA","temple":"MINIONDA","acabado":"S/A","peso":14.3,"tar":91,"mur":0,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0092005","descripcion":"CHAPA MINIONDA 6050 X 1150 X 0,8 MULTI-PERF 3-6","largo":6050,"ancho":1150,"espesor":0.8,"aleacion":"MINIONDA","temple":"MINIONDA","acabado":"S/A","peso":8.953,"tar":0,"mur":22,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0092006","descripcion":"CHAPA MINIONDA 6400 X 1150 X 0,8 PERF R3T5","largo":6400,"ancho":1150,"espesor":0.8,"aleacion":"MINIONDA","temple":"MINIONDA","acabado":"9010-2C","peso":12,"tar":0,"mur":0,"val":33,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0092006","descripcion":"CHAPA MINIONDA 6400 X 1150 X 0,8 PERF R3T5","largo":6400,"ancho":1150,"espesor":0.8,"aleacion":"MINIONDA","temple":"MINIONDA","acabado":"S/A","peso":12,"tar":0,"mur":1,"val":1,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0092008","descripcion":"CHAPA MINIONDA 6050 X 1150 X 0.7 CREMA 1015","largo":6050,"ancho":1150,"espesor":0.7,"aleacion":"MINIONDA","temple":"MINIONDA","acabado":"S/A","peso":14.3,"tar":0,"mur":9,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0092009","descripcion":"CHAPA MINIONDA 6050 X 1150 X 0.7 VERDE 6028","largo":6050,"ancho":1150,"espesor":0.7,"aleacion":"MINIONDA","temple":"MINIONDA","acabado":"S/A","peso":14.3,"tar":0,"mur":55,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0092010","descripcion":"CHAPA MINIONDA 6050 X 1150 X 0.7 ROJO TEJA 3009","largo":6050,"ancho":1150,"espesor":0.7,"aleacion":"MINIONDA","temple":"MINIONDA","acabado":"S/A","peso":14.3,"tar":0,"mur":43,"val":44,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0092012","descripcion":"CHAPA MINIONDA 6050 X 1150 X 0.8 S/A         SAND","largo":6050,"ancho":1150,"espesor":0.8,"aleacion":"MINIONDA","temple":"MINIONDA","acabado":"S/A","peso":16.3,"tar":0,"mur":0,"val":41,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0092014","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"S/A","peso":0,"tar":0,"mur":2,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0092020","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"S/A","peso":0,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0092024","descripcion":"CHAPA MINIONDA 6050 X 1150 X 0.7 S/A","largo":6050,"ancho":1150,"espesor":0.7,"aleacion":"MINIONDA","temple":"MINIONDA","acabado":"S/A","peso":14.3,"tar":40,"mur":195,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0092099","descripcion":"CHAPA MINIONDA 3100 X 1150 X 1.2 5005 - R5T7","largo":3100,"ancho":1150,"espesor":1.2,"aleacion":"PERFORADA","temple":"PERFORADA","acabado":"PLATA-2C","peso":12.55,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0092100","descripcion":"CHAPA TRAPEZOIDAL AF32 6050 X 1100 X 0.8 PERF.R3T5","largo":6050,"ancho":1100,"espesor":0.8,"aleacion":"TRAPEZOIDAL","temple":"TRAPEZOIDAL","acabado":"PLATA-2C","peso":16.5,"tar":0,"mur":2,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0092100","descripcion":"CHAPA TRAPEZOIDAL AF32 6050 X 1100 X 0.8 PERF.R3T5","largo":6050,"ancho":1100,"espesor":0.8,"aleacion":"TRAPEZOIDAL","temple":"TRAPEZOIDAL","acabado":"S/A","peso":16.5,"tar":0,"mur":32,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0092103","descripcion":"CHAPA TRAPEZOIDAL AF32 6050 X 1100 X 0.7 RAL 9010","largo":6050,"ancho":1100,"espesor":0.7,"aleacion":"TRAPEZOIDAL","temple":"TRAPEZOIDAL","acabado":"S/A","peso":14.3,"tar":0,"mur":30,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0092152","descripcion":"CHAPA TRAPEZOIDAL AF32 6050 X 1100 X 0.8  S/A","largo":6050,"ancho":1100,"espesor":0.8,"aleacion":"TRAPEZOIDAL","temple":"TRAPEZOIDAL","acabado":"S/A","peso":15,"tar":15,"mur":14,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0092156","descripcion":"CHAPA TRAPEZOIDAL AF32 6050 X 1100 X 0.7  S/A","largo":6050,"ancho":1100,"espesor":0.7,"aleacion":"TRAPEZOIDAL","temple":"TRAPEZOIDAL","acabado":"S/A","peso":14.3,"tar":0,"mur":37,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096000","descripcion":"SAND. 2000 X 1000 X 10","largo":2000,"ancho":1000,"espesor":10,"aleacion":"SANDWICH","temple":"SANDWICH","acabado":"7011","peso":1,"tar":0,"mur":0,"val":2,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096000","descripcion":"SAND. 2000 X 1000 X 10","largo":2000,"ancho":1000,"espesor":10,"aleacion":"SANDWICH","temple":"SANDWICH","acabado":"7039","peso":1,"tar":0,"mur":0,"val":1,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096000","descripcion":"SAND. 2000 X 1000 X 10","largo":2000,"ancho":1000,"espesor":10,"aleacion":"SANDWICH","temple":"SANDWICH","acabado":"9010","peso":1,"tar":14,"mur":219,"val":84,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096000","descripcion":"SAND. 2000 X 1000 X 10","largo":2000,"ancho":1000,"espesor":10,"aleacion":"SANDWICH","temple":"SANDWICH","acabado":"9111 EXTRUCO","peso":1,"tar":0,"mur":0,"val":1,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096000","descripcion":"SAND. 2000 X 1000 X 10","largo":2000,"ancho":1000,"espesor":10,"aleacion":"SANDWICH","temple":"SANDWICH","acabado":"PLATA","peso":1,"tar":0,"mur":2,"val":86,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096000","descripcion":"SAND. 2000 X 1000 X 10","largo":2000,"ancho":1000,"espesor":10,"aleacion":"SANDWICH","temple":"SANDWICH","acabado":"S/A","peso":1,"tar":0,"mur":17,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096001","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"7011","peso":0,"tar":0,"mur":2,"val":1,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096001","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"9010","peso":0,"tar":53,"mur":68,"val":81,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096001","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"PLATA","peso":0,"tar":0,"mur":0,"val":19,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096002","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"7011","peso":0,"tar":0,"mur":0,"val":1,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096002","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"7039","peso":0,"tar":0,"mur":1,"val":1,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096002","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"9010","peso":0,"tar":98,"mur":36,"val":24,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096002","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"PLATA","peso":0,"tar":9,"mur":2,"val":57,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096003","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"5024","peso":0,"tar":0,"mur":3,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096003","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"7011","peso":0,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096003","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"9010","peso":0,"tar":62,"mur":62,"val":15,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096003","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"PLATA","peso":0,"tar":1,"mur":0,"val":30,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096004","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"9010","peso":0,"tar":0,"mur":28,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096004","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"CHATA-LACA","peso":0,"tar":0,"mur":2,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096005","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"7122","peso":0,"tar":0,"mur":2,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096005","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"9010","peso":0,"tar":0,"mur":16,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096007","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"7022","peso":0,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096007","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"9010","peso":0,"tar":0,"mur":0,"val":18,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096008","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"9010","peso":0,"tar":0,"mur":3,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096011","descripcion":"SAND. 3000X1250X0.8/18/0.8","largo":3000,"ancho":1250,"espesor":0.8,"aleacion":"SANDWICH","temple":"SANDWICH","acabado":"1015","peso":17,"tar":0,"mur":10,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096011","descripcion":"SAND. 3000X1250X0.8/18/0.8","largo":3000,"ancho":1250,"espesor":0.8,"aleacion":"SANDWICH","temple":"SANDWICH","acabado":"7016","peso":17,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096011","descripcion":"SAND. 3000X1250X0.8/18/0.8","largo":3000,"ancho":1250,"espesor":0.8,"aleacion":"SANDWICH","temple":"SANDWICH","acabado":"7032","peso":17,"tar":0,"mur":3,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096011","descripcion":"SAND. 3000X1250X0.8/18/0.8","largo":3000,"ancho":1250,"espesor":0.8,"aleacion":"SANDWICH","temple":"SANDWICH","acabado":"PLATA","peso":17,"tar":0,"mur":3,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096011","descripcion":"SAND. 3000X1250X0.8/18/0.8","largo":3000,"ancho":1250,"espesor":0.8,"aleacion":"SANDWICH","temple":"SANDWICH","acabado":"S/A","peso":17,"tar":0,"mur":0,"val":1,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096015","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"9010","peso":0,"tar":7,"mur":0,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096031","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"9010","peso":0,"tar":0,"mur":1,"val":13,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096033","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"9010","peso":0,"tar":0,"mur":25,"val":4,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096033","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"PLATA","peso":0,"tar":0,"mur":0,"val":2,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096043","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"9010","peso":0,"tar":0,"mur":0,"val":7,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096100","descripcion":"COMPOSITE ALC 3050 X 2000 X 3 (0,30) BLB/BLM","largo":3050,"ancho":2000,"espesor":3,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":23,"tar":34,"mur":128,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096101","descripcion":"COMPOSITE ALC 3050 X 2000 X 3 (0,30) NEGROB/NEGROM","largo":3050,"ancho":2000,"espesor":3,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":23,"tar":60,"mur":126,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096102","descripcion":"COMPOSITE ALC 3050 X 1500 X 3 (0,30) BLB/BLM","largo":3050,"ancho":1500,"espesor":3,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":17.38,"tar":0,"mur":210,"val":41,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096103","descripcion":"COMPOSITE ALC 4050 X 1500 X 3 (0,30)  ROJO Br/MATE","largo":4050,"ancho":1500,"espesor":3,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":17.38,"tar":50,"mur":2,"val":100,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096104","descripcion":"COMPOSITE ALC 3050 X 1500 X 3 (0,30) NEGROB/NEGROM","largo":3050,"ancho":1500,"espesor":3,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":17.35,"tar":28,"mur":125,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096105","descripcion":"COMPOSITE ALC 3050 X 1500 X 3 (0,30)  ROJOB/ROJOM","largo":3050,"ancho":1500,"espesor":3,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":17.35,"tar":0,"mur":66,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096106","descripcion":"COMPOSITE ALC 3050 X 1500 X 3 (0,30) AZULB/AZULM","largo":3050,"ancho":1500,"espesor":3,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":17.35,"tar":0,"mur":94,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096107","descripcion":"COMPOSITE 2500 X 1250 X 3 ESPEJO/SILVER       SAND","largo":2500,"ancho":1250,"espesor":3,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":11.8,"tar":0,"mur":13,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096108","descripcion":"COMPOSITE ALC 3050 X 1500 X 3 (0,30) SILVER_B/MATE","largo":3050,"ancho":1500,"espesor":3,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":17.35,"tar":30,"mur":61,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096109","descripcion":"COMPOSITE ALC 3050 X 1500 X 3 (0,30) BL_M / BL_M","largo":3050,"ancho":1500,"espesor":3,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":17.35,"tar":0,"mur":49,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096110","descripcion":"COMPOSITE ALC 3050 X 1500 X 3 (0,30) CEPILLADO/SA","largo":3050,"ancho":1500,"espesor":3,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":17.35,"tar":0,"mur":65,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096111","descripcion":"COMPOSITE 3050 X 1500 X 3 1023B/1023M       SAND","largo":3050,"ancho":1500,"espesor":3,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":17.35,"tar":0,"mur":43,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096113","descripcion":"COMPOSITE ALC 3050 X 1500 X 3 (0,30) 7016B/7016M","largo":3050,"ancho":1500,"espesor":3,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":17.35,"tar":70,"mur":18,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096114","descripcion":"COMPOSITE ALC 4050 X 1500 X 3 (0,30) 8017 B/8017 M","largo":4050,"ancho":1500,"espesor":3,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":22.6,"tar":0,"mur":146,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096115","descripcion":"COMPOSITE ALC 3050 X 1250 X 3 (0,30) ESPEJO/PRIMER","largo":3050,"ancho":1250,"espesor":3,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":0,"tar":0,"mur":61,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096116","descripcion":"COMPOSITE ALC 3050 X 1500 X 3 (0,15) - BLB/BLM","largo":3050,"ancho":1500,"espesor":3,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":17.85,"tar":54,"mur":76,"val":57,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096150","descripcion":"COMPOSITE RB 3050 X 1500 X 3 ROJOB/PRIMER    SAND","largo":3050,"ancho":1500,"espesor":3,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":17.35,"tar":20,"mur":4,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096152","descripcion":"COMPOSITE RB 3050 X 1500 X 3 BLB/BLM      SAND","largo":3050,"ancho":1500,"espesor":3,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":17.35,"tar":2,"mur":0,"val":7,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096156","descripcion":"COMPOSITE RB 3050 X 1500 X 3 NEGROM/NEGROB    SAND","largo":3050,"ancho":1500,"espesor":3,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":0,"tar":0,"mur":7,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096161","descripcion":"COMPOSITE RB 3050 X 1500 X 3 SILVERB/SILVERM  SAND","largo":3050,"ancho":1500,"espesor":3,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":0,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096162","descripcion":"COMPOSITE RB 3050 X 1500 X 3 6028_M/6028_M    SAND","largo":3050,"ancho":1500,"espesor":3,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":0,"tar":0,"mur":59,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096163","descripcion":"COMPOSITE RB 3050 X 1500 X 3 7016_B/7016_M    SAND","largo":3050,"ancho":1500,"espesor":3,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":0,"tar":0,"mur":2,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096165","descripcion":"COMPOSITE RB 4050 X 1500 X 3 8017_M/8017_M    SAND","largo":4050,"ancho":1500,"espesor":3,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":0,"tar":1,"mur":13,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096167","descripcion":"COMPOSITE RB 4050 X 1500 X 3 ROJO_B/ROJO_M    SAND","largo":4050,"ancho":1500,"espesor":3,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":20.7,"tar":27,"mur":0,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096200","descripcion":"COMPOSITE 4000 X 1500 X 4 SILVER METALIC      SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":60,"tar":100,"mur":92,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096201","descripcion":"COMPOSITE 4000 X 1500 X 4 INOX METALIC        SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":60,"tar":0,"mur":40,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096202","descripcion":"COMPOSITE 4000 X 1500 X 4 BLANCO MATE         SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":60,"tar":0,"mur":192,"val":13,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096203","descripcion":"COMPOSITE 4000 X 1500 X 4 ANTRACITA           SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":60,"tar":102,"mur":149,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096204","descripcion":"COMPOSITE 4000 X 1500 X 4 NEGRO MATE         SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":60,"tar":0,"mur":223,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096205","descripcion":"COMPOSITE 4000 X 1500 X 4 ARGENT MET          SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":60,"tar":0,"mur":48,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096207","descripcion":"COMPOSITE 3200 X 1250 X 4 NEGRO BASALTO       SAND","largo":3200,"ancho":1250,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":22,"tar":0,"mur":17,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096209","descripcion":"COMPOSITE 4000 X 1500 X 4 GRIS METALICO - 104","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":60,"tar":52,"mur":17,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096210","descripcion":"COMPOSITE 3200 X 1250 X 4 BRONCE CLARO    SAND","largo":3200,"ancho":1250,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":32.4,"tar":0,"mur":17,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096211","descripcion":"COMPOSITE 4000 X 1250 X 4 CORTEN          SAND","largo":4000,"ancho":1250,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":22,"tar":0,"mur":17,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096212","descripcion":"COMPOSITE 5000 X 1500 X 4 NEGRO MATE          SAND","largo":5000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":22,"tar":0,"mur":20,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096214","descripcion":"COMPOSITE 4000 X 1500 X 4 VERDE RAL 6016      SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":0,"tar":5,"mur":54,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096216","descripcion":"COMPOSITE 3200 X 1500 X 4 ROJO MATE      SAND","largo":3200,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":0,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096217","descripcion":"COMPOSITE 5000 X 1500 X 4 BLANCO MATE        SAND","largo":5000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":0,"tar":0,"mur":49,"val":6,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096218","descripcion":"COMPOSITE 5000 X 1500 X 4 SILVER METALIC      SAND","largo":5000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":0,"tar":50,"mur":0,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096219","descripcion":"COMPOSITE 3200 X 1250 X 4 FR - NARANJA-ORO    SAND","largo":3200,"ancho":1250,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":0,"tar":0,"mur":2,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096220","descripcion":"COMPOSITE 4000 X 1500 X 4 CANYON GREY (7035)  SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":0,"tar":21,"mur":41,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096221","descripcion":"COMPOSITE 4000 X 1250 X 4 SILVER MET-ANTIGRA  SAND","largo":4000,"ancho":1250,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":0,"tar":0,"mur":0,"val":50,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096222","descripcion":"COMPOSITE 4000 X 1500 X 4 NARANJA MET (VULCAN)SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":0,"tar":0,"mur":32,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096223","descripcion":"COMPOSITE 4000 X 1500 X 4 RAL 8017  (MARRON)  SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":0,"tar":3,"mur":11,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096225","descripcion":"COMPOSITE 4000 X 1250 X 4 NEGRO CARBONO  SAND","largo":4000,"ancho":1250,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":60,"tar":0,"mur":5,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096226","descripcion":"COMPOSITE 4000 X 1500 X 4 ANTRACITA MET.    SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":60,"tar":0,"mur":48,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096227","descripcion":"COMPOSITE 3200 X 1250 X 4 OCEAN BLUE    SAND","largo":3200,"ancho":1250,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":60,"tar":0,"mur":10,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096228","descripcion":"COMPOSITE 5000 X 1500 X 4 ANTRACITA    SAND","largo":5000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":60,"tar":52,"mur":0,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096229","descripcion":"COMPOSITE 3200 X 1250 X 4 BLANCO-AZUL         SAND","largo":3200,"ancho":1250,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":60,"tar":0,"mur":17,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096230","descripcion":"COMPOSITE 4000 X 1500 X 4 NEGRO CARBONO  SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":30,"tar":0,"mur":13,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096231","descripcion":"COMPOSITE 4000 X 1500 X 4  DARK GREY MET - 310","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":30,"tar":1,"mur":69,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096232","descripcion":"COMPOSITE 4000 X 1500 X 4 BLANCO ACROPOLIS RAL9003","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":30,"tar":0,"mur":35,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096233","descripcion":"COMPOSITE 4000 X 1500 X 4 AZUL (5002)    SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":30,"tar":1,"mur":71,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096234","descripcion":"COMPOSITE (FR) 4000 X 1500 X 4 CORTEN 915","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":22,"tar":0,"mur":43,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096235","descripcion":"COMPOSITE (FR) 4000 X 1500 X 4 ORO       SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":40,"tar":0,"mur":49,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096236","descripcion":"COMPOSITE 4000 X 1500 X 4 GRAPHITE GREY (7011)SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":35,"tar":0,"mur":31,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096242","descripcion":"COMPOSITE (FR) 4100 X 1500 X 4 SILVER MET   SAND","largo":4100,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":41,"tar":0,"mur":47,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096243","descripcion":"COMPOSITE (FR) 5000 X 1500 X 4 NEGRO    SAND","largo":5000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":50,"tar":0,"mur":11,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096246","descripcion":"COMPOSITE (FR) 4000 X 1500 X 4 BLANCO    SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":40,"tar":0,"mur":156,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096247","descripcion":"COMPOSITE (FR) 4000 X 1500 X 4 NEGRO    SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":40,"tar":18,"mur":25,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096248","descripcion":"COMPOSITE (FR) 4000 X 1500 X 4 SILVER MET    SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":40,"tar":0,"mur":10,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096249","descripcion":"COMPOSITE (FR) 4000 X 1500 X 4 ANTRACITA    SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":40,"tar":0,"mur":73,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096282","descripcion":"COMPOSITE (FR) 5000 X 1500 X 4 BLANCO MATE  SAND","largo":5000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":50,"tar":0,"mur":23,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096400","descripcion":"COMPOSITE PT 4000 X 1500 X 4 CREMA (1015)   SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":0,"tar":1,"mur":0,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096401","descripcion":"COMPOSITE PT 4000 X 1500 X 4 GRIS 7037-POLVO SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":0,"tar":0,"mur":46,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096425","descripcion":"COMPOSITE ARC 4000 X 1500 X 4 CEDAR BROWN  SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":0,"tar":1,"mur":8,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096431","descripcion":"COMPOSITE ARC 4000 X 1500 X 4 ROJO VINO 3003  SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":0,"tar":0,"mur":38,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096432","descripcion":"COMPOSITE ARC 4000 X 1500 X 4 PIEDRA GRIS FR  SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":0,"tar":0,"mur":20,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096433","descripcion":"COMPOSITE ARC 4000 X 1500 X 4 AUTUMN WIND FR  SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":0,"tar":0,"mur":36,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096501","descripcion":"COMPOSITE SRY 4000 X 1500 X 4 BLANCO MATE    SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":33,"tar":0,"mur":161,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096502","descripcion":"COMPOSITE SRY 4000 X 1500 X 4 SILVER MET.    SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":33,"tar":0,"mur":89,"val":35,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096503","descripcion":"COMPOSITE SRY 4000 X 1500 X 4 NEGRO MATE    SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":33,"tar":0,"mur":189,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096504","descripcion":"COMPOSITE SRY 4000 X 1500 X 4 ANTRACITA       SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":33,"tar":0,"mur":213,"val":9,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096505","descripcion":"COMPOSITE SRY 4000 X 1500 X 4 ROJO MATE       SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":33,"tar":19,"mur":47,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096516","descripcion":"COMPOSITE SRY 3050 X 1500 X 4 NEGRO MATE    SAND","largo":3050,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":26.15,"tar":0,"mur":33,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096517","descripcion":"COMPOSITE SRY 4000 X 1250 X 4 PREST 601 OAK  SAND","largo":4000,"ancho":1250,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":27.5,"tar":0,"mur":37,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096518","descripcion":"COMPOSITE SRY 4000 X 1250 X 4 PRES 604 ATLANT SAND","largo":4000,"ancho":1250,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":27.5,"tar":15,"mur":45,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096520","descripcion":"COMPOSITE SRY 5000 X 1500 X 4 NEGRO MATE    SAND","largo":5000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":41.25,"tar":26,"mur":0,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096521","descripcion":"COMPOSITE SRY 5000 X 1500 X 4 BLANCO MATE    SAND","largo":5000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":41.25,"tar":22,"mur":84,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096522","descripcion":"COMPOSITE SRY 5000 X 1500 X 4 SILVER MET.   SAND","largo":5000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":41.25,"tar":39,"mur":34,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096523","descripcion":"COMPOSITE SRY 5000 X 1500 X 4 ANTRACITA   SAND","largo":5000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":41.25,"tar":2,"mur":144,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096560","descripcion":"COMPOSITE SRY-PLY 3050 X 1500 X 4 BLANCO MATE SAND","largo":3050,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":25,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096561","descripcion":"COMPOSITE SRY-PLY 3050 X 1500 X 4 NEGRO MATE  SAND","largo":3050,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":25,"tar":0,"mur":3,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHP0096590","descripcion":"COMPOSITE SRY-LIGHT 2550 X 1250 X 4 BLANCO SAND","largo":2550,"ancho":1250,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":17.53,"tar":0,"mur":60,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096610","descripcion":"COMPOSITE SRY-LIGHT 4000 X 1500 X 4 BLANCO    SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":34.8,"tar":46,"mur":13,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096611","descripcion":"COMPOSITE SRY-LIGHT 4000 X 1500 X 4 NEGRO  SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":34.8,"tar":7,"mur":79,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096612","descripcion":"COMPOSITE SRY-LIGHT 4000 X 1500 X 4 ANTRACITA SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":34.8,"tar":53,"mur":24,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHP0096613","descripcion":"COMPOSITE SRY-LIGHT 4000 X 1500 X 4 SILVER M. SAND","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":34.8,"tar":0,"mur":24,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0096614","descripcion":"COMPOSITE SRY-LIGHT 4000 X 1500 X 4 7021 SAND.","largo":4000,"ancho":1500,"espesor":4,"aleacion":"COMPOSITE","temple":"COMPOSITE","acabado":"S/A","peso":34.8,"tar":0,"mur":43,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0296008","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"9010","peso":0,"tar":0,"mur":17,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHP0296009","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"9010","peso":0,"tar":0,"mur":27,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHT0092000","descripcion":"CHAPA 2000 X 1000 X 3 5754 H111","largo":2000,"ancho":1000,"espesor":3,"aleacion":"5754","temple":"H111","acabado":"P.V.C.-1C","peso":16.2,"tar":296,"mur":160,"val":0,"cdad_pdte":370,"estado":"Stock"},{"ref":"CHT0092000","descripcion":"CHAPA 2000 X 1000 X 3 5754 H111","largo":2000,"ancho":1000,"espesor":3,"aleacion":"5754","temple":"H111","acabado":"PLATA-1C","peso":16.2,"tar":1,"mur":0,"val":0,"cdad_pdte":370,"estado":"Sin stock"},{"ref":"CHT0092000","descripcion":"CHAPA 2000 X 1000 X 3 5754 H111","largo":2000,"ancho":1000,"espesor":3,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":16.2,"tar":300,"mur":228,"val":239,"cdad_pdte":370,"estado":"Stock"},{"ref":"CHT0092001","descripcion":"CHAPA 2000 X 1000 X 4 5754 H111","largo":2000,"ancho":1000,"espesor":4,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":21.6,"tar":198,"mur":330,"val":82,"cdad_pdte":417,"estado":"Stock"},{"ref":"CHT0092002","descripcion":"CHAPA 2000 X 1000 X 5 5754 H111","largo":2000,"ancho":1000,"espesor":5,"aleacion":"5754","temple":"H111","acabado":"P.V.C.-1C","peso":27,"tar":74,"mur":0,"val":0,"cdad_pdte":222,"estado":"Stock"},{"ref":"CHT0092002","descripcion":"CHAPA 2000 X 1000 X 5 5754 H111","largo":2000,"ancho":1000,"espesor":5,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":27,"tar":433,"mur":158,"val":129,"cdad_pdte":222,"estado":"Stock"},{"ref":"CHT0092004","descripcion":"CHAPA 2500 X 1250 X 3 5754 H111","largo":2500,"ancho":1250,"espesor":3,"aleacion":"5754","temple":"H111","acabado":"P.V.C.-1C","peso":25.31,"tar":36,"mur":383,"val":13,"cdad_pdte":158,"estado":"Stock"},{"ref":"CHT0092004","descripcion":"CHAPA 2500 X 1250 X 3 5754 H111","largo":2500,"ancho":1250,"espesor":3,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":25.31,"tar":56,"mur":144,"val":267,"cdad_pdte":158,"estado":"Stock"},{"ref":"CHT0092005","descripcion":"CHAPA 2500 X 1250 X 4 5754H111","largo":2500,"ancho":1250,"espesor":4,"aleacion":"5754","temple":"H111","acabado":"P.V.C.-1C","peso":33.75,"tar":0,"mur":0,"val":17,"cdad_pdte":119,"estado":"7/10 días"},{"ref":"CHT0092005","descripcion":"CHAPA 2500 X 1250 X 4 5754H111","largo":2500,"ancho":1250,"espesor":4,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":33.75,"tar":0,"mur":0,"val":1,"cdad_pdte":119,"estado":"Sin stock"},{"ref":"CHT0092006","descripcion":"CHAPA 2500 X 1250 X 5 5754H111","largo":2500,"ancho":1250,"espesor":5,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":42.18,"tar":0,"mur":2,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHT0092008","descripcion":"CHAPA 3000 X 1250 X 4 5754H111","largo":3000,"ancho":1250,"espesor":4,"aleacion":"5754","temple":"H111","acabado":"P.V.C.-1C","peso":40.5,"tar":0,"mur":54,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHT0092008","descripcion":"CHAPA 3000 X 1250 X 4 5754H111","largo":3000,"ancho":1250,"espesor":4,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":40.5,"tar":89,"mur":133,"val":13,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHT0092011","descripcion":"CHAPA 3000 X 1500 X 3 5754 H111","largo":3000,"ancho":1500,"espesor":3,"aleacion":"5754","temple":"H111","acabado":"INOX-2C","peso":36.45,"tar":0,"mur":1,"val":0,"cdad_pdte":2029,"estado":"Sin stock"},{"ref":"CHT0092011","descripcion":"CHAPA 3000 X 1500 X 3 5754 H111","largo":3000,"ancho":1500,"espesor":3,"aleacion":"5754","temple":"H111","acabado":"P.V.C.-1C","peso":36.45,"tar":19,"mur":333,"val":43,"cdad_pdte":2029,"estado":"Stock"},{"ref":"CHT0092011","descripcion":"CHAPA 3000 X 1500 X 3 5754 H111","largo":3000,"ancho":1500,"espesor":3,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":36.45,"tar":23,"mur":386,"val":153,"cdad_pdte":2029,"estado":"Stock"},{"ref":"CHT0092012","descripcion":"CHAPA 3000 X 1500 X 4 5754 H111","largo":3000,"ancho":1500,"espesor":4,"aleacion":"5754","temple":"H111","acabado":"P.V.C.-1C","peso":48.6,"tar":70,"mur":38,"val":0,"cdad_pdte":782,"estado":"Stock"},{"ref":"CHT0092012","descripcion":"CHAPA 3000 X 1500 X 4 5754 H111","largo":3000,"ancho":1500,"espesor":4,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":48.6,"tar":67,"mur":82,"val":165,"cdad_pdte":782,"estado":"Stock"},{"ref":"CHT0092013","descripcion":"CHAPA 3000 X 1500 X 5 5754 H111","largo":3000,"ancho":1500,"espesor":5,"aleacion":"5754","temple":"H111","acabado":"P.V.C.-1C","peso":60.75,"tar":1,"mur":102,"val":0,"cdad_pdte":395,"estado":"7/10 días"},{"ref":"CHT0092013","descripcion":"CHAPA 3000 X 1500 X 5 5754 H111","largo":3000,"ancho":1500,"espesor":5,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":60.75,"tar":268,"mur":521,"val":71,"cdad_pdte":395,"estado":"Stock"},{"ref":"CHT0092014","descripcion":"CHAPA 3000 X 1500 X 6 5754 H111","largo":3000,"ancho":1500,"espesor":6,"aleacion":"5754","temple":"H111","acabado":"P.V.C.-1C","peso":72.9,"tar":19,"mur":40,"val":3,"cdad_pdte":362,"estado":"Stock"},{"ref":"CHT0092014","descripcion":"CHAPA 3000 X 1500 X 6 5754 H111","largo":3000,"ancho":1500,"espesor":6,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":72.9,"tar":118,"mur":394,"val":241,"cdad_pdte":362,"estado":"Stock"},{"ref":"CHT0092018","descripcion":"CHAPA 6000 X 2000 X 3 5754H111","largo":6000,"ancho":2000,"espesor":3,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":98,"tar":0,"mur":26,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHT0092020","descripcion":"CHAPA 6000 X 2000 X 6 5754H111","largo":6000,"ancho":2000,"espesor":6,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":196.18,"tar":0,"mur":10,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHT0092021","descripcion":"CHAPA 6000 X 1500 X 6 5754 H111","largo":6000,"ancho":1500,"espesor":6,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":145.8,"tar":0,"mur":7,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHT0092022","descripcion":"CHAPA 2000 X 1000 X 2 5754 H111","largo":2000,"ancho":1000,"espesor":2,"aleacion":"5754","temple":"H111","acabado":"P.V.C.-1C","peso":10.8,"tar":187,"mur":169,"val":0,"cdad_pdte":278,"estado":"Stock"},{"ref":"CHT0092022","descripcion":"CHAPA 2000 X 1000 X 2 5754 H111","largo":2000,"ancho":1000,"espesor":2,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":10.8,"tar":385,"mur":621,"val":79,"cdad_pdte":278,"estado":"Stock"},{"ref":"CHT0092023","descripcion":"CHAPA 4000 X 2000 X 4 5754 H111","largo":4000,"ancho":2000,"espesor":4,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":86.4,"tar":5,"mur":40,"val":12,"cdad_pdte":32,"estado":"7/10 días"},{"ref":"CHT0092025","descripcion":"CHAPA 6000 X 2000 X 4 5754 H111","largo":6000,"ancho":2000,"espesor":4,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":129.6,"tar":0,"mur":12,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHT0092027","descripcion":"CHAPA 3000 X 1500 X 1.5 5754 H111","largo":3000,"ancho":1500,"espesor":1.5,"aleacion":"5754","temple":"H111","acabado":"P.V.C.-1C","peso":18.225,"tar":117,"mur":3,"val":54,"cdad_pdte":3675,"estado":"Stock"},{"ref":"CHT0092027","descripcion":"CHAPA 3000 X 1500 X 1.5 5754 H111","largo":3000,"ancho":1500,"espesor":1.5,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":18.225,"tar":66,"mur":2142,"val":195,"cdad_pdte":3675,"estado":"Stock"},{"ref":"CHT0092028","descripcion":"CHAPA 3000 X 1500 X 2 5754 H111","largo":3000,"ancho":1500,"espesor":2,"aleacion":"5754","temple":"H111","acabado":"P.V.C.-1C","peso":24.3,"tar":22,"mur":65,"val":56,"cdad_pdte":2797,"estado":"Stock"},{"ref":"CHT0092028","descripcion":"CHAPA 3000 X 1500 X 2 5754 H111","largo":3000,"ancho":1500,"espesor":2,"aleacion":"5754","temple":"H111","acabado":"P.V.C.-2C","peso":24.3,"tar":14,"mur":10,"val":0,"cdad_pdte":2797,"estado":"Stock"},{"ref":"CHT0092028","descripcion":"CHAPA 3000 X 1500 X 2 5754 H111","largo":3000,"ancho":1500,"espesor":2,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":24.3,"tar":321,"mur":137,"val":88,"cdad_pdte":2797,"estado":"Stock"},{"ref":"CHT0092029","descripcion":"CHAPA 3000 X 1500 X 2.5 5754 H111","largo":3000,"ancho":1500,"espesor":2.5,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":30.4,"tar":53,"mur":1,"val":12,"cdad_pdte":99,"estado":"Stock"},{"ref":"CHT0092033","descripcion":"CHAPA 3000 X 1000 X 4 5154H34","largo":3000,"ancho":1000,"espesor":4,"aleacion":"5154","temple":"H34","acabado":"S/A","peso":32.4,"tar":0,"mur":30,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHT0092035","descripcion":"CHAPA 5000 X 1500 X 4 5083H111","largo":5000,"ancho":1500,"espesor":4,"aleacion":"5083","temple":"H111","acabado":"CHATARRA-2C","peso":81,"tar":18,"mur":0,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHT0092035","descripcion":"CHAPA 5000 X 1500 X 4 5083H111","largo":5000,"ancho":1500,"espesor":4,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":81,"tar":138,"mur":11,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHT0092036","descripcion":"CHAPA 6000 X 2000 X 8 5083 H111","largo":6000,"ancho":2000,"espesor":8,"aleacion":"5083","temple":"H111","acabado":"S/A","peso":259.2,"tar":0,"mur":26,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHT0092038","descripcion":"CHAPA 2000 X 1000 X 1 5754 H111","largo":2000,"ancho":1000,"espesor":1,"aleacion":"5754","temple":"H111","acabado":"P.V.C.-1C","peso":5.4,"tar":1371,"mur":0,"val":14,"cdad_pdte":16,"estado":"Stock"},{"ref":"CHT0092038","descripcion":"CHAPA 2000 X 1000 X 1 5754 H111","largo":2000,"ancho":1000,"espesor":1,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":5.4,"tar":369,"mur":1,"val":519,"cdad_pdte":16,"estado":"Stock"},{"ref":"CHT0092039","descripcion":"CHAPA 2000 X 1000 X 1.5 5754 H111","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"5754","temple":"H111","acabado":"P.V.C.-1C","peso":8.1,"tar":0,"mur":430,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHT0092039","descripcion":"CHAPA 2000 X 1000 X 1.5 5754 H111","largo":2000,"ancho":1000,"espesor":1.5,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":8.1,"tar":65,"mur":88,"val":100,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHT0092040","descripcion":"CHAPA 3000 X 1500 X 1 5754 H111","largo":3000,"ancho":1500,"espesor":1,"aleacion":"5754","temple":"H111","acabado":"7016-1C","peso":12.15,"tar":2,"mur":0,"val":0,"cdad_pdte":2387,"estado":"Sin stock"},{"ref":"CHT0092040","descripcion":"CHAPA 3000 X 1500 X 1 5754 H111","largo":3000,"ancho":1500,"espesor":1,"aleacion":"5754","temple":"H111","acabado":"P.V.C.-1C","peso":12.15,"tar":32,"mur":93,"val":0,"cdad_pdte":2387,"estado":"Stock"},{"ref":"CHT0092040","descripcion":"CHAPA 3000 X 1500 X 1 5754 H111","largo":3000,"ancho":1500,"espesor":1,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":12.15,"tar":142,"mur":1890,"val":87,"cdad_pdte":2387,"estado":"Stock"},{"ref":"CHT0092041","descripcion":"CHAPA 3000 X 1250 X 1.5 5754 H111","largo":3000,"ancho":1250,"espesor":1.5,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":15.2,"tar":130,"mur":106,"val":43,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHT0092042","descripcion":"CHAPA 5010 X 2000 X 4 5754 H11","largo":5010,"ancho":2000,"espesor":4,"aleacion":"5754","temple":"H11","acabado":"S/A","peso":108.21,"tar":17,"mur":43,"val":0,"cdad_pdte":3,"estado":"Stock"},{"ref":"CHT0092043","descripcion":"CHAPA 2250 X 1250 X 3 5754H111","largo":2250,"ancho":1250,"espesor":3,"aleacion":"5754","temple":"H111","acabado":"P.V.C.-1C","peso":22.78125,"tar":0,"mur":198,"val":0,"cdad_pdte":117,"estado":"7/10 días"},{"ref":"CHT0092044","descripcion":"CHAPA 3000 X 1250 X 3 5754H111","largo":3000,"ancho":1250,"espesor":3,"aleacion":"5754","temple":"H111","acabado":"P.V.C.-1C","peso":30.375,"tar":0,"mur":312,"val":0,"cdad_pdte":230,"estado":"7/10 días"},{"ref":"CHT0092044","descripcion":"CHAPA 3000 X 1250 X 3 5754H111","largo":3000,"ancho":1250,"espesor":3,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":30.375,"tar":59,"mur":174,"val":62,"cdad_pdte":230,"estado":"Stock"},{"ref":"CHT0092045","descripcion":"CHAPA 3560X 1500 X 5 5754 H111","largo":3560,"ancho":1500,"espesor":5,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":72.1,"tar":0,"mur":0,"val":1,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHT0092047","descripcion":"CHAPA 3000 X 2000 X 3 5754 H111","largo":3000,"ancho":2000,"espesor":3,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":48.6,"tar":0,"mur":69,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHT0092048","descripcion":"CHAPA 3000 X 1500 X 1.2 5754 H111","largo":3000,"ancho":1500,"espesor":1.2,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":14.58,"tar":51,"mur":320,"val":379,"cdad_pdte":686,"estado":"Stock"},{"ref":"CHT0092049","descripcion":"CHAPA 3000 X 1250 X 2 5754 H111","largo":3000,"ancho":1250,"espesor":2,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":20.25,"tar":48,"mur":584,"val":0,"cdad_pdte":346,"estado":"Stock"},{"ref":"CHT0092051","descripcion":"CHAPA 2510 X 2000 X 3 5754 H111","largo":2510,"ancho":2000,"espesor":3,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":40.662,"tar":119,"mur":0,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHT0092053","descripcion":"CHAPA 4000 X 2000 X 3 5754 H111","largo":4000,"ancho":2000,"espesor":3,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":64.8,"tar":1,"mur":86,"val":39,"cdad_pdte":31,"estado":"7/10 días"},{"ref":"CHT0092054","descripcion":"CHAPA 4000 X 1500 X 5 5754 H111","largo":4000,"ancho":1500,"espesor":5,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":81,"tar":5,"mur":14,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHT0092056","descripcion":"CHAPA 4000 X 2000 X 2 5754 H111","largo":4000,"ancho":2000,"espesor":2,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":43.2,"tar":0,"mur":121,"val":77,"cdad_pdte":69,"estado":"7/10 días"},{"ref":"CHT0092058","descripcion":"CHAPA 5000 X 2000 X 4 5754 H111","largo":5000,"ancho":2000,"espesor":4,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":108,"tar":0,"mur":1,"val":0,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHT0092060","descripcion":"CHAPA 2250 X 1500 X 3 5754 H111","largo":2250,"ancho":1500,"espesor":3,"aleacion":"5754","temple":"H111","acabado":"P.V.C.-1C","peso":27.33,"tar":0,"mur":84,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHT0092062","descripcion":"CHAPA 3850 X 1150 X 3 5754 H111","largo":3850,"ancho":1150,"espesor":3,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":35.9,"tar":0,"mur":0,"val":2,"cdad_pdte":0,"estado":"Sin stock"},{"ref":"CHT0092063","descripcion":"CHAPA 2000 X 1000 X 1.2 5754 H111","largo":2000,"ancho":1000,"espesor":1.2,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":6.48,"tar":215,"mur":14,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHT0092064","descripcion":"CHAPA 3000 X 1500 X 0.8 5754 H111","largo":3000,"ancho":1500,"espesor":0.8,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":9.72,"tar":0,"mur":427,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHT0092066","descripcion":"CHAPA 2000 X 1000 X 6 5754 H111","largo":2000,"ancho":1000,"espesor":6,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":32.4,"tar":79,"mur":153,"val":252,"cdad_pdte":62,"estado":"Stock"},{"ref":"CHT0092067","descripcion":"CHAPA 2500 X 1250 X 0.8 5754 H111","largo":2500,"ancho":1250,"espesor":0.8,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":6.75,"tar":43,"mur":706,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHT0092068","descripcion":"CHAPA 2500 X 1250 X 1.2 5754 H111","largo":2500,"ancho":1250,"espesor":1.2,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":10.13,"tar":212,"mur":1316,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHT0092071","descripcion":"CHAPA 2300 X 2000 X 2 5754 H111","largo":2300,"ancho":2000,"espesor":2,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":24.84,"tar":0,"mur":53,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHT0092072","descripcion":"CHAPA 2200 X 1000 X 2 5754 H111","largo":2200,"ancho":1000,"espesor":2,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":11.88,"tar":0,"mur":88,"val":59,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHT0092073","descripcion":"CHAPA 2600 X 1000 X 2 5754 H111","largo":2600,"ancho":1000,"espesor":2,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":14.04,"tar":0,"mur":83,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHT0092074","descripcion":"CHAPA 3000 X 1000 X 2 5754 H111","largo":3000,"ancho":1000,"espesor":2,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":16.2,"tar":15,"mur":146,"val":0,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHT0092075","descripcion":"CHAPA 2700 X 1250 X 2 5754 H111","largo":2700,"ancho":1250,"espesor":2,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":18.225,"tar":0,"mur":64,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHT0092076","descripcion":"CHAPA 2570 X 1500 X 2 5754 H111","largo":2570,"ancho":1500,"espesor":2,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":20.817,"tar":0,"mur":171,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHT0092077","descripcion":"CHAPA 3000 X 2000 X 2 5754 H111","largo":3000,"ancho":2000,"espesor":2,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":32.4,"tar":9,"mur":38,"val":70,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHT0092078","descripcion":"CHAPA 3000 X 1250 X 6 5754 H111","largo":3000,"ancho":1250,"espesor":6,"aleacion":"5754","temple":"H111","acabado":"P.V.C.-1C","peso":60.75,"tar":0,"mur":19,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHT0092080","descripcion":"CHAPA 2100 X 1500 X 2 5754 H111","largo":2100,"ancho":1500,"espesor":2,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":17.01,"tar":0,"mur":163,"val":0,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHT0092081","descripcion":"","largo":0,"ancho":0,"espesor":0,"aleacion":"","temple":"","acabado":"P.V.C.-1C","peso":0,"tar":0,"mur":0,"val":109,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHT0092083","descripcion":"CHAPA 2700 X 1500 X 3 5754 H111","largo":2700,"ancho":1500,"espesor":3,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":32.81,"tar":0,"mur":0,"val":64,"cdad_pdte":0,"estado":"7/10 días"},{"ref":"CHT0092084","descripcion":"CHAPA 2000 X 1000 X 0.5 5754 H111","largo":2000,"ancho":1000,"espesor":0.5,"aleacion":"5754","temple":"H111","acabado":"S/A","peso":2.7,"tar":380,"mur":151,"val":770,"cdad_pdte":0,"estado":"Stock"},{"ref":"CHT0092086","descripcion":"CHAPA 2500 X 1500 X 3 5754 H11","largo":2500,"ancho":1500,"espesor":3,"aleacion":"5754","temple":"H11","acabado":"P.V.C.-1C","peso":30.375,"tar":0,"mur":0,"val":195,"cdad_pdte":429,"estado":"7/10 días"},{"ref":"CHT0092086","descripcion":"CHAPA 2500 X 1500 X 3 5754 H11","largo":2500,"ancho":1500,"espesor":3,"aleacion":"5754","temple":"H11","acabado":"S/A","peso":30.375,"tar":0,"mur":0,"val":142,"cdad_pdte":429,"estado":"7/10 días"}];
+
+// ── PRECIOS Y MEDIDAS ESTÁNDAR ──
+const STD_FORMATS = [
+  [2000,1000], [2500,1000], [3000,1250], [3000,1500], [2500,1250]
+];
+const PRICE_TABLE = {
+  '1050':  { le6: 4.50, gt6: 4.70 },
+  '5754':  { le6: 4.65, gt6: 4.85 },
+  '5083':  { le6: 5.10, gt6: 5.30 },
+  'DAMERO':{ le6: 4.70, gt6: 5.30 },
+  '5005':  { le6: 4.75, gt6: 4.75 },
+  '6082':  { le6: 6.00, gt6: 6.25 },
+};
+
+function getPrecioKg(r) {
+  // Solo acabado S/A o P.V.C.-1C
+  const acab = (r.acabado || '').trim();
+  if (acab !== 'S/A' && acab !== 'P.V.C.-1C') return null;
+  // Solo aleaciones con precio definido
+  const key = Object.keys(PRICE_TABLE).find(k => r.aleacion && r.aleacion.includes(k));
+  if (!key) return null;
+  // Solo medidas estándar
+  const isStd = STD_FORMATS.some(([l,a]) => r.largo == l && r.ancho == a);
+  if (!isStd) return null;
+  const esp = parseFloat(r.espesor) || 0;
+  return esp <= 6 ? PRICE_TABLE[key].le6 : PRICE_TABLE[key].gt6;
+}
+
+function isConsultable(r) {
+  // Todas las refs sin precio directo tienen botón consulta
+  return getPrecioKg(r) === null;
+}
+
+function mailConsulta(i) {
+  var r = window._sliceData[i];
+  var est = estadoCliente(r);
+  var nl = '%0D%0A';
+  var subject = encodeURIComponent('Consulta chapa - ' + r.ref);
+  var body = 'Buenos dias,' + nl + nl
+    + 'Solicito informacion sobre la siguiente chapa:' + nl + nl
+    + 'Referencia:     ' + encodeURIComponent(r.ref) + nl
+    + 'Descripcion:    ' + encodeURIComponent(r.descripcion) + nl
+    + 'Dimensiones:    ' + r.largo + ' x ' + r.ancho + ' x ' + r.espesor + ' mm' + nl
+    + 'Aleacion:       ' + encodeURIComponent(r.aleacion) + nl
+    + 'Temple:         ' + encodeURIComponent(r.temple) + nl
+    + 'Acabado:        ' + encodeURIComponent(r.acabado || 'S/A') + nl
+    + 'Disponibilidad: ' + encodeURIComponent(est) + nl + nl
+    + 'Cantidad necesaria: _____ uds.' + nl + nl
+    + 'Muchas gracias.';
+  window.location.href = 'mailto:danielf@aluminiosfranco.es?subject=' + subject + '&body=' + body;
+}
+
+const PAGE_SIZE = 30;
+let filtered = [];
+let currentPage = 1;
+
+// populate selects
+function populateSel(id, key) {
+  const vals = [...new Set(DATA.map(r => r[key]).filter(v => v !== null && v !== undefined && String(v).trim() !== '' && v !== 'nan'))]
+    .sort((a,b) => parseFloat(a) - parseFloat(b) || String(a).localeCompare(String(b),'es',{numeric:true}));
+  const sel = document.getElementById(id);
+  vals.forEach(v => { const o = document.createElement('option'); o.value=v; o.textContent=v; sel.appendChild(o); });
+}
+populateSel('qEspesor','espesor');
+populateSel('qAleacion','aleacion');
+populateSel('qTemple','temple');
+populateSel('qAcabado','acabado');
+
+function isActive() {
+  return document.getElementById('qLargo').value !== ''
+    || document.getElementById('qAncho').value !== ''
+    || document.getElementById('qEspesor').value !== ''
+    || document.getElementById('qAleacion').value !== ''
+    || document.getElementById('qTemple').value !== ''
+    || document.getElementById('qAcabado').value !== '';
+}
+
+function applyFilters() {
+  if (!isActive()) {
+    document.getElementById('hint').style.display = 'block';
+    document.getElementById('resultsSection').style.display = 'none';
+    return;
+  }
+  document.getElementById('hint').style.display = 'none';
+  document.getElementById('resultsSection').style.display = 'block';
+
+  const lar  = document.getElementById('qLargo').value;
+  const anc  = document.getElementById('qAncho').value;
+  const esp  = document.getElementById('qEspesor').value;
+  const alea = document.getElementById('qAleacion').value;
+  const temp = document.getElementById('qTemple').value;
+  const acab = document.getElementById('qAcabado').value;
+
+  filtered = DATA.filter(r => {
+    if (lar && r.largo != lar) return false;
+    if (anc && r.ancho != anc) return false;
+    if (esp && Math.abs(r.espesor - parseFloat(esp)) > 0.001) return false;
+    if (alea && r.aleacion != alea) return false;
+    if (temp && r.temple !== temp) return false;
+    if (acab && r.acabado != acab) return false;
+    return true;
+  });
+  currentPage = 1;
+  render();
+}
+
+function resetAll() {
+  ['qLargo','qAncho'].forEach(id => document.getElementById(id).value='');
+  ['qEspesor','qAleacion','qTemple','qAcabado'].forEach(id => document.getElementById(id).value='');
+  document.getElementById('hint').style.display='block';
+  document.getElementById('resultsSection').style.display='none';
+}
+
+function estadoCliente(r) {
+  if (r.tar > 10) return 'Stock';
+  if (r.tar <= 10 && (r.mur > 10 || r.val > 10)) return '7/10 días';
+  return 'Sin stock';
+}
+
+function bc(e) {
+  if (e==='Stock') return 'badge-stock';
+  if (e==='7/10 días') return 'badge-dias';
+  if (e==='Pendiente de recepción') return 'badge-pend';
+  return 'badge-sin';
+}
+
+function render() {
+  const total = filtered.length;
+  const pages = Math.max(1, Math.ceil(total/PAGE_SIZE));
+  currentPage = Math.min(currentPage, pages);
+  const start = (currentPage-1)*PAGE_SIZE;
+  const slice = filtered.slice(start, start+PAGE_SIZE);
+
+  document.getElementById('resultMeta').innerHTML =
+    `<strong>${total}</strong> referencia${total!==1?'s':''} encontrada${total!==1?'s':''}`;
+
+  const tbody = document.getElementById('tableBody');
+  if (total===0) {
+    tbody.innerHTML='';
+    document.getElementById('noRes').style.display='block';
+    document.getElementById('pagination').innerHTML='';
+    return;
+  }
+  document.getElementById('noRes').style.display='none';
+
+  // MÓVIL: tarjetas
+  const cardsWrap = document.getElementById('cardsWrap');
+  if (cardsWrap) {
+    if (total === 0) {
+      cardsWrap.innerHTML = '';
+    } else {
+      cardsWrap.innerHTML = slice.map((r, i) => {
+      const est = estadoCliente(r);
+      const precio = getPrecioKg(r);
+      let footerHtml = '';
+      if (precio !== null) {
+        const precioUd = r.peso ? (precio * r.peso).toFixed(2) + ' €' : '';
+        footerHtml = '<div class="ref-card-footer"><span style="font-family:DM Mono,monospace;font-size:0.78rem;font-weight:700;color:var(--accent)">' +
+          precio.toFixed(2) + ' €/kg' + (precioUd ? ' · ' + precioUd + '/ud' : '') + '</span></div>';
+      } else if (isConsultable(r)) {
+        footerHtml = '<div class="ref-card-footer"><button class="btn-consulta" onclick="mailConsulta(' + i + ')">✉ Consultar precio</button></div>';
+      }
+      return '<div class="ref-card">' +
+        '<div class="ref-card-top"><span class="ref-card-ref">' + r.ref + '</span>' +
+        '<span class="badge ' + bc(est) + '">' + est + '</span></div>' +
+        '<div class="ref-card-desc">' + r.descripcion + '</div>' +
+        '<div class="ref-card-grid">' +
+        '<div class="ref-card-item"><span class="ref-card-label">Largo</span><span class="ref-card-val mono">' + (r.largo ?? '—') + '</span></div>' +
+        '<div class="ref-card-item"><span class="ref-card-label">Ancho</span><span class="ref-card-val mono">' + (r.ancho ?? '—') + '</span></div>' +
+        '<div class="ref-card-item"><span class="ref-card-label">Espesor</span><span class="ref-card-val mono">' + (r.espesor ?? '—') + '</span></div>' +
+        '<div class="ref-card-item"><span class="ref-card-label">Aleación</span><span class="ref-card-val">' + r.aleacion + '</span></div>' +
+        '<div class="ref-card-item"><span class="ref-card-label">Temple</span><span class="ref-card-val">' + r.temple + '</span></div>' +
+        '<div class="ref-card-item"><span class="ref-card-label">Peso kg</span><span class="ref-card-val mono">' + (r.peso ? r.peso.toFixed(3) : '—') + '</span></div>' +
+        '<div class="ref-card-item" style="grid-column:1/-1"><span class="ref-card-label">Acabado</span><span class="ref-card-val">' + (r.acabado || '—') + '</span></div>' +
+        '</div>' + footerHtml + '</div>';
+    }).join('');
+    }
+  }
+
+
+  // guardar slice para acceso por índice desde onclick
+window._sliceData = slice;
+
+tbody.innerHTML = slice.map((r, i) => {
+    const precio = getPrecioKg(r);
+    const est = estadoCliente(r);
+    let precioTd = '<td></td><td></td>';
+    if (precio !== null) {
+      const precioUd = r.peso ? (precio * r.peso).toFixed(2) + ' €' : '—';
+      precioTd = '<td class="td-precio r">' + precio.toFixed(2) + ' €/kg<br><small style="font-size:0.62rem;color:#9ca3af">' + precioUd + '/ud</small></td><td></td>';
+    } else if (isConsultable(r)) {
+      precioTd = '<td></td><td><button class="btn-consulta" onclick="mailConsulta(' + i + ')">✉ Consultar</button></td>';
+    }
+    return '<tr>' +
+      '<td class="td-ref">' + r.ref + '</td>' +
+      '<td class="td-desc" data-tip="' + r.descripcion.replace(/"/g,"'") + '">' + r.descripcion + '</td>' +
+      '<td class="td-num">' + (r.largo ?? '—') + '</td>' +
+      '<td class="td-num">' + (r.ancho ?? '—') + '</td>' +
+      '<td class="td-num">' + (r.espesor ?? '—') + '</td>' +
+      '<td>' + r.aleacion + '</td>' +
+      '<td>' + r.temple + '</td>' +
+      '<td class="td-num">' + (r.peso ? r.peso.toFixed(3) : '—') + '</td>' +
+      '<td><span class="td-acabado">' + (r.acabado || '—') + '</span></td>' +
+      '<td><span class="badge ' + bc(est) + '">' + est + '</span></td>' +
+      precioTd +
+      '</tr>';
+  }).join('');
+
+  const pag = document.getElementById('pagination');
+  if (pages<=1) { pag.innerHTML=''; return; }
+  let b = `<button class="page-btn" onclick="gp(${currentPage-1})" ${currentPage===1?'disabled':''}>‹</button>`;
+  for (let i=1;i<=pages;i++) {
+    if (pages>8) {
+      if (i===1||i===pages||(i>=currentPage-2&&i<=currentPage+2))
+        b+=`<button class="page-btn ${i===currentPage?'active':''}" onclick="gp(${i})">${i}</button>`;
+      else if (i===currentPage-3||i===currentPage+3)
+        b+=`<span style="padding:0 3px;color:var(--text-light)">…</span>`;
+    } else {
+      b+=`<button class="page-btn ${i===currentPage?'active':''}" onclick="gp(${i})">${i}</button>`;
+    }
+  }
+  b+=`<button class="page-btn" onclick="gp(${currentPage+1})" ${currentPage===pages?'disabled':''}>›</button>`;
+  b+=`<span class="page-info">Pág. ${currentPage} de ${pages}</span>`;
+  pag.innerHTML=b;
+}
+
+function gp(p) {
+  currentPage=p; render();
+  document.querySelector('.search-card').scrollIntoView({behavior:'smooth',block:'end'});
+}
+
+// Validity banner
+(function() {
+  const jsonDate = new Date('2026-05-15');
+  const expiry = new Date(jsonDate);
+  expiry.setDate(expiry.getDate() + 15);
+  const today = new Date();
+  today.setHours(0,0,0,0);
+
+  const fmt = d => d.toLocaleDateString('es-ES', {day:'2-digit', month:'long', year:'numeric'});
+  const el = document.getElementById('validityMsg');
+  const expired = today > expiry;
+
+  if (expired) {
+    el.className = 'hero-validity expired';
+    el.innerHTML = '⚠️ Consulta expirada · Válida hasta <span class="validity-date">' + fmt(expiry) + '</span> · Solicite actualización';
+  } else {
+    const diff = Math.ceil((expiry - today) / (1000*60*60*24));
+    el.className = 'hero-validity';
+    el.innerHTML = '📅 Consulta válida hasta <span class="validity-date">' + fmt(expiry) + '</span> · ' + diff + ' día' + (diff!==1?'s':'') + ' restante' + (diff!==1?'s':'');
+  }
+})();
+
+['qLargo','qAncho'].forEach(id => document.getElementById(id).addEventListener('input', applyFilters));
+['qEspesor','qAleacion','qTemple','qAcabado'].forEach(id => document.getElementById(id).addEventListener('change', applyFilters));
+
+
+// ── ALERTA CAMBIO DE PRECIO (visible 5 días desde 2026-02-27) ──
+(function() {
+  var alertStart = new Date('2026-05-15');
+  var alertEnd = new Date(alertStart);
+  alertEnd.setDate(alertEnd.getDate() + 5);
+  var today = new Date();
+  today.setHours(0,0,0,0);
+  var dismissed = sessionStorage.getItem('priceAlertDismissed');
+  if (!dismissed && today >= alertStart && today <= alertEnd) {
+    document.getElementById('priceAlert').style.display = 'flex';
+  }
+})();
+
+function dismissAlert() {
+  document.getElementById('priceAlert').style.display = 'none';
+  sessionStorage.setItem('priceAlertDismissed', '1');
+}
+
+// Disclaimer de confirmación de disponibilidad
+function dismissDisclaimer() {
+  document.getElementById('disclaimerOverlay').classList.add('hidden');
+  sessionStorage.setItem('disclaimerDismissed', '1');
+}
+
+(function() {
+  var dismissed = sessionStorage.getItem('disclaimerDismissed');
+  if (!dismissed) {
+    document.getElementById('disclaimerOverlay').classList.remove('hidden');
+  }
+})();
+
+// Popup nuevos precios — visible 1 semana desde 2026-04-17
+(function() {
+  var KEY = 'preciosPopupDismissed_20260417';
+  var EXPIRY = new Date('2026-05-15').getTime();
+  var dismissed = localStorage.getItem(KEY);
+  if (!dismissed && Date.now() < EXPIRY) {
+    document.getElementById('preciosOverlay').style.display = 'flex';
+  }
+})();
+
+function closePreciosPopup() {
+  document.getElementById('preciosOverlay').style.display = 'none';
+  localStorage.setItem('preciosPopupDismissed_20260417', '1');
+}
+
+</script>
+</body>
+</html>
