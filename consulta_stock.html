@@ -110,7 +110,7 @@ td{font-size:.7rem;padding:6px 4px}
 </div>
 <div class="filter-group">
 <label class="precio-label">€/kg</label>
-<input type="text" id="fPrecio" class="precio-input" value="6.50" oninput="applyFilters()">
+<input type="text" id="fPrecio" class="precio-input" value="6.80" oninput="applyFilters()">
 </div>
 <button class="btn-copy-all" onclick="copyAll()">📋 COPIAR RESULTADOS</button>
 <button class="btn-borrar" onclick="borrarFiltros()" style="background:#6c757d;color:#fff;border:none;padding:8px 16px;border-radius:6px;font-size:13px;cursor:pointer;font-family:inherit;margin-left:8px;">🗑 BORRAR FILTROS</button>
@@ -201,7 +201,7 @@ const alto=document.getElementById('fAlto').value;
 const ancho=document.getElementById('fAncho').value;
 const esp=document.getElementById('fEspesor').value;
 const lon=document.getElementById('fLong').value;
-const precio=parseFloat(document.getElementById('fPrecio').value.replace(',','.'))||6.40;
+const precio=parseFloat(document.getElementById('fPrecio').value.replace(',','.'))||6.80;
 sessionStorage.setItem('af_precio_kg',document.getElementById('fPrecio').value);
 
 filtered=DATA.filter(r=>{
@@ -225,7 +225,7 @@ ths.forEach(t=>{t.classList.remove('sorted-asc','sorted-desc')});
 if(sortCol===col){sortAsc=!sortAsc}else{sortCol=col;sortAsc=true}
 ths[col].classList.add(sortAsc?'sorted-asc':'sorted-desc');
 doSort();
-const precio=parseFloat(document.getElementById('fPrecio').value.replace(',','.'))||6.40;
+const precio=parseFloat(document.getElementById('fPrecio').value.replace(',','.'))||6.80;
 render(precio);
 }
 
@@ -296,7 +296,7 @@ function goPage(p){
 const totalPages=Math.ceil(filtered.length/PER_PAGE);
 if(p<1||p>totalPages)return;
 currentPage=p;
-const precio=parseFloat(document.getElementById('fPrecio').value.replace(',','.'))||6.40;
+const precio=parseFloat(document.getElementById('fPrecio').value.replace(',','.'))||6.80;
 render(precio);
 window.scrollTo({top:0,behavior:'smooth'});
 }
@@ -304,7 +304,7 @@ window.scrollTo({top:0,behavior:'smooth'});
 function copyRow(i){
 const start=(currentPage-1)*PER_PAGE;
 const r=filtered[start+i];
-const precio=parseFloat(document.getElementById('fPrecio').value.replace(',','.'))||6.40;
+const precio=parseFloat(document.getElementById('fPrecio').value.replace(',','.'))||6.80;
 const euro=(r.peso_kg_m*precio).toFixed(2);
 const text=r.descripcion+' — '+r.longitud+' m — '+euro+' €/m — '+r.estado;
 navigator.clipboard.writeText(text).then(()=>{
@@ -314,7 +314,7 @@ if(btn){btn.textContent='✓';setTimeout(()=>btn.textContent='📋',1500)}
 }
 
 function copyAll(){
-const precio=parseFloat(document.getElementById('fPrecio').value.replace(',','.'))||6.40;
+const precio=parseFloat(document.getElementById('fPrecio').value.replace(',','.'))||6.80;
 const lines=filtered.map(r=>{
 const euro=(r.peso_kg_m*precio).toFixed(2);
 return r.descripcion+' — '+r.longitud+' m — '+euro+' €/m — '+r.estado;
